@@ -1,6 +1,7 @@
 {
     "common": {
         "name": "enet",
+        "title": "Jung/Gira eNet Adapter",
         "version": "0.0.1",
         "news": {
             "0.0.1": {
@@ -11,16 +12,6 @@
                 "fr": "Version initiale",
                 "nl": "Eerste release"
             }
-        },
-        "title": {
-            "en": "Jung/Gira eNet Adapter",
-            "de": "Jung/Gira eNet Adapter",
-            "ru": "Jung/Gira eNet Adapter",
-            "pt": "Jung/Gira eNet Adapter",
-            "nl": "Jung/Gira eNet Adapter",
-            "fr": "Jung/Gira eNet Adapter",
-            "it": "Jung/Gira eNet Adapter",
-            "es": "Jung/Gira eNet Adapter"
         },
         "desc": {
             "en": "Controls Jung/Gira eNet Smarthome devices through the eNet WLAN gateway",
