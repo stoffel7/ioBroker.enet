@@ -1,5 +1,8 @@
 ![Logo](admin/enet.png)
 # ioBroker.enet
+Jung/Gira eNet Smarthome Adapter for ioBroker
+
+Control smarthome devices using the Jung/Gira eNet Smarthome gateway from [ioBroker](https://www.iobroker.net).
 =================
 
 [![NPM version](http://img.shields.io/npm/v/iobroker.enet.svg)](https://www.npmjs.com/package/iobroker.enet)
@@ -8,9 +11,6 @@
 [![NPM](https://nodei.co/npm/iobroker.enet.png?downloads=true)](https://nodei.co/npm/iobroker.enet/)
 
 
-# Jung/Gira eNet Smarthome Adapter for ioBroker
-
-Control smarthome devices using the Jung/Gira eNet Smarthome gateway from [ioBroker](https://www.iobroker.net).
 
 
 ---
