@@ -1,0 +1,43 @@
+{
+    "common": {
+        "name":                     "enet",
+        "version":                  "0.0.1",
+        "title":                    "Jung/Gira eNet Adapter",
+        "desc":                     {
+ 			             "en": "Controls Jung/Gira eNet Smarthome devices",
+ 			             "de": "Steuert Jung/Gira eNet Smarthome-Geräte",
+ 			             "ru": "Controls Jung/Gira eNet Smarthome devices"
+	    },
+	    "license":                "MIT",
+        "platform":                 "Javascript/Node.js",
+        "mode":                     "daemon",
+        "icon":                     "enet.png",
+        "enabled":                  true,
+	    "extIcon":                  "https://raw.githubusercontent.com/SebastianSchultz/ioBroker.enet/master/admin/enet.png",
+	    "keywords":                 ["enet", "Jung", "Gira", "Smarthome", "Gateway"],
+        "readme":                   "https://github.com/SebastianSchultz/iobroker.enet/blob/master/README.md",
+	    "loglevel":                 "info",
+        "type":                     "media"
+    },
+    "native": {
+        "gateway_ip":       "",
+        "interval": "60000"
+    },
+    "objects": [
+
+    ],
+    "instanceObjects": [
+      {
+        "_id":  "gateway_firmware",
+        "type": "state",
+        "common": {
+          "name": "Firmware version of eNet gatewayy",
+          "role": "state",
+          "type": "string",
+          "read": true,
+          "write": false
+        },
+        "native": {}
+      }
+    ]
+}
