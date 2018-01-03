@@ -54,13 +54,11 @@
         "keywords": ["ioBroker", "Jung", "Gira", "eNet", "smart home"],
         "readme": "https://github.com/SebastianSchultz/ioBroker.enet/blob/master/README.md",
         "loglevel": "info",
-        "type": "general",
-        "restartAdapters": [""]
+        "type": "general"
     },
     "native": {
-        "test1": true,
-        "test2": 42,
-        "mySelect": "auto"
+        "ip": "",
+        "interval": 500
     },
     "objects": [
 
