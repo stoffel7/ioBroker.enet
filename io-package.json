@@ -1,43 +1,68 @@
 {
     "common": {
-        "name":                     "enet",
-        "version":                  "0.0.1",
-        "title":                    "Jung/Gira eNet Adapter",
-        "desc":                     {
- 			             "en": "Controls Jung/Gira eNet Smarthome devices through the eNet WLAN gateway",
- 			             "de": "Steuert Jung/Gira eNet Smarthome-Geräte über das eNet WLAN-Gateway",
- 			             "ru": "Controls Jung/Gira eNet Smarthome devices through the eNet WLAN gateway"
-	    },
-	    "license":                "MIT",
-        "platform":                 "Javascript/Node.js",
-        "mode":                     "daemon",
-        "icon":                     "enet.png",
-        "enabled":                  true,
-	    "extIcon":                  "https://raw.githubusercontent.com/SebastianSchultz/ioBroker.enet/master/admin/enet.png",
-	    "keywords":                 ["enet", "Jung", "Gira", "Smarthome", "Gateway"],
-        "readme":                   "https://github.com/SebastianSchultz/iobroker.enet/blob/master/README.md",
-	    "loglevel":                 "info",
-        "type":                     "iot-systems"
+        "name": "enet",
+        "version": "0.0.1",
+        "news": {
+            "0.0.1": {
+                "en": "initial adapter",
+                "de": "Initiale Version",
+                "ru": "Первоначальный адаптер",
+                "pt": "Versão inicial",
+                "fr": "Version initiale",
+                "nl": "Eerste release"
+            }
+        },
+        "title": {
+            "en": "Jung/Gira eNet Adapter",
+            "de": "Jung/Gira eNet Adapter",
+            "ru": "Jung/Gira eNet Adapter",
+            "pt": "Jung/Gira eNet Adapter",
+            "nl": "Jung/Gira eNet Adapter",
+            "fr": "Jung/Gira eNet Adapter",
+            "it": "Jung/Gira eNet Adapter",
+            "es": "Jung/Gira eNet Adapter"
+        },
+        "desc": {
+            "en": "Controls Jung/Gira eNet Smarthome devices through the eNet WLAN gateway",
+            "de": "Steuert Jung/Gira eNet Smarthome-Geräte über das eNet WLAN-Gateway",
+            "ru": "Controls Jung/Gira eNet Smarthome devices through the eNet WLAN gateway",
+            "pt": "Controls Jung/Gira eNet Smarthome devices through the eNet WLAN gateway",
+            "fr": "Controls Jung/Gira eNet Smarthome devices through the eNet WLAN gateway",
+            "nl": "Controls Jung/Gira eNet Smarthome devices through the eNet WLAN gateway",
+            "it": "Controls Jung/Gira eNet Smarthome devices through the eNet WLAN gateway",
+            "es": "Controls Jung/Gira eNet Smarthome devices through the eNet WLAN gateway"
+        },
+        "authors": [
+            "SebastianSchultz <mail@sebastian-schultz.de>"
+        ],
+        "docs": {
+            "en": "docs/en/admin.md",
+            "ru": "docs/ru/admin.md",
+            "de": "docs/de/admin.md",
+            "es": "docs/es/admin.md",
+            "it": "docs/it/admin.md",
+            "fr": "docs/fr/admin.md",
+            "nl": "docs/nl/admin.md",
+            "pt": "docs/pt/admin.md"
+        },
+        "platform": "Javascript/Node.js",
+        "mode": "daemon",
+        "icon": "enet.png",
+        "materialize": true,
+        "enabled": true,
+        "extIcon": "https://raw.githubusercontent.com/SebastianSchultz/ioBroker.enet/master/admin/enet.png",
+        "keywords": ["ioBroker", "Jung", "Gira", "eNet", "smart home"],
+        "readme": "https://github.com/SebastianSchultz/ioBroker.enet/blob/master/README.md",
+        "loglevel": "info",
+        "type": "general",
+        "restartAdapters": [""]
     },
     "native": {
-        "gateway_ip":       "",
-        "interval": "60000"
+        "test1": true,
+        "test2": 42,
+        "mySelect": "auto"
     },
     "objects": [
 
-    ],
-    "instanceObjects": [
-      {
-        "_id":  "gateway_firmware",
-        "type": "state",
-        "common": {
-          "name": "Firmware version of eNet gateway",
-          "role": "state",
-          "type": "string",
-          "read": true,
-          "write": false
-        },
-        "native": {}
-      }
     ]
 }

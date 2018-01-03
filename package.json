@@ -1,0 +1,36 @@
+{
+  "name": "iobroker.enet",
+  "version": "0.0.1",
+  "description": "ioBroker eNet Adapter",
+  "author": {
+    "name": "SebastianSchultz",
+    "email": "mail@sebastian-mundt.com"
+  },
+  "homepage": "https://github.com/SebastianSchultz/ioBroker.enet",
+  "license": "MIT",
+  "keywords": [
+    "ioBroker",
+    "eNet",
+    "Smart Home",
+    "home automation"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/SebastianSchultz/ioBroker.enet"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "chai": "^4.1.2",
+    "grunt": "^1.0.1",
+    "gulp": "^3.9.1",
+    "mocha": "^4.1.0"
+  },
+  "main": "main.js",
+  "scripts": {
+    "test": "node node_modules/mocha/bin/mocha"
+  },
+  "bugs": {
+    "url": "https://github.com/SebastianSchultz/ioBroker.enet/issues"
+  },
+  "readmeFilename": "README.md"
+}
