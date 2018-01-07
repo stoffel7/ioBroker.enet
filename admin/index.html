@@ -72,18 +72,16 @@
 
 <!-- you have to put your config page in a div with id adapter-container -->
 <div id="adapter-container">
-
-    <table><tr>
-        <td><img src="enet.png"/></td>
-        <td><h3 class="translate">Jung/Gira eNet Adapter Settings</h3></td>
-    </tr></table>
-    <p>
-        <span><label for="ip" class="translate">IP</label></span><input class="value" id="ip"/><br>
-        <span><label for="interval" class="translate">Interval</label></span><input class="value" id="interval"/><br>
-    </p>
-
-    <p class="translate">The adapter will restart immedieately after saving settings</p>
-
+    <table>
+        <td><img src="enet.png" /></td>
+        <td style="padding-top: 20px;padding-left: 10px"><h3 class="translate">Jung/Gira eNet Adapter</h3></td>
+    </table>
+	<table>
+        <tr><td><label class="translate" for="ip">eNet Gateway IP:</label></td><td class="admin-icon"></td><td><input class="value" id="ip"></input></td><td class="admin-tooltip" data-id="ip"></td></tr>
+        <tr><td><label class="translate" for="interval">Poll interval in ms:</label></td><td class="admin-icon"></td><td><input class="value number" id="interval" size="5" maxlength="6" type="number" value="3000"/></td><td class="admin-tooltip"></td></tr>
+        <tr><td><label class="translate" for="sync_rooms">Synchronize Rooms from eNet Gateway:</label></td><td class="admin-icon"></td><td><input class="value" id="sync_rooms" type="checkbox" value="false"/></td><td class="admin-tooltip"></td></tr>
+		<tr><td><label class="translate" for="sync_scenes">Synchronize Scenes from eNet Gateway:</label></td><td class="admin-icon"></td><td><input class="value" id="sync_scenes" type="checkbox" value="false"/></td><td class="admin-tooltip"></td></tr>
+	</table>
 </div>
 
 </html>

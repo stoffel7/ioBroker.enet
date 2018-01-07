@@ -1,7 +1,7 @@
 {
     "common": {
         "name": "enet",
-        "title": "Jung/Gira eNet Adapter",
+        "title": "Jung Gira eNet Adapter",
         "version": "0.0.1",
         "news": {
             "0.0.1": {
@@ -40,18 +40,82 @@
         "mode": "daemon",
         "icon": "enet.png",
         "materialize": true,
-        "enabled": true,
+        "enabled": false,
         "extIcon": "https://raw.githubusercontent.com/SebastianSchultz/ioBroker.enet/master/admin/enet.png",
         "keywords": ["ioBroker", "Jung", "Gira", "eNet", "smart home"],
         "readme": "https://github.com/SebastianSchultz/ioBroker.enet/blob/master/README.md",
         "loglevel": "info",
-        "type": "general"
+        "type": "iot-systems"
     },
     "native": {
         "ip": "",
-        "interval": 500
+        "interval": 3000,
+		"sync_rooms": false,
+		"sync_scenes": false
     },
     "objects": [
 
-    ]
+    ],
+	"instanceObjects": [
+      {
+        "_id":  "gateway.connected",
+        "type": "state",
+        "common": {
+          "name": "Connected to eNet Gateway",
+          "role": "indicator.online",
+          "type": "boolean",
+          "read": true,
+          "write": false
+        },
+        "native": {}
+      },      
+	  {
+        "_id":  "gateway.firmware_version",
+        "type": "state",
+        "common": {
+          "name": "Firmware Version of eNet Gateway",
+          "role": "state",
+          "type": "string",
+          "read": true,
+          "write": false
+        },
+        "native": {}
+      },
+	  {
+        "_id":  "gateway.hardware_version",
+        "type": "state",
+        "common": {
+          "name": "Hardware Version of eNet Gateway",
+          "role": "state",
+          "type": "string",
+          "read": true,
+          "write": false
+        },
+        "native": {}
+      },
+	  {
+        "_id":  "gateway.protocol_version",
+        "type": "state",
+        "common": {
+          "name": "eNet Protocol Version",
+          "role": "state",
+          "type": "string",
+          "read": true,
+          "write": false
+        },
+        "native": {}
+      },
+	  {
+        "_id":  "gateway.enet_version",
+        "type": "state",
+        "common": {
+          "name": "eNet Version",
+          "role": "state",
+          "type": "string",
+          "read": true,
+          "write": false
+        },
+        "native": {}
+      }
+    ]	
 }
