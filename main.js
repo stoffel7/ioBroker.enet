@@ -12,7 +12,7 @@ adapter.on("stateChange", function (id, state)
 {
 	var eNetChannelArray = id.split(".");
 	var eNetChannel = eNetChannelArray[3];
-	if (state)
+	if (state && !state.ack)
 		setGatewayChannel(adapter.config.ip, id, eNetChannel, state.val);
 });
 
@@ -20,8 +20,8 @@ adapter.on("unload", function (callback) {
     try 
 	{
 		adapter.setState("gateway.connected", false, true);
-		//clearInterval(pollTimerStates);
-		//pollTimerStates = null;				
+		clearInterval(pollTimerStates);
+		pollTimerStates = null;				
         callback();
     } 
 	catch (e) 
@@ -35,11 +35,58 @@ adapter.on("ready", function ()
     main();
 });
 
+function deleteStates(states, callback) 
+{
+	if (!states || !states.length) 
+	{
+		if (callback) callback();
+		return;
+	}
+	var id = states.pop();
+	adapter.delObject(id, function (err) 
+	{
+		adapter.delState(id, function (err) 
+		{
+		});         
+	});
+};
+
 function main() {
 	if (adapter.config.ip)
 	{
 		SyncRooms = adapter.config.sync_rooms;
 		SyncScenes = adapter.config.sync_scenes;
+		
+		if (SyncRooms)
+		{
+			adapter.getStates(adapter.namespace + ".rooms.*", function (err, states) 
+			{
+				var toDelete = [];
+				for (var id in states) 
+				{
+					toDelete.push(id);
+				}
+				deleteStates(toDelete, function() 
+				{
+				});
+			});
+		}
+		
+		if (SyncScenes)
+		{
+			adapter.getStates(adapter.namespace + ".scenes.*", function (err, states) 
+			{
+				var toDelete = [];
+				for (var id in states) 
+				{
+					toDelete.push(id);
+				}
+				deleteStates(toDelete, function() 
+				{
+				});
+			});		
+		}
+		
 		adapter.subscribeStates("*");
 		getGatewayDevices(adapter.config.ip);
 		getGatewayInformation(adapter.config.ip);
@@ -53,15 +100,12 @@ function getGatewayStates()
 {
 	if (SyncRooms || SyncScenes)
 	{
-		clearInterval(pollTimerStates);
-		pollTimerStates = null;
 		adapter.extendForeignObject('system.adapter.' + adapter.namespace, {native: {sync_rooms: false, sync_scenes: false}});
 		return;
 	}
 
-
 	// Channel subscription -> write state to ioBroker if channel changes
-	adapter.log.debug("Running getGatewayStates to retrieve the current states from eNet gateway");
+	adapter.log.debug("getGatewayStates: Starting to retrieve the current states from eNet gateway");
 
 	adapter.getState("gateway.subscribeable_channels", function (err, state) 
 	{
@@ -69,12 +113,10 @@ function getGatewayStates()
 		{
 			var eNetChannelList;
 			eNetChannelList = JSON.parse(state.val);
-			adapter.log.debug("getGatewayStates Array of Channels: " + eNetChannelList.toString());
+			adapter.log.debug("getGatewayStates: Array of subscribable Channels: " + eNetChannelList.toString());
 			
 			var Gateway = eNet.gateway({host: adapter.config.ip});
-			
 			Gateway.connect();
-	
 			Gateway.signIn(eNetChannelList, function(err, res)
 			{
 				if (err) 
@@ -95,15 +137,52 @@ function getGatewayStates()
 				{
 					if (!err && msg) 
 					{	
-						adapter.log.debug("Daten für Kanal: " + JSON.stringify(msg));
-						var ResponseString = JSON.stringify(msg);
-						var JSONobj = JSON.parse(ResponseString);
-						adapter.log.debug("Kanal: ", JSONobj.NUMBER);
-						adapter.log.debug("Wert: ", JSONobj.VALUE);
-						adapter.log.debug("State: ", JSONobj.STATE);
-						adapter.log.debug("Setpoint: ", JSONobj.SETPOINT);
+						var ResponseString = JSON.stringify(msg)
+						var ParsedJSON = JSON.parse(ResponseString);
+						if (ParsedJSON)
+						{
+							var eNetChannel = ParsedJSON.NUMBER;
+							adapter.getState("channels." + eNetChannel.toString() + ".STATE", function (err, state) 
+							{
+								if (state)
+								{
+									var eNetValue = ParsedJSON.STATE;
+									adapter.log.debug("getGatewayStates: (channels." + eNetChannel.toString() + ".STATE) Channel: " + eNetChannel.toString() + ", Value: " + eNetValue.toString() + ", State: " + ParsedJSON.STATE + ", Setpoint: " + ParsedJSON.SETPOINT + ", Data for channel: " + JSON.stringify(msg));
+									var ActualValue = state.val;
+									if (eNetValue == "OFF")
+										eNetValue = false;
+									if (eNetValue == "ON")
+										eNetValue = true;
+									if (eNetValue == -1)
+										eNetValue = false;
+									if (ActualValue != eNetValue)
+									{
+										adapter.log.debug("getGatewayStates: Setting state for channel: " + eNetChannel.toString() + " to ioBroker objects DB Old Value: " + ActualValue + " new Value: " + eNetValue);
+										adapter.setState("channels." + eNetChannel.toString() + ".STATE", eNetValue, true);
+									}
+								}
+							});						
+							
+							adapter.getState("channels." + eNetChannel.toString() + ".LEVEL", function (err, state) 
+							{
+								if (state)
+								{
+									var eNetValue = ParsedJSON.VALUE;
+									adapter.log.debug("getGatewayStates: (channels." + eNetChannel.toString() + ".LEVEL) Channel: " + eNetChannel.toString() + ", Value: " + eNetValue.toString() + ", State: " + ParsedJSON.STATE + ", Setpoint: " + ParsedJSON.SETPOINT + ", Data for channel: " + JSON.stringify(msg));
+									var ActualValue = state.val;
+									if (eNetValue == -1)
+										eNetValue = 0;
+									if (ActualValue != eNetValue)
+									{
+										adapter.log.debug("getGatewayStates: Setting state for channel: " + eNetChannel.toString() + " to ioBroker objects DB Old Value: " + ActualValue + " new Value: " + eNetValue);
+										adapter.setState("channels." + eNetChannel.toString() + ".LEVEL", eNetValue.toString(), true);
+									}
+								}
+							});								
+						}
+						else adapter.log.error("getGatewayStates: Parse JSON Error: " + err);
 					}
-					else adapter.log.error("ERROR: " + err)
+					else adapter.log.error("getGatewayStates: Gateway.on Error: " + err);
 					Gateway.disconnect();
 				});
 			}
@@ -115,15 +194,15 @@ function getGatewayDevices(ip)
 {
 	var gw = eNet.gateway({host: adapter.config.ip});
 	gw.connect();
-	adapter.log.debug("Getting gateway devices...");
+	adapter.log.debug("getGatewayDevices: Getting gateway devices...");
 	var DeviceList = {};
 	gw.getProjectList(function(err, res)
 	{
 		if (err) 
-			adapter.log.error("Error getting eNet Gateway devices: " + err);
+			adapter.log.error("getGatewayDevices: Error getting eNet Gateway devices: " + err);
 		else 
 		{
-			adapter.log.debug("Connected to eNet Gateway for device setup: " + JSON.stringify(res));
+			adapter.log.debug("getGatewayDevices: Connected to eNet Gateway for device setup: " + JSON.stringify(res));
 			adapter.setState("gateway.connected", true, true);
 			setupDevices(gw, JSON.stringify(res));
 		}
@@ -133,29 +212,17 @@ function getGatewayDevices(ip)
 
 function setupDevices(gw, res)
 {
-	// 0 bis 15: Szenen
-	// 16 bis 41: Kanäle 1 bis 24
-	// 42 bis 43: Alles ein/aus und Master Dimmen
-	
-	//adapter.getDevices(function (err, devices) 
-	//{
-	//for(var d = 0; d < devices.length; d++) 
-	//	{
-	//		adapter.log.debug("Device ID to delete: " + devices[d]._id);
-	//		adapter.deleteDevice(devices[d]._id);
-	//	}
-	//});
-
+	// 0 to 15: Scenes
+	// 16 to 41: Channel/Device 1 to 24
+	// 42 to 43: All on/off and Master Dim
 	var ParsedJSON = JSON.parse(res);
 	if (ParsedJSON)
 	{
-		adapter.log.debug("setupDevices: Got JSON device information from eNet gateway");
-		adapter.log.debug("setupDevices: Count of devices: " + ParsedJSON.ITEMS.length);
-		adapter.log.debug("setupDevices: Count of rooms: " + ParsedJSON.LISTS.length);
+		adapter.log.debug("setupDevices: Got JSON device information from eNet gateway. Count of Devices: " + ParsedJSON.ITEMS.length + ", " + "Count of rooms: " + ParsedJSON.LISTS.length);
 		var DevicesCount = ParsedJSON.ITEMS.length;
 		var RoomsCount = ParsedJSON.LISTS.length;
 
-		// SETTING UP DEVICES/CHANNELS
+		// Setting up devices/channels
 		adapter.log.debug("setupDevices: Reading Scenes/Channels/Devices...");
 		var channelArray = [];
 		for (var x = 0; x < DevicesCount; x++) 
@@ -226,6 +293,7 @@ function setupDevices(gw, res)
 						
 						adapter.setState("scenes." + ParsedJSON.ITEMS[x].NUMBER + ".ID", ParsedJSON.ITEMS[x].NUMBER, true);
 						adapter.setState("scenes." + ParsedJSON.ITEMS[x].NUMBER + ".NAME", ParsedJSON.ITEMS[x].NAME, true);
+						adapter.setState("scenes." + ParsedJSON.ITEMS[x].NUMBER + ".STATE", false, true);
 						adapter.log.debug("setupDevices: Added Scene ID: " + ParsedJSON.ITEMS[x].NUMBER + ", Name: " + ParsedJSON.ITEMS[x].NAME + ", Type: " + ParsedJSON.ITEMS[x].TYPE);						
 					}
 				break;
@@ -271,10 +339,11 @@ function setupDevices(gw, res)
 					native: {}
 					});
 						
-					if (x > 15 && x < 40)		// Szenen und Master-Dimmen sowie Alles ein/aus NICHT subscriben
+					if (x > 15 && x < 40)		// Do not subscribe scenes, master dim and all on/off!
 						channelArray.push(x);
 					adapter.setState("channels." + ParsedJSON.ITEMS[x].NUMBER + ".ID", ParsedJSON.ITEMS[x].NUMBER, true);
 					adapter.setState("channels." + ParsedJSON.ITEMS[x].NUMBER + ".NAME", ParsedJSON.ITEMS[x].NAME, true);
+					adapter.setState("channels." + ParsedJSON.ITEMS[x].NUMBER + ".STATE", false, true);
 					adapter.log.debug("setupDevices: Added Device ID: " + ParsedJSON.ITEMS[x].NUMBER + ", Name: " + ParsedJSON.ITEMS[x].NAME + ", Type: " + ParsedJSON.ITEMS[x].TYPE);
 				break;
 
@@ -322,15 +391,16 @@ function setupDevices(gw, res)
 					native: {}
 					});	
 
-					if (x > 15 && x < 40)		// Szenen und Master-Dimmen sowie Alles ein/aus NICHT subscriben
+					if (x > 15 && x < 40)		// Do not subscribe scenes, master dim and all on/off!
 						channelArray.push(x);
 					adapter.setState("channels." + ParsedJSON.ITEMS[x].NUMBER + ".ID", ParsedJSON.ITEMS[x].NUMBER, true);
 					adapter.setState("channels." + ParsedJSON.ITEMS[x].NUMBER + ".NAME", ParsedJSON.ITEMS[x].NAME, true);
+					adapter.setState("channels." + ParsedJSON.ITEMS[x].NUMBER + ".LEVEL", "0", true);
 					adapter.log.debug("setupDevices: Added Device ID: " + ParsedJSON.ITEMS[x].NUMBER + ", Name: " + ParsedJSON.ITEMS[x].NAME + ", Type: " + ParsedJSON.ITEMS[x].TYPE);
 				break;
 				
 				case "NONE":
-					// Gerät ist nicht im Gateway programmiert/angelernt
+					// Device is not programmed/learned on eNet Gateway
 				break;
 				
 				default:
@@ -338,7 +408,6 @@ function setupDevices(gw, res)
 			}
 		}
 		
-		adapter.log.debug("setupDevices: Reading Rooms...");
 		if (SyncRooms)
 		{
 			adapter.log.debug("setupDevices: Reading Rooms...");
@@ -374,7 +443,7 @@ function setupDevices(gw, res)
 				native: {}
 				});								
 			
-				if (ParsedJSON.LISTS[x].ITEMS_ORDER)			// In diesem  Raum sind Geräte zugeordnet
+				if (ParsedJSON.LISTS[x].ITEMS_ORDER)			// There are devices in this room
 				{
 					var DevicesInRoom = ParsedJSON.LISTS[x].ITEMS_ORDER;
 					adapter.setObjectNotExists("rooms." + ParsedJSON.LISTS[x].NUMBER + ".DEVICES", {
@@ -391,7 +460,7 @@ function setupDevices(gw, res)
 
 				adapter.setState("rooms." + ParsedJSON.LISTS[x].NUMBER + ".ID", ParsedJSON.LISTS[x].NUMBER, true);
 				adapter.setState("rooms." + ParsedJSON.LISTS[x].NUMBER + ".NAME", ParsedJSON.LISTS[x].NAME, true);
-				adapter.log.debug("setupDevices: Added Rooms ID: " + ParsedJSON.LISTS[x].NUMBER + ", Name: " + ParsedJSON.LISTS[x].NAME);						
+				adapter.log.debug("setupDevices: Added Room ID: " + ParsedJSON.LISTS[x].NUMBER + ", Name: " + ParsedJSON.LISTS[x].NAME);						
 			}
 		}		
 
@@ -409,6 +478,7 @@ function setupDevices(gw, res)
 		});		
 
 		adapter.setState("gateway.subscribeable_channels", JSON.stringify(channelArray), true);
+		
 		getGatewayStates();
 	}
 };
@@ -418,27 +488,23 @@ function getGatewayInformation(ip)
 	var gw = eNet.gateway({host: adapter.config.ip});
 	gw.connect();
 
-	// GETTING VERSION INFORMATION
-	adapter.log.debug("Connecting to eNet Gateway " + gw.name + " for retrieving version information...");
+	// Getting gateway version information
+	adapter.log.debug("getGatewayInformation: Connecting to eNet Gateway " + gw.name + " for retrieving version information...");
 	gw.getVersion(function(err, res) 
 	{
 		if (err) 
-			adapter.log.error("Error getting eNet Gateway version: " + err);
+			adapter.log.error("getGatewayInformation: Error getting eNet Gateway version: " + err);
 		else 
 		{
 			adapter.setState("gateway.connected", true, true);
 			var ParsedJSON = JSON.parse(JSON.stringify(res));
 			if (ParsedJSON)
 			{
-				// Reading eNet Gateway Firmware Version
 				adapter.setState("gateway.firmware_version", ParsedJSON.FIRMWARE, true);
-				// Reading eNet Gateway Hardware Version
 				adapter.setState("gateway.hardware_version", ParsedJSON.HARDWARE, true);
-				// Reading eNet Protocol Version
 				adapter.setState("gateway.protocol_version", ParsedJSON.PROTOCOL, true);
-				// Reading eNet Version
 				adapter.setState("gateway.enet_version", ParsedJSON.ENET, true);
-				adapter.log.debug("ioBroker Jung/Gira eNet Adapter. Gateway IP: " + gw.name + ", Gateway Firmware: " + ParsedJSON.FIRMWARE + ", Gateway Hardware: " + ParsedJSON.HARDWARE + ", Protocol: " + ParsedJSON.PROTOCOL + ", eNet: " + ParsedJSON.ENET);
+				adapter.log.info("ioBroker Jung/Gira eNet Adapter. Gateway IP: " + gw.name + ", Gateway Firmware: " + ParsedJSON.FIRMWARE + ", Gateway Hardware: " + ParsedJSON.HARDWARE + ", Protocol: " + ParsedJSON.PROTOCOL + ", eNet: " + ParsedJSON.ENET);
 			}
 		}
 		gw.disconnect();
@@ -456,34 +522,34 @@ function setGatewayChannel(ip, id, channel, state)
 		{
 			switch (obj.common.role)
 			{
-				case "switch":				// AKTOR
-					adapter.log.debug("SetGatewayChannel SWITCH: ID: " + id + ", Object Type: " + obj.common.type + " Object Role: " + obj.common.role);
+				case "switch":				// Actor/Switch/Light
+					adapter.log.debug("SetGatewayChannel: SWITCH: ID: " + id + ", Object Type: " + obj.common.type + " Object Role: " + obj.common.role);
 					gw.setValue(channel, state, false, function(err, res) 
 					{
 						if (err) 
-							adapter.log.error("SetGatewayChannel Error in setting SWITCH value: ID: " + id + ", Object Type: " + obj.common.type + " Object Role: " + obj.common.role + ", VALUE: " + state + ", Error: " + JSON.stringify(err));
+							adapter.log.error("SetGatewayChannel: Error in setting SWITCH value: ID: " + id + ", Object Type: " + obj.common.type + " Object Role: " + obj.common.role + ", VALUE: " + state + ", Error: " + JSON.stringify(err));
 						else 
-						adapter.log.debug("setGatewayChannel Command successfull: \n" + JSON.stringify(res));
+						adapter.log.debug("setGatewayChannel: Command successfull: \n" + JSON.stringify(res));
 					})
 				break;
-				case "level.dimmer":		// DIMMER
-					adapter.log.debug("SetGatewayChannel DIMMER: ID: " + id + ", Object Type: " + obj.common.type + " Object Role: " + obj.common.role);
+				case "level.dimmer":		// Dimmer
+					adapter.log.debug("SetGatewayChannel: DIMMER: ID: " + id + ", Object Type: " + obj.common.type + " Object Role: " + obj.common.role);
 					gw.setValueDim(channel, state, false, function(err, res) 
 					{
 						if (err) 
-							adapter.log.error("SetGatewayChannel Error in setting DIMMER value: ID: " + id + ", Object Type: " + obj.common.type + " Object Role: " + obj.common.role + ", VALUE: " + state);
+							adapter.log.error("SetGatewayChannel: Error in setting DIMMER value: ID: " + id + ", Object Type: " + obj.common.type + " Object Role: " + obj.common.role + ", VALUE: " + state);
 						else 
-						adapter.log.debug("setGatewayChannel Command successfull: \n" + JSON.stringify(res));
+						adapter.log.debug("setGatewayChannel: Command successfull: \n" + JSON.stringify(res));
 					})
 				break;
-				case "???":					// ROLLADENAKTOR
-					adapter.log.debug("SetGatewayChannel SHUTTER: ID: " + id + ", Object Type: " + obj.common.type + " Object Role: " + obj.common.role);
+				case "???":					// Shutter
+					adapter.log.debug("SetGatewayChannel: SHUTTER: ID: " + id + ", Object Type: " + obj.common.type + " Object Role: " + obj.common.role);
 					gw.setValueBlind(channel, state, false, function(err, res) 
 					{
 						if (err) 
-							adapter.log.error("SetGatewayChannel Error in setting SHUTTER value: ID: " + id + ", Object Type: " + obj.common.type + " Object Role: " + obj.common.role + ", VALUE: " + state);
+							adapter.log.error("SetGatewayChannel: Error in setting SHUTTER value: ID: " + id + ", Object Type: " + obj.common.type + " Object Role: " + obj.common.role + ", VALUE: " + state);
 						else 
-						adapter.log.debug("setGatewayChannel Command successfull: \n" + JSON.stringify(res));
+						adapter.log.debug("setGatewayChannel: Command successfull: \n" + JSON.stringify(res));
 					})
 				break;
 			}
