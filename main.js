@@ -4,8 +4,7 @@ var utils = require(__dirname + "/lib/utils");
 var eNet = require(__dirname + "/lib/enet");
 var Gateway = require(__dirname + "/lib/gateway");
 var pollTimerStates = null;
-var SyncRooms;
-var SyncScenes;
+var SyncRoomsAndScenes;
 var adapter = new utils.Adapter("enet");
 
 adapter.on("stateChange", function (id, state) 
@@ -16,7 +15,8 @@ adapter.on("stateChange", function (id, state)
 		setGatewayChannel(adapter.config.ip, id, eNetChannel, state.val);
 });
 
-adapter.on("unload", function (callback) {
+adapter.on("unload", function (callback) 
+{
     try 
 	{
 		adapter.setState("gateway.connected", false, true);
@@ -32,8 +32,21 @@ adapter.on("unload", function (callback) {
 
 adapter.on("ready", function () 
 {
-    main();
+    init();
 });
+
+function init() 
+{
+	if (adapter.config.ip)
+		getGatewayDevices(adapter.config.ip)
+}
+
+function main() 
+{
+	adapter.subscribeStates("*");
+	if (parseInt(adapter.config.interval, 10))
+		pollTimerStates = setInterval(getGatewayStates, parseInt(adapter.config.interval, 10));
+}
 
 function deleteStates(states, callback) 
 {
@@ -51,59 +64,8 @@ function deleteStates(states, callback)
 	});
 };
 
-function main() {
-	if (adapter.config.ip)
-	{
-		SyncRooms = adapter.config.sync_rooms;
-		SyncScenes = adapter.config.sync_scenes;
-		
-		if (SyncRooms)
-		{
-			adapter.getStates(adapter.namespace + ".rooms.*", function (err, states) 
-			{
-				var toDelete = [];
-				for (var id in states) 
-				{
-					toDelete.push(id);
-				}
-				deleteStates(toDelete, function() 
-				{
-				});
-			});
-		}
-		
-		if (SyncScenes)
-		{
-			adapter.getStates(adapter.namespace + ".scenes.*", function (err, states) 
-			{
-				var toDelete = [];
-				for (var id in states) 
-				{
-					toDelete.push(id);
-				}
-				deleteStates(toDelete, function() 
-				{
-				});
-			});		
-		}
-		
-		adapter.subscribeStates("*");
-		getGatewayDevices(adapter.config.ip);
-		getGatewayInformation(adapter.config.ip);
-		if (parseInt(adapter.config.interval, 10))
-			pollTimerStates = setInterval(getGatewayStates, parseInt(adapter.config.interval, 10));
-	}
-}
-	
-	
 function getGatewayStates()
 {
-	if (SyncRooms || SyncScenes)
-	{
-		adapter.extendForeignObject('system.adapter.' + adapter.namespace, {native: {sync_rooms: false, sync_scenes: false}});
-		return;
-	}
-
 	// Channel subscription -> write state to ioBroker if channel changes
 	adapter.log.debug("getGatewayStates: Starting to retrieve the current states from eNet gateway");
 
@@ -113,7 +75,7 @@ function getGatewayStates()
 		{
 			var eNetChannelList;
 			eNetChannelList = JSON.parse(state.val);
-			adapter.log.debug("getGatewayStates: Array of subscribable Channels: " + eNetChannelList.toString());
+			adapter.log.debug("getGatewayStates: Array of subscribeable Channels: " + eNetChannelList.toString());
 			
 			var Gateway = eNet.gateway({host: adapter.config.ip});
 			Gateway.connect();
@@ -192,22 +154,54 @@ function getGatewayStates()
 	
 function getGatewayDevices(ip)
 {
-	var gw = eNet.gateway({host: adapter.config.ip});
-	gw.connect();
-	adapter.log.debug("getGatewayDevices: Getting gateway devices...");
-	var DeviceList = {};
-	gw.getProjectList(function(err, res)
+	if (adapter.config.ip)
 	{
-		if (err) 
-			adapter.log.error("getGatewayDevices: Error getting eNet Gateway devices: " + err);
-		else 
+		SyncRoomsAndScenes = adapter.config.sync_roomsandscenes;
+		
+		if (SyncRoomsAndScenes)
 		{
-			adapter.log.debug("getGatewayDevices: Connected to eNet Gateway for device setup: " + JSON.stringify(res));
-			adapter.setState("gateway.connected", true, true);
-			setupDevices(gw, JSON.stringify(res));
+			adapter.getStates(adapter.namespace + ".rooms.*", function (err, states) 
+			{
+				var toDelete = [];
+				for (var id in states) 
+				{
+					toDelete.push(id);
+				}
+				deleteStates(toDelete, function() 
+				{
+				});
+			});
+
+			adapter.getStates(adapter.namespace + ".scenes.*", function (err, states) 
+			{
+				var toDelete = [];
+				for (var id in states) 
+				{
+					toDelete.push(id);
+				}
+				deleteStates(toDelete, function() 
+				{
+				});
+			});		
 		}
-		gw.disconnect();
-	})
+
+		var gw = eNet.gateway({host: adapter.config.ip});
+		gw.connect();
+		adapter.log.debug("getGatewayDevices: Getting gateway devices...");
+		var DeviceList = {};
+		gw.getProjectList(function(err, res)
+		{
+			if (err) 
+				adapter.log.error("getGatewayDevices: Error getting eNet Gateway devices: " + err);
+			else 
+			{
+				adapter.log.debug("getGatewayDevices: Connected to eNet Gateway for device setup: " + JSON.stringify(res));
+				adapter.setState("gateway.connected", true, true);
+				setupDevices(gw, JSON.stringify(res));
+			}
+			gw.disconnect();
+		})
+	}
 };
 
 function setupDevices(gw, res)
@@ -215,6 +209,28 @@ function setupDevices(gw, res)
 	// 0 to 15: Scenes
 	// 16 to 41: Channel/Device 1 to 24
 	// 42 to 43: All on/off and Master Dim
+	var gw = eNet.gateway({host: adapter.config.ip});
+	gw.connect();
+	gw.getVersion(function(err, res) 
+	{
+		if (err) 
+			adapter.log.error("setupDevices: Error getting eNet Gateway version: " + err);
+		else 
+		{
+			adapter.setState("gateway.connected", true, true);
+			var ParsedJSON = JSON.parse(JSON.stringify(res));
+			if (ParsedJSON)
+			{
+				adapter.setState("gateway.firmware_version", ParsedJSON.FIRMWARE, true);
+				adapter.setState("gateway.hardware_version", ParsedJSON.HARDWARE, true);
+				adapter.setState("gateway.protocol_version", ParsedJSON.PROTOCOL, true);
+				adapter.setState("gateway.enet_version", ParsedJSON.ENET, true);
+				adapter.log.info("ioBroker Jung/Gira eNet Adapter. Gateway IP: " + gw.name + ", Gateway Firmware: " + ParsedJSON.FIRMWARE + ", Gateway Hardware: " + ParsedJSON.HARDWARE + ", Protocol: " + ParsedJSON.PROTOCOL + ", eNet: " + ParsedJSON.ENET);
+			}
+		}
+		gw.disconnect();
+	})	
+	
 	var ParsedJSON = JSON.parse(res);
 	if (ParsedJSON)
 	{
@@ -232,7 +248,7 @@ function setupDevices(gw, res)
 			switch(DeviceType)
 			{
 				case "SCENE":
-					if (SyncScenes === true)
+					if (SyncRoomsAndScenes === true)
 					{
 						adapter.setObjectNotExists("scenes." + ParsedJSON.ITEMS[x].NUMBER, {
 						type: "device",
@@ -408,7 +424,7 @@ function setupDevices(gw, res)
 			}
 		}
 		
-		if (SyncRooms)
+		if (SyncRoomsAndScenes)
 		{
 			adapter.log.debug("setupDevices: Reading Rooms...");
 			for (var x = 0; x < RoomsCount; x++) 
@@ -479,36 +495,8 @@ function setupDevices(gw, res)
 
 		adapter.setState("gateway.subscribeable_channels", JSON.stringify(channelArray), true);
 		
-		getGatewayStates();
+		main();
 	}
-};
-
-function getGatewayInformation(ip)
-{
-	var gw = eNet.gateway({host: adapter.config.ip});
-	gw.connect();
-
-	// Getting gateway version information
-	adapter.log.debug("getGatewayInformation: Connecting to eNet Gateway " + gw.name + " for retrieving version information...");
-	gw.getVersion(function(err, res) 
-	{
-		if (err) 
-			adapter.log.error("getGatewayInformation: Error getting eNet Gateway version: " + err);
-		else 
-		{
-			adapter.setState("gateway.connected", true, true);
-			var ParsedJSON = JSON.parse(JSON.stringify(res));
-			if (ParsedJSON)
-			{
-				adapter.setState("gateway.firmware_version", ParsedJSON.FIRMWARE, true);
-				adapter.setState("gateway.hardware_version", ParsedJSON.HARDWARE, true);
-				adapter.setState("gateway.protocol_version", ParsedJSON.PROTOCOL, true);
-				adapter.setState("gateway.enet_version", ParsedJSON.ENET, true);
-				adapter.log.info("ioBroker Jung/Gira eNet Adapter. Gateway IP: " + gw.name + ", Gateway Firmware: " + ParsedJSON.FIRMWARE + ", Gateway Hardware: " + ParsedJSON.HARDWARE + ", Protocol: " + ParsedJSON.PROTOCOL + ", eNet: " + ParsedJSON.ENET);
-			}
-		}
-		gw.disconnect();
-	})
 };
 
 function setGatewayChannel(ip, id, channel, state)

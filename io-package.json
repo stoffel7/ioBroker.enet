@@ -2,9 +2,9 @@
     "common": {
         "name": "enet",
         "title": "Jung Gira eNet Adapter",
-        "version": "0.0.1",
+        "version": "0.0.2",
         "news": {
-            "0.0.1": {
+            "0.0.2": {
                 "en": "initial adapter",
                 "de": "Initiale Version",
                 "ru": "Первоначальный адаптер",
@@ -51,8 +51,7 @@
     "native": {
         "ip": "",
         "interval": 3000,
-		"sync_rooms": false,
-		"sync_scenes": false
+		"sync_roomsandscenes": false
     },
     "objects": [
 
