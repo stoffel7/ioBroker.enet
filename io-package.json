@@ -14,14 +14,14 @@
             }
         },
         "desc": {
-            "en": "Controls Jung/Gira eNet Smarthome devices through the eNet WLAN gateway",
-            "de": "Steuert Jung/Gira eNet Smarthome-Geräte über das eNet WLAN-Gateway",
-            "ru": "Controls Jung/Gira eNet Smarthome devices through the eNet WLAN gateway",
-            "pt": "Controls Jung/Gira eNet Smarthome devices through the eNet WLAN gateway",
-            "fr": "Controls Jung/Gira eNet Smarthome devices through the eNet WLAN gateway",
-            "nl": "Controls Jung/Gira eNet Smarthome devices through the eNet WLAN gateway",
-            "it": "Controls Jung/Gira eNet Smarthome devices through the eNet WLAN gateway",
-            "es": "Controls Jung/Gira eNet Smarthome devices through the eNet WLAN gateway"
+            "en": "Controls Jung/Gira eNet Smarthome devices through the eNet Mobile Gate Wireless IP gateway",
+            "de": "Steuert Jung/Gira eNet Smarthome-Geräte über das eNet Mobile Gate Funk IP Gateway",
+            "ru": "Controls Jung/Gira eNet Smarthome devices through the eNet Mobile Gate Wireless IP gateway",
+            "pt": "Controls Jung/Gira eNet Smarthome devices through the eNet Mobile Gate Wireless IP gateway",
+            "fr": "Controls Jung/Gira eNet Smarthome devices through eNet Mobile Gate Wireless IP gateway",
+            "nl": "Controls Jung/Gira eNet Smarthome devices through eNet Mobile Gate Wireless IP gateway",
+            "it": "Controls Jung/Gira eNet Smarthome devices through eNet Mobile Gate Wireless IP gateway",
+            "es": "Controls Jung/Gira eNet Smarthome devices through eNet Mobile Gate Wireless IP gateway"
         },
         "authors": [
             "SebastianSchultz <mail@sebastian-schultz.de>"
