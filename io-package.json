@@ -1,7 +1,7 @@
 {
     "common": {
         "name": "enet",
-        "title": "Jung Gira eNet Adapter",
+        "title": "Jung/Gira eNet Adapter",
         "version": "0.0.2",
         "news": {
             "0.0.2": {
