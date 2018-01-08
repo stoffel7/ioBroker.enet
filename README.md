@@ -10,7 +10,8 @@
 
 Jung/Gira eNet Smarthome Adapter for [ioBroker smart home system](https://www.iobroker.net)
 
-Control Jung/Gira eNet smarthome devices using the eNet Smarthome WLAN IP gateway (https://www.gira.com/en_GB/gebaeudetechnik/systeme/enet/enet-produkte/bediengeraete/enet-mobile-gate.html).
+Control Jung/Gira eNet smarthome devices using the 
+eNet Smarthome WLAN IP gateway (https://www.gira.com/en_GB/gebaeudetechnik/systeme/enet/enet-produkte/bediengeraete/enet-mobile-gate.html).
 
 
 ## Changelog
