@@ -45,7 +45,8 @@
         "keywords": ["ioBroker", "Jung", "Gira", "eNet", "smart home"],
         "readme": "https://github.com/SebastianSchultz/ioBroker.enet/blob/master/README.md",
         "loglevel": "info",
-        "type": "iot-systems"
+        "type": "iot-systems",
+		"license": "MIT"
     },
     "native": {
         "ip": "",
