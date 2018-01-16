@@ -235,6 +235,7 @@ function setupDevices(gw, res)
 	if (ParsedJSON)
 	{
 		adapter.log.debug("setupDevices: Got JSON device information from eNet gateway. Count of Devices: " + ParsedJSON.ITEMS.length + ", " + "Count of rooms: " + ParsedJSON.LISTS.length);
+		adapter.log.debug("setupDevices: JSON device data from eNet gateway: " + JSON.stringify(res));
 		var DevicesCount = ParsedJSON.ITEMS.length;
 		var RoomsCount = ParsedJSON.LISTS.length;
 
