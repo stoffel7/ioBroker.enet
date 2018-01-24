@@ -235,7 +235,6 @@ function setupDevices(gw, res)
 	if (ParsedJSON)
 	{
 		adapter.log.debug("setupDevices: Got JSON device information from eNet gateway. Count of Devices: " + ParsedJSON.ITEMS.length + ", " + "Count of rooms: " + ParsedJSON.LISTS.length);
-		adapter.log.debug("setupDevices: JSON device data from eNet gateway: " + JSON.stringify(res));
 		var DevicesCount = ParsedJSON.ITEMS.length;
 		var RoomsCount = ParsedJSON.LISTS.length;
 
@@ -365,7 +364,6 @@ function setupDevices(gw, res)
 				break;
 
 				case "DIMMER":
-				case "JALOUSIE":
 					adapter.setObjectNotExists("channels." + ParsedJSON.ITEMS[x].NUMBER, {
 					type: "device",
 					common: {
@@ -402,6 +400,57 @@ function setupDevices(gw, res)
 						name: ParsedJSON.ITEMS[x].NAME + ".LEVEL",
 						type: "number",
 						role: "level.dimmer",
+						min: 0,
+						max: 100
+					},
+					native: {}
+					});	
+
+					if (x > 15 && x < 40)		// Do not subscribe scenes, master dim and all on/off!
+						channelArray.push(x);
+					adapter.setState("channels." + ParsedJSON.ITEMS[x].NUMBER + ".ID", ParsedJSON.ITEMS[x].NUMBER, true);
+					adapter.setState("channels." + ParsedJSON.ITEMS[x].NUMBER + ".NAME", ParsedJSON.ITEMS[x].NAME, true);
+					adapter.setState("channels." + ParsedJSON.ITEMS[x].NUMBER + ".LEVEL", "0", true);
+					adapter.log.debug("setupDevices: Added Device ID: " + ParsedJSON.ITEMS[x].NUMBER + ", Name: " + ParsedJSON.ITEMS[x].NAME + ", Type: " + ParsedJSON.ITEMS[x].TYPE);
+				break;
+
+				case "JALOUSIE":
+					adapter.setObjectNotExists("channels." + ParsedJSON.ITEMS[x].NUMBER, {
+					type: "device",
+					common: {
+						name: ParsedJSON.ITEMS[x].NUMBER,
+						type: "string",
+						role: "device"
+					},
+					native: {}
+					});
+					
+					adapter.setObjectNotExists("channels." + ParsedJSON.ITEMS[x].NUMBER + ".ID", {
+					type: "state",
+					common: {
+						name: ParsedJSON.ITEMS[x].NAME + ".ID",
+						type: "string",
+						role: "id"
+					},
+					native: {}
+					});	
+				
+					adapter.setObjectNotExists("channels." + ParsedJSON.ITEMS[x].NUMBER + ".NAME", {
+					type: "state",
+					common: {
+						name: ParsedJSON.ITEMS[x].NAME + ".NAME",
+						type: "string",
+						role: "id"
+					},
+					native: {}
+					});															
+						
+					adapter.setObjectNotExists("channels." + ParsedJSON.ITEMS[x].NUMBER + ".LEVEL", {
+					type: "state",
+					common: {
+						name: ParsedJSON.ITEMS[x].NAME + ".LEVEL",
+						type: "number",
+						role: "level.blind",
 						min: 0,
 						max: 100
 					},
@@ -531,7 +580,7 @@ function setGatewayChannel(ip, id, channel, state)
 						adapter.log.debug("setGatewayChannel: Command successfull: \n" + JSON.stringify(res));
 					})
 				break;
-				case "???":					// Shutter
+				case "level.blind":			// Jalousie
 					adapter.log.debug("SetGatewayChannel: SHUTTER: ID: " + id + ", Object Type: " + obj.common.type + " Object Role: " + obj.common.role);
 					gw.setValueBlind(channel, state, false, function(err, res) 
 					{
