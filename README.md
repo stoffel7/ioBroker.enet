@@ -15,6 +15,9 @@ eNet Mobile Gate Wireless IP gateway (https://www.gira.com/en_GB/gebaeudetechnik
 
 
 ## Changelog
+### 0.0.4 (2018-04-07)
+* (SebastianSchultz) added support for materialize UI of ioBroker.admin v3
+
 ### 0.0.3 (2017-01-24)
 * (SebastianSchultz) fixed a bug regarding the control of blinds
 
