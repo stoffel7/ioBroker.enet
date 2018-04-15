@@ -47,10 +47,22 @@
         "type": "remote"
       },
       "C:\\ioBroker\\node_modules\\iobroker"
+    ],
+    [
+      {
+        "raw": "https://github.com/SebastianSchultz/ioBroker.enet/tarball/master",
+        "scope": null,
+        "escapedName": null,
+        "name": null,
+        "rawSpec": "https://github.com/SebastianSchultz/ioBroker.enet/tarball/master",
+        "spec": "https://github.com/SebastianSchultz/ioBroker.enet/tarball/master",
+        "type": "remote"
+      },
+      "C:\\ioBroker\\node_modules\\iobroker"
     ]
   ],
   "_from": "https://github.com/SebastianSchultz/ioBroker.enet/tarball/master",
-  "_id": "iobroker.enet@0.0.4",
+  "_id": "iobroker.enet@1.0.0",
   "_inCache": true,
   "_location": "/iobroker.enet",
   "_phantomChildren": {},
@@ -106,5 +118,5 @@
   "scripts": {
     "test": "node node_modules/mocha/bin/mocha"
   },
-  "version": "0.0.4"
+  "version": "1.0.0"
 }

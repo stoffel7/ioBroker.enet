@@ -7,6 +7,10 @@
 
 [![NPM](https://nodei.co/npm/iobroker.enet.png?downloads=true)](https://nodei.co/npm/iobroker.enet/)
 
+**Tests:** Linux/Mac: [![Travis-CI](https://travis-ci.org/SebastianSchultz/ioBroker.enet.svg?branch=master)](https://travis-ci.org/SebastianSchultz/ioBroker.enet)
+Windows: [![AppVeyor](https://ci.appveyor.com/api/projects/status/9ow8uf5dq6u8fpfv/branch/master?svg=true)](https://ci.appveyor.com/project/SebastianSchultz/iobroker-enet/branch/master)
+
+
 
 Jung/Gira eNet Smarthome Adapter for [ioBroker smart home system](https://www.iobroker.net)
 
@@ -15,6 +19,10 @@ eNet Mobile Gate Wireless IP gateway (https://www.gira.com/en_GB/gebaeudetechnik
 
 
 ## Changelog
+### 1.0.0 (2018-04-15)
+* (SebastianSchultz) first release
+* (SebastianSchultz) added Travis-CI and AppVeyor tests
+
 ### 0.0.4 (2018-04-07)
 * (SebastianSchultz) added support for materialize UI of ioBroker.admin v3
 
