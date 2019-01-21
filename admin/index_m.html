@@ -26,17 +26,71 @@
             if ($key.attr('type') === 'checkbox') {
 		        // do not call onChange direct, because onChange could expect some arguments
                 $key.prop('checked', settings[id]).change(function() {
-                    onChange();
+
+					if ($('#sync_roomsandscenes').prop('checked') && $('#devicetype').val() == 'Server')
+					{
+						//showToast(_('Please activate secure communication'));
+						$('#sync_roomsandscenes').prop('checked', false);
+					}
+					onChange();
                 });
             } else {
 		        // do not call onChange direct, because onChange could expect some arguments
                 $key.val(settings[id]).change(function() {
-                    onChange();
-                }).keyup(function() {
+				onChange();
+                }).keyup(function() 
+				{
                     onChange();
                 });
             }
         });
+
+		switch($('#devicetype').val())
+		{
+			case 'Server':
+				$('#username').show();
+				$('#usernamelabel').show();
+				$('#password').show();
+				$('#passwordlabel').show();
+				$('#sync_roomsandscenes').addClass('disabled');
+			break;
+			
+			case 'Gateway':
+				$('#username').hide();
+				$('#usernamelabel').hide();
+				$('#password').hide();
+				$('#passwordlabel').hide();
+				$('#sync_roomsandscenes').removeClass('disabled');
+			break;
+			
+			default:			
+		}
+		
+	
+        $('#devicetype').change(function () 
+		{
+            switch ($(this).val()) 
+			{
+                case 'Server':
+					$('#username').show();
+					$('#usernamelabel').show();
+					$('#password').show();
+					$('#passwordlabel').show();
+					$('#sync_roomsandscenes').addClass('disabled');
+				break;
+
+                case 'Gateway':
+					$('#username').hide();
+					$('#usernamelabel').hide();
+					$('#password').hide();
+					$('#passwordlabel').hide();
+					$('#sync_roomsandscenes').removeClass('disabled');
+				break;
+
+                default:
+            }
+        });
+		
         onChange(false);
     }
 
@@ -69,9 +123,23 @@
                 </div>
             </div>
             <div class="row">
+			 <div class="input-field col s12 m6 l4">
+                    <select class="value" id="devicetype">
+                        <option value="Server" class="translate">eNet Server</option>
+                        <option value="Gateway" class="translate">eNet Gateway</option>
+                    </select>
+                    <label class="translate" for="devicetype">devicetype</label>
+                </div>
+			</div>
+			
+			<div class="row">			
                 <div class="col s12 m8 l5">
                     <input class="value" id="ip"></input>
                     <label for="ip" class="translate" for="ip">ip</label>
+                    <input class="value" id="username"></input>
+                    <label for="usernamelabel" class="translate" for="usernamelabel" id="usernamelabel">usernamelabel</label>
+                    <input class="value" id="password" type="password"></input>
+                    <label for="passwordlabel" class="translate" for="passwordlabel" id="passwordlabel">passwordlabel</label>
                 </div>
                 <div class="col s12 m4 l1">
                     <input class="value" id="interval" type="number" min="3000" value="3000"/>
