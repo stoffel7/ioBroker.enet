@@ -14,14 +14,14 @@
             }
         },
         "desc": {
-            "en": "Controls Jung/Gira eNet Smarthome devices through the eNet Mobile Gate Wireless IP gateway",
-            "de": "Steuert Jung/Gira eNet Smarthome-Geräte über das eNet Mobile Gate Funk IP Gateway",
-            "ru": "Controls Jung/Gira eNet Smarthome devices through the eNet Mobile Gate Wireless IP gateway",
-            "pt": "Controls Jung/Gira eNet Smarthome devices through the eNet Mobile Gate Wireless IP gateway",
-            "fr": "Controls Jung/Gira eNet Smarthome devices through eNet Mobile Gate Wireless IP gateway",
-            "nl": "Controls Jung/Gira eNet Smarthome devices through eNet Mobile Gate Wireless IP gateway",
-            "it": "Controls Jung/Gira eNet Smarthome devices through eNet Mobile Gate Wireless IP gateway",
-            "es": "Controls Jung/Gira eNet Smarthome devices through eNet Mobile Gate Wireless IP gateway"
+            "en": "Controls Jung/Gira eNet Smarthome devices through the eNet Mobile Gate Wireless IP gateway or the eNet Smart Home Server",
+            "de": "Steuert Jung/Gira eNet Smarthome-Geräte über das eNet Mobile Gate Funk IP Gateway oder dem eNet Smart Home Server",
+            "ru": "Controls Jung/Gira eNet Smarthome devices through the eNet Mobile Gate Wireless IP gateway or the eNet Smart Home Server",
+            "pt": "Controls Jung/Gira eNet Smarthome devices through the eNet Mobile Gate Wireless IP gateway or the eNet Smart Home Server",
+            "fr": "Controls Jung/Gira eNet Smarthome devices through eNet Mobile Gate Wireless IP gateway or the eNet Smart Home Server",
+            "nl": "Controls Jung/Gira eNet Smarthome devices through eNet Mobile Gate Wireless IP gateway or the eNet Smart Home Server",
+            "it": "Controls Jung/Gira eNet Smarthome devices through eNet Mobile Gate Wireless IP gateway or the eNet Smart Home Server",
+            "es": "Controls Jung/Gira eNet Smarthome devices through eNet Mobile Gate Wireless IP gateway or the eNet Smart Home Server"
         },
         "authors": [
             "SebastianSchultz <mail@sebastian-schultz.de>"
@@ -46,76 +46,41 @@
         "readme": "https://github.com/SebastianSchultz/ioBroker.enet/blob/master/README.md",
         "loglevel": "info",
         "type": "iot-systems",
-		"license": "MIT"
+		"license": "MIT",
+		"compact": true
     },
     "native": {
+		"devicetype": "Server",
         "ip": "",
+		"username": "",
+		"password": "",
         "interval": 3000,
 		"sync_roomsandscenes": false
     },
     "objects": [
 
     ],
-	"instanceObjects": [
-      {
-        "_id":  "gateway.connected",
-        "type": "state",
-        "common": {
-          "name": "Connected to eNet Gateway",
-          "role": "indicator.online",
-          "type": "boolean",
-          "read": true,
-          "write": false
+    "instanceObjects": [
+        {
+            "_id": "info",
+            "type": "channel",
+            "common": {
+                "name": "Information"
+            },
+            "native": {}
         },
-        "native": {}
-      },      
-	  {
-        "_id":  "gateway.firmware_version",
-        "type": "state",
-        "common": {
-          "name": "Firmware Version of eNet Gateway",
-          "role": "state",
-          "type": "string",
-          "read": true,
-          "write": false
-        },
-        "native": {}
-      },
-	  {
-        "_id":  "gateway.hardware_version",
-        "type": "state",
-        "common": {
-          "name": "Hardware Version of eNet Gateway",
-          "role": "state",
-          "type": "string",
-          "read": true,
-          "write": false
-        },
-        "native": {}
-      },
-	  {
-        "_id":  "gateway.protocol_version",
-        "type": "state",
-        "common": {
-          "name": "eNet Protocol Version",
-          "role": "state",
-          "type": "string",
-          "read": true,
-          "write": false
-        },
-        "native": {}
-      },
-	  {
-        "_id":  "gateway.enet_version",
-        "type": "state",
-        "common": {
-          "name": "eNet Version",
-          "role": "state",
-          "type": "string",
-          "read": true,
-          "write": false
-        },
-        "native": {}
-      }
-    ]	
+        {
+            "_id": "info.connection",
+            "type": "state",
+            "common": {
+                "role": "indicator.connected",
+                "name": "If connected to eNet Gateway or Server",
+                "type": "boolean",
+                "read": true,
+                "write": false,
+                "def": false
+            },
+            "native": {}
+        }
+    ]
 }

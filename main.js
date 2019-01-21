@@ -1,27 +1,87 @@
-"use strict";
+/* jshint -W097 */
+/* jshint strict:false */
+/* global require */
+/* global RRule */
+/* global __dirname */
+/* jslint node: true */
 
-var utils = require(__dirname + "/lib/utils");
+//adapter.config.devicetype.toLowerCase(); --> "server" (eNet Geräteart ist Server) (String) 
+//adapter.config.devicetype.toLowerCase(); --> "gateway" (eNet Geräteart ist Gateway) (String)
+//adapter.config.ip --> IP des Gateways oder Servers (String)
+//adapter.config.username --> Benutzername für den eNet Server (wird bei Gateway nicht genutzt) (String)
+//adapter.config.password --> Passwort für den eNet Server (wird bei Gateway nicht benutzt) (String)
+//adapter.config.interval --> Poll Intervall für aktuelle Zustände/States (wird bei Server nicht genutzt) (Integer)
+//adapter.config.syncroomsandscenes --> Räume und Szenen einmalig vom Gateway abrufen ja/nein (wird bei Server nicht genutzt) (Boolean)
+
+"use strict";
+var utils = require('@iobroker/adapter-core');
+var adapter;
 var eNet = require(__dirname + "/lib/enet");
 var Gateway = require(__dirname + "/lib/gateway");
-var pollTimerStates = null;
-var SyncRoomsAndScenes;
 var adapter = new utils.Adapter("enet");
+var pollTimerStates = null;
+var SyncRoomsAndScenes = false;
+var eNetType = "server";
 
-adapter.on("stateChange", function (id, state) 
-{
-	var eNetChannelArray = id.split(".");
-	var eNetChannel = eNetChannelArray[3];
-	if (state && !state.ack)
-		setGatewayChannel(adapter.config.ip, id, eNetChannel, state.val);
-});
+var http = require('http');
+var crypto = require('crypto');
+
+if (module && module.parent) {
+    module.exports = startAdapter;
+} else {
+    // or start the instance directly
+    startAdapter();
+} 
+
+function startAdapter(options) {
+    options = options || {};
+    Object.assign(options,{
+        name:  "ical",
+        stateChange:  function (id, state) 
+		{
+			if (eNetType == "gateway")
+			{
+				var eNetChannelArray = id.split(".");
+				var eNetChannelTemp = eNetChannelArray[2];
+				if (eNetChannelTemp.search(/channel/g));
+				{
+					var eNetChannel = eNetChannelTemp.replace("channel", "");
+					if (state && !state.ack)
+						setGatewayChannel(adapter.config.ip, id, eNetChannel, state.val);
+				}
+			}
+			else if (eNetType == "server")
+			{
+			}
+		},
+        unload: function (callback) {
+            callback();
+        },
+        ready: function () {
+            main();
+        }
+    });
+
+    adapter = new utils.Adapter(options);
+
+    return adapter;
+}			
+
 
 adapter.on("unload", function (callback) 
 {
     try 
 	{
-		adapter.setState("gateway.connected", false, true);
-		clearInterval(pollTimerStates);
-		pollTimerStates = null;				
+		if (eNetType == "gateway")
+		{
+			clearInterval(pollTimerStates);
+			pollTimerStates = null;				
+		}
+		else if (eNetType == "server")
+		{
+		}
+		
+		adapter.setState("info.connection", false, true);
         callback();
     } 
 	catch (e) 
@@ -32,36 +92,94 @@ adapter.on("unload", function (callback)
 
 adapter.on("ready", function () 
 {
+	eNetType = adapter.config.devicetype.toLowerCase();
+	if (eNetType == "gateway")
+	{
+		adapter.log.info("Running eNet Adapter Version " + adapter.version + ", Configured eNet Gateway: " + adapter.config.ip);
+	}
+	else if (eNetType == "server")
+	{
+		adapter.log.info("Running eNet Adapter Version " + adapter.version + ", Configured eNet Server: " + adapter.config.ip + ", Username: " + adapter.config.username);
+	}
     init();
 });
 
 function init() 
 {
 	if (adapter.config.ip)
-		getGatewayDevices(adapter.config.ip)
+	{
+		if (eNetType == "gateway")
+		{
+			getGatewayDevices(adapter.config.ip)
+		}
+		else if (eNetType == "server")
+		{
+			adapter.log.debug("INIT SERVER");
+		}
+	}
 }
 
 function main() 
 {
 	adapter.subscribeStates("*");
 	if (parseInt(adapter.config.interval, 10))
-		pollTimerStates = setInterval(getGatewayStates, parseInt(adapter.config.interval, 10));
+	{
+		if (eNetType == "gateway")
+		{
+			pollTimerStates = setInterval(getGatewayStates, parseInt(adapter.config.interval, 10));
+		}
+		else if (eNetType == "server")
+		{
+			adapter.log.debug("MAIN SERVER");
+		}
+	}
 }
 
-function deleteStates(states, callback) 
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+///																																											//
+///          BEGIN ENET SERVER ROUTINES 																																	//
+///																																											//
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+
+
+
+
+
+
+
+
+
+
+
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+///																																											//
+///          BEGIN ENET GATEWAY ROUTINES 																																	//
+///																																											//
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+function deleteGatewayStates(states, callback) 
 {
 	if (!states || !states.length) 
 	{
 		if (callback) callback();
 		return;
 	}
-	var id = states.pop();
-	adapter.delObject(id, function (err) 
+	
+	if (eNetType == "gateway")
 	{
-		adapter.delState(id, function (err) 
+		var id = states.pop();
+		adapter.delObject(id, function (err) 
 		{
-		});         
-	});
+			adapter.delState(id, function (err) 
+			{
+			});         
+		});
+	}
+	else if (eNetType == "server")
+	{
+		adapter.log.debug("DELETE STATES SERVER");
+	}
 };
 
 function getGatewayStates()
@@ -84,12 +202,12 @@ function getGatewayStates()
 				if (err) 
 				{
 					adapter.log.error("getGatewayStates: Error on signing in channels for subscription: " + err);
-					adapter.setState("gateway.connected", false, true)
+					adapter.setState("info.connection", false, true)
 				}
 				if (res) 
 				{
 					adapter.log.debug.log("getGatewayStates: Sucess in singing in to channels: " + JSON.stringify(res));
-					adapter.setState("gateway.connected", true, true);
+					adapter.setState("info.connection", true, true);
 				}
 			});
 
@@ -104,40 +222,37 @@ function getGatewayStates()
 						if (ParsedJSON)
 						{
 							var eNetChannel = ParsedJSON.NUMBER;
-							adapter.getState("channels." + eNetChannel.toString() + ".STATE", function (err, state) 
+							adapter.getState("channel" + eNetChannel.toString() + ".STATE", function (err, state) 
 							{
 								if (state)
 								{
 									var eNetValue = ParsedJSON.STATE;
-									adapter.log.debug("getGatewayStates: (channels." + eNetChannel.toString() + ".STATE) Channel: " + eNetChannel.toString() + ", Value: " + eNetValue.toString() + ", State: " + ParsedJSON.STATE + ", Setpoint: " + ParsedJSON.SETPOINT + ", Data for channel: " + JSON.stringify(msg));
+									adapter.log.debug("getGatewayStates: (channel" + eNetChannel.toString() + ".STATE) Channel: " + eNetChannel.toString() + ", Value: " + eNetValue.toString() + ", State: " + ParsedJSON.STATE + ", Setpoint: " + ParsedJSON.SETPOINT + ", Data for channel: " + JSON.stringify(msg));
 									var ActualValue = state.val;
-									if (eNetValue == "OFF")
+									if ((eNetValue == "OFF") || (eNetValue == -1))
 										eNetValue = false;
-									if (eNetValue == "ON")
-										eNetValue = true;
-									if (eNetValue == -1)
-										eNetValue = false;
+									else eNetValue = true;
 									if (ActualValue != eNetValue)
 									{
 										adapter.log.debug("getGatewayStates: Setting state for channel: " + eNetChannel.toString() + " to ioBroker objects DB Old Value: " + ActualValue + " new Value: " + eNetValue);
-										adapter.setState("channels." + eNetChannel.toString() + ".STATE", eNetValue, true);
+										adapter.setState("channel" + eNetChannel.toString() + ".STATE", eNetValue, true);
 									}
 								}
 							});						
 							
-							adapter.getState("channels." + eNetChannel.toString() + ".LEVEL", function (err, state) 
+							adapter.getState("channel" + eNetChannel.toString() + ".LEVEL", function (err, state) 
 							{
 								if (state)
 								{
 									var eNetValue = ParsedJSON.VALUE;
-									adapter.log.debug("getGatewayStates: (channels." + eNetChannel.toString() + ".LEVEL) Channel: " + eNetChannel.toString() + ", Value: " + eNetValue.toString() + ", State: " + ParsedJSON.STATE + ", Setpoint: " + ParsedJSON.SETPOINT + ", Data for channel: " + JSON.stringify(msg));
+									adapter.log.debug("getGatewayStates: (channel" + eNetChannel.toString() + ".LEVEL) Channel: " + eNetChannel.toString() + ", Value: " + eNetValue.toString() + ", State: " + ParsedJSON.STATE + ", Setpoint: " + ParsedJSON.SETPOINT + ", Data for channel: " + JSON.stringify(msg));
 									var ActualValue = state.val;
 									if (eNetValue == -1)
 										eNetValue = 0;
 									if (ActualValue != eNetValue)
 									{
 										adapter.log.debug("getGatewayStates: Setting state for channel: " + eNetChannel.toString() + " to ioBroker objects DB Old Value: " + ActualValue + " new Value: " + eNetValue);
-										adapter.setState("channels." + eNetChannel.toString() + ".LEVEL", eNetValue.toString(), true);
+										adapter.setState("channel" + eNetChannel.toString() + ".LEVEL", eNetValue.toString(), true);
 									}
 								}
 							});								
@@ -157,17 +272,14 @@ function getGatewayDevices(ip)
 	if (adapter.config.ip)
 	{
 		SyncRoomsAndScenes = adapter.config.sync_roomsandscenes;
-		
 		if (SyncRoomsAndScenes)
 		{
 			adapter.getStates(adapter.namespace + ".rooms.*", function (err, states) 
 			{
 				var toDelete = [];
 				for (var id in states) 
-				{
 					toDelete.push(id);
-				}
-				deleteStates(toDelete, function() 
+				deleteGatewayStates(toDelete, function() 
 				{
 				});
 			});
@@ -176,13 +288,11 @@ function getGatewayDevices(ip)
 			{
 				var toDelete = [];
 				for (var id in states) 
-				{
 					toDelete.push(id);
-				}
-				deleteStates(toDelete, function() 
+				deleteGatewayStates(toDelete, function() 
 				{
 				});
-			});		
+			});
 		}
 
 		var gw = eNet.gateway({host: adapter.config.ip});
@@ -196,15 +306,15 @@ function getGatewayDevices(ip)
 			else 
 			{
 				adapter.log.debug("getGatewayDevices: Connected to eNet Gateway for device setup: " + JSON.stringify(res));
-				adapter.setState("gateway.connected", true, true);
-				setupDevices(gw, JSON.stringify(res));
+				adapter.setState("info.connection", true, true);
+				setupGatewayDevices(gw, JSON.stringify(res));
 			}
 			gw.disconnect();
 		})
 	}
 };
 
-function setupDevices(gw, res)
+function setupGatewayDevices(gw, res)
 {
 	// 0 to 15: Scenes
 	// 16 to 41: Channel/Device 1 to 24
@@ -214,18 +324,14 @@ function setupDevices(gw, res)
 	gw.getVersion(function(err, res) 
 	{
 		if (err) 
-			adapter.log.error("setupDevices: Error getting eNet Gateway version: " + err);
+			adapter.log.error("setupGatewayDevices: Error getting eNet Gateway version: " + err);
 		else 
 		{
-			adapter.setState("gateway.connected", true, true);
+			adapter.setState("info.connection", true, true);
 			var ParsedJSON = JSON.parse(JSON.stringify(res));
 			if (ParsedJSON)
 			{
-				adapter.setState("gateway.firmware_version", ParsedJSON.FIRMWARE, true);
-				adapter.setState("gateway.hardware_version", ParsedJSON.HARDWARE, true);
-				adapter.setState("gateway.protocol_version", ParsedJSON.PROTOCOL, true);
-				adapter.setState("gateway.enet_version", ParsedJSON.ENET, true);
-				adapter.log.info("ioBroker Jung/Gira eNet Adapter. Gateway IP: " + gw.name + ", Gateway Firmware: " + ParsedJSON.FIRMWARE + ", Gateway Hardware: " + ParsedJSON.HARDWARE + ", Protocol: " + ParsedJSON.PROTOCOL + ", eNet: " + ParsedJSON.ENET);
+				adapter.log.info("ioBroker Jung/Gira eNet Adapter Version " + adapter.version + ". Connected to eNet Gateway on " + gw.name + ", Gateway Firmware: " + ParsedJSON.FIRMWARE + ", Gateway Hardware: " + ParsedJSON.HARDWARE + ", Protocol: " + ParsedJSON.PROTOCOL + ", eNet: " + ParsedJSON.ENET);
 			}
 		}
 		gw.disconnect();
@@ -234,12 +340,12 @@ function setupDevices(gw, res)
 	var ParsedJSON = JSON.parse(res);
 	if (ParsedJSON)
 	{
-		adapter.log.debug("setupDevices: Got JSON device information from eNet gateway. Count of Devices: " + ParsedJSON.ITEMS.length + ", " + "Count of rooms: " + ParsedJSON.LISTS.length);
+		adapter.log.debug("setupGatewayDevices: Got JSON device information from eNet gateway. Count of Devices: " + ParsedJSON.ITEMS.length + ", " + "Count of rooms: " + ParsedJSON.LISTS.length);
 		var DevicesCount = ParsedJSON.ITEMS.length;
 		var RoomsCount = ParsedJSON.LISTS.length;
 
 		// Setting up devices/channels
-		adapter.log.debug("setupDevices: Reading Scenes/Channels/Devices...");
+		adapter.log.debug("setupGatewayDevices: Reading Scenes/Channels/Devices...");
 		var channelArray = [];
 		for (var x = 0; x < DevicesCount; x++) 
 		{
@@ -250,56 +356,63 @@ function setupDevices(gw, res)
 				case "SCENE":
 					if (SyncRoomsAndScenes === true)
 					{
-						adapter.setObjectNotExists("scenes." + ParsedJSON.ITEMS[x].NUMBER, {
-						type: "device",
+						adapter.setObjectNotExists("scenes.scene" + ParsedJSON.ITEMS[x].NUMBER, {
+						_id : adapter.namespace + "scenes.scene" + ParsedJSON.ITEMS[x].NUMBER,
+						type: "channel",
 						common: {
-							name: ParsedJSON.ITEMS[x].NUMBER,
-							type: "string",
-							role: "device"
+							name: ParsedJSON.ITEMS[x].NAME,
 						},
 						native: {}
 						});
 					
-						adapter.setObjectNotExists("scenes." + ParsedJSON.ITEMS[x].NUMBER + ".ID", {
+						adapter.setObjectNotExists("scenes.scene" + ParsedJSON.ITEMS[x].NUMBER + ".ID", {
+						_id : adapter.namespace + "scenes.scene" + ParsedJSON.ITEMS[x].NUMBER + ".ID",
 						type: "state",
 							common: {
-							name: ParsedJSON.ITEMS[x].NAME + ".ID",
+							name: ParsedJSON.ITEMS[x].NAME + ":ID",
 							type: "string",
-							role: "id"
+							role: "id",
+							write: "false",
+							read: "true"
 						},
 						native: {}
 						});	
 			
-						adapter.setObjectNotExists("scenes." + ParsedJSON.ITEMS[x].NUMBER + ".NAME", {
+						adapter.setObjectNotExists("scenes.scene" + ParsedJSON.ITEMS[x].NUMBER + ".NAME", {
+						_id : adapter.namespace + "scenes.scene" + ParsedJSON.ITEMS[x].NUMBER + ".NAME",
 						type: "state",
-						common: {
-							name: ParsedJSON.ITEMS[x].NAME + ".NAME",
+							common: {
+							name: ParsedJSON.ITEMS[x].NAME + ":NAME",
 							type: "string",
-							role: "id"
+							role: "value",
+							write: "false",
+							read: "true"
 						},
 						native: {}
 						});								
 			
 						if (ParsedJSON.ITEMS[x].DIMMABLE)
 						{
-							adapter.setObjectNotExists("scenes." + ParsedJSON.ITEMS[x].NUMBER + ".LEVEL", {
+							adapter.setObjectNotExists("scenes.scene" + ParsedJSON.ITEMS[x].NUMBER + ".LEVEL", {
+							_id : adapter.namespace + "scenes.scene" + ParsedJSON.ITEMS[x].NUMBER + ".LEVEL",
 							type: "state",
-							common: {
-								name: ParsedJSON.ITEMS[x].NAME + ".LEVEL",
+								common: {
+								name: ParsedJSON.ITEMS[x].NAME + ":LEVEL",
 								type: "number",
-								role: "scene.state",
+								role: "level.dimmer",
 								min: 0,
-								max: 100								
+								max: 100
 							},
 							native: {}
 							});							
 						}
 						else
 						{
-							adapter.setObjectNotExists("scenes." + ParsedJSON.ITEMS[x].NUMBER + ".STATE", {
+							adapter.setObjectNotExists("scenes.scene" + ParsedJSON.ITEMS[x].NUMBER + ".STATE", {
+							_id : adapter.namespace + "scenes.scene" + ParsedJSON.ITEMS[x].NUMBER + ".STATE",
 							type: "state",
-							common: {
-								name: ParsedJSON.ITEMS[x].NAME + ".STATE",
+								common: {
+								name: ParsedJSON.ITEMS[x].NAME + ":STATE",
 								type: "boolean",
 								role: "scene.state"
 							},
@@ -307,48 +420,54 @@ function setupDevices(gw, res)
 							});
 						}
 						
-						adapter.setState("scenes." + ParsedJSON.ITEMS[x].NUMBER + ".ID", ParsedJSON.ITEMS[x].NUMBER, true);
-						adapter.setState("scenes." + ParsedJSON.ITEMS[x].NUMBER + ".NAME", ParsedJSON.ITEMS[x].NAME, true);
-						adapter.setState("scenes." + ParsedJSON.ITEMS[x].NUMBER + ".STATE", false, true);
-						adapter.log.debug("setupDevices: Added Scene ID: " + ParsedJSON.ITEMS[x].NUMBER + ", Name: " + ParsedJSON.ITEMS[x].NAME + ", Type: " + ParsedJSON.ITEMS[x].TYPE);						
+						adapter.setState("scenes.scene" + ParsedJSON.ITEMS[x].NUMBER + ".ID", ParsedJSON.ITEMS[x].NUMBER, true);
+						adapter.setState("scenes.scene" + ParsedJSON.ITEMS[x].NUMBER + ".NAME", ParsedJSON.ITEMS[x].NAME, true);
+						adapter.setState("scenes.scene" + ParsedJSON.ITEMS[x].NUMBER + ".STATE", false, true);
+						adapter.log.debug("setupGatewayDevices: Added Scene ID: " + ParsedJSON.ITEMS[x].NUMBER + ", Name: " + ParsedJSON.ITEMS[x].NAME + ", Type: " + ParsedJSON.ITEMS[x].TYPE);						
 					}
 				break;
 				
 				case "BINAER":
-					adapter.setObjectNotExists("channels." + ParsedJSON.ITEMS[x].NUMBER, {
-					type: "device",
+					adapter.setObjectNotExists("channel" + ParsedJSON.ITEMS[x].NUMBER, {
+					_id : adapter.namespace + "channel" + ParsedJSON.ITEMS[x].NUMBER,
+					type: "channel",
 					common: {
-						name: ParsedJSON.ITEMS[x].NUMBER,
-						type: "string",
-						role: "device"
+						name: ParsedJSON.ITEMS[x].NAME,
 					},
 					native: {}
 					});
 					
-					adapter.setObjectNotExists("channels." + ParsedJSON.ITEMS[x].NUMBER + ".ID", {
+					adapter.setObjectNotExists("channel" + ParsedJSON.ITEMS[x].NUMBER + ".ID", {
+					_id : adapter.namespace + "channel" + ParsedJSON.ITEMS[x].NUMBER + ".ID",
 					type: "state",
 						common: {
-						name: ParsedJSON.ITEMS[x].NAME + ".ID",
+						name: ParsedJSON.ITEMS[x].NAME + ":ID",
 						type: "string",
-						role: "id"
+						role: "id",
+						write: "false",
+						read: "true"
 					},
 					native: {}
 					});	
 			
-					adapter.setObjectNotExists("channels." + ParsedJSON.ITEMS[x].NUMBER + ".NAME", {
+					adapter.setObjectNotExists("channel" + ParsedJSON.ITEMS[x].NUMBER + ".NAME", {
+					_id : adapter.namespace + "channel" + ParsedJSON.ITEMS[x].NUMBER + ".NAME",
 					type: "state",
-					common: {
-						name: ParsedJSON.ITEMS[x].NAME + ".NAME",
-						type: "string",
-						role: "id"
-					},
+						common: {
+							name: ParsedJSON.ITEMS[x].NAME + ":NAME",
+							type: "string",
+							role: "value",
+							write: "false",
+							read: "true"
+						},
 					native: {}
 					});								
 			
-					adapter.setObjectNotExists("channels." + ParsedJSON.ITEMS[x].NUMBER + ".STATE", {
+					adapter.setObjectNotExists("channel" + ParsedJSON.ITEMS[x].NUMBER + ".STATE", {
+					_id : adapter.namespace + "channel" + ParsedJSON.ITEMS[x].NUMBER + ".STATE",
 					type: "state",
-					common: {
-						name: ParsedJSON.ITEMS[x].NAME + ".STATE",
+						common: {
+						name: ParsedJSON.ITEMS[x].NAME + ":STATE",
 						type: "boolean",
 						role: "switch"
 					},
@@ -357,47 +476,53 @@ function setupDevices(gw, res)
 						
 					if (x > 15 && x < 40)		// Do not subscribe scenes, master dim and all on/off!
 						channelArray.push(x);
-					adapter.setState("channels." + ParsedJSON.ITEMS[x].NUMBER + ".ID", ParsedJSON.ITEMS[x].NUMBER, true);
-					adapter.setState("channels." + ParsedJSON.ITEMS[x].NUMBER + ".NAME", ParsedJSON.ITEMS[x].NAME, true);
-					adapter.setState("channels." + ParsedJSON.ITEMS[x].NUMBER + ".STATE", false, true);
-					adapter.log.debug("setupDevices: Added Device ID: " + ParsedJSON.ITEMS[x].NUMBER + ", Name: " + ParsedJSON.ITEMS[x].NAME + ", Type: " + ParsedJSON.ITEMS[x].TYPE);
+					adapter.setState("channel" + ParsedJSON.ITEMS[x].NUMBER + ".ID", ParsedJSON.ITEMS[x].NUMBER, true);
+					adapter.setState("channel" + ParsedJSON.ITEMS[x].NUMBER + ".NAME", ParsedJSON.ITEMS[x].NAME, true);
+					adapter.setState("channel" + ParsedJSON.ITEMS[x].NUMBER + ".STATE", false, true);
+					adapter.log.debug("setupGatewayDevices: Added Device ID: " + ParsedJSON.ITEMS[x].NUMBER + ", Name: " + ParsedJSON.ITEMS[x].NAME + ", Type: " + ParsedJSON.ITEMS[x].TYPE);
 				break;
 
 				case "DIMMER":
-					adapter.setObjectNotExists("channels." + ParsedJSON.ITEMS[x].NUMBER, {
-					type: "device",
+					adapter.setObjectNotExists("channel" + ParsedJSON.ITEMS[x].NUMBER, {
+					_id : adapter.namespace + "channel" + ParsedJSON.ITEMS[x].NUMBER,
+					type: "channel",
 					common: {
-						name: ParsedJSON.ITEMS[x].NUMBER,
-						type: "string",
-						role: "device"
+						name: ParsedJSON.ITEMS[x].NAME,
 					},
 					native: {}
 					});
 					
-					adapter.setObjectNotExists("channels." + ParsedJSON.ITEMS[x].NUMBER + ".ID", {
+					adapter.setObjectNotExists("channel" + ParsedJSON.ITEMS[x].NUMBER + ".ID", {
+					_id : adapter.namespace + "channel" + ParsedJSON.ITEMS[x].NUMBER + ".ID",
 					type: "state",
-					common: {
-						name: ParsedJSON.ITEMS[x].NAME + ".ID",
+						common: {
+						name: ParsedJSON.ITEMS[x].NAME + ":ID",
 						type: "string",
-						role: "id"
+						role: "id",
+						write: "false",
+						read: "true"
 					},
 					native: {}
 					});	
 				
-					adapter.setObjectNotExists("channels." + ParsedJSON.ITEMS[x].NUMBER + ".NAME", {
+					adapter.setObjectNotExists("channel" + ParsedJSON.ITEMS[x].NUMBER + ".NAME", {
+					_id : adapter.namespace + "channel" + ParsedJSON.ITEMS[x].NUMBER + ".NAME",
 					type: "state",
-					common: {
-						name: ParsedJSON.ITEMS[x].NAME + ".NAME",
+						common: {
+						name: ParsedJSON.ITEMS[x].NAME + ":NAME",
 						type: "string",
-						role: "id"
+						role: "value",
+						write: "false",
+						read: "true"
 					},
 					native: {}
 					});															
 						
-					adapter.setObjectNotExists("channels." + ParsedJSON.ITEMS[x].NUMBER + ".LEVEL", {
+					adapter.setObjectNotExists("channel" + ParsedJSON.ITEMS[x].NUMBER + ".LEVEL", {
+					_id : adapter.namespace + "channel" + ParsedJSON.ITEMS[x].NUMBER + ".LEVEL",
 					type: "state",
 					common: {
-						name: ParsedJSON.ITEMS[x].NAME + ".LEVEL",
+						name: ParsedJSON.ITEMS[x].NAME + ":LEVEL",
 						type: "number",
 						role: "level.dimmer",
 						min: 0,
@@ -408,47 +533,53 @@ function setupDevices(gw, res)
 
 					if (x > 15 && x < 40)		// Do not subscribe scenes, master dim and all on/off!
 						channelArray.push(x);
-					adapter.setState("channels." + ParsedJSON.ITEMS[x].NUMBER + ".ID", ParsedJSON.ITEMS[x].NUMBER, true);
-					adapter.setState("channels." + ParsedJSON.ITEMS[x].NUMBER + ".NAME", ParsedJSON.ITEMS[x].NAME, true);
-					adapter.setState("channels." + ParsedJSON.ITEMS[x].NUMBER + ".LEVEL", "0", true);
-					adapter.log.debug("setupDevices: Added Device ID: " + ParsedJSON.ITEMS[x].NUMBER + ", Name: " + ParsedJSON.ITEMS[x].NAME + ", Type: " + ParsedJSON.ITEMS[x].TYPE);
+					adapter.setState("channel" + ParsedJSON.ITEMS[x].NUMBER + ".ID", ParsedJSON.ITEMS[x].NUMBER, true);
+					adapter.setState("channel" + ParsedJSON.ITEMS[x].NUMBER + ".NAME", ParsedJSON.ITEMS[x].NAME, true);
+					adapter.setState("channel" + ParsedJSON.ITEMS[x].NUMBER + ".LEVEL", "0", true);
+					adapter.log.debug("setupGatewayDevices: Added Device ID: " + ParsedJSON.ITEMS[x].NUMBER + ", Name: " + ParsedJSON.ITEMS[x].NAME + ", Type: " + ParsedJSON.ITEMS[x].TYPE);
 				break;
 
 				case "JALOUSIE":
-					adapter.setObjectNotExists("channels." + ParsedJSON.ITEMS[x].NUMBER, {
-					type: "device",
+					adapter.setObjectNotExists("channel" + ParsedJSON.ITEMS[x].NUMBER, {
+					_id : adapter.namespace + "channel" + ParsedJSON.ITEMS[x].NUMBER,
+					type: "channel",
 					common: {
-						name: ParsedJSON.ITEMS[x].NUMBER,
-						type: "string",
-						role: "device"
+						name: ParsedJSON.ITEMS[x].NAME,
 					},
 					native: {}
 					});
 					
-					adapter.setObjectNotExists("channels." + ParsedJSON.ITEMS[x].NUMBER + ".ID", {
+					adapter.setObjectNotExists("channel" + ParsedJSON.ITEMS[x].NUMBER + ".ID", {
+					_id : adapter.namespace + "channel" + ParsedJSON.ITEMS[x].NUMBER + ".ID",
 					type: "state",
 					common: {
-						name: ParsedJSON.ITEMS[x].NAME + ".ID",
+						name: ParsedJSON.ITEMS[x].NAME + ":ID",
 						type: "string",
-						role: "id"
+						role: "id",
+						write: "false",
+						read: "true"
 					},
 					native: {}
 					});	
 				
-					adapter.setObjectNotExists("channels." + ParsedJSON.ITEMS[x].NUMBER + ".NAME", {
+					adapter.setObjectNotExists("channel" + ParsedJSON.ITEMS[x].NUMBER + ".NAME", {
+					_id : adapter.namespace + "channel" + ParsedJSON.ITEMS[x].NUMBER + ".NAME",
 					type: "state",
 					common: {
-						name: ParsedJSON.ITEMS[x].NAME + ".NAME",
+						name: ParsedJSON.ITEMS[x].NAME + ":NAME",
 						type: "string",
-						role: "id"
+						role: "value",
+						write: "false",
+						read: "true"
 					},
 					native: {}
 					});															
 						
-					adapter.setObjectNotExists("channels." + ParsedJSON.ITEMS[x].NUMBER + ".LEVEL", {
+					adapter.setObjectNotExists("channel" + ParsedJSON.ITEMS[x].NUMBER + ".LEVEL", {
+					_id : adapter.namespace + "channel" + ParsedJSON.ITEMS[x].NUMBER + ".LEVEL",
 					type: "state",
 					common: {
-						name: ParsedJSON.ITEMS[x].NAME + ".LEVEL",
+						name: ParsedJSON.ITEMS[x].NAME + ":LEVEL",
 						type: "number",
 						role: "level.blind",
 						min: 0,
@@ -459,10 +590,10 @@ function setupDevices(gw, res)
 
 					if (x > 15 && x < 40)		// Do not subscribe scenes, master dim and all on/off!
 						channelArray.push(x);
-					adapter.setState("channels." + ParsedJSON.ITEMS[x].NUMBER + ".ID", ParsedJSON.ITEMS[x].NUMBER, true);
-					adapter.setState("channels." + ParsedJSON.ITEMS[x].NUMBER + ".NAME", ParsedJSON.ITEMS[x].NAME, true);
-					adapter.setState("channels." + ParsedJSON.ITEMS[x].NUMBER + ".LEVEL", "0", true);
-					adapter.log.debug("setupDevices: Added Device ID: " + ParsedJSON.ITEMS[x].NUMBER + ", Name: " + ParsedJSON.ITEMS[x].NAME + ", Type: " + ParsedJSON.ITEMS[x].TYPE);
+					adapter.setState("channel" + ParsedJSON.ITEMS[x].NUMBER + ".ID", ParsedJSON.ITEMS[x].NUMBER, true);
+					adapter.setState("channel" + ParsedJSON.ITEMS[x].NUMBER + ".NAME", ParsedJSON.ITEMS[x].NAME, true);
+					adapter.setState("channel" + ParsedJSON.ITEMS[x].NUMBER + ".LEVEL", "0", true);
+					adapter.log.debug("setupGatewayDevices: Added Device ID: " + ParsedJSON.ITEMS[x].NUMBER + ", Name: " + ParsedJSON.ITEMS[x].NAME + ", Type: " + ParsedJSON.ITEMS[x].TYPE);
 				break;
 				
 				case "NONE":
@@ -470,41 +601,46 @@ function setupDevices(gw, res)
 				break;
 				
 				default:
-					adapter.log.error("setupDevices: ERROR! Unknown device type " + ParsedJSON.ITEMS[x].NUMBER + ", Channel: " + ParsedJSON.ITEMS[x].NUMBER + ", Name: " + ParsedJSON.ITEMS[x].NAME);
+					adapter.log.error("setupGatewayDevices: ERROR! Unknown device type " + ParsedJSON.ITEMS[x].NUMBER + ", Channel: " + ParsedJSON.ITEMS[x].NUMBER + ", Name: " + ParsedJSON.ITEMS[x].NAME);
 			}
 		}
 		
 		if (SyncRoomsAndScenes)
 		{
-			adapter.log.debug("setupDevices: Reading Rooms...");
+			adapter.log.debug("setupGatewayDevices: Reading Rooms...");
 			for (var x = 0; x < RoomsCount; x++) 
 			{
-				adapter.setObjectNotExists("rooms." + ParsedJSON.LISTS[x].NUMBER, {
-				type: "state",
+				adapter.setObjectNotExists("rooms.room" + ParsedJSON.LISTS[x].NUMBER, {
+				_id : adapter.namespace + "rooms.room" + ParsedJSON.ITEMS[x].NUMBER,
+				type: "channel",
 				common: {
-					name: ParsedJSON.LISTS[x].NUMBER,
-					type: "string",
-					role: "state"
+					name: ParsedJSON.LISTS[x].NAME,
 				},
 				native: {}
 				});
 			
-				adapter.setObjectNotExists("rooms." + ParsedJSON.LISTS[x].NUMBER + ".ID", {
+				adapter.setObjectNotExists("rooms.room" + ParsedJSON.LISTS[x].NUMBER + ".ID", {
+					_id : adapter.namespace + "rooms.room" + ParsedJSON.ITEMS[x].NUMBER + ".ID",
 				type: "state",
 					common: {
-					name: ParsedJSON.LISTS[x].NAME + ".ID",
+					name: ParsedJSON.LISTS[x].NAME + ":ID",
 					type: "string",
-					role: "id"
+					role: "id",
+					write: "false",
+					read: "true"
 				},
 				native: {}
 				});	
 			
-				adapter.setObjectNotExists("rooms." + ParsedJSON.LISTS[x].NUMBER + ".NAME", {
+				adapter.setObjectNotExists("rooms.room" + ParsedJSON.LISTS[x].NUMBER + ".NAME", {
+				_id : adapter.namespace + "rooms.room" + ParsedJSON.ITEMS[x].NUMBER + ".NAME",
 				type: "state",
 				common: {
-					name: ParsedJSON.LISTS[x].NAME + ".NAME",
+					name: ParsedJSON.LISTS[x].NAME + ":NAME",
 					type: "string",
-					role: "id"
+					role: "value",
+					write: "false",
+					read: "true"
 				},
 				native: {}
 				});								
@@ -512,31 +648,35 @@ function setupDevices(gw, res)
 				if (ParsedJSON.LISTS[x].ITEMS_ORDER)			// There are devices in this room
 				{
 					var DevicesInRoom = ParsedJSON.LISTS[x].ITEMS_ORDER;
-					adapter.setObjectNotExists("rooms." + ParsedJSON.LISTS[x].NUMBER + ".DEVICES", {
+					adapter.setObjectNotExists("rooms.room" + ParsedJSON.LISTS[x].NUMBER + ".DEVICES", {
+					_id : adapter.namespace + "rooms.room" + ParsedJSON.ITEMS[x].NUMBER + ".DEVICES",
 					type: "state",
 					common: {
-						name: ParsedJSON.LISTS[x].NAME + ".DEVICES",
+						name: ParsedJSON.LISTS[x].NAME + ":DEVICES",
 						type: "string",
-						role: "state"
+						role: "value",
+						write: "false",
+						read: "true"
 					},
 					native: {}
 					});		
-					adapter.setState("rooms." + ParsedJSON.LISTS[x].NUMBER + ".DEVICES", DevicesInRoom.toString(), true);
+					adapter.setState("rooms.room" + ParsedJSON.LISTS[x].NUMBER + ".DEVICES", DevicesInRoom.toString(), true);
 				}
 
-				adapter.setState("rooms." + ParsedJSON.LISTS[x].NUMBER + ".ID", ParsedJSON.LISTS[x].NUMBER, true);
-				adapter.setState("rooms." + ParsedJSON.LISTS[x].NUMBER + ".NAME", ParsedJSON.LISTS[x].NAME, true);
-				adapter.log.debug("setupDevices: Added Room ID: " + ParsedJSON.LISTS[x].NUMBER + ", Name: " + ParsedJSON.LISTS[x].NAME);						
+				adapter.setState("rooms.room" + ParsedJSON.LISTS[x].NUMBER + ".ID", ParsedJSON.LISTS[x].NUMBER, true);
+				adapter.setState("rooms.room" + ParsedJSON.LISTS[x].NUMBER + ".NAME", ParsedJSON.LISTS[x].NAME, true);
+				adapter.log.debug("setupGatewayDevices: Added Room ID: " + ParsedJSON.LISTS[x].NUMBER + ", Name: " + ParsedJSON.LISTS[x].NAME);						
 			}
 		}		
 
-		adapter.log.debug("setupDevices: Channels for subscription: " + channelArray.toString());
+		adapter.log.debug("setupGatewayDevices: Channels for subscription: " + channelArray.toString());
 		adapter.setObjectNotExists("gateway.subscribeable_channels", {
+		_id : adapter.namespace + "gateway.subscribeable_channels",
 		type: "state",
 		common: {
 		name: "eNet channels to subscribe for",
 			type: "string",
-			role: "state",
+			role: "value",
 			read: true,
 			write: false
 		},

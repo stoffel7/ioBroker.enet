@@ -14,26 +14,12 @@ Windows: [![AppVeyor](https://ci.appveyor.com/api/projects/status/9ow8uf5dq6u8fp
 
 Jung/Gira eNet Smarthome Adapter for [ioBroker smart home system](https://www.iobroker.net)
 
-Control Jung/Gira eNet smarthome devices using the Jung/Gira
-eNet Mobile Gate Wireless IP gateway (https://www.gira.com/en_GB/gebaeudetechnik/systeme/enet/enet-produkte/bediengeraete/enet-mobile-gate.html).
+Control Jung/Gira eNet smarthome devices using the Jung/Gira eNet Mobile Gate Wireless IP gateway (https://www.gira.com/en_GB/gebaeudetechnik/systeme/enet/enet-produkte/bediengeraete/enet-mobile-gate.html) or the Jung/Gira eNet Smart Home Server.
 
 
 ## Changelog
-### 1.0.0 (2018-04-15)
+### 1.0.0 (2019-01-21)
 * (SebastianSchultz) first release
-* (SebastianSchultz) added Travis-CI and AppVeyor tests
-
-### 0.0.4 (2018-04-07)
-* (SebastianSchultz) added support for materialize UI of ioBroker.admin v3
-
-### 0.0.3 (2017-01-24)
-* (SebastianSchultz) fixed a bug regarding the control of blinds
-
-### 0.0.2 (2017-01-08)
-* (SebastianSchultz) cleaning up code
-
-### 0.0.1 (2017-01-06)
-* (SebastianSchultz) initial commit
 
 
 
@@ -46,7 +32,7 @@ eNet Mobile Gate Wireless IP gateway (https://www.gira.com/en_GB/gebaeudetechnik
 
 The MIT License (MIT)
 
-Copyright (c) 2018 SebastianSchultz
+Copyright (c) 2019 SebastianSchultz
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
