@@ -18,6 +18,8 @@ Control Jung/Gira eNet smarthome devices using the Jung/Gira eNet Mobile Gate Wi
 
 
 ## Changelog
+### 1.0.1 (2019-01-21)
+* (SebastianSchultz) added support for compact mode
 ### 1.0.0 (2019-01-21)
 * (SebastianSchultz) first release
 

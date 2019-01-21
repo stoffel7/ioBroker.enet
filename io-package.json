@@ -2,9 +2,9 @@
     "common": {
         "name": "enet",
         "title": "Jung/Gira eNet Adapter",
-        "version": "1.0.0",
+        "version": "1.0.1",
         "news": {
-            "1.0.0": {
+            "1.0.1": {
                 "en": "First release",
                 "de": "Erstes Release",
                 "ru": "First release",

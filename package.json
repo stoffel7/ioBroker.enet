@@ -62,7 +62,7 @@
     ]
   ],
   "_from": "https://github.com/SebastianSchultz/ioBroker.enet/tarball/enet_server_dev",
-  "_id": "iobroker.enet@1.0.0",
+  "_id": "iobroker.enet@1.0.1",
   "_inCache": true,
   "_location": "/iobroker.enet",
   "_phantomChildren": {},
@@ -121,5 +121,5 @@
   "scripts": {
     "test": "node node_modules/mocha/bin/mocha"
   },
-  "version": "1.0.0"
+  "version": "1.0.1"
 }
