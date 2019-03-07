@@ -8,7 +8,7 @@
   },
   "bundleDependencies": false,
   "dependencies": {
-    "@iobroker/adapter-core": "^1.0.2"
+    "@iobroker/adapter-core": "^1.0.3"
   },
   "deprecated": false,
   "description": "ioBroker eNet Adapter",
@@ -34,7 +34,7 @@
     "url": "git+https://github.com/SebastianSchultz/ioBroker.enet.git"
   },
   "scripts": {
-    "test": "node node_modules/mocha/bin/mocha"
+    "test": "node node_modules/mocha/bin/mocha --exit"
   },
   "version": "1.0.1"
 }
