@@ -2,7 +2,7 @@
 # ioBroker.enet
 ===================
 
-[![NPM version](http://img.shields.io/npm/v/iobroker.enet.svg)](https://www.npmjs.com/package/iobroker.enet)
+![Number of Installations](http://iobroker.live/badges/enet-installed.svg) ![Number of Installations](http://iobroker.live/badges/enet-stable.svg) [![NPM version](http://img.shields.io/npm/v/iobroker.enet.svg)](https://www.npmjs.com/package/iobroker.enet)
 [![Downloads](https://img.shields.io/npm/dm/iobroker.enet.svg)](https://www.npmjs.com/package/iobroker.enet)
 
 [![NPM](https://nodei.co/npm/iobroker.enet.png?downloads=true)](https://nodei.co/npm/iobroker.enet/)
