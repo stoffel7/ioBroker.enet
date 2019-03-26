@@ -1,6 +1,5 @@
 ![Logo](admin/enet.png)
 # ioBroker.enet
-===================
 
 ![Number of Installations](http://iobroker.live/badges/enet-installed.svg) ![Number of Installations](http://iobroker.live/badges/enet-stable.svg) [![NPM version](http://img.shields.io/npm/v/iobroker.enet.svg)](https://www.npmjs.com/package/iobroker.enet)
 [![Downloads](https://img.shields.io/npm/dm/iobroker.enet.svg)](https://www.npmjs.com/package/iobroker.enet)
@@ -10,25 +9,15 @@
 **Tests:** Linux/Mac: [![Travis-CI](https://travis-ci.org/SebastianSchultz/ioBroker.enet.svg?branch=master)](https://travis-ci.org/SebastianSchultz/ioBroker.enet)
 Windows: [![AppVeyor](https://ci.appveyor.com/api/projects/status/9ow8uf5dq6u8fpfv/branch/master?svg=true)](https://ci.appveyor.com/project/SebastianSchultz/iobroker-enet/branch/master)
 
-
-
 Jung/Gira eNet Smarthome Adapter for [ioBroker smart home system](https://www.iobroker.net)
 
 Control Jung/Gira eNet smarthome devices using the Jung/Gira eNet Mobile Gate Wireless IP gateway (https://www.gira.com/en_GB/gebaeudetechnik/systeme/enet/enet-produkte/bediengeraete/enet-mobile-gate.html) or the Jung/Gira eNet Smart Home Server.
-
 
 ## Changelog
 ### 1.0.1 (2019-01-21)
 * (SebastianSchultz) added support for compact mode
 ### 1.0.0 (2019-01-21)
 * (SebastianSchultz) first release
-
-
-
-
-
----
-
 
 ## License
 
