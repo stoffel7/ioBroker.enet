@@ -26,6 +26,7 @@
         "authors": [
             "SebastianSchultz <mail@sebastian-schultz.de>"
         ],
+	"main": "main.js",
         "platform": "Javascript/Node.js",
         "mode": "daemon",
         "icon": "enet.png",
