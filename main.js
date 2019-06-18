@@ -18,7 +18,6 @@ var utils = require('@iobroker/adapter-core');
 var adapter;
 var eNet = require(__dirname + "/lib/enet");
 var Gateway = require(__dirname + "/lib/gateway");
-var adapter = new utils.Adapter("enet");
 var pollTimerStates = null;
 var SyncRoomsAndScenes = false;
 var eNetType = "Server";
@@ -26,19 +25,13 @@ var eNetType = "Server";
 var http = require('http');
 var crypto = require('crypto');
 
-if (module && module.parent) {
-    module.exports = startAdapter;
-} else {
-    // or start the instance directly
-    startAdapter();
-} 
-
 function startAdapter(options) {
     options = options || {};
     Object.assign(options,{
         name:  "enet",
         stateChange:  function (id, state) 
 		{
+			eNetType = adapter.config.devicetype;
 			if (eNetType == "Gateway")
 			{
 				var eNetChannelArray = id.split(".");
@@ -54,60 +47,51 @@ function startAdapter(options) {
 			{
 			}
 		},
-        unload: function (callback) {
-            callback();
+        unload: function (callback) 
+		{
+			try 
+			{
+				eNetType = adapter.config.devicetype;		
+				if (eNetType == "Gateway")
+				{
+					clearInterval(pollTimerStates);
+					pollTimerStates = null;				
+				}
+				else if (eNetType == "Server")
+				{
+				}
+				adapter.setState("info.connection", false, true);
+				callback();
+			} 
+			catch (e) 
+			{
+				callback();
+			}			
         },
-        ready: function () {
+        ready: function () 
+		{
+			eNetType = adapter.config.devicetype;
+			if (eNetType == "Gateway")
+			{
+				adapter.log.info("Running eNet Adapter Version " + adapter.version + ", Configured eNet Gateway: " + adapter.config.ip);
+			}
+			else if (eNetType == "Server")
+			{
+				adapter.log.info("Running eNet Adapter Version " + adapter.version + ", Configured eNet Server: " + adapter.config.ip + ", Username: " + adapter.config.username);
+			}
+			init();			
             main();
         }
     });
-
     adapter = new utils.Adapter(options);
-
     return adapter;
 }			
-
-
-adapter.on("unload", function (callback) 
-{
-    try 
-	{
-		if (eNetType == "Gateway")
-		{
-			clearInterval(pollTimerStates);
-			pollTimerStates = null;				
-		}
-		else if (eNetType == "Server")
-		{
-		}
-		
-		adapter.setState("info.connection", false, true);
-        callback();
-    } 
-	catch (e) 
-	{
-        callback();
-    }
-});
-
-adapter.on("ready", function () 
-{
-	eNetType = adapter.config.devicetype;
-	if (eNetType == "Gateway")
-	{
-		adapter.log.info("Running eNet Adapter Version " + adapter.version + ", Configured eNet Gateway: " + adapter.config.ip);
-	}
-	else if (eNetType == "Server")
-	{
-		adapter.log.info("Running eNet Adapter Version " + adapter.version + ", Configured eNet Server: " + adapter.config.ip + ", Username: " + adapter.config.username);
-	}
-    init();
-});
 
 function init() 
 {
 	if (adapter.config.ip)
 	{
+		eNetType = adapter.config.devicetype;
 		if (eNetType == "Gateway")
 		{
 			getGatewayDevices(adapter.config.ip)
@@ -124,6 +108,7 @@ function main()
 	adapter.subscribeStates("*");
 	if (parseInt(adapter.config.interval, 10))
 	{
+		eNetType = adapter.config.devicetype;
 		if (eNetType == "Gateway")
 		{
 			pollTimerStates = setInterval(getGatewayStates, parseInt(adapter.config.interval, 10));
@@ -166,6 +151,7 @@ function deleteGatewayStates(states, callback)
 		return;
 	}
 	
+	eNetType = adapter.config.devicetype;
 	if (eNetType == "Gateway")
 	{
 		var id = states.pop();
@@ -734,3 +720,10 @@ function setGatewayChannel(ip, id, channel, state)
 		}
 	}); 	
 };
+
+if (module && module.parent) {
+    module.exports = startAdapter;
+} else {
+    // or start the instance directly
+    startAdapter();
+} 
