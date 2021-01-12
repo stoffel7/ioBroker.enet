@@ -1,77 +1,122 @@
 {
-    "common": {
-        "name": "enet",
-        "title": "Jung/Gira eNet",
-        "version": "1.0.1",
-        "news": {
-            "1.0.1": {
-                "en": "First release",
-                "de": "Erstes Release",
-                "ru": "First release",
-                "pt": "First release",
-                "fr": "First release",
-                "nl": "First release"
-            }
-        },
-        "desc": {
-            "en": "Controls Jung/Gira eNet Smarthome devices through the eNet Mobile Gate Wireless IP gateway or the eNet Smart Home Server",
-            "de": "Steuert Jung/Gira eNet Smarthome-Geräte über das eNet Mobile Gate Funk IP Gateway oder dem eNet Smart Home Server",
-            "ru": "Controls Jung/Gira eNet Smarthome devices through the eNet Mobile Gate Wireless IP gateway or the eNet Smart Home Server",
-            "pt": "Controls Jung/Gira eNet Smarthome devices through the eNet Mobile Gate Wireless IP gateway or the eNet Smart Home Server",
-            "fr": "Controls Jung/Gira eNet Smarthome devices through eNet Mobile Gate Wireless IP gateway or the eNet Smart Home Server",
-            "nl": "Controls Jung/Gira eNet Smarthome devices through eNet Mobile Gate Wireless IP gateway or the eNet Smart Home Server",
-            "it": "Controls Jung/Gira eNet Smarthome devices through eNet Mobile Gate Wireless IP gateway or the eNet Smart Home Server",
-            "es": "Controls Jung/Gira eNet Smarthome devices through eNet Mobile Gate Wireless IP gateway or the eNet Smart Home Server"
-        },
-        "authors": [
-            "SebastianSchultz <mail@sebastian-schultz.de>"
-        ],
-	"main": "main.js",
-        "platform": "Javascript/Node.js",
-        "mode": "daemon",
-        "icon": "enet.png",
-        "materialize": true,
-        "enabled": false,
-        "extIcon": "https://raw.githubusercontent.com/SebastianSchultz/ioBroker.enet/master/admin/enet.png",
-        "keywords": ["ioBroker", "Jung", "Gira", "eNet", "smart home"],
-        "readme": "https://github.com/SebastianSchultz/ioBroker.enet/blob/master/README.md",
-        "loglevel": "info",
-        "type": "iot-systems",
-		"license": "MIT",
-		"compact": true
+  "common": {
+    "name": "enet",
+    "title": "Jung/Gira eNet",
+    "version": "1.0.1",
+    "news": {
+      "1.0.1": {
+        "en": "First release",
+        "de": "Erstes Release",
+        "ru": "First release",
+        "pt": "First release",
+        "fr": "First release",
+        "nl": "First release"
+      }
     },
-    "native": {
-		"devicetype": "Server",
-        "ip": "",
-		"username": "",
-		"password": "",
-        "interval": 3000,
-		"sync_roomsandscenes": false
+    "desc": {
+      "en": "Controls Jung/Gira eNet Smarthome devices through the eNet Mobile Gate Wireless IP gateway or the eNet Smart Home Server",
+      "de": "Steuert Jung/Gira eNet Smarthome-Geräte über das eNet Mobile Gate Funk IP Gateway oder dem eNet Smart Home Server",
+      "ru": "Controls Jung/Gira eNet Smarthome devices through the eNet Mobile Gate Wireless IP gateway or the eNet Smart Home Server",
+      "pt": "Controls Jung/Gira eNet Smarthome devices through the eNet Mobile Gate Wireless IP gateway or the eNet Smart Home Server",
+      "fr": "Controls Jung/Gira eNet Smarthome devices through eNet Mobile Gate Wireless IP gateway or the eNet Smart Home Server",
+      "nl": "Controls Jung/Gira eNet Smarthome devices through eNet Mobile Gate Wireless IP gateway or the eNet Smart Home Server",
+      "it": "Controls Jung/Gira eNet Smarthome devices through eNet Mobile Gate Wireless IP gateway or the eNet Smart Home Server",
+      "es": "Controls Jung/Gira eNet Smarthome devices through eNet Mobile Gate Wireless IP gateway or the eNet Smart Home Server"
     },
-    "objects": [
-
+    "authors": [
+      "SebastianSchultz <mail@sebastian-schultz.de>"
     ],
-    "instanceObjects": [
-        {
-            "_id": "info",
-            "type": "channel",
-            "common": {
-                "name": "Information"
-            },
-            "native": {}
-        },
-        {
-            "_id": "info.connection",
-            "type": "state",
-            "common": {
-                "role": "indicator.connected",
-                "name": "If connected to eNet Gateway or Server",
-                "type": "boolean",
-                "read": true,
-                "write": false,
-                "def": false
-            },
-            "native": {}
-        }
-    ]
+    "main": "main.js",
+    "platform": "Javascript/Node.js",
+    "mode": "daemon",
+    "icon": "enet.png",
+    "materialize": true,
+    "enabled": false,
+    "extIcon": "https://raw.githubusercontent.com/SebastianSchultz/ioBroker.enet/master/admin/enet.png",
+    "keywords": [
+      "ioBroker",
+      "Jung",
+      "Gira",
+      "eNet",
+      "smart home"
+    ],
+    "readme": "https://github.com/SebastianSchultz/ioBroker.enet/blob/master/README.md",
+    "loglevel": "info",
+    "type": "iot-systems",
+    "license": "MIT",
+    "compact": true,
+    "installedFrom": "https://github.com/SebastianSchultz/ioBroker.enet/tarball/b5dcf212cefff6ade77583e1b095926e60ce47de"
+  },
+  "native": {
+    "devicetype": "Server",
+    "ip": "",
+    "username": "",
+    "password": "",
+    "interval": 3000,
+	"connection_type_ssl": false,
+    "sync_roomsandscenes": false
+  },
+  "objects": [],
+  "instanceObjects": [
+    {
+      "_id": "info",
+      "type": "channel",
+      "common": {
+        "name": "Information"
+      },
+      "native": {}
+    },
+    {
+      "_id": "info.connection",
+      "type": "state",
+      "common": {
+        "role": "indicator.connected",
+        "name": "If connected to eNet Gateway or Server",
+        "type": "boolean",
+        "read": true,
+        "write": false,
+        "def": false
+      },
+      "native": {}
+    },
+    {
+      "_id": "info.CounterID",
+      "type": "state",
+      "common": {
+        "name": "eNet Server Counter ID",
+        "type": "string",
+		"role": "value",
+        "read": true,
+        "write": false,
+        "def": false
+      },
+      "native": {}
+    },
+    {
+      "_id": "info.ICP",
+      "type": "state",
+      "common": {
+        "name": "eNet Server ICP",
+        "type": "string",
+		"role": "value",
+        "read": true,
+        "write": false,
+        "def": false
+      },
+      "native": {}
+    },
+    {
+      "_id": "info.SessionID",
+      "type": "state",
+      "common": {
+        "name": "eNet Server Counter ID",
+        "type": "string",
+		"role": "value",
+        "read": true,
+        "write": false,
+        "def": false
+      },
+      "native": {}
+    }
+  ]
 }

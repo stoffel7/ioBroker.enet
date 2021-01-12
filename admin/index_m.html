@@ -27,10 +27,13 @@
 		        // do not call onChange direct, because onChange could expect some arguments
                 $key.prop('checked', settings[id]).change(function() {
 
-					if ($('#sync_roomsandscenes').prop('checked') && $('#devicetype').val() == 'Server')
+					if ($('#sync_roomsandscenes').prop('checked') && $('#devicetype').val() == 'eNet Server')
 					{
-						//showToast(_('Please activate secure communication'));
 						$('#sync_roomsandscenes').prop('checked', false);
+					}
+					if ($('#connection_type_ssl').prop('checked') && $('#devicetype').val() == 'eNet Gateway')
+					{
+						$('#connection_type_ssl').prop('checked', false);
 					}
 					onChange();
                 });
@@ -52,7 +55,9 @@
 				$('#usernamelabel').show();
 				$('#password').show();
 				$('#passwordlabel').show();
+				$('#connection_type_ssl').removeClass('disabled');
 				$('#sync_roomsandscenes').addClass('disabled');
+				$('#sync_roomsandscenes').prop('checked', false);
 			break;
 			
 			case 'Gateway':
@@ -60,6 +65,8 @@
 				$('#usernamelabel').hide();
 				$('#password').hide();
 				$('#passwordlabel').hide();
+				$('#connection_type_ssl').addClass('disabled');
+				$('#connection_type_ssl').prop('checked', false);
 				$('#sync_roomsandscenes').removeClass('disabled');
 			break;
 			
@@ -76,7 +83,9 @@
 					$('#usernamelabel').show();
 					$('#password').show();
 					$('#passwordlabel').show();
+					$('#connection_type_ssl').removeClass('disabled');
 					$('#sync_roomsandscenes').addClass('disabled');
+					$('#sync_roomsandscenes').prop('checked', false);
 				break;
 
                 case 'Gateway':
@@ -84,6 +93,8 @@
 					$('#usernamelabel').hide();
 					$('#password').hide();
 					$('#passwordlabel').hide();
+					$('#connection_type_ssl').addClass('disabled');
+					$('#connection_type_ssl').prop('checked', false);
 					$('#sync_roomsandscenes').removeClass('disabled');
 				break;
 
@@ -123,13 +134,17 @@
                 </div>
             </div>
             <div class="row">
-			 <div class="input-field col s12 m6 l4">
+				<div class="input-field col s12 m6 l4">
                     <select class="value" id="devicetype">
                         <option value="Server" class="translate">eNet Server</option>
                         <option value="Gateway" class="translate">eNet Gateway</option>
                     </select>
                     <label class="translate" for="devicetype">devicetype</label>
                 </div>
+                <div class="col s12 m8 l5">
+					<input class="value" id="connection_type_ssl" type="checkbox" value="false"/>
+                    <label for="connection_type_ssl" class="translate" for="connection_type_ssl">connection_type_ssl</label>
+				</div>
 			</div>
 			
 			<div class="row">			

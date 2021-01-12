@@ -1,4 +1,25 @@
 {
+  "_from": "https://github.com/SebastianSchultz/ioBroker.enet/tarball/b5dcf212cefff6ade77583e1b095926e60ce47de",
+  "_id": "iobroker.enet@1.0.1",
+  "_inBundle": false,
+  "_integrity": "sha512-Xfm69+B2157bj6bW98tu0AhhIFxx4tP/2HMJwOznNrNAVjtYauYCSFeaX6p1FkcHUhx5kPXALP9P1aKd8ShK1A==",
+  "_location": "/iobroker.enet",
+  "_phantomChildren": {},
+  "_requested": {
+    "type": "remote",
+    "raw": "https://github.com/SebastianSchultz/ioBroker.enet/tarball/b5dcf212cefff6ade77583e1b095926e60ce47de",
+    "rawSpec": "https://github.com/SebastianSchultz/ioBroker.enet/tarball/b5dcf212cefff6ade77583e1b095926e60ce47de",
+    "saveSpec": "https://github.com/SebastianSchultz/ioBroker.enet/tarball/b5dcf212cefff6ade77583e1b095926e60ce47de",
+    "fetchSpec": "https://github.com/SebastianSchultz/ioBroker.enet/tarball/b5dcf212cefff6ade77583e1b095926e60ce47de"
+  },
+  "_requiredBy": [
+    "#USER",
+    "/"
+  ],
+  "_resolved": "https://github.com/SebastianSchultz/ioBroker.enet/tarball/b5dcf212cefff6ade77583e1b095926e60ce47de",
+  "_shasum": "01dd88df2316643c0d0b516376c70346e85a1da1",
+  "_spec": "https://github.com/SebastianSchultz/ioBroker.enet/tarball/b5dcf212cefff6ade77583e1b095926e60ce47de",
+  "_where": "/",
   "author": {
     "name": "SebastianSchultz",
     "email": "mail@sebastian-mundt.com"
@@ -13,11 +34,11 @@
   "deprecated": false,
   "description": "ioBroker eNet Adapter",
   "devDependencies": {
+    "@iobroker/testing": "^1.1.10",
     "chai": "^4.1.2",
     "grunt": "^1.0.1",
     "gulp": "^3.9.1",
-    "mocha": "^4.1.0",
-    "@iobroker/testing": "^1.1.10"
+    "mocha": "^4.1.0"
   },
   "homepage": "https://github.com/SebastianSchultz/ioBroker.enet",
   "keywords": [
@@ -36,9 +57,9 @@
   },
   "scripts": {
     "test": "npm run test:package && npm run test:unit",
+    "test:integration": "mocha test/integration --exit",
     "test:package": "mocha test/package --exit",
-    "test:unit": "mocha test/unit --exit",
-    "test:integration": "mocha test/integration --exit"
+    "test:unit": "mocha test/unit --exit"
   },
   "version": "1.0.1"
 }
