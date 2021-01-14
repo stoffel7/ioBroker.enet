@@ -113,23 +113,21 @@ function startAdapter(options)
         ready: function () 
 		{
 			ConnectionType_SSL = adapter.config.connection_type_ssl;
+			Connection_Port = adapter.config.connection_port;
 			eNetType = adapter.config.devicetype;
 			if (eNetType == "Gateway")
 			{
-				Connection_Port = 80;
 				adapter.log.info("Running eNet Adapter Version " + adapter.version + ", Configured eNet Gateway: " + adapter.config.ip);
 			}
 			else if (eNetType == "Server")
 			{
 				if (ConnectionType_SSL)
 				{
-					Connection_Port = 443;
-					adapter.log.info("Running eNet Adapter Version " + adapter.version + ", Configured eNet Server: " + adapter.config.ip + " (SSL/HTTPS), Username: " + adapter.config.username);
+					adapter.log.info("Running eNet Adapter Version " + adapter.version + ", Configured eNet Server: " + adapter.config.ip + " (SSL/HTTPS), Username: " + adapter.config.username + " on port " + Connection_Port);
 				}
 				else 
 				{
-					Connection_Port = 80;
-					adapter.log.info("Running eNet Adapter Version " + adapter.version + ", Configured eNet Server: " + adapter.config.ip + ", Username: " + adapter.config.username);
+					adapter.log.info("Running eNet Adapter Version " + adapter.version + ", Configured eNet Server: " + adapter.config.ip + ", Username: " + adapter.config.username + " on port " + Connection_Port);
 				}
 			}
 			init();			

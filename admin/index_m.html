@@ -56,6 +56,7 @@
 				$('#password').show();
 				$('#passwordlabel').show();
 				$('#connection_type_ssl').removeClass('disabled');
+				$('#connection_port').removeClass('disabled');
 				$('#sync_roomsandscenes').addClass('disabled');
 				$('#sync_roomsandscenes').prop('checked', false);
 			break;
@@ -66,6 +67,7 @@
 				$('#password').hide();
 				$('#passwordlabel').hide();
 				$('#connection_type_ssl').addClass('disabled');
+				$('#connection_port').addClass('disabled');
 				$('#connection_type_ssl').prop('checked', false);
 				$('#sync_roomsandscenes').removeClass('disabled');
 			break;
@@ -84,6 +86,7 @@
 					$('#password').show();
 					$('#passwordlabel').show();
 					$('#connection_type_ssl').removeClass('disabled');
+					$('#connection_port').removeClass('disabled');
 					$('#sync_roomsandscenes').addClass('disabled');
 					$('#sync_roomsandscenes').prop('checked', false);
 				break;
@@ -94,6 +97,7 @@
 					$('#password').hide();
 					$('#passwordlabel').hide();
 					$('#connection_type_ssl').addClass('disabled');
+					$('#connection_port').addClass('disabled');
 					$('#connection_type_ssl').prop('checked', false);
 					$('#sync_roomsandscenes').removeClass('disabled');
 				break;
@@ -144,6 +148,10 @@
                 <div class="col s12 m8 l5">
 					<input class="value" id="connection_type_ssl" type="checkbox" value="false"/>
                     <label for="connection_type_ssl" class="translate" for="connection_type_ssl">connection_type_ssl</label>
+				</div>
+                <div class="col s12 m8 l5">
+					<input class="value" id="connection_port" value="80"/>
+                    <label for="connection_port" class="translate" for="connection_port">connection_port</label>
 				</div>
 			</div>
 			

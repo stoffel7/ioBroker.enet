@@ -54,6 +54,7 @@
     "password": "",
     "interval": 3000,
 	"connection_type_ssl": false,
+	"connection_port": 80,
     "sync_roomsandscenes": false
   },
   "objects": [],
