@@ -2,7 +2,7 @@
   "common": {
     "name": "enet",
     "title": "Jung/Gira eNet",
-    "version": "1.0.2",
+    "version": "1.0.6",
     "news": {
       "1.0.1": {
         "en": "First release",
@@ -45,7 +45,7 @@
     "type": "iot-systems",
     "license": "MIT",
     "compact": true,
-    "installedFrom": "https://github.com/SebastianSchultz/ioBroker.enet/tarball/b5dcf212cefff6ade77583e1b095926e60ce47de"
+    "installedFrom": "sebastianschultz/iobroker.enet#350f38d57a877db0993c82a40d717200745e5908"
   },
   "native": {
     "devicetype": "Server",
@@ -53,8 +53,8 @@
     "username": "",
     "password": "",
     "interval": 3000,
-	"connection_type_ssl": false,
-	"connection_port": 80,
+    "connection_type_ssl": false,
+    "connection_port": 80,
     "sync_roomsandscenes": false
   },
   "objects": [],
@@ -86,7 +86,7 @@
       "common": {
         "name": "eNet Server Counter ID",
         "type": "string",
-		"role": "value",
+        "role": "value",
         "read": true,
         "write": true,
         "def": false
@@ -99,7 +99,7 @@
       "common": {
         "name": "eNet Server ICP",
         "type": "string",
-		"role": "value",
+        "role": "value",
         "read": true,
         "write": true,
         "def": false
@@ -110,9 +110,22 @@
       "_id": "info.SessionID",
       "type": "state",
       "common": {
-        "name": "eNet Server Counter ID",
+        "name": "eNet Server Session ID",
         "type": "string",
-		"role": "value",
+        "role": "value",
+        "read": true,
+        "write": true,
+        "def": false
+      },
+      "native": {}
+    },
+    {
+      "_id": "requestEvents",
+      "type": "state",
+      "common": {
+        "name": "eNet Server request Events",
+        "type": "boolean",
+        "role": "value",
         "read": true,
         "write": true,
         "def": false

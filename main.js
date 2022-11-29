@@ -1,1 +1,2174 @@
-'use strict';var _0x2399=['setupGatewayDevices:\x20Reading\x20Rooms...','.InputDevice','eNet\x20Server\x20Session\x20ID','connection_type_ssl','scene.state',',\x20eNet:\x20','{\x22jsonrpc\x22:\x222.0\x22,\x20\x22method\x22:\x22getSceneActions\x22,\x20\x22params\x22:\x20{\x22sceneActionUIDs\x22:[$$uids$$]},\x20\x22id\x22:\x22$$id$$\x22}','pop','outputDeviceFunctions','Login\x20Digest\x20Login:\x20','VALUE','toString','gateway','.\x20Maybe\x20you\x20can\x20try\x20HTTP\x20or\x20non-HTTPS\x20connection?','SETPOINT','Body:\x20','{\x22jsonrpc\x22:\x222.0\x22,\x20\x22method\x22:\x22getCurrentProject\x22,\x20\x22params\x22:\x20null,\x20\x22id\x22:\x22$$id$$\x22}','900355ttpznC','disconnect','sha1','registerEventDeviceBatteryStateChanged','Input_UID','sceneActions','FIRMWARE','/lib/gateway','enet','Starting\x20Login\x20into\x20eNet\x20Server','deviceBatteryStateChanged','\x22.\x20Please\x20try\x20to\x20restart\x20the\x20eNet\x20server,\x20change\x20the\x20connection\x20type\x20(HTTP/HTTPS)\x20and\x20check\x20username/password!','string',',\x20State:\x20','messsage','\x22,\x20\x22response\x22:\x22','replace','Adapter',',\x20Gateway\x20Firmware:\x20','$$typeID$$','{\x22jsonrpc\x22:\x222.0\x22,\x20\x22method\x22:\x20\x22getNameAndValueTypeIDsFromDeviceFunctionType\x22,\x22params\x22:{\x20\x22deviceFunctionTypeID\x22:\x20\x22$$typeID$$\x22},\x22id\x22:\x22$$id$$\x22}','/jsonrpc/visualization/app_scene','sync_roomsandscenes','DELETE\x20STATES\x20SERVER','namespace',',\x20Value:\x20','split','statusValue','GetDevices:\x20Error\x20with\x20request:\x20','TYPE',',\x20Typ:\x20','eNet\x20Server\x20Logout\x20Start','deviceChannels','SetClientRole\x20Error:\x20','18853JLgSug','stringify','request','\x20to\x20ioBroker\x20objects\x20DB\x20Old\x20Value:\x20','application/json;\x20charset=utf-8','eNet.subscribeable_channels',',\x20Configured\x20eNet\x20Server:\x20','toUpperCase','setupGatewayDevices:\x20Error\x20getting\x20eNet\x20Gateway\x20version:\x20','25zFtlgs','Register_Value_Change:','getVersion','ITEMS_ORDER','setupGatewayDevices:\x20Reading\x20Scenes/Channels/Devices...','registerEventSceneActionDeleted','getGatewayStates:\x20Setting\x20state\x20for\x20channel:\x20','val','x-clientcredentials-sessionid','cnonce','41slZsLv','value',',\x20Username:\x20','Cannot\x20write\x20object:\x20','createHash','name','object','search','20272ZRDnHt','VOLT','\x22,\x20\x22realm\x22:\x22Insta-NetBox\x22,\x20\x22nonce\x22:\x22','Login\x20Body:\x20','error','getForeignObject','$$funk$$','deviceUID','lastIndexOf','eNet\x20Server\x20Counter\x20ID','end','devices',':ID','\x22,\x20\x22nc\x22:\x22','State\x20Change\x20ID:\x20',',\x20Data\x20for\x20channel:\x20','ENET','info','Location\x20Path:\x20','indexOf',',\x20Gateway\x20Hardware:\x20','{\x22jsonrpc\x22:\x222.0\x22,\x20\x22method\x22:\x22userLoginDigest\x22,\x20\x22params\x22:{\x22userName\x22:\x22','valueTypeID','round','SetGatewayChannel:\x20SHUTTER:\x20ID:\x20',';\x20downloadFinished=true;\x20rememberMe=true','event','folder','getGatewayStates:\x20Array\x20of\x20subscribeable\x20Channels:\x20','POST:/jsonrpc//management','result','setValue','SetGatewayChannel:\x20Error\x20in\x20setting\x20SHUTTER\x20value:\x20ID:\x20','{\x22jsonrpc\x22:\x222.0\x22,\x20\x22method\x22:\x22setClientRole\x22,\x20\x22params\x22:{\x22clientRole\x22:\x22CR_VISU\x22},\x20\x22id\x22:\x22$$id$$\x22}','$$uids$$','{\x22jsonrpc\x22:\x222.0\x22,\x20\x22method\x22:\x22getCurrentValuesFromOutputDeviceFunction\x22,\x20\x22params\x22:{\x22deviceFunctionUID\x22:\x22$$eventuid$$\x22},\x20\x22id\x22:\x22$$id$$\x22}','Scene\x20BODY:','SetGatewayChannel:\x20Error\x20in\x20setting\x20DIMMER\x20value:\x20ID:\x20','role','channelTypeID','.NAME',':DEVICES','{\x22jsonrpc\x22:\x222.0\x22,\x20\x22method\x22:\x20\x22registerEventValueChanged\x22,\x22params\x22:{\x22valueUID\x22:\x22$$uid$$\x22},\x22id\x22:\x22$$id$$\x22}','GetDevices\x20Pfad:\x20','Szene\x20NEU\x20für:','username','Szene:','\x20(SSL/HTTPS),\x20Username:\x20','debug','toFixed','valueChanged','Register_Scene:','sceneActionUID','events','00000000',':LEVEL','getGatewayDevices:\x20Error\x20getting\x20eNet\x20Gateway\x20devices:\x20','SetState\x20Body\x20Out:\x20','getGatewayStates:\x20Gateway.on\x20Error:\x20','ITEMS','SetGatewayChannel:\x20DIMMER:\x20ID:\x20','currentValues','batteryState',',\x20Raum:\x20','Register\x20DeviceFunction:',',\x20Etage:\x20','$$uid$$','.action','connection_port','.value','nonce','setObjectNotExists','ack','HARDWARE','eNet\x20channels\x20to\x20subscribe\x20for','setupGatewayDevices:\x20Got\x20JSON\x20device\x20information\x20from\x20eNet\x20gateway.\x20Count\x20of\x20Devices:\x20','Error\x20with\x20request\x20SendLoginDigest:\x20','Szene:::::','Error\x20with\x20request:\x20','105WGrvCc','rooms.room','https','inputDeviceFunctions','false','number','undefined','devicetype','info.SessionID',',\x20JSON:\x20','eNet\x20Server\x20OTyp2Ityp\x20','220086fpUtmp','uEhaA=true;\x20pbAudioFalg=ON;\x20VideoFormatAVN=ActiveX;\x20INSTASESSIONID=','PROTOCOL','Register_Value_Change\x20Problem\x20with\x20request:\x20','setEncoding','389JTXCZd','config','setupGatewayDevices:\x20Channels\x20for\x20subscription:\x20','uid','Change:','554599braewm','{\x22jsonrpc\x22:\x222.0\x22,\x20\x22method\x22:\x22requestEvents\x22,\x20\x22params\x22:null,\x20\x22id\x22:\x22$$id$$\x22}','setGatewayChannel:\x20Command\x20successfull:\x20\x0a','stop','deviceTypeID','exports','common','/jsonrpc/visualization','EVENT:\x20','execute\x20Action\x20Problem\x20with\x20request:\x20','substring','true','qop','CT_DEVICE','data','native','NAME','INIT\x20SERVER\x20Routine....','...\x20jetzt\x20noch\x20Szenen\x20suchen....für\x20','Server','ValueType_ID','.ID','\x22,\x20\x22algorithm\x22:\x22sha\x22,\x20\x22opaque\x22:\x22',':auth:','active','childLocations','\x22},\x20\x22id\x22:\x22$$id$$\x22}','Request_events\x20Error:\x20','signIn','OFF','GetLocations\x20Error:\x20','{\x22jsonrpc\x22:\x222.0\x22,\x20\x22method\x22:\x22callInputDeviceFunction\x22,\x20\x22params\x22:{\x22deviceFunctionUID\x22:\x22$$UID$$\x22,\x20\x22values\x22:[{\x22valueTypeID\x22:\x22$$valueTypeID$$\x22,\x20\x22value\x22:$$Wert$$}]},\x20\x22id\x22:\x22$$id$$\x22}','eNet\x20Server\x20Logout,\x20Tschuess\x20....','getGatewayStates:\x20Error\x20on\x20signing\x20in\x20channels\x20for\x20subscription:\x20','getState','mixed','registerEventSceneActionChanged','eNet\x20Server\x20Logout\x20Error:\x20','sceneActionChanged','Return\x20from\x20eNet\x20Server:\x20\x22','{\x22jsonrpc\x22:\x222.0\x22,\x20\x22method\x22:\x20\x22executeAction\x22,\x22params\x22:{\x20\x22actionUID\x22:\x22$$uid$$\x22},\x22id\x22:\x22$$id$$\x22}','switch','GetLocations,\x20Projekt:\x20','code','info.requestEvents','getGatewayStates:\x20Parse\x20JSON\x20Error:\x20','log','.scenes.*','sceneActionDeleted','$$Wert$$',',\x20Configured\x20eNet\x20Gateway:\x20','substr','headers','application/json','setupGatewayDevices:\x20Added\x20Room\x20ID:\x20',',\x20Object\x20Type:\x20','realm','{\x22jsonrpc\x22:\x222.0\x22,\x20\x22userLogout\x22,\x20\x22params\x22:null,\x20\x22id\x22:\x22$$id$$\x22}','STATE',',\x20deviceTypeID:\x20','digest',':NAME','{\x22jsonrpc\x22:\x222.0\x22,\x20\x22method\x22:\x22getLocations\x22,\x20\x22params\x22:{\x22locationUIDs\x22:[]},\x20\x22id\x22:\x22$$id$$\x22}','opaque','boolean','message','\x20Object\x20Role:\x20','typeID',',\x20Type:\x20','Action:\x20','info.connection','eNet\x20Server\x20Logout\x20Request\x20Body\x20IN:\x20','version','Running\x20eNet\x20Adapter\x20Version\x20',',\x20Channel:\x20','\x20new\x20Value:\x20','delState','getGatewayStates:\x20(channel','GetLocations,\x20Room:\x20','channel','\x20on\x20port\x20','SCENE','{\x22jsonrpc\x22:\x222.0\x22,\x20\x22method\x22:\x22$$funk$$\x22,\x20\x22params\x22:\x20null,\x20\x22id\x22:\x22$$id$$\x22}','CT_DISABLED','subscribeStates','connect','LISTS','.status',',\x20Setpoint:\x20','Error\x20with\x20request\x20Login:\x20','execte\x20Action\x20Body\x20Out:\x20','state','{\x22jsonrpc\x22:\x222.0\x22,\x20\x22method\x22:\x20\x22getInputDeviceFunctionUIDCorrespondingToOutputDeviceFunction\x22,\x22params\x22:{\x20\x22deviceFunctionUID\x22:\x20\x22$$typeID$$\x22},\x22id\x22:\x22$$id$$\x22}','locations','deviceUIDs','scenes.scene','level.dimmer','$$valueTypeID$$','JALOUSIE','getObject','assign','{\x22jsonrpc\x22:\x222.0\x22,\x20\x22method\x22:\x22$$func$$\x22,\x20\x22params\x22:\x20$$uid$$,\x20\x22id\x22:\x22$$id$$\x22}','write','hasOwnProperty','hex','DIMMABLE','BINAER','Gateway','extendObject','SetGatewayChannel:\x20Error\x20in\x20setting\x20SWITCH\x20value:\x20ID:\x20','suche\x20Szenen............fuer:','Error\x20on\x20connecting\x20or\x20logging\x20in\x20to\x20eNet\x20server:\x20','$$id$$','getGatewayDevices:\x20Getting\x20gateway\x20devices...',',\x20eNet\x20Input\x20UID:\x20','UID','setupGatewayDevices:\x20Added\x20Device\x20ID:\x20','password','random','setupGatewayDevices:\x20Added\x20Scene\x20ID:\x20','.LEVEL','{\x22jsonrpc\x22:\x222.0\x22,\x22method\x22:\x22getDigestAuthentificationInfos\x22,\x22params\x22:null,\x22id\x22:\x22$$id$$\x22}','LUX','/jsonrpc/management',',\x20eNet\x20Action\x20UID:\x20','length','type','utf8','.batteryState','slice','push','getStates','.STATE)\x20Channel:\x20','eventData','setValueDim','deviceFunctionUID','GetLocations\x20Locations:\x20','NUMBER',',\x20DeviceUID:\x20','update',':Insta-NetBox:','Cannot\x20read\x20object:\x20','SendLoginDigest,\x20Body:\x20','setObject',',\x20VALUE:\x20','.LEVEL)\x20Channel:\x20','{\x22jsonrpc\x22:\x222.0\x22,\x20\x22method\x22:\x22getDevices\x22,\x20\x22params\x22:{\x22deviceUIDs\x22:[\x22$$devuid$$\x22]},\x20\x22id\x22:\x22$$id$$\x22}','POST','NONE',':STATE','9dHqpct','eNet\x20Szene\x20','parse','.DEVICES','setState','deviceChannelConfigurationGroups','SetGatewayChannel:\x20SWITCH:\x20ID:\x20','getGatewayDevices:\x20Connected\x20to\x20eNet\x20Gateway\x20for\x20device\x20setup:\x20','info.CounterID','{\x22jsonrpc\x22:\x222.0\x22,\x20\x22method\x22:\x22getDevicesWithParameterFilter\x22,\x20\x22params\x22:{\x22deviceUIDs\x22:[\x22$$devuid$$\x22],\x20\x22filter\x22:\x22.+\x5c\x5c.(SCV1|SCV2|SNA|PSN)\x5c\x5c[(.|1.|2.|3.)\x5c\x5c]+\x22},\x20\x22id\x22:\x22$$id$$\x22}','level.blind','getProjectList','delObject','88863BGZvhH',',\x20Name:\x20','.STATE'];var _0x2c17=function(_0x161c52,_0x5bcc69){_0x161c52=_0x161c52-0x12a;var _0x239999=_0x2399[_0x161c52];return _0x239999;};var _0x1540a5=_0x2c17;(function(_0x2ebd3f,_0x2469d9){var _0xe5d105=_0x2c17;while(!![]){try{var _0x12a111=-parseInt(_0xe5d105(0x24f))+-parseInt(_0xe5d105(0x27a))*parseInt(_0xe5d105(0x134))+parseInt(_0xe5d105(0x198))+-parseInt(_0xe5d105(0x271))*-parseInt(_0xe5d105(0x12c))+-parseInt(_0xe5d105(0x183))*parseInt(_0xe5d105(0x193))+-parseInt(_0xe5d105(0x18e))+parseInt(_0xe5d105(0x23b))*parseInt(_0xe5d105(0x22e));if(_0x12a111===_0x2469d9)break;else _0x2ebd3f['push'](_0x2ebd3f['shift']());}catch(_0x4347f2){_0x2ebd3f['push'](_0x2ebd3f['shift']());}}}(_0x2399,0x701f5));var utils=require('@iobroker/adapter-core'),adapter,eNet=require(__dirname+'/lib/enet'),Gateway=require(__dirname+_0x1540a5(0x256)),pollTimerStates=null,SyncRoomsAndScenes=![],ConnectionType_SSL=![],Connection_Port=0x50,eNetType=_0x1540a5(0x1ab),crypto=require('crypto'),SessionID='',CounterID='',ncd=0x1,Zaehler=0x1,devtyp='',devUID='',valuePathArray=[],devicePathArray=[],sceneActionPathArray=[],batteryPathArray=[],get_login_digest=_0x1540a5(0x211),get_configuration='{\x22jsonrpc\x22:\x222.0\x22,\x20\x22method\x22:\x22getCurrentConfiguration\x22,\x20\x22params\x22:null,\x20\x22id\x22:\x22$$id$$\x22}',get_locations=_0x1540a5(0x1d6),get_eventid=_0x1540a5(0x237),get_devices=_0x1540a5(0x22a),get_currentvalues=_0x1540a5(0x157),set_state=_0x1540a5(0x1b7),set_client_role=_0x1540a5(0x155),register_value_change=_0x1540a5(0x15e),request_events=_0x1540a5(0x199),HTTPRequest=function(){var _0x3a5610=_0x1540a5,_0x10b98d={'false':require('http'),'true':require(_0x3a5610(0x185))};return function(_0x31b503){var _0x4ff415=_0x3a5610;return _0x10b98d[adapter['config'][_0x4ff415(0x241)]];};}();function startAdapter(_0x32405f){var _0xa0ac8b=_0x1540a5;return _0x32405f=_0x32405f||{},Object[_0xa0ac8b(0x1fc)](_0x32405f,{'name':_0xa0ac8b(0x257),'stateChange':function(_0x28b751,_0x3a2f76){var _0x20c78c=_0xa0ac8b;eNetType=adapter['config']['devicetype'];if(eNetType==_0x20c78c(0x203)){var _0x4ed978=_0x28b751[_0x20c78c(0x269)]('.'),_0x571461=_0x4ed978[0x2];if(_0x571461[_0x20c78c(0x133)](/channel/g));{var _0x3ac288=_0x571461['replace'](_0x20c78c(0x1e7),'');if(_0x3a2f76&&!_0x3a2f76[_0x20c78c(0x17c)])setGatewayChannel(adapter[_0x20c78c(0x194)]['ip'],_0x28b751,_0x3ac288,_0x3a2f76[_0x20c78c(0x281)]);}}else{if(eNetType==_0x20c78c(0x1ab)){if(_0x28b751[_0x20c78c(0x147)](_0x20c78c(0x177))>-0x1){if(_0x3a2f76&&!_0x3a2f76[_0x20c78c(0x17c)]){var _0x1b7019=_0x28b751[_0x20c78c(0x1a2)](0x0,_0x28b751[_0x20c78c(0x13c)]('.'));adapter[_0x20c78c(0x139)](_0x1b7019,function(_0x1a9d4f,_0x54c12a){var _0x18d38f=_0x20c78c;_0x54c12a&&_0x54c12a['native']&&_0x54c12a[_0x18d38f(0x1a7)][_0x18d38f(0x168)]&&(adapter[_0x18d38f(0x1c6)][_0x18d38f(0x164)](_0x18d38f(0x1dd)+_0x28b751+_0x18d38f(0x214)+_0x54c12a[_0x18d38f(0x1a7)][_0x18d38f(0x168)]),eNetServer_executeAction(_0x54c12a[_0x18d38f(0x1a7)]['sceneActionUID']),adapter[_0x18d38f(0x232)](_0x28b751,![],!![]));});}}if(_0x28b751[_0x20c78c(0x147)](_0x20c78c(0x179))>-0x1){if(_0x3a2f76&&!_0x3a2f76['ack']){var _0x1b7019=_0x28b751['substring'](0x0,_0x28b751[_0x20c78c(0x13c)]('.'));adapter[_0x20c78c(0x139)](_0x1b7019,function(_0x5b097c,_0x38a82f){var _0x331e27=_0x20c78c;_0x38a82f&&_0x38a82f[_0x331e27(0x1a7)]&&_0x38a82f['native'][_0x331e27(0x253)]&&_0x38a82f['native'][_0x331e27(0x1ac)]&&(adapter[_0x331e27(0x1c6)]['debug'](_0x331e27(0x142)+_0x28b751+_0x331e27(0x20a)+_0x38a82f[_0x331e27(0x1a7)][_0x331e27(0x253)]+'\x20Value\x20Type\x20ID:'+_0x38a82f[_0x331e27(0x1a7)][_0x331e27(0x1ac)]+_0x331e27(0x268)+_0x3a2f76['val']+',\x20Value\x20type:\x20'+typeof _0x3a2f76[_0x331e27(0x281)]),eNetServer_SetState(_0x38a82f[_0x331e27(0x1a7)][_0x331e27(0x253)],_0x38a82f[_0x331e27(0x1a7)][_0x331e27(0x1ac)],_0x3a2f76[_0x331e27(0x281)]));});}}}}},'unload':function(_0x378a9f){var _0x189f73=_0xa0ac8b;try{eNetType=adapter['config'][_0x189f73(0x18a)];if(eNetType=='Gateway')clearInterval(pollTimerStates),pollTimerStates=null;else eNetType==_0x189f73(0x1ab)&&(clearInterval(pollTimerStates),pollTimerStates=null,eNetServer_Logout());adapter[_0x189f73(0x232)](_0x189f73(0x1de),![],!![]),_0x378a9f();}catch(_0x33c2e0){_0x378a9f();}},'ready':function(){var _0x615cd4=_0xa0ac8b;ConnectionType_SSL=adapter['config'][_0x615cd4(0x241)],Connection_Port=adapter[_0x615cd4(0x194)][_0x615cd4(0x178)],eNetType=adapter[_0x615cd4(0x194)][_0x615cd4(0x18a)];if(eNetType==_0x615cd4(0x203))adapter[_0x615cd4(0x1c6)][_0x615cd4(0x145)](_0x615cd4(0x1e1)+adapter[_0x615cd4(0x1e0)]+_0x615cd4(0x1ca)+adapter[_0x615cd4(0x194)]['ip']);else eNetType==_0x615cd4(0x1ab)&&(ConnectionType_SSL?adapter[_0x615cd4(0x1c6)][_0x615cd4(0x145)](_0x615cd4(0x1e1)+adapter[_0x615cd4(0x1e0)]+',\x20Configured\x20eNet\x20Server:\x20'+adapter[_0x615cd4(0x194)]['ip']+_0x615cd4(0x163)+adapter[_0x615cd4(0x194)][_0x615cd4(0x161)]+_0x615cd4(0x1e8)+Connection_Port):adapter[_0x615cd4(0x1c6)]['info'](_0x615cd4(0x1e1)+adapter['version']+_0x615cd4(0x277)+adapter[_0x615cd4(0x194)]['ip']+_0x615cd4(0x12e)+adapter[_0x615cd4(0x194)]['username']+_0x615cd4(0x1e8)+Connection_Port));init(),main();}}),adapter=new utils[(_0xa0ac8b(0x260))](_0x32405f),adapter;}function init(){var _0x372985=_0x1540a5;if(adapter[_0x372985(0x194)]['ip']){eNetType=adapter[_0x372985(0x194)][_0x372985(0x18a)];if(eNetType=='Gateway')getGatewayDevices(adapter['config']['ip']);else eNetType==_0x372985(0x1ab)&&(init_server(),eNetServer_Login());}}function init_server(){var _0x4119d2=_0x1540a5;adapter[_0x4119d2(0x1c6)]['debug'](_0x4119d2(0x1a9));var _0x582771=adapter[_0x4119d2(0x1ba)](_0x4119d2(0x18b),function(_0x1c28e6,_0x4fe108){var _0x196296=_0x4119d2;!_0x4fe108&&(adapter[_0x196296(0x17b)](_0x196296(0x18b),{'_id':adapter[_0x196296(0x267)]+'info.SessionID','type':_0x196296(0x1f3),'common':{'name':_0x196296(0x240),'type':_0x196296(0x25b),'role':_0x196296(0x12d),'read':!![],'write':!![]},'native':{}}),adapter['setState'](_0x196296(0x18b),'',{'unit':''}));}),_0x25615c=adapter[_0x4119d2(0x1ba)](_0x4119d2(0x236),function(_0x79796a,_0x576cb9){var _0x108a10=_0x4119d2;!_0x576cb9&&(adapter[_0x108a10(0x17b)](_0x108a10(0x236),{'_id':adapter[_0x108a10(0x267)]+_0x108a10(0x236),'type':_0x108a10(0x1f3),'common':{'name':_0x108a10(0x13d),'type':_0x108a10(0x25b),'role':_0x108a10(0x12d),'read':!![],'write':!![]},'native':{}}),adapter[_0x108a10(0x232)](_0x108a10(0x236),0x0,{'unit':''}));});}function main(){var _0x12d0c6=_0x1540a5;adapter[_0x12d0c6(0x1ec)]('*');if(parseInt(adapter[_0x12d0c6(0x194)]['interval'],0xa)){eNetType=adapter[_0x12d0c6(0x194)]['devicetype'];if(eNetType=='Gateway')pollTimerStates=setInterval(getGatewayStates,parseInt(adapter[_0x12d0c6(0x194)]['interval'],0xa));else{if(eNetType==_0x12d0c6(0x1ab)){}}}}function GenerateRandom(_0x362bae){var _0x2d180d=_0x1540a5,_0x1314e8='ABCDEFGHIJKLMNOPQRSTUVWXYZabzdefghijklmnopqrstuvwxyz0123456789',_0x472d06='';for(var _0x17d121=0x0;_0x17d121<_0x362bae;_0x17d121++){var _0x137ab0=Math[_0x2d180d(0x14b)](Math[_0x2d180d(0x20e)]()*_0x1314e8[_0x2d180d(0x215)]);_0x472d06+=_0x1314e8['substr'](_0x137ab0,0x1);}return _0x472d06;}function Traverse(_0x353eb4){var _0x47a4cc=_0x1540a5;for(var _0x41ade4 in _0x353eb4){if(_0x353eb4[_0x41ade4]!==null&&typeof _0x353eb4[_0x41ade4]==_0x47a4cc(0x132))Traverse(_0x353eb4[_0x41ade4]);}}function eNetServer_CalculateLoginDigest(_0x842d36){var _0x4a1507=_0x1540a5,_0x33741b=crypto['createHash'](_0x4a1507(0x251))[_0x4a1507(0x223)](adapter['config'][_0x4a1507(0x161)]+_0x4a1507(0x224)+adapter['config'][_0x4a1507(0x20d)])[_0x4a1507(0x1d4)](_0x4a1507(0x200)),_0xbfb89a=_0x33741b[_0x4a1507(0x278)](),_0x481064=crypto[_0x4a1507(0x130)](_0x4a1507(0x251))[_0x4a1507(0x223)](_0x4a1507(0x151))['digest'](_0x4a1507(0x200)),_0x37691a=_0x481064[_0x4a1507(0x278)](),_0x4a21b5=(_0x4a1507(0x16a)+ncd)[_0x4a1507(0x219)](-0x8),_0x51ec36=GenerateRandom(0x28),_0x3c6059=crypto[_0x4a1507(0x130)](_0x4a1507(0x251))[_0x4a1507(0x223)](_0xbfb89a+':'+_0x842d36[_0x4a1507(0x152)][_0x4a1507(0x17a)]+':'+_0x4a21b5+':'+_0x51ec36+_0x4a1507(0x1af)+_0x37691a)['digest'](_0x4a1507(0x200)),_0x5e938b=_0x3c6059['toUpperCase'](),_0xfb1d5b={'username':adapter[_0x4a1507(0x194)][_0x4a1507(0x161)],'realm':_0x842d36['result'][_0x4a1507(0x1d0)],'nonce':_0x842d36[_0x4a1507(0x152)][_0x4a1507(0x17a)],'uri':_0x842d36['result']['uri'],'qop':_0x842d36[_0x4a1507(0x152)][_0x4a1507(0x1a4)],'opaque':_0x842d36[_0x4a1507(0x152)][_0x4a1507(0x1d7)],'response':_0x5e938b,'nc':_0x4a21b5,'cnonce':_0x51ec36},_0x3f680a=_0x4a1507(0x149)+adapter[_0x4a1507(0x194)][_0x4a1507(0x161)]+'\x22,\x20\x22uri\x22:\x22/jsonrpc//management\x22,\x20\x22qop\x22:\x22auth\x22,\x20\x22cnonce\x22:\x22'+_0xfb1d5b[_0x4a1507(0x12b)]+_0x4a1507(0x141)+_0xfb1d5b['nc']+_0x4a1507(0x25e)+_0x5e938b+_0x4a1507(0x136)+_0xfb1d5b['nonce']+_0x4a1507(0x1ae)+_0xfb1d5b[_0x4a1507(0x1d7)]+_0x4a1507(0x1b2);return _0x3f680a;}function eNetServer_SetClientRole(){var _0x15f7fd=_0x1540a5,_0x5ecd84={'host':adapter[_0x15f7fd(0x194)]['ip'],'port':Connection_Port,'rejectUnauthorized':![],'path':_0x15f7fd(0x213),'method':_0x15f7fd(0x22b),'headers':{'Content-Type':_0x15f7fd(0x1cd)}},_0x556bd8=adapter[_0x15f7fd(0x1ba)](_0x15f7fd(0x18b),function(_0x102da2,_0x15f480){var _0x1829e2=_0x15f7fd;if(_0x15f480){SessionID=_0x15f480[_0x1829e2(0x281)],_0x5ecd84['headers']={'Content-Type':_0x1829e2(0x275),'Cookie':_0x1829e2(0x18f)+SessionID+_0x1829e2(0x14d)};var _0xea21f9=adapter[_0x1829e2(0x1ba)]('info.CounterID',function(_0x254297,_0x40c797){var _0x188908=_0x1829e2;if(_0x40c797){Zaehler++,adapter[_0x188908(0x232)]('info.CounterID',Zaehler,{'unit':''});var _0x5c219a=set_client_role['replace'](_0x188908(0x208),Zaehler['toString']()),_0x3e1e80=HTTPRequest()['request'](_0x5ecd84,function(_0x445b65){var _0x4d9d5e=_0x188908;_0x445b65[_0x4d9d5e(0x192)]('utf8'),_0x445b65['on'](_0x4d9d5e(0x1a6),function(_0x179f42){var _0x37bf8a=_0x4d9d5e;try{adapter[_0x37bf8a(0x1c6)][_0x37bf8a(0x164)]('SetClientRole\x20Body:\x20'+_0x179f42);var _0x259897=JSON[_0x37bf8a(0x230)](_0x179f42);_0x259897[_0x37bf8a(0x1ff)](_0x37bf8a(0x138))&&adapter[_0x37bf8a(0x1c6)][_0x37bf8a(0x138)](_0x37bf8a(0x270)+_0x259897[_0x37bf8a(0x138)][_0x37bf8a(0x1d9)]);}catch(_0x4377f6){adapter[_0x37bf8a(0x1c6)][_0x37bf8a(0x138)](_0x37bf8a(0x1bf)+_0x4377f6+_0x37bf8a(0x25a)),adapter[_0x37bf8a(0x19b)]();}}),_0x3e1e80['on'](_0x4d9d5e(0x138),function(_0x1726a8){var _0x79f3d5=_0x4d9d5e;adapter['log'][_0x79f3d5(0x138)](_0x79f3d5(0x182)+_0x1726a8[_0x79f3d5(0x1d9)]);});});_0x3e1e80[_0x188908(0x1fe)](_0x5c219a),_0x3e1e80[_0x188908(0x13e)]();}});}});}function eNetServer_SendLoginDigest(_0x3ee47a){var _0x41ee38=_0x1540a5,_0x1a055f={'host':adapter[_0x41ee38(0x194)]['ip'],'port':Connection_Port,'rejectUnauthorized':![],'path':'/jsonrpc/management','method':_0x41ee38(0x22b),'headers':{'Content-Type':_0x41ee38(0x1cd)}};_0x1a055f[_0x41ee38(0x1cc)]={'Content-Type':_0x41ee38(0x275),'Cookie':_0x41ee38(0x18f)+SessionID+_0x41ee38(0x14d)};var _0x3eaf53=HTTPRequest()[_0x41ee38(0x273)](_0x1a055f,function(_0x65d64c){var _0x16a3a1=_0x41ee38;_0x65d64c[_0x16a3a1(0x192)]('utf8'),_0x65d64c['on'](_0x16a3a1(0x1a6),function(_0x4030ea){var _0x2cdb1b=_0x16a3a1;adapter['log'][_0x2cdb1b(0x164)](_0x2cdb1b(0x226)+_0x4030ea);}),_0x65d64c['on']('end',function(){var _0x426a92=_0x16a3a1;console['log'](_0x426a92(0x24d)+_0x3ee47a),eNetServer_SetClientRole();}),_0x3eaf53['on'](_0x16a3a1(0x138),function(_0x25fb23){var _0x243025=_0x16a3a1;adapter['log']['error'](_0x243025(0x180)+_0x25fb23[_0x243025(0x1d9)]);});});_0x3eaf53['write'](_0x3ee47a),_0x3eaf53[_0x41ee38(0x13e)]();}function eNetServer_delTree(_0x13ed86){var _0x139350=_0x1540a5;adapter[_0x139350(0x21b)](adapter[_0x139350(0x267)]+'.'+_0x13ed86+'.*',function(_0x5d25e1,_0x532a10){var _0x4a9e72=_0x139350,_0xa28781=[];for(var _0x2b3a91 in _0x532a10){adapter[_0x4a9e72(0x23a)](_0x2b3a91,function(_0x207bff){var _0x495639=_0x4a9e72;adapter[_0x495639(0x1c6)][_0x495639(0x164)]('Lösche\x20Objekt:\x20'+_0x2b3a91),adapter[_0x495639(0x1e4)](_0x2b3a91,function(_0x128f61){var _0x2b847f=_0x495639;adapter['log'][_0x2b847f(0x164)]('Lösche\x20State:\x20'+_0x2b3a91);});});}});}function eNetServer_Login(){var _0x5a9fbf=_0x1540a5;adapter[_0x5a9fbf(0x1c6)][_0x5a9fbf(0x145)](_0x5a9fbf(0x258));var _0x4d8231={'host':adapter[_0x5a9fbf(0x194)]['ip'],'port':Connection_Port,'rejectUnauthorized':![],'path':_0x5a9fbf(0x213),'method':_0x5a9fbf(0x22b),'headers':{'Content-Type':_0x5a9fbf(0x1cd)}};_0x4d8231[_0x5a9fbf(0x1cc)]={'Content-Type':_0x5a9fbf(0x275),'Cookie':'uEhaA=true;\x20pbAudioFalg=ON;\x20VideoFormatAVN=ActiveX;\x20INSTASESSIONID='+SessionID+_0x5a9fbf(0x14d)};var _0x3eb7c1=adapter[_0x5a9fbf(0x1ba)](_0x5a9fbf(0x236),function(_0x2a9b80,_0xe7b647){var _0x2b01f0=_0x5a9fbf;if(_0xe7b647)try{var _0x4fe88f=get_login_digest[_0x2b01f0(0x25f)]('$$id$$',Zaehler[_0x2b01f0(0x249)]()),_0x5ae792='',_0x4a8974=HTTPRequest()[_0x2b01f0(0x273)](_0x4d8231,function(_0x14a047){var _0x2ffa8a=_0x2b01f0;try{SessionID=_0x14a047['headers'][_0x2ffa8a(0x12a)][_0x2ffa8a(0x249)](),adapter[_0x2ffa8a(0x232)](_0x2ffa8a(0x18b),SessionID,{'unit':''}),_0x14a047[_0x2ffa8a(0x192)](_0x2ffa8a(0x217)),_0x14a047['on'](_0x2ffa8a(0x1a6),function(_0x244b1e){_0x5ae792+=_0x244b1e;}),_0x14a047['on'](_0x2ffa8a(0x13e),function(){var _0x21f48c=_0x2ffa8a;adapter[_0x21f48c(0x1c6)][_0x21f48c(0x164)](_0x21f48c(0x137)+_0x5ae792);var _0x36fc8f=JSON[_0x21f48c(0x230)](_0x5ae792),_0x2e598c=eNetServer_CalculateLoginDigest(_0x36fc8f);Zaehler++,_0x2e598c=_0x2e598c[_0x21f48c(0x25f)](_0x21f48c(0x208),Zaehler[_0x21f48c(0x249)]()),adapter['log'][_0x21f48c(0x164)](_0x21f48c(0x247)+_0x2e598c),adapter[_0x21f48c(0x232)]('info.CounterID',Zaehler,{'unit':''}),eNetServer_SendLoginDigest(_0x2e598c),adapter[_0x21f48c(0x232)](_0x21f48c(0x1de),!![],!![]),adapter[_0x21f48c(0x232)](_0x21f48c(0x1c4),!![],!![]),eNetServer_GetLocations(),eNetServer_RegisterSceneAction('registerEventSceneActionCreated'),eNetServer_RegisterSceneAction(_0x21f48c(0x27f)),eNetServer_RegisterSceneAction(_0x21f48c(0x1bc)),eNetServer_RegisterDeviceFunction(_0x21f48c(0x252),'null');}),_0x4a8974['on'](_0x2ffa8a(0x138),function(_0x11448e){var _0x248bb3=_0x2ffa8a;adapter['log']['error'](_0x248bb3(0x1f1)+_0x11448e[_0x248bb3(0x1d9)]),adapter['setState'](_0x248bb3(0x1de),![],!![]);});}catch(_0x2f7174){adapter[_0x2ffa8a(0x1c6)]['error'](_0x2ffa8a(0x207)+_0x2f7174[_0x2ffa8a(0x1d9)]+_0x2ffa8a(0x24b)),adapter[_0x2ffa8a(0x19b)]();}});_0x4a8974[_0x2b01f0(0x1fe)](_0x4fe88f),_0x4a8974['end']();}catch(_0x476339){adapter[_0x2b01f0(0x1c6)][_0x2b01f0(0x138)](_0x2b01f0(0x207)+_0x476339[_0x2b01f0(0x1d9)]+_0x2b01f0(0x24b)),adapter[_0x2b01f0(0x19b)]();}});}function eNetServer_getifUIDfromofUID(_0x2bfad6,_0x2b8f5e){var _0x205af6=_0x1540a5,_0x31fbfb={'host':adapter[_0x205af6(0x194)]['ip'],'port':Connection_Port,'rejectUnauthorized':![],'path':_0x205af6(0x19f),'method':_0x205af6(0x22b),'headers':{'Content-Type':_0x205af6(0x1cd)}},_0x3a6ee5=_0x205af6(0x1f4),_0x485308='',_0x2cef79=adapter['getState']('info.SessionID',function(_0x525e0c,_0x555251){var _0x36041a=_0x205af6;if(_0x555251){SessionID=_0x555251[_0x36041a(0x281)];var _0x4bab52=adapter[_0x36041a(0x1ba)]('info.CounterID',function(_0x405440,_0xd142bc){var _0x11962c=_0x36041a;if(_0xd142bc){CounterID=_0xd142bc[_0x11962c(0x281)],_0x31fbfb[_0x11962c(0x1cc)]={'Content-Type':_0x11962c(0x275),'Cookie':_0x11962c(0x18f)+SessionID+_0x11962c(0x14d)},Zaehler++,adapter['setState'](_0x11962c(0x236),Zaehler,{'unit':''});var _0x19a2c9=_0x3a6ee5[_0x11962c(0x25f)](_0x11962c(0x208),Zaehler[_0x11962c(0x249)]()),_0x19a2c9=_0x19a2c9[_0x11962c(0x25f)](_0x11962c(0x262),_0x2b8f5e),_0x46bfd8=HTTPRequest()[_0x11962c(0x273)](_0x31fbfb,function(_0x396927){var _0xf7304b=_0x11962c;_0x396927[_0xf7304b(0x192)](_0xf7304b(0x217)),_0x396927['on'](_0xf7304b(0x1a6),function(_0x53aea5){_0x485308+=_0x53aea5;}),_0x396927['on'](_0xf7304b(0x13e),function(){var _0x553782=_0xf7304b,_0x3c1257=JSON['parse'](_0x485308);if(_0x3c1257[_0x553782(0x1ff)]('error')){}else{if(_0x3c1257[_0x553782(0x152)][_0x553782(0x21f)]!=null){var _0xe3fe26=_0x3c1257[_0x553782(0x152)]['deviceFunctionUID'];adapter[_0x553782(0x1fb)](_0x2bfad6,function(_0x494e52,_0x46028a){var _0x97e0c8=_0x553782;if(_0x494e52)log(_0x97e0c8(0x225)+_0x494e52);_0x46028a[_0x97e0c8(0x1a7)]['Input_UID']=_0xe3fe26,adapter[_0x97e0c8(0x204)](_0x2bfad6,_0x46028a,function(_0x396ba6){var _0x936054=_0x97e0c8;if(_0x396ba6)log(_0x936054(0x12f)+_0x396ba6);});});}}}),_0x46bfd8['on'](_0xf7304b(0x138),function(_0x6d7526){var _0x67a118=_0xf7304b;adapter[_0x67a118(0x1c6)][_0x67a118(0x138)](_0x67a118(0x18d)+_0x6d7526[_0x67a118(0x1d9)]);});});_0x46bfd8[_0x11962c(0x1fe)](_0x19a2c9),_0x46bfd8[_0x11962c(0x13e)]();}});}});}function eNetServer_getNameAndValueTypeIDsFromDeviceFunctionType(_0x13f728,_0x379314){var _0x40b70e=_0x1540a5,_0x312301={'host':adapter[_0x40b70e(0x194)]['ip'],'port':Connection_Port,'rejectUnauthorized':![],'path':_0x40b70e(0x19f),'method':_0x40b70e(0x22b),'headers':{'Content-Type':'application/json'}},_0x2e3e7e=_0x40b70e(0x263),_0x7a0e8='',_0xb196b4=adapter[_0x40b70e(0x1ba)]('info.SessionID',function(_0x26d81e,_0x3cb8de){var _0x401e22=_0x40b70e;if(_0x3cb8de){SessionID=_0x3cb8de[_0x401e22(0x281)];var _0x2d51b8=adapter[_0x401e22(0x1ba)](_0x401e22(0x236),function(_0x2788b2,_0x132003){var _0x43e525=_0x401e22;if(_0x132003){CounterID=_0x132003[_0x43e525(0x281)],_0x312301[_0x43e525(0x1cc)]={'Content-Type':'application/json;\x20charset=utf-8','Cookie':_0x43e525(0x18f)+SessionID+_0x43e525(0x14d)},Zaehler++,adapter[_0x43e525(0x232)]('info.CounterID',Zaehler,{'unit':''});var _0x4967d3=_0x2e3e7e[_0x43e525(0x25f)](_0x43e525(0x208),Zaehler[_0x43e525(0x249)]()),_0x4967d3=_0x4967d3[_0x43e525(0x25f)](_0x43e525(0x262),_0x379314),_0x11f4dd=HTTPRequest()['request'](_0x312301,function(_0x5ecb78){var _0x4a5075=_0x43e525;_0x5ecb78[_0x4a5075(0x192)](_0x4a5075(0x217)),_0x5ecb78['on'](_0x4a5075(0x1a6),function(_0x2b981c){_0x7a0e8+=_0x2b981c;}),_0x5ecb78['on'](_0x4a5075(0x13e),function(){var _0x42e11f=_0x4a5075,_0x162fde=JSON[_0x42e11f(0x230)](_0x7a0e8);if(_0x162fde[_0x42e11f(0x152)][_0x42e11f(0x131)]!=null){var _0x13f33d=_0x162fde[_0x42e11f(0x152)][_0x42e11f(0x131)],_0x163ee7=_0x162fde['result']['valueTypeIDs'][0x0];adapter['getObject'](_0x13f728,function(_0x28b2f2,_0x541cb5){var _0x174244=_0x42e11f;if(_0x28b2f2)log('Cannot\x20read\x20object:\x20'+_0x28b2f2);_0x541cb5[_0x174244(0x19e)][_0x174244(0x131)]=_0x13f33d,_0x541cb5[_0x174244(0x1a7)]['ValueType_ID']=_0x163ee7,adapter[_0x174244(0x204)](_0x13f728,_0x541cb5,function(_0x527114){if(_0x527114)log('Cannot\x20write\x20object:\x20'+_0x527114);});});}}),_0x11f4dd['on'](_0x4a5075(0x138),function(_0x3c31ee){var _0x268b2a=_0x4a5075;adapter[_0x268b2a(0x1c6)][_0x268b2a(0x138)](_0x268b2a(0x18d)+_0x3c31ee['message']);});});_0x11f4dd[_0x43e525(0x1fe)](_0x4967d3),_0x11f4dd['end']();}});}});}function eNetServer_getScenes(_0x1b7895,_0x3e121b){var _0x4bd415=_0x1540a5,_0x4b78a8={'host':adapter[_0x4bd415(0x194)]['ip'],'port':Connection_Port,'rejectUnauthorized':![],'path':_0x4bd415(0x264),'method':_0x4bd415(0x22b),'headers':{'Content-Type':_0x4bd415(0x1cd)}},_0x509659=_0x4bd415(0x244),_0x5890e6='',_0x4907d6=adapter[_0x4bd415(0x1ba)](_0x4bd415(0x18b),function(_0x33eba5,_0x55cd47){var _0x12c8cd=_0x4bd415;if(_0x55cd47){SessionID=_0x55cd47['val'],_0x4b78a8['headers']={'Content-Type':'application/json;\x20charset=utf-8','Cookie':_0x12c8cd(0x18f)+SessionID+_0x12c8cd(0x14d)},Zaehler++,adapter[_0x12c8cd(0x232)](_0x12c8cd(0x236),Zaehler,{'unit':''});var _0x362768=_0x509659[_0x12c8cd(0x25f)]('$$id$$',Zaehler['toString']()),_0x362768=_0x362768[_0x12c8cd(0x25f)](_0x12c8cd(0x156),_0x3e121b);adapter[_0x12c8cd(0x1c6)][_0x12c8cd(0x164)](_0x12c8cd(0x206)+_0x1b7895);var _0x4c1ef4=HTTPRequest()[_0x12c8cd(0x273)](_0x4b78a8,function(_0x2a088e){var _0x148892=_0x12c8cd;_0x2a088e['setEncoding'](_0x148892(0x217)),_0x2a088e['on']('data',function(_0x289056){_0x5890e6+=_0x289056;}),_0x2a088e['on'](_0x148892(0x13e),function(){var _0x103896=_0x148892,_0x469bab=JSON[_0x103896(0x230)](_0x5890e6);adapter['log'][_0x103896(0x164)](_0x103896(0x181)+_0x5890e6);var _0x258d59=_0x469bab[_0x103896(0x152)][_0x103896(0x254)]['length'];for(var _0x17445b=0x0;_0x17445b<_0x258d59;_0x17445b++){var _0x25ca38=_0x469bab[_0x103896(0x152)][_0x103896(0x254)][_0x17445b]['uid'],_0x466d6c=_0x469bab[_0x103896(0x152)][_0x103896(0x254)][_0x17445b][_0x103896(0x131)],_0x29f5e6=_0x469bab[_0x103896(0x152)][_0x103896(0x254)][_0x17445b][_0x103896(0x26a)]['value'];if(_0x466d6c[_0x103896(0x147)](']')>0x0){var _0x10289d=_0x466d6c[_0x103896(0x147)](']')+0x1;_0x10289d>0x0&&(_0x466d6c=_0x466d6c[_0x103896(0x1cb)](_0x10289d,_0x466d6c['length']));adapter[_0x103896(0x1c6)][_0x103896(0x164)](_0x103896(0x162)+_0x466d6c);var _0x262e6b='Scenes.'+_0x466d6c;adapter[_0x103896(0x17b)](_0x262e6b,{'_id':adapter[_0x103896(0x267)]+_0x262e6b,'type':_0x103896(0x14f),'common':{'name':_0x262e6b,'read':!![],'write':!![]},'native':{'sceneActionUID':_0x25ca38,'sceneActionName':_0x466d6c}}),adapter[_0x103896(0x17b)](_0x262e6b+'.action',{'_id':adapter[_0x103896(0x267)]+_0x262e6b+'.action','type':_0x103896(0x1f3),'common':{'name':_0x466d6c,'type':_0x103896(0x25b),'role':_0x103896(0x12d),'read':!![],'write':!![]},'native':{'sceneUID':_0x25ca38}}),adapter[_0x103896(0x232)](_0x262e6b+_0x103896(0x177),_0x103896(0x187),{'unit':''}),adapter[_0x103896(0x17b)](_0x262e6b+_0x103896(0x1ef),{'_id':adapter['namespace']+_0x262e6b+_0x103896(0x1ef),'type':_0x103896(0x1f3)}),adapter[_0x103896(0x232)](_0x262e6b+'.status',_0x29f5e6,{'unit':''}),sceneActionPathArray[_0x25ca38]=_0x262e6b;}}}),_0x4c1ef4['on'](_0x148892(0x138),function(_0x2bfb30){var _0x172d32=_0x148892;adapter[_0x172d32(0x1c6)]['error'](_0x172d32(0x22f)+_0x2bfb30[_0x172d32(0x1d9)]);});});_0x4c1ef4[_0x12c8cd(0x1fe)](_0x362768),adapter[_0x12c8cd(0x1c6)][_0x12c8cd(0x164)](_0x12c8cd(0x158)+_0x362768),_0x4c1ef4['end']();}});}function eNetServer_getProject(){var _0x37a597=_0x1540a5,_0x5ce217={'host':adapter['config']['ip'],'port':Connection_Port,'rejectUnauthorized':![],'path':_0x37a597(0x19f),'method':_0x37a597(0x22b),'headers':{'Content-Type':'application/json'}},_0x53c819=_0x37a597(0x24e),_0x35ac2e='',_0x16ffa4=adapter[_0x37a597(0x1ba)](_0x37a597(0x18b),function(_0x44353e,_0x15c11c){var _0x758808=_0x37a597;if(_0x15c11c){SessionID=_0x15c11c['val'],_0x5ce217[_0x758808(0x1cc)]={'Content-Type':'application/json;\x20charset=utf-8','Cookie':'uEhaA=true;\x20pbAudioFalg=ON;\x20VideoFormatAVN=ActiveX;\x20INSTASESSIONID='+SessionID+_0x758808(0x14d)},Zaehler++,adapter[_0x758808(0x232)](_0x758808(0x236),Zaehler,{'unit':''});var _0x3d8458=_0x53c819[_0x758808(0x25f)]('$$id$$',Zaehler['toString']()),_0x32774a=HTTPRequest()[_0x758808(0x273)](_0x5ce217,function(_0x1c3f5b){var _0x54f887=_0x758808;_0x1c3f5b[_0x54f887(0x192)](_0x54f887(0x217)),_0x1c3f5b['on'](_0x54f887(0x1a6),function(_0x5841bd){_0x35ac2e+=_0x5841bd;}),_0x1c3f5b['on']('end',function(){var _0x17a7b2=_0x54f887,_0x2bcfc0=JSON['parse'](_0x35ac2e),_0x682423=_0x2bcfc0[result][projectName];_0x682423=_0x682423[_0x17a7b2(0x25f)]('.\x20','_')['replace']('.','_')['replace']('\x20','_'),adapter[_0x17a7b2(0x1c6)][_0x17a7b2(0x164)](_0x17a7b2(0x1aa)+_0x682423),eNetServer_getScenes(_0x682423);}),_0x32774a['on']('error',function(_0x1fe4c8){var _0x59dc6d=_0x54f887;adapter[_0x59dc6d(0x1c6)][_0x59dc6d(0x138)]('eNet\x20Server\x20Projekt'+_0x1fe4c8[_0x59dc6d(0x1d9)]);}),_0x32774a[_0x54f887(0x1fe)](_0x3d8458),adapter[_0x54f887(0x1c6)][_0x54f887(0x164)]('getProjet\x20BODY_in:'+_0x3d8458),_0x32774a[_0x54f887(0x13e)]();});}});}function normierung(_0x50ccea,_0x1aee1a){var _0x44dd9c=_0x1540a5;if(_0x50ccea['indexOf'](_0x44dd9c(0x135))>0x0)return(parseFloat(_0x1aee1a)/0x3e8)['toFixed'](0x1);else return _0x50ccea[_0x44dd9c(0x147)](_0x44dd9c(0x212))>0x0?parseFloat(_0x1aee1a)[_0x44dd9c(0x165)](0x0):_0x1aee1a;}function eNetServer_RequestEvents(){var _0x7a13d6=_0x1540a5,_0x3126e5={'host':adapter['config']['ip'],'port':Connection_Port,'rejectUnauthorized':![],'path':_0x7a13d6(0x19f),'method':_0x7a13d6(0x22b),'headers':{'Content-Type':_0x7a13d6(0x1cd)}},_0x30ffd4='',_0x54dbf9=adapter[_0x7a13d6(0x1ba)](_0x7a13d6(0x18b),function(_0x1e5a3c,_0x181f5e){var _0x45360f=_0x7a13d6;if(_0x181f5e){SessionID=_0x181f5e['val'],_0x3126e5[_0x45360f(0x1cc)]={'Content-Type':_0x45360f(0x275),'Cookie':'uEhaA=true;\x20pbAudioFalg=ON;\x20VideoFormatAVN=ActiveX;\x20INSTASESSIONID='+SessionID+_0x45360f(0x14d)};var _0xd51d1e=adapter[_0x45360f(0x1ba)](_0x45360f(0x236),function(_0x5eadf7,_0x1c021e){var _0x26a2de=_0x45360f;if(_0x1c021e){Zaehler++,adapter['setState']('info.CounterID',Zaehler,{'unit':''});var _0x384e68=request_events[_0x26a2de(0x25f)](_0x26a2de(0x208),Zaehler[_0x26a2de(0x249)]()),_0x2a7668=HTTPRequest()['request'](_0x3126e5,function(_0xb4a8ba){var _0xf3a9c6=_0x26a2de;_0xb4a8ba[_0xf3a9c6(0x192)](_0xf3a9c6(0x217)),_0xb4a8ba['on']('data',function(_0x6017a3){_0x30ffd4+=_0x6017a3;}),_0xb4a8ba['on'](_0xf3a9c6(0x13e),function(){var _0x5ace33=_0xf3a9c6;try{var _0x51294a=JSON['parse'](_0x30ffd4);if(_0x51294a[_0x5ace33(0x1ff)](_0x5ace33(0x138))){if(_0x51294a['error'][_0x5ace33(0x1c3)]!=-0x752f)adapter[_0x5ace33(0x1c6)]['debug'](_0x5ace33(0x1b3)+_0x51294a[_0x5ace33(0x138)]['message']+'\x20'+_0x51294a[_0x5ace33(0x138)][_0x5ace33(0x1c3)]);else{}}else{var _0x5d1950=_0x51294a[_0x5ace33(0x152)]['events']['length'];for(var _0x1c7cd8=0x0;_0x1c7cd8<_0x5d1950;_0x1c7cd8++){adapter[_0x5ace33(0x1c6)][_0x5ace33(0x164)](_0x5ace33(0x1a0)+_0x51294a[_0x5ace33(0x152)][_0x5ace33(0x169)][_0x1c7cd8][_0x5ace33(0x14e)]);var _0x2da1b4=_0x51294a[_0x5ace33(0x152)]['events'][_0x1c7cd8][_0x5ace33(0x14e)];switch(_0x2da1b4){case _0x5ace33(0x259):{var _0x3fd74e=_0x51294a[_0x5ace33(0x152)]['events'][_0x1c7cd8][_0x5ace33(0x21d)][_0x5ace33(0x13b)],_0x5a7405=_0x51294a[_0x5ace33(0x152)]['events'][_0x1c7cd8][_0x5ace33(0x21d)][_0x5ace33(0x172)];adapter[_0x5ace33(0x1c6)]['info'](_0x5ace33(0x197)+batteryPathArray[_0x3fd74e]+'\x20setze\x20auf:'+_0x5a7405),adapter[_0x5ace33(0x232)](batteryPathArray[deviveUID],_0x5a7405,!![]);break;}case _0x5ace33(0x166):{var _0x2d8afb=_0x51294a[_0x5ace33(0x152)][_0x5ace33(0x169)][_0x1c7cd8]['eventData']['valueUID'],_0x2ee40f=_0x51294a[_0x5ace33(0x152)][_0x5ace33(0x169)][_0x1c7cd8][_0x5ace33(0x21d)]['value'];valuePathArray[_0x2d8afb]!==_0x5ace33(0x189)&&adapter[_0x5ace33(0x1fb)](valuePathArray[_0x2d8afb]+'.value',function(_0x16586e,_0x45cddc){var _0x2eba77=_0x5ace33;if(_0x45cddc===null)adapter[_0x2eba77(0x1c6)][_0x2eba77(0x164)]('ERROR\x20value\x20Changed:\x20'+_0x2d8afb+'\x20->Object\x20noch\x20nicht\x20vorhanden');else{var _0x417399=_0x45cddc[_0x2eba77(0x19e)][_0x2eba77(0x131)],_0x38764d=normierung(_0x417399,_0x2ee40f);adapter[_0x2eba77(0x1c6)][_0x2eba77(0x145)](_0x2eba77(0x197)+valuePathArray[_0x2d8afb]+'.value\x20\x20setze\x20auf:'+_0x38764d),adapter['setState'](valuePathArray[_0x2d8afb]+'.value',_0x38764d,!![]);}});break;}case _0x5ace33(0x1be):{var _0x41e404=_0x51294a[_0x5ace33(0x152)]['events'][_0x1c7cd8][_0x5ace33(0x21d)][_0x5ace33(0x168)];adapter['getStates'](sceneActionPathArray[_0x41e404]+'.*',function(_0x1c6117,_0x12e3cb){var _0x5ea103=_0x5ace33;for(var _0x1d154f in _0x12e3cb){adapter['delObject'](_0x1d154f,function(_0x3a3166){var _0x5d19f6=_0x2c17;adapter[_0x5d19f6(0x1e4)](_0x1d154f,function(_0x8776b7){});});}adapter[_0x5ea103(0x23a)](sceneActionPathArray[_0x41e404],function(_0x4af98d){}),eNetServer_getScenes('','\x22'+_0x41e404+'\x22');});break;}case _0x5ace33(0x1c8):{var _0x41e404=_0x51294a[_0x5ace33(0x152)][_0x5ace33(0x169)][_0x1c7cd8][_0x5ace33(0x21d)][_0x5ace33(0x168)];adapter[_0x5ace33(0x1c6)][_0x5ace33(0x164)]('Szene\x20Löschen\x20für:'+sceneActionPathArray[_0x41e404]),adapter['getStates'](sceneActionPathArray[_0x41e404]+'.*',function(_0x58b8d6,_0x3bd21a){var _0x4228c3=_0x5ace33,_0x4d6ec7=[];for(var _0x3a3625 in _0x3bd21a){_0x4d6ec7[_0x4228c3(0x21a)](_0x3a3625),adapter[_0x4228c3(0x23a)](_0x3a3625,function(_0x1c5690){var _0x1ce5be=_0x4228c3;adapter[_0x1ce5be(0x1e4)](_0x3a3625,function(_0x2d1c70){});});}adapter['delObject'](sceneActionPathArray[_0x41e404],function(_0x2c3090){});});break;}case'sceneActionCreated':{var _0x41e404=_0x51294a[_0x5ace33(0x152)]['events'][_0x1c7cd8][_0x5ace33(0x21d)][_0x5ace33(0x168)];adapter[_0x5ace33(0x1c6)][_0x5ace33(0x164)](_0x5ace33(0x160)+_0x41e404),eNetServer_getScenes('','\x22'+_0x41e404+'\x22');break;}}}}var _0x2f6dac=adapter[_0x5ace33(0x1ba)]('info.requestEvents',function(_0x245536,_0x11674c){var _0x25b9c9=_0x5ace33;_0x11674c['val']?eNetServer_RequestEvents():adapter[_0x25b9c9(0x1c6)]['debug']('requestEvents\x20gestoppt....');});}catch(_0x3d4127){adapter[_0x5ace33(0x1c6)]['error'](_0x5ace33(0x1bf)+_0x3d4127+_0x5ace33(0x25a)),adapter[_0x5ace33(0x19b)]();}}),_0x2a7668['on']('error',function(_0x56492b){var _0x469eb1=_0xf3a9c6;adapter[_0x469eb1(0x1c6)]['error'](_0x469eb1(0x182)+_0x56492b[_0x469eb1(0x1d9)]);});});_0x2a7668[_0x26a2de(0x1fe)](_0x384e68),_0x2a7668['end']();}});}});}function eNetServer_GetLocations(){var _0x113bc8=_0x1540a5,_0x168aa2={'host':adapter[_0x113bc8(0x194)]['ip'],'port':Connection_Port,'rejectUnauthorized':![],'path':_0x113bc8(0x19f),'method':_0x113bc8(0x22b),'headers':{'Content-Type':_0x113bc8(0x1cd)}},_0x561a50='',_0x2d3ac1='',_0x3dadf5=adapter[_0x113bc8(0x1ba)]('info.SessionID',function(_0x25fa20,_0x5ae993){var _0x389a1a=_0x113bc8;if(_0x5ae993){SessionID=_0x5ae993[_0x389a1a(0x281)];var _0x2d7a03=adapter[_0x389a1a(0x1ba)](_0x389a1a(0x236),function(_0x18a62e,_0x1e7241){var _0x221b63=_0x389a1a;if(_0x1e7241)_0x168aa2['headers']={'Content-Type':_0x221b63(0x275),'Cookie':_0x221b63(0x18f)+SessionID+_0x221b63(0x14d)};Zaehler++,adapter[_0x221b63(0x232)](_0x221b63(0x236),Zaehler,{'unit':''});var _0x4d1329=get_locations[_0x221b63(0x25f)]('$$id$$',Zaehler['toString']()),_0x38b0ae=HTTPRequest()[_0x221b63(0x273)](_0x168aa2,function(_0x2ef3a3){var _0x5578ec=_0x221b63;_0x2ef3a3[_0x5578ec(0x192)](_0x5578ec(0x217)),_0x2ef3a3['on'](_0x5578ec(0x1a6),function(_0x1f781d){_0x561a50+=_0x1f781d;}),_0x2ef3a3['on'](_0x5578ec(0x13e),function(){var _0x11f764=_0x5578ec,_0x3d3a22=JSON[_0x11f764(0x230)](_0x561a50);if(_0x3d3a22[_0x11f764(0x1ff)](_0x11f764(0x138)))adapter[_0x11f764(0x1c6)][_0x11f764(0x138)](_0x11f764(0x1b6)+_0x3d3a22[_0x11f764(0x138)][_0x11f764(0x1d9)]);else{var _0x242539=_0x3d3a22[_0x11f764(0x152)][_0x11f764(0x1f5)][_0x11f764(0x215)],_0x4d84c3=_0x3d3a22[_0x11f764(0x152)]['locations'][0x0][_0x11f764(0x1b1)]['length'],_0xe58a7f=_0x3d3a22['result'][_0x11f764(0x1f5)][0x0][_0x11f764(0x1b1)][0x0][_0x11f764(0x1b1)][_0x11f764(0x215)],_0x4c3cde=_0x3d3a22['result'][_0x11f764(0x1f5)][0x0][_0x11f764(0x1b1)][0x0][_0x11f764(0x1b1)][0x0][_0x11f764(0x1f6)][_0x11f764(0x215)];adapter[_0x11f764(0x1c6)]['debug'](_0x11f764(0x220)+_0x242539+'#'+_0x4d84c3+'#'+_0xe58a7f+'#'+_0x4c3cde+_0x11f764(0x18c)+_0x561a50);for(var _0x41a5ed=0x0;_0x41a5ed<_0x242539;_0x41a5ed++){var _0x5628ef=_0x3d3a22[_0x11f764(0x152)][_0x11f764(0x1f5)][_0x41a5ed]['name'];_0x2d3ac1=_0x5628ef['replace']('.\x20','_')['replace']('.','_')[_0x11f764(0x25f)]('\x20','_'),eNetServer_getScenes('',''),adapter[_0x11f764(0x1c6)][_0x11f764(0x164)]('GetLocations,\x20Project:\x20'+_0x2d3ac1),_0x4d84c3=_0x3d3a22[_0x11f764(0x152)][_0x11f764(0x1f5)][_0x41a5ed][_0x11f764(0x1b1)][_0x11f764(0x215)];for(var _0xa70230=0x0;_0xa70230<_0x4d84c3;_0xa70230++){var _0x5c7a9e=_0x3d3a22[_0x11f764(0x152)]['locations'][_0x41a5ed]['childLocations'][_0xa70230][_0x11f764(0x131)],_0x48c4ba=_0x5c7a9e['replace']('.\x20','_')['replace']('.','_')[_0x11f764(0x25f)]('\x20','_');adapter['log'][_0x11f764(0x164)]('GetLocations,\x20Etage:\x20'+_0x48c4ba),_0xe58a7f=_0x3d3a22[_0x11f764(0x152)][_0x11f764(0x1f5)][_0x41a5ed][_0x11f764(0x1b1)][_0xa70230][_0x11f764(0x1b1)][_0x11f764(0x215)];for(var _0x2c47cc=0x0;_0x2c47cc<_0xe58a7f;_0x2c47cc++){var _0x2c5a87=_0x3d3a22[_0x11f764(0x152)][_0x11f764(0x1f5)][_0x41a5ed]['childLocations'][_0xa70230][_0x11f764(0x1b1)][_0x2c47cc][_0x11f764(0x131)],_0x16a7fa=_0x2c5a87[_0x11f764(0x25f)]('.\x20','_')[_0x11f764(0x25f)]('.','_')[_0x11f764(0x25f)]('\x20','_');adapter[_0x11f764(0x1c6)][_0x11f764(0x164)](_0x11f764(0x1e6)+_0x16a7fa),_0x4c3cde=_0x3d3a22[_0x11f764(0x152)][_0x11f764(0x1f5)][_0x41a5ed][_0x11f764(0x1b1)][_0xa70230][_0x11f764(0x1b1)][_0x2c47cc][_0x11f764(0x1f6)]['length'];for(var _0x2d75ff=0x0;_0x2d75ff<_0x4c3cde;_0x2d75ff++){adapter['log'][_0x11f764(0x164)]('Location\x20Object:\x20'+_0x2d75ff);var _0x52b17f=_0x3d3a22[_0x11f764(0x152)][_0x11f764(0x1f5)][_0x41a5ed][_0x11f764(0x1b1)][_0xa70230][_0x11f764(0x1b1)][_0x2c47cc]['deviceUIDs'][_0x2d75ff]['deviceUID'],_0x59721f=_0x3d3a22[_0x11f764(0x152)][_0x11f764(0x1f5)][_0x41a5ed][_0x11f764(0x1b1)][_0xa70230][_0x11f764(0x1b1)][_0x2c47cc]['deviceUIDs'][_0x2d75ff][_0x11f764(0x19c)],_0x2e3b33=_0x2d3ac1+'.'+_0x48c4ba+'.'+_0x16a7fa;adapter[_0x11f764(0x1c6)][_0x11f764(0x164)](_0x11f764(0x146)+_0x2e3b33),adapter[_0x11f764(0x1c6)][_0x11f764(0x164)](_0x11f764(0x1c2)+_0x2d3ac1+_0x11f764(0x175)+_0x48c4ba+_0x11f764(0x173)+_0x16a7fa+_0x11f764(0x222)+_0x52b17f+_0x11f764(0x1d3)+_0x59721f+',\x20Pfad:\x20'+_0x2e3b33),adapter['setObjectNotExists'](_0x2e3b33,{'_id':adapter[_0x11f764(0x267)]+_0x2e3b33,'type':_0x11f764(0x1f3),'common':{'name':_0x2e3b33,'read':!![],'write':!![]},'native':{'Device_Type':_0x59721f,'Device_UID':_0x52b17f}}),eNetServer_GetDevices(_0x2e3b33,_0x2d75ff,_0x59721f,_0x52b17f);}}}}}}),_0x38b0ae['on'](_0x5578ec(0x138),function(_0x6f33e6){var _0x1cfab6=_0x5578ec;adapter['log'][_0x1cfab6(0x138)]('GetLocations:\x20Error\x20with\x20request:\x20'+_0x6f33e6['message']);});});_0x38b0ae['write'](_0x4d1329),_0x38b0ae[_0x221b63(0x13e)](),adapter[_0x221b63(0x1c6)][_0x221b63(0x164)]('...\x20jetzt\x20noch\x20RequestEvents\x20starten....'),eNetServer_RequestEvents();});}});}function eNetServer_Register_EventValue_Change(_0x43db20,_0x3eb466){var _0xf5cbab=_0x1540a5;valuePathArray[_0x43db20]=_0x3eb466['replace'](_0xf5cbab(0x20b),'');var _0x3779e6={'host':adapter['config']['ip'],'port':Connection_Port,'rejectUnauthorized':![],'path':_0xf5cbab(0x19f),'method':_0xf5cbab(0x22b),'headers':{'Content-Type':_0xf5cbab(0x1cd)}},_0x31cc29='',_0x8a002e=adapter[_0xf5cbab(0x1ba)](_0xf5cbab(0x18b),function(_0xd9ec5,_0x17d240){var _0x2b2cb6=_0xf5cbab;if(_0x17d240){SessionID=_0x17d240[_0x2b2cb6(0x281)];var _0x5325a0=adapter[_0x2b2cb6(0x1ba)](_0x2b2cb6(0x236),function(_0x14ac63,_0x16626a){var _0x4b419f=_0x2b2cb6;if(_0x16626a){_0x3779e6['headers']={'Content-Type':_0x4b419f(0x275),'Cookie':_0x4b419f(0x18f)+SessionID+_0x4b419f(0x14d)},Zaehler++,adapter[_0x4b419f(0x232)](_0x4b419f(0x236),Zaehler,{'unit':''});var _0x1c4bf2=register_value_change[_0x4b419f(0x25f)](_0x4b419f(0x208),Zaehler[_0x4b419f(0x249)]());_0x1c4bf2=_0x1c4bf2[_0x4b419f(0x25f)](_0x4b419f(0x176),_0x43db20);var _0x52c08e=HTTPRequest()[_0x4b419f(0x273)](_0x3779e6,function(_0x1c5e8f){var _0x5e818d=_0x4b419f;_0x1c5e8f[_0x5e818d(0x192)]('utf8'),_0x1c5e8f['on'](_0x5e818d(0x1a6),function(_0x4fbc88){_0x31cc29+=_0x4fbc88;}),_0x1c5e8f['on'](_0x5e818d(0x13e),function(){var _0x1b8e65=_0x5e818d;adapter['log']['debug']('Register_Value_Change\x20Body\x20Out:\x20'+_0x31cc29);var _0x58404c=JSON[_0x1b8e65(0x230)](_0x31cc29);}),_0x52c08e['on'](_0x5e818d(0x138),function(_0x273ea2){var _0x294e8d=_0x5e818d;adapter[_0x294e8d(0x1c6)]['error'](_0x294e8d(0x191)+_0x273ea2[_0x294e8d(0x1d9)]);});});_0x52c08e[_0x4b419f(0x1fe)](_0x1c4bf2),adapter[_0x4b419f(0x1c6)][_0x4b419f(0x164)](_0x4b419f(0x27b)+_0x1c4bf2),_0x52c08e[_0x4b419f(0x13e)]();}});}});}function eNetServer_RegisterSceneAction(_0x510155){var _0xd7bbc8=_0x1540a5,_0x138733={'host':adapter[_0xd7bbc8(0x194)]['ip'],'port':Connection_Port,'rejectUnauthorized':![],'path':'/jsonrpc/visualization/app_scene','method':_0xd7bbc8(0x22b),'headers':{'Content-Type':_0xd7bbc8(0x1cd)}},_0x14bea1=_0xd7bbc8(0x1ea),_0x306ca2='',_0x336372=adapter[_0xd7bbc8(0x1ba)](_0xd7bbc8(0x18b),function(_0x48a5c6,_0x1b3c6b){var _0x212397=_0xd7bbc8;if(_0x1b3c6b){SessionID=_0x1b3c6b[_0x212397(0x281)];var _0xd31fd3=adapter[_0x212397(0x1ba)](_0x212397(0x236),function(_0x29b37f,_0x29c5f8){var _0x4f12a8=_0x212397;if(_0x29c5f8){_0x138733[_0x4f12a8(0x1cc)]={'Content-Type':'application/json;\x20charset=utf-8','Cookie':'uEhaA=true;\x20pbAudioFalg=ON;\x20VideoFormatAVN=ActiveX;\x20INSTASESSIONID='+SessionID+_0x4f12a8(0x14d)},Zaehler++,adapter['setState']('info.CounterID',Zaehler,{'unit':''});var _0x3bd5a2=_0x14bea1[_0x4f12a8(0x25f)](_0x4f12a8(0x208),Zaehler['toString']());_0x3bd5a2=_0x3bd5a2[_0x4f12a8(0x25f)](_0x4f12a8(0x13a),_0x510155);var _0xb8e16b=HTTPRequest()[_0x4f12a8(0x273)](_0x138733,function(_0x1f5828){var _0x2604d2=_0x4f12a8;_0x1f5828[_0x2604d2(0x192)]('utf8'),_0x1f5828['on'](_0x2604d2(0x1a6),function(_0x32e305){_0x306ca2+=_0x32e305;}),_0x1f5828['on'](_0x2604d2(0x13e),function(){var _0x325078=_0x2604d2,_0x4ad160=JSON[_0x325078(0x230)](_0x306ca2);}),_0xb8e16b['on'](_0x2604d2(0x138),function(_0xc15f54){var _0x2ea55b=_0x2604d2;adapter[_0x2ea55b(0x1c6)][_0x2ea55b(0x138)]('Register_Scene\x20Problem\x20with\x20request:\x20'+_0xc15f54[_0x2ea55b(0x1d9)]);});});_0xb8e16b[_0x4f12a8(0x1fe)](_0x3bd5a2),adapter[_0x4f12a8(0x1c6)]['debug'](_0x4f12a8(0x167)+_0x3bd5a2),_0xb8e16b[_0x4f12a8(0x13e)]();}});}});}function eNetServer_RegisterDeviceFunction(_0x12dc42,_0x400246){var _0x282338=_0x1540a5,_0x2e81ea={'host':adapter[_0x282338(0x194)]['ip'],'port':Connection_Port,'rejectUnauthorized':![],'path':_0x282338(0x19f),'method':'POST','headers':{'Content-Type':'application/json'}},_0x5f9d23=_0x282338(0x1fd),_0x1e51ff='',_0x5b4591=adapter[_0x282338(0x1ba)](_0x282338(0x18b),function(_0x502271,_0x58bede){var _0x9ef4ed=_0x282338;if(_0x58bede){SessionID=_0x58bede[_0x9ef4ed(0x281)];var _0x328194=adapter[_0x9ef4ed(0x1ba)](_0x9ef4ed(0x236),function(_0x33bdcb,_0x57ef49){var _0x4a671a=_0x9ef4ed;if(_0x57ef49){_0x2e81ea[_0x4a671a(0x1cc)]={'Content-Type':_0x4a671a(0x275),'Cookie':'uEhaA=true;\x20pbAudioFalg=ON;\x20VideoFormatAVN=ActiveX;\x20INSTASESSIONID='+SessionID+_0x4a671a(0x14d)},Zaehler++,adapter[_0x4a671a(0x232)](_0x4a671a(0x236),Zaehler,{'unit':''});var _0xea414e=_0x5f9d23[_0x4a671a(0x25f)](_0x4a671a(0x208),Zaehler[_0x4a671a(0x249)]());_0xea414e=_0xea414e[_0x4a671a(0x25f)]('$$func$$',_0x12dc42),_0xea414e=_0xea414e[_0x4a671a(0x25f)]('$$uid$$',_0x400246);var _0x5e94be=HTTPRequest()[_0x4a671a(0x273)](_0x2e81ea,function(_0x4b5248){var _0x6e3675=_0x4a671a;_0x4b5248['setEncoding'](_0x6e3675(0x217)),_0x4b5248['on'](_0x6e3675(0x1a6),function(_0x140e25){_0x1e51ff+=_0x140e25;}),_0x4b5248['on']('end',function(){var _0x1dd945=_0x6e3675,_0x2fc790=JSON[_0x1dd945(0x230)](_0x1e51ff);}),_0x5e94be['on'](_0x6e3675(0x138),function(_0x362849){var _0x1db8d6=_0x6e3675;adapter[_0x1db8d6(0x1c6)][_0x1db8d6(0x138)]('Register_DeviceFunction\x20Problem\x20with\x20request:\x20'+_0x362849[_0x1db8d6(0x1d9)]);});});_0x5e94be[_0x4a671a(0x1fe)](_0xea414e),adapter['log']['debug'](_0x4a671a(0x174)+_0xea414e),_0x5e94be[_0x4a671a(0x13e)]();}});}});}function eNetServer_GetDevices(_0x56e820,_0x4021b3,_0x440982,_0xac9a1d){var _0x53702a=_0x1540a5;adapter[_0x53702a(0x1c6)][_0x53702a(0x164)](_0x53702a(0x15f)+_0x56e820+',\x20Pos:\x20'+_0x4021b3+_0x53702a(0x26d)+_0x440982+',\x20UID:\x20'+_0xac9a1d);var _0x2dddc6={'host':adapter['config']['ip'],'port':Connection_Port,'rejectUnauthorized':![],'path':_0x53702a(0x19f),'method':'POST','headers':{'Content-Type':_0x53702a(0x1cd)}},_0x296c5a='',_0x20f1e9=adapter['getState'](_0x53702a(0x18b),function(_0x25fd7f,_0xfb5b86){var _0x369685=_0x53702a;if(_0xfb5b86){SessionID=_0xfb5b86[_0x369685(0x281)];var _0x538e95=adapter[_0x369685(0x1ba)](_0x369685(0x236),function(_0x1bebd7,_0x4a8fff){var _0x1f1ab7=_0x369685;if(_0x4a8fff){_0x2dddc6['headers']={'Content-Type':'application/json;\x20charset=utf-8','Cookie':_0x1f1ab7(0x18f)+SessionID+_0x1f1ab7(0x14d)},Zaehler++,adapter['setState'](_0x1f1ab7(0x236),Zaehler,{'unit':''});var _0x335a6a=get_devices[_0x1f1ab7(0x25f)](_0x1f1ab7(0x208),Zaehler[_0x1f1ab7(0x249)]());_0x335a6a=_0x335a6a[_0x1f1ab7(0x25f)]('$$devuid$$',_0xac9a1d);var _0x1116d4=HTTPRequest()[_0x1f1ab7(0x273)](_0x2dddc6,function(_0x245f91){var _0x5d86d8=_0x1f1ab7;_0x245f91[_0x5d86d8(0x192)]('utf8'),_0x245f91['on'](_0x5d86d8(0x1a6),function(_0x596715){_0x296c5a+=_0x596715;}),_0x245f91['on'](_0x5d86d8(0x13e),function(){var _0x324d40=_0x5d86d8,_0x1ffe49=JSON[_0x324d40(0x230)](_0x296c5a),_0x48b2fe=_0x1ffe49[_0x324d40(0x152)][_0x324d40(0x13f)][0x0]['installationArea'];_0x48b2fe!==null&&(_0x48b2fe=_0x48b2fe[_0x324d40(0x25f)](/\./g,''),_0x48b2fe=_0x48b2fe['replace'](/\,/g,'_'),_0x48b2fe=_0x48b2fe[_0x324d40(0x25f)](/'/g,'_'));var _0x920654=_0x1ffe49['result'][_0x324d40(0x13f)][0x0]['typeID'],_0x5a0a53=_0x1ffe49[_0x324d40(0x152)]['devices'][0x0]['uid'],_0x13c8db=_0x1ffe49[_0x324d40(0x152)][_0x324d40(0x13f)][0x0][_0x324d40(0x172)],_0x582193=_0x1ffe49[_0x324d40(0x152)]['devices'][0x0][_0x324d40(0x233)][_0x324d40(0x215)];for(var _0x52b18a=0x0;_0x52b18a<_0x582193;_0x52b18a++){var _0x112ac1=_0x1ffe49['result'][_0x324d40(0x13f)][0x0][_0x324d40(0x233)][_0x52b18a][_0x324d40(0x26f)][_0x324d40(0x215)];for(var _0x9ec481=0x0;_0x9ec481<_0x112ac1;_0x9ec481++){var _0x219bb7={};if(_0x1ffe49['result'][_0x324d40(0x13f)][0x0][_0x324d40(0x233)][_0x52b18a][_0x324d40(0x26f)][_0x9ec481]['channelTypeID']!=_0x324d40(0x1eb)&&_0x1ffe49[_0x324d40(0x152)][_0x324d40(0x13f)][0x0][_0x324d40(0x233)][_0x52b18a]['deviceChannels'][_0x9ec481][_0x324d40(0x15b)]!=_0x324d40(0x1a5)){_0x13c8db!==null&&(adapter[_0x324d40(0x17b)](_0x56e820+'.'+_0x48b2fe+'\x20#'+_0x52b18a+'.batteryState',{'_id':adapter[_0x324d40(0x267)]+_0x56e820+'.'+_0x48b2fe+'\x20#'+_0x52b18a+_0x324d40(0x218),'type':_0x324d40(0x1f3)}),adapter[_0x324d40(0x232)](_0x56e820+'.'+_0x48b2fe+'\x20#'+_0x52b18a+_0x324d40(0x218),_0x13c8db,!![]),batteryPathArray[_0x5a0a53]=_0x56e820+'.'+_0x48b2fe+'\x20#'+_0x52b18a+'.batteryState');var _0x44e108=_0x1ffe49[_0x324d40(0x152)][_0x324d40(0x13f)][0x0][_0x324d40(0x233)][_0x52b18a][_0x324d40(0x26f)][_0x9ec481]['effectArea'];_0x44e108!==null&&(_0x44e108=_0x44e108['replace'](/\./g,''),_0x44e108=_0x44e108[_0x324d40(0x25f)](/\,/g,'_'),_0x44e108=_0x44e108[_0x324d40(0x25f)](/'/g,'_'));var _0x325452=_0x1ffe49[_0x324d40(0x152)][_0x324d40(0x13f)][0x0][_0x324d40(0x233)][_0x52b18a]['deviceChannels'][_0x9ec481][_0x324d40(0x186)][_0x324d40(0x215)];for(var _0x5f189b=0x0;_0x5f189b<_0x325452;_0x5f189b++){var _0x29550b=_0x1ffe49[_0x324d40(0x152)][_0x324d40(0x13f)][0x0][_0x324d40(0x233)][_0x52b18a][_0x324d40(0x26f)][_0x9ec481][_0x324d40(0x186)][_0x5f189b][_0x324d40(0x1b0)];if(_0x29550b){var _0x17bb1f=_0x1ffe49[_0x324d40(0x152)]['devices'][0x0]['deviceChannelConfigurationGroups'][_0x52b18a][_0x324d40(0x26f)][_0x9ec481][_0x324d40(0x186)][_0x5f189b][_0x324d40(0x1db)],_0x3e687e=_0x1ffe49[_0x324d40(0x152)]['devices'][0x0]['deviceChannelConfigurationGroups'][_0x52b18a][_0x324d40(0x26f)][_0x9ec481][_0x324d40(0x186)][_0x5f189b][_0x324d40(0x196)],_0x4f2d57=_0x56e820+'.'+_0x48b2fe+'\x20#'+_0x52b18a+'.'+_0x44e108+'\x20#'+_0x9ec481+_0x324d40(0x23f)+_0x5f189b;_0x219bb7[_0x17bb1f]=_0x3e687e,adapter[_0x324d40(0x227)](_0x4f2d57,{'_id':adapter['namespace']+_0x4f2d57,'type':_0x324d40(0x14f),'common':{'name':_0x4f2d57,'type':_0x324d40(0x1bb),'role':_0x324d40(0x12d)},'native':{'Device_UID':_0x5a0a53,'Device_Type':_0x17bb1f,'Install_Area':_0x48b2fe,'ValueType_ID':_0x324d40(0x14a),'Input_UID':_0x3e687e}}),adapter[_0x324d40(0x17b)](_0x4f2d57+'.value',{'_id':adapter[_0x324d40(0x267)]+_0x4f2d57,'type':'state','common':{'name':'*','type':_0x324d40(0x1bb),'role':'value'},'native':{'Device_UID':_0x5a0a53,'Device_Type':_0x17bb1f,'Install_Area':_0x48b2fe,'ValueType_ID':_0x4dce03,'Input_UID':_0x3e687e}}),adapter[_0x324d40(0x232)](_0x4f2d57+_0x324d40(0x179),_0x3d8a47,!![]),eNetServer_getNameAndValueTypeIDsFromDeviceFunctionType(_0x4f2d57,_0x17bb1f),devicePathArray[_0x3e687e]=_0x4f2d57;}}var _0x43abcd=_0x1ffe49[_0x324d40(0x152)][_0x324d40(0x13f)][0x0]['deviceChannelConfigurationGroups'][_0x52b18a][_0x324d40(0x26f)][_0x9ec481][_0x324d40(0x246)][_0x324d40(0x215)];for(var _0x3b13ef=0x0;_0x3b13ef<_0x43abcd;_0x3b13ef++){var _0x54673e=_0x1ffe49['result'][_0x324d40(0x13f)][0x0][_0x324d40(0x233)][_0x52b18a][_0x324d40(0x26f)][_0x9ec481][_0x324d40(0x246)][_0x3b13ef][_0x324d40(0x1db)],_0x129ecc=_0x1ffe49[_0x324d40(0x152)]['devices'][0x0]['deviceChannelConfigurationGroups'][_0x52b18a][_0x324d40(0x26f)][_0x9ec481][_0x324d40(0x246)][_0x3b13ef][_0x324d40(0x196)],_0x29550b=_0x1ffe49[_0x324d40(0x152)]['devices'][0x0][_0x324d40(0x233)][_0x52b18a][_0x324d40(0x26f)][_0x9ec481][_0x324d40(0x246)][_0x3b13ef][_0x324d40(0x1b0)];if(_0x29550b){var _0x52813c=_0x1ffe49['result'][_0x324d40(0x13f)][0x0]['deviceChannelConfigurationGroups'][_0x52b18a][_0x324d40(0x26f)][_0x9ec481][_0x324d40(0x246)][_0x3b13ef][_0x324d40(0x171)]['length'];for(var _0x659fe=0x0;_0x659fe<_0x52813c;_0x659fe++){var _0x4dce03=_0x1ffe49[_0x324d40(0x152)]['devices'][0x0][_0x324d40(0x233)][_0x52b18a]['deviceChannels'][_0x9ec481]['outputDeviceFunctions'][_0x3b13ef][_0x324d40(0x171)][_0x659fe][_0x324d40(0x14a)],_0x32b952=_0x1ffe49['result'][_0x324d40(0x13f)][0x0][_0x324d40(0x233)][_0x52b18a]['deviceChannels'][_0x9ec481][_0x324d40(0x246)][_0x3b13ef][_0x324d40(0x171)][_0x659fe][_0x324d40(0x12d)],_0x57ab90=_0x1ffe49[_0x324d40(0x152)][_0x324d40(0x13f)][0x0][_0x324d40(0x233)][_0x52b18a][_0x324d40(0x26f)][_0x9ec481]['outputDeviceFunctions'][_0x3b13ef][_0x324d40(0x171)][_0x659fe]['valueUID'],_0x4f2d57=_0x56e820+'.'+_0x48b2fe+'\x20#'+_0x52b18a+'.'+_0x44e108+'\x20#'+_0x9ec481+'.OutputDevice'+_0x3b13ef+'\x20#'+_0x659fe,_0x3d8a47=normierung(_0x4dce03,_0x32b952);adapter[_0x324d40(0x17b)](_0x4f2d57,{'_id':adapter[_0x324d40(0x267)]+_0x4f2d57,'type':'folder','common':{'name':'##','type':_0x324d40(0x1bb),'role':_0x324d40(0x12d)},'native':{'Device_UID':_0x5a0a53,'Device_TypeID':_0x920654,'outputDeviceType_UID':_0x129ecc,'Device_Type':_0x54673e,'Install_Area':_0x48b2fe,'ValueType_ID':_0x4dce03,'Input_UID':''}}),adapter[_0x324d40(0x17b)](_0x4f2d57+'.value',{'_id':adapter[_0x324d40(0x267)]+_0x4f2d57+_0x324d40(0x179),'type':_0x324d40(0x1f3),'common':{'name':_0x4dce03,'type':_0x324d40(0x25b),'role':'value','read':!![],'write':!![]},'native':{'valueUID':_0x57ab90}}),adapter[_0x324d40(0x232)](_0x4f2d57+_0x324d40(0x179),_0x3d8a47,!![]),eNetServer_getNameAndValueTypeIDsFromDeviceFunctionType(_0x4f2d57,_0x54673e),eNetServer_Register_EventValue_Change(_0x57ab90,_0x4f2d57),eNetServer_getifUIDfromofUID(_0x4f2d57,_0x129ecc),devicePathArray[_0x129ecc]=_0x4f2d57;}}}}}}}),_0x1116d4['on']('error',function(_0x1b4ee7){var _0x4bafc1=_0x5d86d8;adapter[_0x4bafc1(0x1c6)][_0x4bafc1(0x138)](_0x4bafc1(0x26b)+_0x1b4ee7[_0x4bafc1(0x1d9)]);});});_0x1116d4[_0x1f1ab7(0x1fe)](_0x335a6a),_0x1116d4[_0x1f1ab7(0x13e)]();}});}});}function eNetServer_SetState(_0x2d9594,_0xfac34b,_0x41a9a3){var _0x4ce2e9=_0x1540a5,_0x256b7a={'host':adapter['config']['ip'],'port':Connection_Port,'rejectUnauthorized':![],'path':_0x4ce2e9(0x19f),'method':_0x4ce2e9(0x22b),'headers':{'Content-Type':'application/json'}},_0x25372f='',_0x2cfd9e=adapter['getState'](_0x4ce2e9(0x18b),function(_0x356e68,_0x3f659a){var _0x4bc08d=_0x4ce2e9;if(_0x3f659a){SessionID=_0x3f659a[_0x4bc08d(0x281)];var _0xe05824=adapter[_0x4bc08d(0x1ba)](_0x4bc08d(0x236),function(_0x2bdd1d,_0x23c7bf){var _0x5e4296=_0x4bc08d;if(_0x23c7bf){_0x256b7a[_0x5e4296(0x1cc)]={'Content-Type':_0x5e4296(0x275),'Cookie':_0x5e4296(0x18f)+SessionID+_0x5e4296(0x14d)},Zaehler++,adapter[_0x5e4296(0x232)]('info.CounterID',Zaehler,{'unit':''});var _0x9c385e=set_state['replace']('$$id$$',Zaehler[_0x5e4296(0x249)]());_0x9c385e=_0x9c385e['replace']('$$UID$$',_0x2d9594),_0x9c385e=_0x9c385e['replace'](_0x5e4296(0x1f9),_0xfac34b),_0x9c385e=_0x9c385e[_0x5e4296(0x25f)](_0x5e4296(0x1c9),_0x41a9a3);var _0x4a4ce0=HTTPRequest()[_0x5e4296(0x273)](_0x256b7a,function(_0x253b69){var _0xc54582=_0x5e4296;_0x253b69[_0xc54582(0x192)](_0xc54582(0x217)),_0x253b69['on'](_0xc54582(0x1a6),function(_0x324be4){_0x25372f+=_0x324be4;}),_0x253b69['on'](_0xc54582(0x13e),function(){var _0x2852d0=_0xc54582;adapter[_0x2852d0(0x1c6)]['debug'](_0x2852d0(0x16d)+_0x25372f);var _0x4c0f72=JSON[_0x2852d0(0x230)](_0x25372f);}),_0x4a4ce0['on'](_0xc54582(0x138),function(_0x56cffa){var _0x1d2ef0=_0xc54582;adapter['log'][_0x1d2ef0(0x138)]('SetState\x20Problem\x20with\x20request:\x20'+_0x56cffa[_0x1d2ef0(0x1d9)]);});});_0x4a4ce0[_0x5e4296(0x1fe)](_0x9c385e),_0x4a4ce0[_0x5e4296(0x13e)]();}});}});}function eNetServer_executeAction(_0x1719a1){var _0x136c86=_0x1540a5,_0x1818f6={'host':adapter[_0x136c86(0x194)]['ip'],'port':Connection_Port,'rejectUnauthorized':![],'path':_0x136c86(0x19f),'method':'POST','headers':{'Content-Type':'application/json'}},_0x3e387b=_0x136c86(0x1c0),_0x44a188='',_0x16b0e8=adapter[_0x136c86(0x1ba)](_0x136c86(0x18b),function(_0x47003d,_0x1c68ad){var _0x53bcb1=_0x136c86;if(_0x1c68ad){_0x1818f6[_0x53bcb1(0x1cc)]={'Content-Type':_0x53bcb1(0x275),'Cookie':_0x53bcb1(0x18f)+SessionID+_0x53bcb1(0x14d)},Zaehler++,adapter[_0x53bcb1(0x232)](_0x53bcb1(0x236),Zaehler,{'unit':''});var _0x5d3736=_0x3e387b[_0x53bcb1(0x25f)](_0x53bcb1(0x208),Zaehler[_0x53bcb1(0x249)]());_0x5d3736=_0x5d3736['replace'](_0x53bcb1(0x176),_0x1719a1);var _0x17c57c=HTTPRequest()[_0x53bcb1(0x273)](_0x1818f6,function(_0x159110){var _0x54789d=_0x53bcb1;_0x159110[_0x54789d(0x192)](_0x54789d(0x217)),_0x159110['on'](_0x54789d(0x1a6),function(_0x339359){_0x44a188+=_0x339359;}),_0x159110['on'](_0x54789d(0x13e),function(){var _0x363e64=_0x54789d;adapter[_0x363e64(0x1c6)][_0x363e64(0x164)](_0x363e64(0x1f2)+_0x44a188);var _0x55e43f=JSON[_0x363e64(0x230)](_0x44a188);}),_0x17c57c['on']('error',function(_0x398ae2){var _0x1df25a=_0x54789d;adapter[_0x1df25a(0x1c6)][_0x1df25a(0x138)](_0x1df25a(0x1a1)+_0x398ae2[_0x1df25a(0x1d9)]);});});_0x17c57c[_0x53bcb1(0x1fe)](_0x5d3736),_0x17c57c[_0x53bcb1(0x13e)]();}});}function eNetServer_Logout(){var _0x3aea7f=_0x1540a5;adapter[_0x3aea7f(0x1c6)][_0x3aea7f(0x164)](_0x3aea7f(0x26e));var _0x5427ea={'host':adapter['config']['ip'],'port':Connection_Port,'rejectUnauthorized':![],'path':'/jsonrpc/visualization','method':_0x3aea7f(0x22b),'headers':{'Content-Type':_0x3aea7f(0x1cd)}},_0x89718f=[];_0x89718f[_0x3aea7f(0x21a)](_0x3aea7f(0x1d1));var _0x21aff6=0x0;Zaehler=0x0;var _0x5cb41e='',_0x295ab2=adapter['getState']('info.SessionID',function(_0x1bc1eb,_0xb94f32){var _0x4601ac=_0x3aea7f;if(_0xb94f32){SessionID=_0xb94f32['val'];var _0x1d7a0e=adapter[_0x4601ac(0x1ba)](_0x4601ac(0x236),function(_0x4c1a4b,_0x47c37c){var _0x3b8c62=_0x4601ac;if(_0x47c37c){CounterID=_0x47c37c[_0x3b8c62(0x281)],_0x5427ea['headers']={'Content-Type':_0x3b8c62(0x275),'Cookie':_0x3b8c62(0x18f)+SessionID+_0x3b8c62(0x14d)},Zaehler=CounterID,Zaehler++,adapter['setState']('info.CounterID',Zaehler,{'unit':''});var _0x24ac96=_0x89718f[_0x21aff6][_0x3b8c62(0x25f)]('$$id$$',Zaehler['toString']()),_0x51b792=HTTPRequest()[_0x3b8c62(0x273)](_0x5427ea,function(_0x491017){var _0x5cfe3f=_0x3b8c62;_0x491017['setEncoding']('utf8'),_0x491017['on'](_0x5cfe3f(0x1a6),function(_0x1217a1){var _0x173d1b=_0x5cfe3f;_0x5cb41e+=_0x1217a1,typeof body!=='undefined'&&traverse(JSON[_0x173d1b(0x230)](body));}),_0x491017['on'](_0x5cfe3f(0x13e),function(){var _0x63b09d=_0x5cfe3f;typeof body!==_0x63b09d(0x189)&&(_0x21aff6++,_0x21aff6<_0x89718f['length']&&eNetServer_Logout());}),_0x51b792['on']('error',function(_0x5eac2f){var _0x22b75a=_0x5cfe3f;adapter[_0x22b75a(0x1c6)][_0x22b75a(0x138)](_0x22b75a(0x1bd)+_0x5eac2f[_0x22b75a(0x25d)]),adapter[_0x22b75a(0x232)](_0x22b75a(0x1de),![],!![]);}),adapter[_0x5cfe3f(0x232)](_0x5cfe3f(0x1de),![],!![]),adapter[_0x5cfe3f(0x232)]('info.SessionID','',{'unit':''}),adapter[_0x5cfe3f(0x232)]('info.CounterID',0x0,{'unit':''}),adapter['setState'](_0x5cfe3f(0x1c4),![],!![]);});adapter[_0x3b8c62(0x1c6)]['debug'](_0x3b8c62(0x1df)+_0x24ac96),adapter[_0x3b8c62(0x1c6)][_0x3b8c62(0x145)](_0x3b8c62(0x1b8)),_0x51b792[_0x3b8c62(0x1fe)](_0x24ac96),_0x51b792[_0x3b8c62(0x13e)]();}});}});}function deleteGatewayStates(_0x555b23,_0x276af3){var _0x16c4d2=_0x1540a5;if(!_0x555b23||!_0x555b23[_0x16c4d2(0x215)]){if(_0x276af3)_0x276af3();return;}eNetType=adapter[_0x16c4d2(0x194)][_0x16c4d2(0x18a)];if(eNetType==_0x16c4d2(0x203)){var _0x10e4e7=_0x555b23[_0x16c4d2(0x245)]();adapter[_0x16c4d2(0x23a)](_0x10e4e7,function(_0x2ed5aa){var _0x1f1912=_0x16c4d2;adapter[_0x1f1912(0x1e4)](_0x10e4e7,function(_0x348742){});});}else eNetType==_0x16c4d2(0x1ab)&&adapter[_0x16c4d2(0x1c6)][_0x16c4d2(0x164)](_0x16c4d2(0x266));};function getGatewayStates(){var _0x18f601=_0x1540a5;adapter[_0x18f601(0x1c6)][_0x18f601(0x164)]('getGatewayStates:\x20Starting\x20to\x20retrieve\x20the\x20current\x20states\x20from\x20eNet\x20gateway'),adapter[_0x18f601(0x1ba)](_0x18f601(0x276),function(_0x21f8fe,_0x2f4b47){var _0x2f8edd=_0x18f601;if(_0x2f4b47){var _0x1d7e49;_0x1d7e49=JSON['parse'](_0x2f4b47[_0x2f8edd(0x281)]),adapter[_0x2f8edd(0x1c6)][_0x2f8edd(0x164)](_0x2f8edd(0x150)+_0x1d7e49[_0x2f8edd(0x249)]());var _0x3ffa94=eNet[_0x2f8edd(0x24a)]({'host':adapter[_0x2f8edd(0x194)]['ip']});_0x3ffa94[_0x2f8edd(0x1ed)](),_0x3ffa94[_0x2f8edd(0x1b4)](_0x1d7e49,function(_0x10553d,_0x233bae){var _0x561e31=_0x2f8edd;_0x10553d&&(adapter[_0x561e31(0x1c6)][_0x561e31(0x138)](_0x561e31(0x1b9)+_0x10553d),adapter['setState']('info.connection',![],!![])),_0x233bae&&(adapter[_0x561e31(0x1c6)][_0x561e31(0x164)]['log']('getGatewayStates:\x20Sucess\x20in\x20singing\x20in\x20to\x20channels:\x20'+JSON[_0x561e31(0x272)](_0x233bae)),adapter[_0x561e31(0x232)](_0x561e31(0x1de),!![],!![]));});for(var _0x25daa7=0x0;_0x25daa7<_0x1d7e49['length'];_0x25daa7++){_0x3ffa94['on'](_0x1d7e49[parseInt(_0x25daa7)],function(_0x2da427,_0x5dff87){var _0x5cf2b8=_0x2f8edd;if(!_0x2da427&&_0x5dff87){var _0x1369a5=JSON['stringify'](_0x5dff87),_0x523db0=JSON[_0x5cf2b8(0x230)](_0x1369a5);if(_0x523db0){var _0x41f07c=_0x523db0[_0x5cf2b8(0x221)];adapter[_0x5cf2b8(0x1ba)](_0x5cf2b8(0x1e7)+_0x41f07c[_0x5cf2b8(0x249)]()+'.STATE',function(_0x2f405d,_0x1f5596){var _0x9588fa=_0x5cf2b8;if(_0x1f5596){var _0x3bce00=_0x523db0[_0x9588fa(0x1d2)];adapter['log'][_0x9588fa(0x164)](_0x9588fa(0x1e5)+_0x41f07c[_0x9588fa(0x249)]()+_0x9588fa(0x21c)+_0x41f07c[_0x9588fa(0x249)]()+',\x20Value:\x20'+_0x3bce00['toString']()+_0x9588fa(0x25c)+_0x523db0['STATE']+_0x9588fa(0x1f0)+_0x523db0[_0x9588fa(0x24c)]+_0x9588fa(0x143)+JSON['stringify'](_0x5dff87));var _0x417ba8=_0x1f5596[_0x9588fa(0x281)];if(_0x3bce00==_0x9588fa(0x1b5)||_0x3bce00==-0x1)_0x3bce00=![];else _0x3bce00=!![];_0x417ba8!=_0x3bce00&&(adapter['log'][_0x9588fa(0x164)](_0x9588fa(0x280)+_0x41f07c['toString']()+'\x20to\x20ioBroker\x20objects\x20DB\x20Old\x20Value:\x20'+_0x417ba8+'\x20new\x20Value:\x20'+_0x3bce00),adapter[_0x9588fa(0x232)](_0x9588fa(0x1e7)+_0x41f07c[_0x9588fa(0x249)]()+_0x9588fa(0x23d),_0x3bce00,!![]));}}),adapter['getState']('channel'+_0x41f07c['toString']()+'.LEVEL',function(_0x1d2efc,_0x380fcb){var _0x50a5cd=_0x5cf2b8;if(_0x380fcb){var _0x4af3ea=_0x523db0[_0x50a5cd(0x248)];adapter[_0x50a5cd(0x1c6)][_0x50a5cd(0x164)](_0x50a5cd(0x1e5)+_0x41f07c['toString']()+_0x50a5cd(0x229)+_0x41f07c['toString']()+',\x20Value:\x20'+_0x4af3ea[_0x50a5cd(0x249)]()+_0x50a5cd(0x25c)+_0x523db0[_0x50a5cd(0x1d2)]+',\x20Setpoint:\x20'+_0x523db0['SETPOINT']+_0x50a5cd(0x143)+JSON[_0x50a5cd(0x272)](_0x5dff87));var _0x41d875=_0x380fcb[_0x50a5cd(0x281)];if(_0x4af3ea==-0x1)_0x4af3ea=0x0;_0x41d875!=_0x4af3ea&&(adapter[_0x50a5cd(0x1c6)][_0x50a5cd(0x164)]('getGatewayStates:\x20Setting\x20state\x20for\x20channel:\x20'+_0x41f07c[_0x50a5cd(0x249)]()+_0x50a5cd(0x274)+_0x41d875+_0x50a5cd(0x1e3)+_0x4af3ea),adapter[_0x50a5cd(0x232)]('channel'+_0x41f07c[_0x50a5cd(0x249)]()+_0x50a5cd(0x210),_0x4af3ea['toString'](),!![]));}});}else adapter['log'][_0x5cf2b8(0x138)](_0x5cf2b8(0x1c5)+_0x2da427);}else adapter['log'][_0x5cf2b8(0x138)](_0x5cf2b8(0x16e)+_0x2da427);_0x3ffa94[_0x5cf2b8(0x250)]();});}}});};function getGatewayDevices(_0x3cf9d7){var _0x507082=_0x1540a5;if(adapter['config']['ip']){SyncRoomsAndScenes=adapter[_0x507082(0x194)][_0x507082(0x265)];SyncRoomsAndScenes&&(adapter[_0x507082(0x21b)](adapter[_0x507082(0x267)]+'.rooms.*',function(_0x2fb379,_0x4e520b){var _0x244200=_0x507082,_0x2da36f=[];for(var _0x50a0f0 in _0x4e520b)_0x2da36f[_0x244200(0x21a)](_0x50a0f0);deleteGatewayStates(_0x2da36f,function(){});}),adapter[_0x507082(0x21b)](adapter[_0x507082(0x267)]+_0x507082(0x1c7),function(_0xdb33bd,_0x1224e2){var _0x42d69d=[];for(var _0x55a1d7 in _0x1224e2)_0x42d69d['push'](_0x55a1d7);deleteGatewayStates(_0x42d69d,function(){});}));var _0xa77b1b=eNet[_0x507082(0x24a)]({'host':adapter[_0x507082(0x194)]['ip']});_0xa77b1b[_0x507082(0x1ed)](),adapter[_0x507082(0x1c6)][_0x507082(0x164)](_0x507082(0x209));var _0x4fad32={};_0xa77b1b[_0x507082(0x239)](function(_0x45c5fd,_0x57ac83){var _0x380279=_0x507082;if(_0x45c5fd)adapter[_0x380279(0x1c6)]['error'](_0x380279(0x16c)+_0x45c5fd);else adapter[_0x380279(0x1c6)][_0x380279(0x164)](_0x380279(0x235)+JSON['stringify'](_0x57ac83)),adapter[_0x380279(0x232)]('info.connection',!![],!![]),setupGatewayDevices(_0xa77b1b,JSON[_0x380279(0x272)](_0x57ac83));_0xa77b1b[_0x380279(0x250)]();});}};function setupGatewayDevices(_0x3fc7d0,_0x4d0d64){var _0xe8fdb7=_0x1540a5,_0x3fc7d0=eNet[_0xe8fdb7(0x24a)]({'host':adapter[_0xe8fdb7(0x194)]['ip']});_0x3fc7d0['connect'](),_0x3fc7d0[_0xe8fdb7(0x27c)](function(_0x558828,_0x4b406a){var _0x206ce3=_0xe8fdb7;if(_0x558828)adapter[_0x206ce3(0x1c6)]['error'](_0x206ce3(0x279)+_0x558828);else{adapter[_0x206ce3(0x232)](_0x206ce3(0x1de),!![],!![]);var _0x5c3616=JSON['parse'](JSON[_0x206ce3(0x272)](_0x4b406a));_0x5c3616&&adapter['log']['info']('ioBroker\x20Jung/Gira\x20eNet\x20Adapter\x20Version\x20'+adapter[_0x206ce3(0x1e0)]+'.\x20Connected\x20to\x20eNet\x20Gateway\x20on\x20'+_0x3fc7d0['name']+_0x206ce3(0x261)+_0x5c3616[_0x206ce3(0x255)]+_0x206ce3(0x148)+_0x5c3616[_0x206ce3(0x17d)]+',\x20Protocol:\x20'+_0x5c3616[_0x206ce3(0x190)]+_0x206ce3(0x243)+_0x5c3616[_0x206ce3(0x144)]);}_0x3fc7d0[_0x206ce3(0x250)]();});var _0x4b8a88=JSON[_0xe8fdb7(0x230)](_0x4d0d64);if(_0x4b8a88){adapter[_0xe8fdb7(0x1c6)][_0xe8fdb7(0x164)](_0xe8fdb7(0x17f)+_0x4b8a88[_0xe8fdb7(0x16f)][_0xe8fdb7(0x215)]+',\x20'+'Count\x20of\x20rooms:\x20'+_0x4b8a88[_0xe8fdb7(0x1ee)][_0xe8fdb7(0x215)]);var _0x586e78=_0x4b8a88[_0xe8fdb7(0x16f)][_0xe8fdb7(0x215)],_0x379d1b=_0x4b8a88[_0xe8fdb7(0x1ee)]['length'];adapter[_0xe8fdb7(0x1c6)][_0xe8fdb7(0x164)](_0xe8fdb7(0x27e));var _0xa6c6c3=[];for(var _0x1e5f1d=0x0;_0x1e5f1d<_0x586e78;_0x1e5f1d++){var _0x45ab8a=_0x4b8a88['ITEMS'][_0x1e5f1d]['TYPE'],_0x5de934=_0x45ab8a[_0xe8fdb7(0x278)]();switch(_0x5de934){case _0xe8fdb7(0x1e9):SyncRoomsAndScenes===!![]&&(adapter[_0xe8fdb7(0x17b)]('scenes.scene'+_0x4b8a88[_0xe8fdb7(0x16f)][_0x1e5f1d]['NUMBER'],{'_id':adapter[_0xe8fdb7(0x267)]+'scenes.scene'+_0x4b8a88[_0xe8fdb7(0x16f)][_0x1e5f1d][_0xe8fdb7(0x221)],'type':'channel','common':{'name':_0x4b8a88[_0xe8fdb7(0x16f)][_0x1e5f1d][_0xe8fdb7(0x1a8)]},'native':{}}),adapter[_0xe8fdb7(0x17b)](_0xe8fdb7(0x1f7)+_0x4b8a88['ITEMS'][_0x1e5f1d][_0xe8fdb7(0x221)]+_0xe8fdb7(0x1ad),{'_id':adapter[_0xe8fdb7(0x267)]+_0xe8fdb7(0x1f7)+_0x4b8a88[_0xe8fdb7(0x16f)][_0x1e5f1d][_0xe8fdb7(0x221)]+_0xe8fdb7(0x1ad),'type':_0xe8fdb7(0x1f3),'common':{'name':_0x4b8a88[_0xe8fdb7(0x16f)][_0x1e5f1d]['NAME']+_0xe8fdb7(0x140),'type':_0xe8fdb7(0x25b),'role':'id','write':_0xe8fdb7(0x187),'read':_0xe8fdb7(0x1a3)},'native':{}}),adapter[_0xe8fdb7(0x17b)]('scenes.scene'+_0x4b8a88[_0xe8fdb7(0x16f)][_0x1e5f1d][_0xe8fdb7(0x221)]+'.NAME',{'_id':adapter['namespace']+'scenes.scene'+_0x4b8a88[_0xe8fdb7(0x16f)][_0x1e5f1d]['NUMBER']+'.NAME','type':_0xe8fdb7(0x1f3),'common':{'name':_0x4b8a88[_0xe8fdb7(0x16f)][_0x1e5f1d][_0xe8fdb7(0x1a8)]+_0xe8fdb7(0x1d5),'type':'string','role':_0xe8fdb7(0x12d),'write':_0xe8fdb7(0x187),'read':_0xe8fdb7(0x1a3)},'native':{}}),_0x4b8a88[_0xe8fdb7(0x16f)][_0x1e5f1d][_0xe8fdb7(0x201)]?adapter['setObjectNotExists'](_0xe8fdb7(0x1f7)+_0x4b8a88['ITEMS'][_0x1e5f1d][_0xe8fdb7(0x221)]+_0xe8fdb7(0x210),{'_id':adapter['namespace']+'scenes.scene'+_0x4b8a88['ITEMS'][_0x1e5f1d]['NUMBER']+_0xe8fdb7(0x210),'type':'state','common':{'name':_0x4b8a88[_0xe8fdb7(0x16f)][_0x1e5f1d][_0xe8fdb7(0x1a8)]+_0xe8fdb7(0x16b),'type':_0xe8fdb7(0x188),'role':_0xe8fdb7(0x1f8),'min':0x0,'max':0x64},'native':{}}):adapter['setObjectNotExists'](_0xe8fdb7(0x1f7)+_0x4b8a88[_0xe8fdb7(0x16f)][_0x1e5f1d][_0xe8fdb7(0x221)]+_0xe8fdb7(0x23d),{'_id':adapter[_0xe8fdb7(0x267)]+_0xe8fdb7(0x1f7)+_0x4b8a88['ITEMS'][_0x1e5f1d]['NUMBER']+'.STATE','type':_0xe8fdb7(0x1f3),'common':{'name':_0x4b8a88[_0xe8fdb7(0x16f)][_0x1e5f1d][_0xe8fdb7(0x1a8)]+_0xe8fdb7(0x22d),'type':'boolean','role':_0xe8fdb7(0x242)},'native':{}}),adapter[_0xe8fdb7(0x232)](_0xe8fdb7(0x1f7)+_0x4b8a88['ITEMS'][_0x1e5f1d]['NUMBER']+_0xe8fdb7(0x1ad),_0x4b8a88['ITEMS'][_0x1e5f1d][_0xe8fdb7(0x221)],!![]),adapter[_0xe8fdb7(0x232)]('scenes.scene'+_0x4b8a88['ITEMS'][_0x1e5f1d][_0xe8fdb7(0x221)]+_0xe8fdb7(0x15c),_0x4b8a88[_0xe8fdb7(0x16f)][_0x1e5f1d][_0xe8fdb7(0x1a8)],!![]),adapter[_0xe8fdb7(0x232)](_0xe8fdb7(0x1f7)+_0x4b8a88['ITEMS'][_0x1e5f1d][_0xe8fdb7(0x221)]+'.STATE',![],!![]),adapter['log'][_0xe8fdb7(0x164)](_0xe8fdb7(0x20f)+_0x4b8a88[_0xe8fdb7(0x16f)][_0x1e5f1d][_0xe8fdb7(0x221)]+',\x20Name:\x20'+_0x4b8a88[_0xe8fdb7(0x16f)][_0x1e5f1d][_0xe8fdb7(0x1a8)]+_0xe8fdb7(0x1dc)+_0x4b8a88[_0xe8fdb7(0x16f)][_0x1e5f1d][_0xe8fdb7(0x26c)]));break;case _0xe8fdb7(0x202):adapter['setObjectNotExists'](_0xe8fdb7(0x1e7)+_0x4b8a88[_0xe8fdb7(0x16f)][_0x1e5f1d]['NUMBER'],{'_id':adapter[_0xe8fdb7(0x267)]+'channel'+_0x4b8a88[_0xe8fdb7(0x16f)][_0x1e5f1d][_0xe8fdb7(0x221)],'type':_0xe8fdb7(0x1e7),'common':{'name':_0x4b8a88[_0xe8fdb7(0x16f)][_0x1e5f1d][_0xe8fdb7(0x1a8)]},'native':{}}),adapter[_0xe8fdb7(0x17b)]('channel'+_0x4b8a88['ITEMS'][_0x1e5f1d][_0xe8fdb7(0x221)]+_0xe8fdb7(0x1ad),{'_id':adapter[_0xe8fdb7(0x267)]+_0xe8fdb7(0x1e7)+_0x4b8a88['ITEMS'][_0x1e5f1d][_0xe8fdb7(0x221)]+_0xe8fdb7(0x1ad),'type':_0xe8fdb7(0x1f3),'common':{'name':_0x4b8a88[_0xe8fdb7(0x16f)][_0x1e5f1d]['NAME']+_0xe8fdb7(0x140),'type':_0xe8fdb7(0x25b),'role':'id','write':'false','read':_0xe8fdb7(0x1a3)},'native':{}}),adapter[_0xe8fdb7(0x17b)](_0xe8fdb7(0x1e7)+_0x4b8a88[_0xe8fdb7(0x16f)][_0x1e5f1d]['NUMBER']+_0xe8fdb7(0x15c),{'_id':adapter[_0xe8fdb7(0x267)]+_0xe8fdb7(0x1e7)+_0x4b8a88['ITEMS'][_0x1e5f1d][_0xe8fdb7(0x221)]+_0xe8fdb7(0x15c),'type':_0xe8fdb7(0x1f3),'common':{'name':_0x4b8a88[_0xe8fdb7(0x16f)][_0x1e5f1d][_0xe8fdb7(0x1a8)]+_0xe8fdb7(0x1d5),'type':'string','role':'value','write':_0xe8fdb7(0x187),'read':'true'},'native':{}}),adapter['setObjectNotExists'](_0xe8fdb7(0x1e7)+_0x4b8a88['ITEMS'][_0x1e5f1d][_0xe8fdb7(0x221)]+_0xe8fdb7(0x23d),{'_id':adapter[_0xe8fdb7(0x267)]+_0xe8fdb7(0x1e7)+_0x4b8a88['ITEMS'][_0x1e5f1d][_0xe8fdb7(0x221)]+_0xe8fdb7(0x23d),'type':_0xe8fdb7(0x1f3),'common':{'name':_0x4b8a88['ITEMS'][_0x1e5f1d][_0xe8fdb7(0x1a8)]+_0xe8fdb7(0x22d),'type':_0xe8fdb7(0x1d8),'role':_0xe8fdb7(0x1c1)},'native':{}});if(_0x1e5f1d>0xf&&_0x1e5f1d<0x28)_0xa6c6c3[_0xe8fdb7(0x21a)](_0x1e5f1d);adapter[_0xe8fdb7(0x232)](_0xe8fdb7(0x1e7)+_0x4b8a88['ITEMS'][_0x1e5f1d]['NUMBER']+_0xe8fdb7(0x1ad),_0x4b8a88['ITEMS'][_0x1e5f1d][_0xe8fdb7(0x221)],!![]),adapter['setState'](_0xe8fdb7(0x1e7)+_0x4b8a88[_0xe8fdb7(0x16f)][_0x1e5f1d][_0xe8fdb7(0x221)]+_0xe8fdb7(0x15c),_0x4b8a88[_0xe8fdb7(0x16f)][_0x1e5f1d][_0xe8fdb7(0x1a8)],!![]),adapter[_0xe8fdb7(0x232)](_0xe8fdb7(0x1e7)+_0x4b8a88['ITEMS'][_0x1e5f1d][_0xe8fdb7(0x221)]+_0xe8fdb7(0x23d),![],!![]),adapter[_0xe8fdb7(0x1c6)][_0xe8fdb7(0x164)](_0xe8fdb7(0x20c)+_0x4b8a88[_0xe8fdb7(0x16f)][_0x1e5f1d][_0xe8fdb7(0x221)]+_0xe8fdb7(0x23c)+_0x4b8a88[_0xe8fdb7(0x16f)][_0x1e5f1d][_0xe8fdb7(0x1a8)]+_0xe8fdb7(0x1dc)+_0x4b8a88[_0xe8fdb7(0x16f)][_0x1e5f1d]['TYPE']);break;case'DIMMER':adapter[_0xe8fdb7(0x17b)]('channel'+_0x4b8a88['ITEMS'][_0x1e5f1d][_0xe8fdb7(0x221)],{'_id':adapter[_0xe8fdb7(0x267)]+_0xe8fdb7(0x1e7)+_0x4b8a88['ITEMS'][_0x1e5f1d]['NUMBER'],'type':_0xe8fdb7(0x1e7),'common':{'name':_0x4b8a88[_0xe8fdb7(0x16f)][_0x1e5f1d][_0xe8fdb7(0x1a8)]},'native':{}}),adapter['setObjectNotExists'](_0xe8fdb7(0x1e7)+_0x4b8a88[_0xe8fdb7(0x16f)][_0x1e5f1d]['NUMBER']+_0xe8fdb7(0x1ad),{'_id':adapter[_0xe8fdb7(0x267)]+'channel'+_0x4b8a88[_0xe8fdb7(0x16f)][_0x1e5f1d]['NUMBER']+_0xe8fdb7(0x1ad),'type':_0xe8fdb7(0x1f3),'common':{'name':_0x4b8a88['ITEMS'][_0x1e5f1d]['NAME']+_0xe8fdb7(0x140),'type':_0xe8fdb7(0x25b),'role':'id','write':'false','read':_0xe8fdb7(0x1a3)},'native':{}}),adapter[_0xe8fdb7(0x17b)](_0xe8fdb7(0x1e7)+_0x4b8a88['ITEMS'][_0x1e5f1d][_0xe8fdb7(0x221)]+_0xe8fdb7(0x15c),{'_id':adapter['namespace']+_0xe8fdb7(0x1e7)+_0x4b8a88['ITEMS'][_0x1e5f1d][_0xe8fdb7(0x221)]+'.NAME','type':_0xe8fdb7(0x1f3),'common':{'name':_0x4b8a88[_0xe8fdb7(0x16f)][_0x1e5f1d][_0xe8fdb7(0x1a8)]+_0xe8fdb7(0x1d5),'type':_0xe8fdb7(0x25b),'role':_0xe8fdb7(0x12d),'write':_0xe8fdb7(0x187),'read':_0xe8fdb7(0x1a3)},'native':{}}),adapter[_0xe8fdb7(0x17b)](_0xe8fdb7(0x1e7)+_0x4b8a88[_0xe8fdb7(0x16f)][_0x1e5f1d]['NUMBER']+_0xe8fdb7(0x210),{'_id':adapter[_0xe8fdb7(0x267)]+_0xe8fdb7(0x1e7)+_0x4b8a88['ITEMS'][_0x1e5f1d][_0xe8fdb7(0x221)]+'.LEVEL','type':_0xe8fdb7(0x1f3),'common':{'name':_0x4b8a88['ITEMS'][_0x1e5f1d][_0xe8fdb7(0x1a8)]+_0xe8fdb7(0x16b),'type':_0xe8fdb7(0x188),'role':'level.dimmer','min':0x0,'max':0x64},'native':{}});if(_0x1e5f1d>0xf&&_0x1e5f1d<0x28)_0xa6c6c3[_0xe8fdb7(0x21a)](_0x1e5f1d);adapter[_0xe8fdb7(0x232)](_0xe8fdb7(0x1e7)+_0x4b8a88[_0xe8fdb7(0x16f)][_0x1e5f1d]['NUMBER']+'.ID',_0x4b8a88[_0xe8fdb7(0x16f)][_0x1e5f1d][_0xe8fdb7(0x221)],!![]),adapter[_0xe8fdb7(0x232)]('channel'+_0x4b8a88['ITEMS'][_0x1e5f1d][_0xe8fdb7(0x221)]+'.NAME',_0x4b8a88[_0xe8fdb7(0x16f)][_0x1e5f1d][_0xe8fdb7(0x1a8)],!![]),adapter[_0xe8fdb7(0x232)]('channel'+_0x4b8a88[_0xe8fdb7(0x16f)][_0x1e5f1d]['NUMBER']+_0xe8fdb7(0x210),'0',!![]),adapter['log'][_0xe8fdb7(0x164)](_0xe8fdb7(0x20c)+_0x4b8a88[_0xe8fdb7(0x16f)][_0x1e5f1d][_0xe8fdb7(0x221)]+_0xe8fdb7(0x23c)+_0x4b8a88['ITEMS'][_0x1e5f1d][_0xe8fdb7(0x1a8)]+_0xe8fdb7(0x1dc)+_0x4b8a88[_0xe8fdb7(0x16f)][_0x1e5f1d]['TYPE']);break;case _0xe8fdb7(0x1fa):adapter['setObjectNotExists'](_0xe8fdb7(0x1e7)+_0x4b8a88[_0xe8fdb7(0x16f)][_0x1e5f1d][_0xe8fdb7(0x221)],{'_id':adapter[_0xe8fdb7(0x267)]+_0xe8fdb7(0x1e7)+_0x4b8a88['ITEMS'][_0x1e5f1d][_0xe8fdb7(0x221)],'type':_0xe8fdb7(0x1e7),'common':{'name':_0x4b8a88[_0xe8fdb7(0x16f)][_0x1e5f1d]['NAME']},'native':{}}),adapter[_0xe8fdb7(0x17b)](_0xe8fdb7(0x1e7)+_0x4b8a88['ITEMS'][_0x1e5f1d][_0xe8fdb7(0x221)]+'.ID',{'_id':adapter[_0xe8fdb7(0x267)]+_0xe8fdb7(0x1e7)+_0x4b8a88[_0xe8fdb7(0x16f)][_0x1e5f1d][_0xe8fdb7(0x221)]+_0xe8fdb7(0x1ad),'type':_0xe8fdb7(0x1f3),'common':{'name':_0x4b8a88[_0xe8fdb7(0x16f)][_0x1e5f1d][_0xe8fdb7(0x1a8)]+_0xe8fdb7(0x140),'type':_0xe8fdb7(0x25b),'role':'id','write':_0xe8fdb7(0x187),'read':'true'},'native':{}}),adapter[_0xe8fdb7(0x17b)]('channel'+_0x4b8a88[_0xe8fdb7(0x16f)][_0x1e5f1d][_0xe8fdb7(0x221)]+_0xe8fdb7(0x15c),{'_id':adapter[_0xe8fdb7(0x267)]+'channel'+_0x4b8a88[_0xe8fdb7(0x16f)][_0x1e5f1d][_0xe8fdb7(0x221)]+_0xe8fdb7(0x15c),'type':'state','common':{'name':_0x4b8a88[_0xe8fdb7(0x16f)][_0x1e5f1d][_0xe8fdb7(0x1a8)]+_0xe8fdb7(0x1d5),'type':_0xe8fdb7(0x25b),'role':_0xe8fdb7(0x12d),'write':_0xe8fdb7(0x187),'read':_0xe8fdb7(0x1a3)},'native':{}}),adapter[_0xe8fdb7(0x17b)](_0xe8fdb7(0x1e7)+_0x4b8a88[_0xe8fdb7(0x16f)][_0x1e5f1d]['NUMBER']+_0xe8fdb7(0x210),{'_id':adapter[_0xe8fdb7(0x267)]+_0xe8fdb7(0x1e7)+_0x4b8a88[_0xe8fdb7(0x16f)][_0x1e5f1d][_0xe8fdb7(0x221)]+'.LEVEL','type':_0xe8fdb7(0x1f3),'common':{'name':_0x4b8a88[_0xe8fdb7(0x16f)][_0x1e5f1d]['NAME']+_0xe8fdb7(0x16b),'type':_0xe8fdb7(0x188),'role':_0xe8fdb7(0x238),'min':0x0,'max':0x64},'native':{}});if(_0x1e5f1d>0xf&&_0x1e5f1d<0x28)_0xa6c6c3['push'](_0x1e5f1d);adapter[_0xe8fdb7(0x232)]('channel'+_0x4b8a88[_0xe8fdb7(0x16f)][_0x1e5f1d]['NUMBER']+_0xe8fdb7(0x1ad),_0x4b8a88['ITEMS'][_0x1e5f1d][_0xe8fdb7(0x221)],!![]),adapter[_0xe8fdb7(0x232)](_0xe8fdb7(0x1e7)+_0x4b8a88[_0xe8fdb7(0x16f)][_0x1e5f1d][_0xe8fdb7(0x221)]+'.NAME',_0x4b8a88[_0xe8fdb7(0x16f)][_0x1e5f1d][_0xe8fdb7(0x1a8)],!![]),adapter[_0xe8fdb7(0x232)](_0xe8fdb7(0x1e7)+_0x4b8a88['ITEMS'][_0x1e5f1d][_0xe8fdb7(0x221)]+_0xe8fdb7(0x210),'0',!![]),adapter[_0xe8fdb7(0x1c6)]['debug'](_0xe8fdb7(0x20c)+_0x4b8a88[_0xe8fdb7(0x16f)][_0x1e5f1d][_0xe8fdb7(0x221)]+',\x20Name:\x20'+_0x4b8a88[_0xe8fdb7(0x16f)][_0x1e5f1d]['NAME']+_0xe8fdb7(0x1dc)+_0x4b8a88[_0xe8fdb7(0x16f)][_0x1e5f1d][_0xe8fdb7(0x26c)]);break;case _0xe8fdb7(0x22c):break;default:adapter[_0xe8fdb7(0x1c6)][_0xe8fdb7(0x138)]('setupGatewayDevices:\x20ERROR!\x20Unknown\x20device\x20type\x20'+_0x4b8a88['ITEMS'][_0x1e5f1d][_0xe8fdb7(0x221)]+_0xe8fdb7(0x1e2)+_0x4b8a88[_0xe8fdb7(0x16f)][_0x1e5f1d][_0xe8fdb7(0x221)]+_0xe8fdb7(0x23c)+_0x4b8a88[_0xe8fdb7(0x16f)][_0x1e5f1d]['NAME']);}}if(SyncRoomsAndScenes){adapter[_0xe8fdb7(0x1c6)]['debug'](_0xe8fdb7(0x23e));for(var _0x1e5f1d=0x0;_0x1e5f1d<_0x379d1b;_0x1e5f1d++){adapter[_0xe8fdb7(0x17b)](_0xe8fdb7(0x184)+_0x4b8a88[_0xe8fdb7(0x1ee)][_0x1e5f1d][_0xe8fdb7(0x221)],{'_id':adapter['namespace']+_0xe8fdb7(0x184)+_0x4b8a88[_0xe8fdb7(0x16f)][_0x1e5f1d][_0xe8fdb7(0x221)],'type':_0xe8fdb7(0x1e7),'common':{'name':_0x4b8a88[_0xe8fdb7(0x1ee)][_0x1e5f1d][_0xe8fdb7(0x1a8)]},'native':{}}),adapter[_0xe8fdb7(0x17b)](_0xe8fdb7(0x184)+_0x4b8a88[_0xe8fdb7(0x1ee)][_0x1e5f1d]['NUMBER']+_0xe8fdb7(0x1ad),{'_id':adapter[_0xe8fdb7(0x267)]+'rooms.room'+_0x4b8a88[_0xe8fdb7(0x16f)][_0x1e5f1d][_0xe8fdb7(0x221)]+_0xe8fdb7(0x1ad),'type':_0xe8fdb7(0x1f3),'common':{'name':_0x4b8a88[_0xe8fdb7(0x1ee)][_0x1e5f1d][_0xe8fdb7(0x1a8)]+_0xe8fdb7(0x140),'type':_0xe8fdb7(0x25b),'role':'id','write':_0xe8fdb7(0x187),'read':_0xe8fdb7(0x1a3)},'native':{}}),adapter[_0xe8fdb7(0x17b)](_0xe8fdb7(0x184)+_0x4b8a88['LISTS'][_0x1e5f1d][_0xe8fdb7(0x221)]+_0xe8fdb7(0x15c),{'_id':adapter[_0xe8fdb7(0x267)]+'rooms.room'+_0x4b8a88['ITEMS'][_0x1e5f1d][_0xe8fdb7(0x221)]+_0xe8fdb7(0x15c),'type':'state','common':{'name':_0x4b8a88[_0xe8fdb7(0x1ee)][_0x1e5f1d][_0xe8fdb7(0x1a8)]+':NAME','type':_0xe8fdb7(0x25b),'role':_0xe8fdb7(0x12d),'write':_0xe8fdb7(0x187),'read':'true'},'native':{}});if(_0x4b8a88[_0xe8fdb7(0x1ee)][_0x1e5f1d]['ITEMS_ORDER']){var _0xd36064=_0x4b8a88[_0xe8fdb7(0x1ee)][_0x1e5f1d][_0xe8fdb7(0x27d)];adapter[_0xe8fdb7(0x17b)](_0xe8fdb7(0x184)+_0x4b8a88[_0xe8fdb7(0x1ee)][_0x1e5f1d][_0xe8fdb7(0x221)]+_0xe8fdb7(0x231),{'_id':adapter[_0xe8fdb7(0x267)]+_0xe8fdb7(0x184)+_0x4b8a88[_0xe8fdb7(0x16f)][_0x1e5f1d]['NUMBER']+_0xe8fdb7(0x231),'type':_0xe8fdb7(0x1f3),'common':{'name':_0x4b8a88[_0xe8fdb7(0x1ee)][_0x1e5f1d]['NAME']+_0xe8fdb7(0x15d),'type':_0xe8fdb7(0x25b),'role':_0xe8fdb7(0x12d),'write':_0xe8fdb7(0x187),'read':_0xe8fdb7(0x1a3)},'native':{}}),adapter[_0xe8fdb7(0x232)](_0xe8fdb7(0x184)+_0x4b8a88['LISTS'][_0x1e5f1d][_0xe8fdb7(0x221)]+_0xe8fdb7(0x231),_0xd36064['toString'](),!![]);}adapter['setState'](_0xe8fdb7(0x184)+_0x4b8a88[_0xe8fdb7(0x1ee)][_0x1e5f1d][_0xe8fdb7(0x221)]+'.ID',_0x4b8a88[_0xe8fdb7(0x1ee)][_0x1e5f1d]['NUMBER'],!![]),adapter[_0xe8fdb7(0x232)](_0xe8fdb7(0x184)+_0x4b8a88[_0xe8fdb7(0x1ee)][_0x1e5f1d][_0xe8fdb7(0x221)]+_0xe8fdb7(0x15c),_0x4b8a88[_0xe8fdb7(0x1ee)][_0x1e5f1d]['NAME'],!![]),adapter[_0xe8fdb7(0x1c6)][_0xe8fdb7(0x164)](_0xe8fdb7(0x1ce)+_0x4b8a88[_0xe8fdb7(0x1ee)][_0x1e5f1d]['NUMBER']+_0xe8fdb7(0x23c)+_0x4b8a88[_0xe8fdb7(0x1ee)][_0x1e5f1d][_0xe8fdb7(0x1a8)]);}}adapter[_0xe8fdb7(0x1c6)][_0xe8fdb7(0x164)](_0xe8fdb7(0x195)+_0xa6c6c3[_0xe8fdb7(0x249)]()),adapter[_0xe8fdb7(0x17b)]('eNet.subscribeable_channels',{'_id':adapter[_0xe8fdb7(0x267)]+_0xe8fdb7(0x276),'type':_0xe8fdb7(0x1f3),'common':{'name':_0xe8fdb7(0x17e),'type':'string','role':'value','read':!![],'write':![]},'native':{}}),adapter[_0xe8fdb7(0x232)]('eNet.subscribeable_channels',JSON['stringify'](_0xa6c6c3),!![]),main();}};function setGatewayChannel(_0x1483e1,_0xcf925f,_0x1f3351,_0x375ae2){var _0x2e52ba=_0x1540a5,_0xd8cd6c=eNet[_0x2e52ba(0x24a)]({'host':_0x1483e1});_0xd8cd6c[_0x2e52ba(0x1ed)](),adapter[_0x2e52ba(0x1fb)](_0xcf925f,function(_0xfa9118,_0x20fd56){var _0x54be0a=_0x2e52ba;if(!_0xfa9118&&_0x20fd56)switch(_0x20fd56[_0x54be0a(0x19e)][_0x54be0a(0x15a)]){case _0x54be0a(0x1c1):adapter[_0x54be0a(0x1c6)]['debug'](_0x54be0a(0x234)+_0xcf925f+_0x54be0a(0x1cf)+_0x20fd56[_0x54be0a(0x19e)][_0x54be0a(0x216)]+_0x54be0a(0x1da)+_0x20fd56[_0x54be0a(0x19e)][_0x54be0a(0x15a)]),_0xd8cd6c[_0x54be0a(0x153)](_0x1f3351,_0x375ae2,![],function(_0x27126b,_0xcfa4d2){var _0x4493e9=_0x54be0a;if(_0x27126b)adapter[_0x4493e9(0x1c6)][_0x4493e9(0x138)](_0x4493e9(0x205)+_0xcf925f+',\x20Object\x20Type:\x20'+_0x20fd56[_0x4493e9(0x19e)][_0x4493e9(0x216)]+_0x4493e9(0x1da)+_0x20fd56['common'][_0x4493e9(0x15a)]+',\x20VALUE:\x20'+_0x375ae2+',\x20Error:\x20'+JSON[_0x4493e9(0x272)](_0x27126b));else adapter[_0x4493e9(0x1c6)][_0x4493e9(0x164)](_0x4493e9(0x19a)+JSON[_0x4493e9(0x272)](_0xcfa4d2));});break;case _0x54be0a(0x1f8):adapter[_0x54be0a(0x1c6)]['debug'](_0x54be0a(0x170)+_0xcf925f+_0x54be0a(0x1cf)+_0x20fd56[_0x54be0a(0x19e)][_0x54be0a(0x216)]+'\x20Object\x20Role:\x20'+_0x20fd56['common'][_0x54be0a(0x15a)]),_0xd8cd6c[_0x54be0a(0x21e)](_0x1f3351,_0x375ae2,![],function(_0x231337,_0x25348f){var _0x513798=_0x54be0a;if(_0x231337)adapter[_0x513798(0x1c6)][_0x513798(0x138)](_0x513798(0x159)+_0xcf925f+_0x513798(0x1cf)+_0x20fd56[_0x513798(0x19e)][_0x513798(0x216)]+'\x20Object\x20Role:\x20'+_0x20fd56[_0x513798(0x19e)]['role']+',\x20VALUE:\x20'+_0x375ae2);else adapter[_0x513798(0x1c6)][_0x513798(0x164)](_0x513798(0x19a)+JSON['stringify'](_0x25348f));});break;case _0x54be0a(0x238):adapter[_0x54be0a(0x1c6)][_0x54be0a(0x164)](_0x54be0a(0x14c)+_0xcf925f+',\x20Object\x20Type:\x20'+_0x20fd56[_0x54be0a(0x19e)]['type']+_0x54be0a(0x1da)+_0x20fd56['common'][_0x54be0a(0x15a)]),_0xd8cd6c['setValueBlind'](_0x1f3351,_0x375ae2,![],function(_0x585a5f,_0x24c0c8){var _0x18c75d=_0x54be0a;if(_0x585a5f)adapter[_0x18c75d(0x1c6)][_0x18c75d(0x138)](_0x18c75d(0x154)+_0xcf925f+_0x18c75d(0x1cf)+_0x20fd56[_0x18c75d(0x19e)][_0x18c75d(0x216)]+_0x18c75d(0x1da)+_0x20fd56[_0x18c75d(0x19e)][_0x18c75d(0x15a)]+_0x18c75d(0x228)+_0x375ae2);else adapter[_0x18c75d(0x1c6)][_0x18c75d(0x164)](_0x18c75d(0x19a)+JSON['stringify'](_0x24c0c8));});break;}});};module&&module['parent']?module[_0x1540a5(0x19d)]=startAdapter:startAdapter();
+/* jshint -W097 */
+/* jshint strict:false */
+/* global require */
+/* global RRule */
+/* global __dirname */
+/* jslint node: true */
+
+"use strict";
+var utils = require('@iobroker/adapter-core');
+var adapter;
+var eNet = require(__dirname + "/lib/enet");
+var Gateway = require(__dirname + "/lib/gateway");
+var pollTimerStates = null;
+var SyncRoomsAndScenes = false;
+var ConnectionType_SSL = false;
+var Connection_Port = 80;
+var eNetType = "Server";
+var crypto = require('crypto');
+var SessionID = "";
+var CounterID = "";
+//var IBN = "";
+var ncd = 1;
+var Zaehler = 1;
+var devtyp='';
+var devUID='';
+// weitere VAR's
+var valuePathArray =[];
+var devicePathArray=[];
+var sceneActionPathArray=[];
+var batteryPathArray=[];
+
+
+var get_login_digest='{"jsonrpc":"2.0","method":"getDigestAuthentificationInfos","params":null,"id":"$$id$$"}'; 
+var get_configuration='{"jsonrpc":"2.0", "method":"getCurrentConfiguration", "params":null, "id":"$$id$$"}';
+var get_locations='{"jsonrpc":"2.0", "method":"getLocations", "params":{"locationUIDs":[]}, "id":"$$id$$"}';
+var get_eventid='{"jsonrpc":"2.0", "method":"getDevicesWithParameterFilter", "params":{"deviceUIDs":["$$devuid$$"], "filter":".+\\\\.(SCV1|SCV2|SNA|PSN)\\\\[(.|1.|2.|3.)\\\\]+"}, "id":"$$id$$"}';
+var get_devices='{"jsonrpc":"2.0", "method":"getDevices", "params":{"deviceUIDs":["$$devuid$$"]}, "id":"$$id$$"}';
+var get_currentvalues='{"jsonrpc":"2.0", "method":"getCurrentValuesFromOutputDeviceFunction", "params":{"deviceFunctionUID":"$$eventuid$$"}, "id":"$$id$$"}';
+var set_state='{"jsonrpc":"2.0", "method":"callInputDeviceFunction", "params":{"deviceFunctionUID":"$$UID$$", "values":[{"valueTypeID":"$$valueTypeID$$", "value":$$Wert$$}]}, "id":"$$id$$"}';
+var set_client_role='{"jsonrpc":"2.0", "method":"setClientRole", "params":{"clientRole":"CR_VISU"}, "id":"$$id$$"}';
+var register_value_change='{"jsonrpc":"2.0", "method": "registerEventValueChanged","params":{"valueUID":"$$uid$$"},"id":"$$id$$"}'
+var request_events='{"jsonrpc":"2.0", "method":"requestEvents", "params":null, "id":"$$id$$"}'
+
+
+
+
+var HTTPRequest = (function() {
+  var adapters = {
+      false: require('http'),
+      true: require('https'),
+    };
+
+  return function(connection_type) {
+    return adapters[adapter.config.connection_type_ssl]
+  }
+}());
+
+
+
+
+function startAdapter(options) 
+{
+    options = options || {};
+    Object.assign(options,{
+        name:  "enet",
+        stateChange:  function (id, state) 
+		{
+			eNetType = adapter.config.devicetype;
+			if (eNetType == "Gateway")
+			{
+				var eNetChannelArray = id.split(".");
+				var eNetChannelTemp = eNetChannelArray[2];
+				if (eNetChannelTemp.search(/channel/g));
+				{
+					var eNetChannel = eNetChannelTemp.replace("channel", "");
+					if (state && !state.ack)
+						setGatewayChannel(adapter.config.ip, id, eNetChannel, state.val);
+				}
+			}
+			else if (eNetType == "Server")
+			{
+
+				if (id.indexOf('.action') > -1)
+				{
+					if (state && !state.ack)
+					{
+						var parent = id.substring(0,id.lastIndexOf('.'));
+						adapter.getForeignObject(parent, function (err, obj) 
+						{
+							if (obj && obj.native && obj.native.sceneActionUID) 
+							{
+								adapter.log.debug("Action: " + id + ", eNet Action UID: " + obj.native.sceneActionUID);
+								eNetServer_executeAction(obj.native.sceneActionUID);
+								adapter.setState(id,false,true)//true=ACK
+							}
+						});
+					}
+				}
+
+
+				if (id.indexOf('.value') > -1)
+				{
+					if (state && !state.ack)
+					{
+						var parent = id.substring(0,id.lastIndexOf('.'));
+						adapter.getForeignObject(parent, function (err, obj) 
+						{
+							if (obj && obj.native && obj.native.Input_UID && obj.native.ValueType_ID) 
+							{
+								adapter.log.debug("State Change ID: " + id + ", eNet Input UID: " + obj.native.Input_UID + " Value Type ID:" +obj.native.ValueType_ID + ", Value: " + state.val + ", Value type: " + typeof(state.val));
+								eNetServer_SetState(obj.native.Input_UID, obj.native.ValueType_ID, state.val);
+							}
+						});
+					}
+				}
+			}
+		},
+        unload: function (callback) 
+		{
+			try 
+			{
+				eNetType = adapter.config.devicetype;		
+				if (eNetType == "Gateway")
+				{
+					clearInterval(pollTimerStates);
+					pollTimerStates = null;				
+				}
+				else if (eNetType == "Server")
+				{
+					clearInterval(pollTimerStates);
+					pollTimerStates = null;				
+					eNetServer_Logout();
+				}
+				adapter.setState("info.connection", false, true);
+				callback();
+			} 
+			catch (e) 
+			{
+				callback();
+			}			
+        },
+        ready: function () 
+		{
+			ConnectionType_SSL = adapter.config.connection_type_ssl;
+			Connection_Port = adapter.config.connection_port;
+			eNetType = adapter.config.devicetype;
+			if (eNetType == "Gateway")
+			{
+				adapter.log.info("Running eNet Adapter Version " + adapter.version + ", Configured eNet Gateway: " + adapter.config.ip);
+			}
+			else if (eNetType == "Server")
+			{
+				if (ConnectionType_SSL)
+				{
+					adapter.log.info("Running eNet Adapter Version " + adapter.version + ", Configured eNet Server: " + adapter.config.ip + " (SSL/HTTPS), Username: " + adapter.config.username + " on port " + Connection_Port);
+				}
+				else 
+				{
+					adapter.log.info("Running eNet Adapter Version " + adapter.version + ", Configured eNet Server: " + adapter.config.ip + ", Username: " + adapter.config.username + " on port " + Connection_Port);
+				}
+			}
+			init();			
+            main();
+        }
+    });
+    adapter = new utils.Adapter(options);
+    return adapter;
+}			
+
+function init() 
+{
+	if (adapter.config.ip)
+	{
+		eNetType = adapter.config.devicetype;
+		if (eNetType == "Gateway")
+		{
+			getGatewayDevices(adapter.config.ip)
+		}
+		else if (eNetType == "Server")
+		{
+			init_server(); // NUR EINMAL laufen!!!
+			eNetServer_Login();
+		}
+	}
+}
+
+
+function init_server()
+{
+	adapter.log.debug('INIT SERVER Routine....')
+	var tempSessionID =	adapter.getState("info.SessionID", function (err, state) 
+	{
+		if (!state)
+		{
+			adapter.setObjectNotExists("info.SessionID", {_id : adapter.namespace + "info.SessionID", type: "state", common: {name: "eNet Server Session ID", type: "string", role: "value", read: true, write: true},native: {}});
+			adapter.setState('info.SessionID', "", true);
+		}
+	});
+	var tempCounterID =	adapter.getState("info.CounterID", function (err, state) 
+	{
+		if (!state)
+		{
+			adapter.setObjectNotExists("info.CounterID", {_id : adapter.namespace + "info.CounterID", type: "state", common: {name: "eNet Server Counter ID", type: "string", role: "value", read: true, write: true},native: {}});
+			adapter.setState('info.CounterID', "0", true);
+		}
+	});
+/*	var tempRE = adapter.getState("info.requestEvents", function (err, state) 
+	{
+		if (!state)
+		{
+			adapter.setObjectNotExists("info.requestEvents", {_id : adapter.namespace + "info.requestEvents", type: "state", common: {name: "eNet requestEvents", type: "string", role: "value", read: true, write: true},native: {}});
+			adapter.setState('info.requestEvents', true, {unit: ''});
+		}
+	});
+*/
+}
+
+
+function main() 
+{
+	adapter.subscribeStates("*");
+	if (parseInt(adapter.config.interval, 10))
+	{
+		eNetType = adapter.config.devicetype;
+		if (eNetType == "Gateway")
+		{
+			pollTimerStates = setInterval(getGatewayStates, parseInt(adapter.config.interval, 10));
+		}
+		else if (eNetType == "Server")
+		{
+			// nicht mehr notwendig, wegen RequestEvents
+			//pollTimerStates = setInterval(eNetServer_GetCurrentValues, parseInt(adapter.config.interval, 10));
+		}
+	}
+}
+
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+///																																											//
+///          BEGIN ENET SERVER ROUTINES 																																	//
+///																																											//
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+            
+function GenerateRandom(len) 
+{
+    var characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabzdefghijklmnopqrstuvwxyz0123456789';
+    var token = '';
+    for (var i = 0; i < len; i++) 
+	{
+        var randNum = Math.round(Math.random() * characters.length);
+        token += characters.substr(randNum, 1);
+    }
+    return token;
+}
+
+function Traverse(o) 
+{
+	for (var i in o) 
+	{
+        if (o[i] !== null && typeof(o[i])=="object") 
+            Traverse(o[i]);
+	}
+}
+
+function eNetServer_CalculateLoginDigest(challengeParams)
+{
+	var ha1 = crypto.createHash('sha1').update(adapter.config.username+':Insta-NetBox:'+adapter.config.password).digest('hex');
+    var ha1u=ha1.toUpperCase();
+    var ha2 = crypto.createHash('sha1').update('POST:/jsonrpc//management' ).digest('hex');
+    var ha2u=ha2.toUpperCase();
+    var nc=('00000000' + ncd).slice(-8);
+    var cnonce=GenerateRandom(40);
+    var ha3 = crypto.createHash('sha1').update(ha1u + ':' + challengeParams.result.nonce + ':'+nc+':'+cnonce+':auth:' + ha2u).digest('hex');
+    var response=ha3.toUpperCase();
+    var authRequestParams = {username : adapter.config.username, realm : challengeParams.result.realm, nonce : challengeParams.result.nonce, uri : challengeParams.result.uri, qop : challengeParams.result.qop, opaque : challengeParams.result.opaque, response : response, nc : nc , cnonce: cnonce};
+	var user_login_digest='{"jsonrpc":"2.0", "method":"userLoginDigest", "params":{"userName":"'+adapter.config.username+'", "uri":"/jsonrpc//management", "qop":"auth", "cnonce":"'+authRequestParams.cnonce+'", "nc":"'+authRequestParams.nc+'", "response":"'+response+'", "realm":"Insta-NetBox", "nonce":"'+authRequestParams.nonce+'", "algorithm":"sha", "opaque":"'+authRequestParams.opaque+'"}, "id":"$$id$$"}';
+
+    return user_login_digest;
+}
+
+function eNetServer_SetClientRole() 
+{
+	var options = 
+	{
+		host: adapter.config.ip,
+		port: Connection_Port,
+		rejectUnauthorized: false,
+		path: '/jsonrpc/management',
+		method:'POST',
+		headers: {'Content-Type': 'application/json'}
+	};
+	var tempSessionID =	adapter.getState("info.SessionID", function (err, state) 
+	{
+		if (state)
+		{
+			SessionID = state.val;
+			options.headers={'Content-Type':'application/json; charset=utf-8','Cookie':'uEhaA=true; pbAudioFalg=ON; VideoFormatAVN=ActiveX; INSTASESSIONID='+SessionID+'; downloadFinished=true; rememberMe=true'};
+			var tempZaehler = adapter.getState("info.CounterID", function (err, state) 
+			{
+				if (state)
+				{
+					//Zaehler = state.val;
+					Zaehler++;
+					adapter.setState('info.CounterID', Zaehler.toString(), true);
+					var body_in=set_client_role.replace('$$id$$',Zaehler.toString());
+					var req = HTTPRequest().request(options, function(res) 
+					{
+						res.setEncoding('utf8');
+						res.on('data', function (body) 
+						{
+							try
+							{
+								adapter.log.debug('SetClientRole Body: ' + body); 
+								var obj=JSON.parse(body);
+								if (obj.hasOwnProperty('error')) 
+								{	
+									adapter.log.error('SetClientRole Error: ' + obj.error.message)
+								} 	
+							}
+							catch(e)
+							{
+								adapter.log.error('Return from eNet Server: "' + e + '". Please try to restart the eNet server, change the connection type (HTTP/HTTPS) and check username/password!');
+								adapter.stop();
+							}
+						});
+						req.on('error', function(e) 
+						{
+							adapter.log.error('Error with request: ' + e.message);
+						});
+					});
+					req.write(body_in);
+					req.end();
+				}
+			});
+		}
+	});						
+}
+
+function eNetServer_SendLoginDigest(body) 
+{
+	var options = {host: adapter.config.ip, 
+			port: Connection_Port, 
+			rejectUnauthorized: false,
+			path: '/jsonrpc/management', 
+			method:'POST', 
+			headers: {'Content-Type': 'application/json'}
+			};
+    options.headers={'Content-Type':'application/json; charset=utf-8','Cookie':'uEhaA=true; pbAudioFalg=ON; VideoFormatAVN=ActiveX; INSTASESSIONID='+SessionID+'; downloadFinished=true; rememberMe=true'};
+    var req = HTTPRequest().request(options, function(res) 
+	{
+        res.setEncoding('utf8');
+	res.on('data', function (body) 
+		{
+		adapter.log.debug('SendLoginDigest, Body: ' + body);
+        });
+	res.on('end', function () {
+        	console.log('Body: ' + body);
+        	eNetServer_SetClientRole();
+        });
+	req.on('error', function(e) {
+        adapter.log.error('Error with request SendLoginDigest: ' + e.message);
+        });
+    });
+    req.write(body);
+    req.end();
+}
+
+
+function eNetServer_delTree(projekt)
+{
+	adapter.getStates(adapter.namespace + "."+projekt+".*", function (err, states) 
+	{
+		var toDelete = [];
+    		for (var id in states) 
+    		{
+        		//toDelete.push(id);
+        		//var id = states.pop();
+			//adapter.log.debug('Lösche Objekt: '+id)
+			//adapter.log.debug('Lösche State: '+id)
+        		adapter.delObject(id, function (err)
+        		{
+				adapter.log.debug('Lösche Objekt: '+id)
+            			adapter.delState(id, function (err)
+            			{
+				adapter.log.debug('Lösche State: '+id)
+            			});        
+        		});                    
+
+    		}
+	});
+}
+
+function eNetServer_Login()
+{
+	adapter.log.info("Starting Login into eNet Server");
+	var options = {
+			host: adapter.config.ip,
+			port: Connection_Port, 
+			rejectUnauthorized: false,
+			path: '/jsonrpc/management', 
+			method:'POST', 
+			headers: {'Content-Type': 'application/json'}
+	};
+	options.headers={'Content-Type':'application/json; charset=utf-8','Cookie':'uEhaA=true; pbAudioFalg=ON; VideoFormatAVN=ActiveX; INSTASESSIONID='+SessionID+'; downloadFinished=true; rememberMe=true'};
+	var tempZaehler = adapter.getState("info.CounterID", function (err, state)
+	{
+		if (state)
+		{
+			try
+			{
+				//Zaehler = state.val;
+				var body = get_login_digest.replace('$$id$$', Zaehler.toString());
+				var body_out='';
+				var req = HTTPRequest().request(options, function(res) 
+				{
+					try
+					{
+						SessionID = res.headers['x-clientcredentials-sessionid'].toString();
+						adapter.setState('info.SessionID', SessionID, {unit: ''});
+						res.setEncoding('utf8');
+						res.on('data', function (data) 
+						{
+							body_out += data;
+						});
+						res.on('end', function () 
+						{
+							adapter.log.debug('Login Body: ' + body_out);
+							var challengeParams = JSON.parse(body_out);
+							var login_digest= eNetServer_CalculateLoginDigest(challengeParams);
+							Zaehler++;
+							login_digest = login_digest.replace("$$id$$",Zaehler.toString());
+							adapter.log.debug('Login Digest Login: ' + login_digest);
+							adapter.setState('info.CounterID', Zaehler.toString(), true);
+							eNetServer_SendLoginDigest(login_digest);
+							adapter.setState("info.connection", true, true);
+							adapter.setState("info.requestEvents", true, true);
+
+							//eNetServer_getProject();
+							//eNetServer_getScenes('','')
+							eNetServer_GetLocations();
+							eNetServer_RegisterSceneAction('registerEventSceneActionCreated') 
+							eNetServer_RegisterSceneAction('registerEventSceneActionDeleted') 
+							eNetServer_RegisterSceneAction('registerEventSceneActionChanged') 
+				                        eNetServer_RegisterDeviceFunction('registerEventDeviceBatteryStateChanged','null') 
+
+						});
+
+						req.on('error', function(e) 
+						{
+							adapter.log.error('Error with request Login: ' + e.message);
+							adapter.setState("info.connection", false, true);
+						});
+					}
+					catch(e)
+					{
+						adapter.log.error('Error on connecting or logging in to eNet server: ' + e.message + '. Maybe you can try HTTP or non-HTTPS connection?');
+						adapter.stop();
+					}
+				});
+				req.write(body);
+				req.end();
+			}
+			
+			catch(e)
+			{
+				adapter.log.error('Error on connecting or logging in to eNet server: ' + e.message + '. Maybe you can try HTTP or non-HTTPS connection?');
+				adapter.stop();
+			}
+		}
+	});	
+}
+
+/*function eNetServer_getInputFTypfromOutputFTyp(pfad,InputTyp2InputID,typeID) 
+{
+	var options = {host: adapter.config.ip, port: Connection_Port, rejectUnauthorized: false, path: '/jsonrpc/visualization', method:'POST', headers: {'Content-Type': 'application/json'}};
+    var reqstring='{"jsonrpc":"2.0", "method": "getInputDeviceFunctionTypeIDCorrespondingToOutputDeviceFunctionType","params":{ "outputDeviceFunctionTypeID": "$$FTyp$$"},"id":"$$id$$"}'
+    var body_out = ''
+	//adapter.log.info("Laenge::"+JSON.stringify(InputTyp2InputID))
+	var tempSessionID = adapter.getState("info.SessionID", function (err, state) 
+	{
+		if (state)
+		{
+			SessionID = state.val;
+			var tempCounterID = adapter.getState("info.CounterID", function (err, state) 
+			{
+				if (state)
+				{
+					CounterID = state.val;
+					options.headers = {'Content-Type':'application/json; charset=utf-8','Cookie':'uEhaA=true; pbAudioFalg=ON; VideoFormatAVN=ActiveX; INSTASESSIONID='+SessionID+'; downloadFinished=true; rememberMe=true'};
+					//Zaehler = CounterID
+					Zaehler++;
+					adapter.setState('info.CounterID', Zaehler.toString(), true);
+					var body_in = reqstring.replace('$$id$$',Zaehler.toString());
+					var body_in = body_in.replace('$$FTyp$$',typeID);
+					var req = HTTPRequest().request(options, function(res) 
+					{
+						res.setEncoding('utf8');
+						res.on('data', function (data) 
+						{
+							body_out += data;
+						});
+						res.on('end', function () 
+						{
+                            //adapter.log.debug('OTyp2ITyp Body_out: ' + body_out); 
+                            // hier setzen
+						    var obj=JSON.parse(body_out);
+                            if (obj['result']['inputDeviceFunctionTypeID'] != null)
+                            {
+                               // adapter.log.debug('INPUT-TYP:'+obj['result']['inputDeviceFunctionTypeID'])
+                                var itypID=obj['result']['inputDeviceFunctionTypeID']
+                                adapter.log.debug('setze inputUID:'+InputTyp2InputID[itypID]+'fuer Pfad:'+pfad)
+                                //adapter.setObjectNotExists(pfad, {_id : adapter.namespace + pfad, type: "state", common: {name: pfad, type: "mixed", role: "value"}});
+					adapter.getObject(pfad, function(err,obj)
+					{
+						if (err) log('Cannot read object: ' + err);
+						//adapter.log.debug('OBJ-Name:'+obj.common.name)
+						obj.native.Input_UID=InputTyp2InputID[itypID]
+						adapter.extendObject(pfad,obj,function(err){
+						if (err) log('Cannot write object (InputValue_UID: ' + err);
+						})
+					})
+   
+
+                            } else  {
+					//adapter.log.debug('Cannot set Input_UID for:'+pfad)
+			    }
+						});
+					    req.on('error', function(e) 
+					    {
+							adapter.log.error("eNet Server OTyp2Ityp " + e.message);
+					    });
+                    });
+                    req.write(body_in);  
+                    //adapter.log.debug('getINputfromOutput Pfad:'+pfad)
+                    //adapter.log.debug('getINputfromOutput BODY:'+body_in)
+				    req.end();
+				}
+			});
+		}
+	});
+}
+*/
+
+function eNetServer_getifUIDfromofUID(pfad,oftUID) 
+{
+	var options = {host: adapter.config.ip, port: Connection_Port, rejectUnauthorized: false, path: '/jsonrpc/visualization', method:'POST', headers: {'Content-Type': 'application/json'}};
+    var reqstring='{"jsonrpc":"2.0", "method": "getInputDeviceFunctionUIDCorrespondingToOutputDeviceFunction","params":{ "deviceFunctionUID": "$$typeID$$"},"id":"$$id$$"}'
+
+    var body_out = ''
+	var tempSessionID = adapter.getState("info.SessionID", function (err, state) 
+	{
+		if (state)
+		{
+			SessionID = state.val;
+			var tempCounterID = adapter.getState("info.CounterID", function (err, state) 
+			{
+				if (state)
+				{
+					CounterID = state.val;
+					options.headers = {'Content-Type':'application/json; charset=utf-8','Cookie':'uEhaA=true; pbAudioFalg=ON; VideoFormatAVN=ActiveX; INSTASESSIONID='+SessionID+'; downloadFinished=true; rememberMe=true'};
+					//Zaehler = CounterID
+					Zaehler++;
+					adapter.setState('info.CounterID', Zaehler.toString(), true);
+					var body_in = reqstring.replace('$$id$$',Zaehler.toString());
+					var body_in = body_in.replace('$$typeID$$',oftUID);
+		                        //adapter.log.debug("suche NameandBody:"+typeID)
+					var req = HTTPRequest().request(options, function(res) 
+					{
+						res.setEncoding('utf8');
+						res.on('data', function (data) 
+						{
+							body_out += data;
+						});
+						res.on('end', function () 
+						{
+                            //adapter.log.debug('NameandValue Body_out: ' + body_out); 
+                            // hier setzen
+						    var hobj=JSON.parse(body_out);
+                            if (hobj.hasOwnProperty('error')) // kommt bei Sensor vor, sollte eigentlich lt. Doku null kommen 
+								{	
+									//adapter.log.debug('kein IF für OF: '+pfad+'  Error: ' + hobj.error.message)
+								} else 
+                                {
+                                if (hobj['result']['deviceFunctionUID'] != null)
+                                {
+                                    //adapter.log.debug('Name aendern: '+hobj['result']['name'])
+			                	    //adapter.log.debug("PFAD:"+pfad)
+                                    var idfUID=hobj['result']['deviceFunctionUID']
+    
+            		        		adapter.getObject(pfad, function(err,obj)
+		        		        	    {
+			        			        if (err) log('Cannot read object: ' + err);
+				    		             //adapter.log.debug('OBJ-Name:'+obj.common.name)
+    
+	    					            obj.native.Input_UID=idfUID
+		    				            adapter.extendObject(pfad,obj,function(err){
+			    		    	            if (err) log('Cannot write object: ' + err);
+				        		        })
+					                })
+                                }
+                           }
+				        });
+					    req.on('error', function(e) 
+					    {
+							adapter.log.error("eNet Server OTyp2Ityp " + e.message);
+					    });
+                    });
+                    req.write(body_in);  
+                    //adapter.log.debug('NameandValue Pfad:'+pfad)
+                    //adapter.log.debug('NameandValue BODY:'+body_in)
+				    req.end();
+				}
+			});
+		}
+	});
+}
+
+
+
+function eNetServer_getNameAndValueTypeIDsFromDeviceFunctionType(pfad,typeID) 
+{
+	var options = {host: adapter.config.ip, port: Connection_Port, rejectUnauthorized: false, path: '/jsonrpc/visualization', method:'POST', headers: {'Content-Type': 'application/json'}};
+    var reqstring='{"jsonrpc":"2.0", "method": "getNameAndValueTypeIDsFromDeviceFunctionType","params":{ "deviceFunctionTypeID": "$$typeID$$"},"id":"$$id$$"}'
+
+    var body_out = ''
+	var tempSessionID = adapter.getState("info.SessionID", function (err, state) 
+	{
+		if (state)
+		{
+			SessionID = state.val;
+			var tempCounterID = adapter.getState("info.CounterID", function (err, state) 
+			{
+				if (state)
+				{
+					CounterID = state.val;
+					options.headers = {'Content-Type':'application/json; charset=utf-8','Cookie':'uEhaA=true; pbAudioFalg=ON; VideoFormatAVN=ActiveX; INSTASESSIONID='+SessionID+'; downloadFinished=true; rememberMe=true'};
+					//Zaehler = CounterID
+					Zaehler++;
+					adapter.setState('info.CounterID', Zaehler.toString(), true);
+					var body_in = reqstring.replace('$$id$$',Zaehler.toString());
+					var body_in = body_in.replace('$$typeID$$',typeID);
+		                        //adapter.log.debug("suche NameandBody:"+typeID)
+					var req = HTTPRequest().request(options, function(res) 
+					{
+						res.setEncoding('utf8');
+						res.on('data', function (data) 
+						{
+							body_out += data;
+						});
+						res.on('end', function () 
+						{
+                            //adapter.log.debug('NameandValue Body_out: ' + body_out); 
+                            // hier setzen
+						    var hobj=JSON.parse(body_out);
+                            if (hobj['result']['name'] != null)
+                            {
+                                //adapter.log.debug('Name aendern: '+hobj['result']['name'])
+				//adapter.log.debug("PFAD:"+pfad)
+                                var name=hobj['result']['name']
+				var valueTypeID=hobj['result']['valueTypeIDs'][0]
+                    
+					adapter.getObject(pfad, function(err,obj)
+					{
+						if (err) log('Cannot read object: ' + err);
+						//adapter.log.debug('OBJ-Name:'+obj.common.name)
+						obj.common.name=name;
+						obj.native.ValueType_ID=valueTypeID
+						adapter.extendObject(pfad,obj,function(err){
+						if (err) log('Cannot write object: ' + err);
+						})
+					})
+                }
+						});
+					    req.on('error', function(e) 
+					    {
+							adapter.log.error("eNet Server OTyp2Ityp " + e.message);
+					    });
+                    });
+                    req.write(body_in);  
+                    //adapter.log.debug('NameandValue Pfad:'+pfad)
+                    //adapter.log.debug('NameandValue BODY:'+body_in)
+				    req.end();
+				}
+			});
+		}
+	});
+}
+
+
+function eNetServer_getScenes(projekt,uids) 
+{
+	var options = 
+	{
+		host: adapter.config.ip,
+		port: Connection_Port,
+		rejectUnauthorized: false,
+		path: '/jsonrpc/visualization/app_scene',
+		method:'POST',
+		headers: {'Content-Type': 'application/json'}
+	};
+    	var reqstring='{"jsonrpc":"2.0", "method":"getSceneActions", "params": {"sceneActionUIDs":[$$uids$$]}, "id":"$$id$$"}'
+    	var body_out = ''
+	var tempSessionID = adapter.getState("info.SessionID", function (err, state) 
+	{
+		if (state)
+		{
+			SessionID = state.val;
+			options.headers = {'Content-Type':'application/json; charset=utf-8','Cookie':'uEhaA=true; pbAudioFalg=ON; VideoFormatAVN=ActiveX; INSTASESSIONID='+SessionID+'; downloadFinished=true; rememberMe=true'};
+			//Zaehler = CounterID
+			Zaehler++;
+			adapter.setState('info.CounterID', Zaehler.toString(), true);
+			var body_in = reqstring.replace('$$id$$',Zaehler.toString());
+			var body_in = body_in.replace('$$uids$$',uids);
+		        adapter.log.debug("suche Szenen............fuer:"+projekt)
+			var req = HTTPRequest().request(options, function(res) 
+			{
+				res.setEncoding('utf8');
+				res.on('data', function (data) 
+				{
+					body_out += data;
+				});
+				res.on('end', function () 
+				{
+		     		    var sobj=JSON.parse(body_out);
+					//adapter.log.debug("Szene:::::"+body_out)
+                		    var anzScene=sobj['result']['sceneActions'].length
+                    		    for (var i=0;i<anzScene;i++) 
+					{
+                        		var scUID=sobj['result']['sceneActions'][i]['uid']
+                        		var scName=sobj['result']['sceneActions'][i]['name']
+					var scstatus=sobj['result']['sceneActions'][i]['statusValue']['value']
+                        		//adapter.log.debug("SzeneName:"+scName)
+					if (scName.indexOf(']')> 0) // nicht vom System angelegt
+                                	{
+						var end=scName.indexOf(']')+1
+						if ( end > 0 ) {scName=scName.substr(end,scName.length)}
+						adapter.log.debug("Szene:"+scName)
+                        			var pfad='Scenes.'+scName
+						adapter.setObjectNotExists(pfad, {_id : adapter.namespace + pfad, type: "folder", common: {name: pfad, read: true, write: true},native: {sceneActionUID:scUID,sceneActionName:scName}});
+        	                		adapter.setObjectNotExists(pfad+'.action', {_id : adapter.namespace + pfad+'.action', type: "state", common: {name: scName, type: "string", role: "value", read: true, write: true},native: {sceneUID: scUID}});
+                	        		adapter.setState(pfad+'.action',  'false', true);
+        	                		adapter.setObjectNotExists(pfad+'.status', {_id : adapter.namespace + pfad+'.status', type: "state", common: {name: scName, type: "string", role: "value", read: true, write: true},native: {sceneUID: scUID}});
+						adapter.setState(pfad+'.status',  scstatus, true);
+						sceneActionPathArray[scUID]=pfad;
+						//eNetServer_RegisterSceneAction('registerEventSceneActionChanged') 
+                    			}
+				   	}
+				});
+				req.on('error', function(e) 
+				    {
+					adapter.log.error("eNet Szene " + e.message);
+				    });
+			})
+               			req.write(body_in);  
+		                //adapter.log.debug('NameandValue Pfad:'+pfad)
+                		adapter.log.debug('Scene BODY:'+body_in)
+				req.end();
+		}
+	})
+}
+
+function eNetServer_getProject() 
+{
+	var options = 
+	{
+		host: adapter.config.ip,
+		port: Connection_Port,
+		rejectUnauthorized: false,
+		path: '/jsonrpc/visualization',
+		method:'POST',
+		headers: {'Content-Type': 'application/json'}
+	};
+    var reqstring='{"jsonrpc":"2.0", "method":"getCurrentProject", "params": null, "id":"$$id$$"}'
+    var body_out = ''
+	var tempSessionID = adapter.getState("info.SessionID", function (err, state) 
+	{
+		if (state)
+		{
+			SessionID = state.val;
+			options.headers = {'Content-Type':'application/json; charset=utf-8','Cookie':'uEhaA=true; pbAudioFalg=ON; VideoFormatAVN=ActiveX; INSTASESSIONID='+SessionID+'; downloadFinished=true; rememberMe=true'};
+			//Zaehler = CounterID
+			Zaehler++;
+			adapter.setState('info.CounterID', Zaehler.toString(), true);
+			var body_in = reqstring.replace('$$id$$',Zaehler.toString());
+            //adapter.log.debug("lese Projet")
+			var req = HTTPRequest().request(options, function(res) 
+			{
+				res.setEncoding('utf8');
+				res.on('data', function (data) 
+					{
+						body_out += data;
+					});
+				res.on('end', function () 
+					{
+	     			    	var sobj=JSON.parse(body_out);
+        		            	var projekt=sobj[result][projectName]
+                    			projekt =projekt.replace('. ','_').replace('.','_').replace(' ','_');
+    					adapter.log.debug("... jetzt noch Szenen suchen....für "+projekt);
+	    				eNetServer_getScenes(projekt);
+					});
+                			req.on('error', function(e) 
+				    	{
+						adapter.log.error("eNet Server Projekt" + e.message);
+                    			});
+                req.write(body_in);  
+                    //adapter.log.debug('NameandValue Pfad:'+pfad)
+                    adapter.log.debug('getProjet BODY_in:'+body_in)
+				req.end();
+		    })
+        }
+	});
+}
+
+function normierung(form,wert) {
+    if (form.indexOf("VOLT") > 0 )
+        {
+        return   (parseFloat(wert)/1000.).toFixed(1); 
+    }
+    else if (form.indexOf("LUX") > 0 )
+        {
+        return   parseFloat(wert).toFixed(0);
+    }
+    else if (form.indexOf("CURR") > 0 )
+        {
+        return   (parseFloat(wert)/1000.).toFixed(1);
+ 
+    }else  {
+    	return wert;
+   }
+ }
+
+
+
+
+function eNetServer_RequestEvents() 
+{
+	var options = 
+	{
+		host: adapter.config.ip,
+		port: Connection_Port,
+		rejectUnauthorized: false,
+		path: '/jsonrpc/visualization',
+		method:'POST',
+		headers: {'Content-Type': 'application/json'}
+	};
+        var body='';
+	var tempSessionID =	adapter.getState("info.SessionID", function (err, state) 
+	{
+		if (state)
+		{
+			SessionID = state.val;
+			options.headers={'Content-Type':'application/json; charset=utf-8','Cookie':'uEhaA=true; pbAudioFalg=ON; VideoFormatAVN=ActiveX; INSTASESSIONID='+SessionID+'; downloadFinished=true; rememberMe=true'};
+			var tempZaehler = adapter.getState("info.CounterID", function (err, state) 
+			{
+				if (state)
+				{
+					//Zaehler = state.val;
+					Zaehler++;
+					adapter.setState('info.CounterID', Zaehler.toString(), true);
+					var body_in=request_events.replace('$$id$$',Zaehler.toString());
+					var req = HTTPRequest().request(options, function(res) 
+					{
+						res.setEncoding('utf8');
+    						res.on('data', function (data) {
+        						body += data;
+						});
+						res.on('end', function () 
+						{
+							try
+							{
+								//adapter.log.debug('RequestEvents Body: ' + body); 
+								var obj=JSON.parse(body);
+								if (obj.hasOwnProperty('error')) 
+								   {
+							           if (obj.error.code   != -29999 ) {
+               								 adapter.log.debug('Request_events Error: '+obj.error.message+' '+obj.error.code)
+            							   } else {
+               								// DEBUG console.log ( "TimeOut-> kein change device....")
+                							//request_events(); // Neustart,  -29999 = TIMEOUT, also keine events
+            							   }
+								} 
+          							 else 
+       								{
+									//adapter.log.debug(body);
+     							       		var i =obj['result']['events'].length
+        								
+  							          	for (var y=0;y<i;y++) 
+									{
+ 							              	    adapter.log.debug('EVENT: '+obj['result']['events'][y]['event'])// valueChanged und deviceFunctionCalled
+  							              	    var event =obj['result']['events'][y]['event']
+									    switch (event)
+									    {
+   										case "deviceBatteryStateChanged": 
+										{
+   							                 		var deviceUID=obj['result']['events'][y]['eventData']['deviceUID']
+	      							              		var batteryState=obj['result']['events'][y]['eventData']['batteryState']
+ 							                   		//adapter.log.debug(valueUID+'  '+value) 
+ 							                   		adapter.log.info('Change:'+batteryPathArray[deviceUID]+' setze auf:'+batteryState);
+  							                  		adapter.setState(batteryPathArray[deviveUID],batteryState,true)//true=ACK
+											break;									
+										}
+
+										case "valueChanged": 
+										{
+   							                 		var valueUID=obj['result']['events'][y]['eventData']['valueUID']
+      							              			var value=obj['result']['events'][y]['eventData']['value']
+ 							                   		//adapter.log.debug(valuePathArray[valueUID]+'.value')
+											if (valuePathArray[valueUID] !== 'undefined')
+											{
+											adapter.getObject (valuePathArray[valueUID]+'.value',function (err,obj){
+                                        				            	if (obj === null) 
+											{
+												adapter.log.debug('ERROR value Changed: '+valueUID+' ->Object noch nicht vorhanden')
+											} else {
+												//var obj = adapter.getObject(valuePathArray[valueUID]+'.value') 
+												//adapter.log.debug(JSON.stringify(obj))
+												var form=obj.common.name
+												//adapter.log.debug(form)												})
+												//adapter.log.debug('Form:'+form)
+					                                                	var wert=normierung(form,value)
+ 							                   			adapter.log.info('Change:'+valuePathArray[valueUID]+'.value  setze auf:'+wert);
+  							                  			adapter.setState(valuePathArray[valueUID]+'.value',wert.toString(),true)//true=ACK
+											}
+											});
+											}
+											break;									
+										}
+  							              		case "sceneActionChanged": 
+										{
+   							                 		var sceneActionUID=obj['result']['events'][y]['eventData']['sceneActionUID']
+											//adapter.log.debug('SzenenÄnderung für:'+sceneActionPathArray[sceneActionUID]);
+											adapter.getStates(sceneActionPathArray[sceneActionUID] + ".*", function (err, states) 
+												{
+   	 											//var toDelete = [];
+    												for (var id in states) 
+    													{
+        												//toDelete.push(id);
+        												//var id = states.pop();
+        												adapter.delObject(id, function (err)
+        												{
+            													adapter.delState(id, function (err)
+            													{
+            													});        
+        												});                    
+    												}
+												adapter.delObject(sceneActionPathArray[sceneActionUID], function (err){})
+												eNetServer_getScenes('','"'+sceneActionUID+'"') 
+											});
+											break;
+									  	}
+										case "sceneActionDeleted":
+										{
+   							                 		var sceneActionUID=obj['result']['events'][y]['eventData']['sceneActionUID']
+											adapter.log.debug('Szene Löschen für:'+sceneActionPathArray[sceneActionUID]);
+											adapter.getStates(sceneActionPathArray[sceneActionUID] + ".*", function (err, states) 
+												{
+   	 											var toDelete = [];
+    												for (var id in states) 
+    													{
+													//adapter.log.debug('ID in States:'+id)
+        												toDelete.push(id);
+        												//var id = states.pop();
+        												adapter.delObject(id, function (err)
+        												{
+            													adapter.delState(id, function (err)
+            													{
+            													});        
+        												});                    
+    												}
+												adapter.delObject(sceneActionPathArray[sceneActionUID], function (err){})
+											});
+											break;
+										}
+  							              		case "sceneActionCreated":
+										{
+   							                 		var sceneActionUID=obj['result']['events'][y]['eventData']['sceneActionUID']
+											adapter.log.debug('Szene NEU für:'+sceneActionUID);
+											eNetServer_getScenes('','"'+sceneActionUID+'"')
+											break;
+										}
+									    }
+
+									} 
+  
+								}
+								var tempreqevent =adapter.getState("info.requestEvents", function (err, state) 
+									{
+									if (state.val){
+										//adapter.log.debug("requestEvents ReStart....")
+										eNetServer_RequestEvents()
+									} else {
+										adapter.log.debug("requestEvents gestoppt....")
+									}
+								});
+        							
+							}
+							catch(e)
+							{
+								adapter.log.error('Return from eNet Server: "' + e + '". Please try to restart the eNet server, change the connection type (HTTP/HTTPS) and check username/password!');
+								adapter.stop();
+							}
+						});
+						req.on('error', function(e) 
+						{
+							adapter.log.error('Error with request: ' + e.message);
+						});
+					});
+					req.write(body_in);
+					req.end();
+				}
+			});
+		}
+	});						
+}
+
+
+function eNetServer_GetLocations() 
+{
+	var options = {host: adapter.config.ip, port: Connection_Port, rejectUnauthorized: false, path: '/jsonrpc/visualization', method:'POST', headers: {'Content-Type': 'application/json'}};
+	var body_out=''
+	var projekt=''
+	var tempSessionID =	adapter.getState("info.SessionID", function (err, state) 
+	{
+		if (state)
+		{
+			SessionID = state.val;
+			var tempCounterID =	adapter.getState("info.CounterID", function (err, state) 
+			{
+				if (state)
+				//Zaehler = state.val;
+				options.headers={'Content-Type':'application/json; charset=utf-8','Cookie':'uEhaA=true; pbAudioFalg=ON; VideoFormatAVN=ActiveX; INSTASESSIONID='+SessionID+'; downloadFinished=true; rememberMe=true'};
+				Zaehler++;
+				adapter.setState('info.CounterID', Zaehler.toString(), true);
+				var body_in = get_locations.replace('$$id$$',Zaehler.toString());
+				var req = HTTPRequest().request(options, function(res) 
+				{
+					res.setEncoding('utf8');
+					res.on('data', function (data) 
+					{
+						body_out += data;
+					});
+					res.on('end', function () 
+					{
+						var obj=JSON.parse(body_out)
+						if (obj.hasOwnProperty('error')) 
+						{
+							adapter.log.error('GetLocations Error: '+obj.error.message)
+						} 
+						else 
+						{
+							var p=obj['result']['locations'].length
+							var e=obj['result']['locations'][0]['childLocations'].length
+							var r=obj['result']['locations'][0]['childLocations'][0]['childLocations'].length
+							var d=obj['result']['locations'][0]['childLocations'][0]['childLocations'][0]['deviceUIDs'].length
+							adapter.log.debug('GetLocations Locations: ' + p+'#'+e+'#'+r+'#'+d + ', JSON: ' + body_out);
+							for (var i=0; i<p;i++) 
+							{
+								var tempProjekt=obj['result']['locations'][i].name
+								projekt = tempProjekt.replace('. ','_').replace('.','_').replace(' ','_');
+								//erst mal putzen
+								//eNetServer_delTree("Scenes");
+								eNetServer_getScenes('','');
+								//eNetServer_delTree(projekt);
+								// jetzt neu lesen
+								adapter.log.debug('GetLocations, Project: ' + projekt);
+								e=obj['result']['locations'][i]['childLocations'].length
+								for (var j=0;j<e;j++) 
+								{
+									var tempEtage=obj['result']['locations'][i]['childLocations'][j].name;
+									var etage=tempEtage.replace('. ','_').replace('.','_').replace(' ','_');
+									adapter.log.debug('GetLocations, Etage: ' + etage);
+									r=obj['result']['locations'][i]['childLocations'][j]['childLocations'].length
+									for (var k=0;k<r;k++) 
+									{
+										var tempRaum=obj['result']['locations'][i]['childLocations'][j]['childLocations'][k].name;
+										var raum = tempRaum.replace('. ','_').replace('.','_').replace(' ','_');
+										adapter.log.debug('GetLocations, Room: ' + raum);
+										d=obj['result']['locations'][i]['childLocations'][j]['childLocations'][k]['deviceUIDs'].length
+										for (var l=0;l<d;l++) 
+										{
+											adapter.log.debug('Location Object: ' + l)
+											var devuid=obj['result']['locations'][i]['childLocations'][j]['childLocations'][k]['deviceUIDs'][l].deviceUID
+											var devtyp=obj['result']['locations'][i]['childLocations'][j]['childLocations'][k]['deviceUIDs'][l].deviceTypeID
+											var iopfad=projekt+'.'+etage+'.'+raum //+'.'+l; //l=position
+											adapter.log.debug('Location Path: ' + iopfad)
+											adapter.log.debug('GetLocations, Projekt: ' + projekt + ', Etage: ' + etage + ', Raum: ' + raum + ', DeviceUID: ' + devuid + ', deviceTypeID: ' + devtyp + ', Pfad: ' + iopfad);
+											adapter.setObjectNotExists(iopfad, {_id : adapter.namespace + iopfad, type: "state", common: {name: iopfad, read: true, write: true},native: {Device_Type: devtyp, Device_UID: devuid}});
+											eNetServer_GetDevices(iopfad,l,devtyp,devuid)
+
+                										}
+									}
+								}
+							}
+						}
+					});
+					req.on('error', function(e) 
+					{
+						adapter.log.error('GetLocations: Error with request: ' + e.message);
+					});
+				});
+				req.write(body_in);
+				req.end();
+				adapter.log.debug("... jetzt noch RequestEvents starten....");
+				eNetServer_RequestEvents();
+			});
+		}
+	});
+}
+
+function eNetServer_Register_EventValue_Change(uid,pfad) 
+{
+	valuePathArray[uid] = pfad.replace('UID','')
+	//adapter.log.debug('PathArray:'+uid+' <->'+pfad.replace('UID',''));
+
+	var options = {host: adapter.config.ip, 
+			port: Connection_Port, 
+			rejectUnauthorized: false, 	
+			path: '/jsonrpc/visualization', 
+			method:'POST', 
+			headers: {'Content-Type': 'application/json'}
+			};
+    var body_out=''
+	var tempSessionID =	adapter.getState("info.SessionID", function (err, state) 
+	{
+		if (state)
+		{
+			SessionID = state.val;
+			var tempZaehler = adapter.getState("info.CounterID", function (err, state) 
+			{
+				if (state)
+				{
+					//Zaehler = state.val;
+					options.headers={'Content-Type':'application/json; charset=utf-8','Cookie':'uEhaA=true; pbAudioFalg=ON; VideoFormatAVN=ActiveX; INSTASESSIONID='+SessionID+'; downloadFinished=true; rememberMe=true'};
+					Zaehler++;
+					adapter.setState('info.CounterID', Zaehler.toString(),true);
+					var body_in=register_value_change.replace('$$id$$',Zaehler.toString());
+   					body_in=body_in.replace('$$uid$$',uid);
+					var req = HTTPRequest().request(options, function(res) 
+					{
+						res.setEncoding('utf8');
+
+						res.on('data', function (data) 
+						{
+							body_out += data;
+						});
+						res.on('end', function () 
+						{
+							adapter.log.debug('Register_Value_Change Body Out: ' + body_out);
+							var obj=JSON.parse(body_out)
+        				});
+        
+						req.on('error', function(e) 
+						{
+							adapter.log.error('Register_Value_Change Problem with request: ' + e.message);
+						});
+					});
+					req.write(body_in);
+					adapter.log.debug('Register_Value_Change:'+body_in);
+					req.end();
+				}
+			});
+		}
+	});
+}
+
+function eNetServer_RegisterSceneAction(ff) 
+{
+	var options = {host: adapter.config.ip, 
+			port: Connection_Port, 
+			rejectUnauthorized: false, 	
+			path: '/jsonrpc/visualization/app_scene', 
+			method:'POST', 
+			headers: {'Content-Type': 'application/json'}
+			};
+
+	var reqstring='{"jsonrpc":"2.0", "method":"$$funk$$", "params": null, "id":"$$id$$"}'
+    	var body_out=''
+	var tempSessionID =	adapter.getState("info.SessionID", function (err, state) 
+	{
+		if (state)
+		{
+			SessionID = state.val;
+			var tempZaehler = adapter.getState("info.CounterID", function (err, state) 
+			{
+				if (state)
+				{
+					//Zaehler = state.val;
+					options.headers={'Content-Type':'application/json; charset=utf-8','Cookie':'uEhaA=true; pbAudioFalg=ON; VideoFormatAVN=ActiveX; INSTASESSIONID='+SessionID+'; downloadFinished=true; rememberMe=true'};
+					Zaehler++;
+					adapter.setState('info.CounterID', Zaehler.toString(),true);
+					var body_in=reqstring.replace('$$id$$',Zaehler.toString());
+   					body_in=body_in.replace('$$funk$$',ff);
+					var req = HTTPRequest().request(options, function(res) 
+					{
+						res.setEncoding('utf8');
+
+						res.on('data', function (data) 
+						{
+							body_out += data;
+						});
+						res.on('end', function () 
+						{
+							//adapter.log.debug('Register_scene Body Out: ' + body_out);
+							var obj=JSON.parse(body_out)
+        				});
+        
+						req.on('error', function(e) 
+						{
+							adapter.log.error('Register_Scene Problem with request: ' + e.message);
+						});
+					});
+					req.write(body_in);
+					adapter.log.debug('Register_Scene:'+body_in);
+					req.end();
+				}
+			});
+		}
+	});
+}
+
+
+function eNetServer_RegisterDeviceFunction(ff,uid) 
+{
+	var options = {host: adapter.config.ip, 
+			port: Connection_Port, 
+			rejectUnauthorized: false, 	
+			path: '/jsonrpc/visualization', 
+			method:'POST', 
+			headers: {'Content-Type': 'application/json'}
+			};
+	var reqstring='{"jsonrpc":"2.0", "method":"$$func$$", "params": $$uid$$, "id":"$$id$$"}'
+    	var body_out=''
+	var tempSessionID =	adapter.getState("info.SessionID", function (err, state) 
+	{
+		if (state)
+		{
+			SessionID = state.val;
+			var tempZaehler = adapter.getState("info.CounterID", function (err, state) 
+			{
+				if (state)
+				{
+					//Zaehler = state.val;
+					options.headers={'Content-Type':'application/json; charset=utf-8','Cookie':'uEhaA=true; pbAudioFalg=ON; VideoFormatAVN=ActiveX; INSTASESSIONID='+SessionID+'; downloadFinished=true; rememberMe=true'};
+					Zaehler++;
+					adapter.setState('info.CounterID', Zaehler,toString(),true);
+					var body_in=reqstring.replace('$$id$$',Zaehler.toString());
+   					body_in=body_in.replace('$$func$$',ff);
+   					body_in=body_in.replace('$$uid$$',uid);
+					var req = HTTPRequest().request(options, function(res) 
+					{
+						res.setEncoding('utf8');
+
+						res.on('data', function (data) 
+						{
+							body_out += data;
+						});
+						res.on('end', function () 
+						{
+							//adapter.log.debug('Register_scene Body Out: ' + body_out);
+							var obj=JSON.parse(body_out)
+        				});
+        
+						req.on('error', function(e) 
+						{
+							adapter.log.error('Register_DeviceFunction Problem with request: ' + e.message);
+						});
+					});
+					req.write(body_in);
+					adapter.log.debug('Register DeviceFunction:'+body_in);
+					req.end();
+				}
+			});
+		}
+	});
+}
+
+
+
+/*
+function eNetServer_writeObjects(deviceUID,pfad,installArea,effectArea,deviceTypeID,deviceID,value,typeID,valueTypeID,valueUID,inputUID) 
+{
+    adapter.setObjectNotExists(pfad+'.EffectArea', {_id : adapter.namespace + pfad+'.EffectArea', type: "state", common: {name: pfad+'.EffectArea', type: "string", role: "value", read: true, write: true},native: {}});
+	adapter.setState(pfad+'.EffectArea',effectArea,{unit: ''}); 
+
+	adapter.setObjectNotExists(pfad+'.value', {_id : adapter.namespace + pfad+'.value', type: "state", common: {name: valueTypeID, type: "string", role: "value", read: true, write: true},native: {valueUID: valueUID}});
+	adapter.setState(pfad+'.value',  value, {unit: ''});
+	adapter.setState(pfad+'.valueTypeID',  valueTypeID, {unit: ''});
+    
+    adapter.setObject(pfad, {_id : adapter.namespace + pfad, type: "state", common: {name: pfad, type: "mixed", role: "value"},native: {Device_UID: deviceUID, Device_TypeID: deviceTypeID, Device_Type: typeID, Install_Area: installArea, ValueType_ID: valueTypeID,  Input_UID: inputUID}});
+	eNetServer_getNameAndValueTypeIDsFromDeviceFunctionType(pfad,typeID) 										
+ 
+}
+*/
+function eNetServer_GetDevices(pfad,pos,typ,uid) 
+{
+	adapter.log.debug("GetDevices Pfad: "+ pfad + ", Pos: " + pos + ", Typ: " + typ + ", UID: "+ uid);
+	var options = {host: adapter.config.ip, port: Connection_Port, rejectUnauthorized: false, path: '/jsonrpc/visualization', method:'POST', headers: {'Content-Type': 'application/json'}};
+	var body_out=''
+	var tempSessionID =	adapter.getState("info.SessionID", function (err, state) 
+	{
+		if (state)
+		{
+			SessionID = state.val;
+			var tempCounterID =	adapter.getState("info.CounterID", function (err, state) 
+			{
+				if (state)
+				{
+					//Zaehler = state.val;
+					options.headers={'Content-Type':'application/json; charset=utf-8','Cookie':'uEhaA=true; pbAudioFalg=ON; VideoFormatAVN=ActiveX; INSTASESSIONID='+SessionID+'; downloadFinished=true; rememberMe=true'};
+					Zaehler++;
+					adapter.setState('info.CounterID', Zaehler.toString(), true);
+					var body_in=get_devices.replace('$$id$$',Zaehler.toString());
+					body_in=body_in.replace('$$devuid$$',uid)
+					var req = HTTPRequest().request(options, function(res) 
+					{
+						res.setEncoding('utf8');
+						res.on('data', function (data) 
+						{
+							body_out += data;
+						});
+						res.on('end', function () 
+						{
+							//adapter.log.debug("GetDevices Body Out: " + body_out);
+							var obj=JSON.parse(body_out)
+							var installArea=obj['result']['devices'][0]['installationArea'];
+							if (installArea !== null) 
+							{
+								installArea =installArea.replace(/\./g,'')
+								installArea =installArea.replace(/\,/g,'_')
+ 								installArea =installArea.replace(/'/g,"_")
+							}
+							var deviceTypeID=obj['result']['devices'][0]['typeID'];
+							var deviceUID=obj['result']['devices'][0]['uid'];
+							var batteryState=obj['result']['devices'][0]['batteryState'];
+//							Start Lese Devices	// #Sonnensensor
+  	                        var endzz=obj['result']['devices'][0]['deviceChannelConfigurationGroups'].length
+                            //alle KonfigGroups
+                            for ( var zz=0;zz<endzz;zz++) {
+                                var endch=obj['result']['devices'][0]['deviceChannelConfigurationGroups'][zz]['deviceChannels'].length
+                                //alle Channels
+                                for ( var ch=0;ch<endch;ch++) {
+				    var InputTyp2InputID={}
+                                    if ((obj['result']['devices'][0]['deviceChannelConfigurationGroups'][zz]['deviceChannels'][ch]['channelTypeID'] != 'CT_DISABLED') && (obj['result']['devices'][0]['deviceChannelConfigurationGroups'][zz]['deviceChannels'][ch]['channelTypeID'] != 'CT_DEVICE')) {
+                                        if (batteryState !== null) {
+                                        adapter.setObjectNotExists(pfad+'.'+installArea+' #'+zz+'.batteryState', {_id : adapter.namespace + pfad+'.'+installArea+' #'+zz+'.batteryState', type: "state", common: { type: "string" }});
+                                        adapter.setState(pfad+'.'+installArea+' #'+zz+'.batteryState',  batteryState,true);
+					batteryPathArray[deviceUID]=pfad+'.'+installArea+' #'+zz+'.batteryState'
+                                        }
+					//erst mal effectArea ... als Stufe
+                                        var effectArea=obj['result']['devices'][0]['deviceChannelConfigurationGroups'][zz]['deviceChannels'][ch]['effectArea']
+                                        if (effectArea !== null) 
+					{
+						effectArea =effectArea.replace(/\./g,'')
+						effectArea =effectArea.replace(/\,/g,'_')
+						effectArea =effectArea.replace(/'/g,"_")
+					}
+					// alle relevanten InputChannel von output ermitteln
+                                        var endip=obj['result']['devices'][0]['deviceChannelConfigurationGroups'][zz]['deviceChannels'][ch]['inputDeviceFunctions'].length
+                                        for (var ip=0;ip<endip;ip++) {
+					    //var InputTyp2InputID={}
+					    var aktiv=obj['result']['devices'][0]['deviceChannelConfigurationGroups'][zz]['deviceChannels'][ch]['inputDeviceFunctions'][ip]['active']
+                                            //nur AKTIVe Inputs ausgeben
+                                            if (aktiv) {
+                                                var htypid=obj['result']['devices'][0]['deviceChannelConfigurationGroups'][zz]['deviceChannels'][ch]['inputDeviceFunctions'][ip]['typeID']
+                                                var huid=obj['result']['devices'][0]['deviceChannelConfigurationGroups'][zz]['deviceChannels'][ch]['inputDeviceFunctions'][ip]['uid']   
+                                                var pfadneu=pfad+'.'+installArea+' #'+zz+'.'+effectArea+' #'+ch+'.InputDevice'+ip
+						InputTyp2InputID[htypid]=huid
+                                                //adapter.log.debug('---->'+htypid+'#'+huid+'#'+pfadneu)
+                                                adapter.setObject(pfadneu, {_id : adapter.namespace + pfadneu, type: "folder", common: {name: pfadneu, type: "mixed", role: "value"},native: {Device_UID: deviceUID,  Device_Type: htypid, Install_Area: installArea, ValueType_ID: 'valueTypeID',  Input_UID: huid}});
+                                                adapter.setObjectNotExists(pfadneu+'.value', {_id : adapter.namespace + pfadneu, type: "state", common: {name: '*', type: "mixed", role: "value"},native: {Device_UID: deviceUID,  Device_Type: htypid, Install_Area: installArea, ValueType_ID: valueTypeID,  Input_UID: huid}});
+                                                adapter.setState(pfadneu+'.value',  value,true); 
+                                                //adapter.log.debug('HTYPID:'+htypid)
+                        			eNetServer_getNameAndValueTypeIDsFromDeviceFunctionType(pfadneu,htypid) 										
+                                                //adapter.log.debug("ITYP2IID:"+htypid+'#'+huid)
+						devicePathArray[huid]=pfadneu
+                                            }
+                                        }
+                                        var endop=obj['result']['devices'][0]['deviceChannelConfigurationGroups'][zz]['deviceChannels'][ch]['outputDeviceFunctions'].length
+                                        // alle OutputChannel ermitteln
+                                        for ( var op=0;op<endop;op++) {
+                                            //alle Value fuer Outputchannel 
+              				    var odftypeID=obj['result']['devices'][0]['deviceChannelConfigurationGroups'][zz]['deviceChannels'][ch]['outputDeviceFunctions'][op]['typeID'];
+ 	      				    var odfUID=obj['result']['devices'][0]['deviceChannelConfigurationGroups'][zz]['deviceChannels'][ch]['outputDeviceFunctions'][op]['uid'];    
+                			    var aktiv=obj['result']['devices'][0]['deviceChannelConfigurationGroups'][zz]['deviceChannels'][ch]['outputDeviceFunctions'][op]['active'];
+                                                if (aktiv) {
+                                                var endcv=obj['result']['devices'][0]['deviceChannelConfigurationGroups'][zz]['deviceChannels'][ch]['outputDeviceFunctions'][op]['currentValues'].length
+                                                for ( var cv=0;cv<endcv;cv++) {
+                                                    //adapter.log.debug('EffectArea:'+effectArea+'#'+zz+'#'+ch+'#'+op+'#endop:'+endop+'#'+cv+'#endcv:'+endcv+'####'+deviceUID)
+                    			    	    var valueTypeID=obj['result']['devices'][0]['deviceChannelConfigurationGroups'][zz]['deviceChannels'][ch]['outputDeviceFunctions'][op]['currentValues'][cv]['valueTypeID'];
+                	    			    var valueo=obj['result']['devices'][0]['deviceChannelConfigurationGroups'][zz]['deviceChannels'][ch]['outputDeviceFunctions'][op]['currentValues'][cv]['value'];
+                		    		    var valueUID=obj['result']['devices'][0]['deviceChannelConfigurationGroups'][zz]['deviceChannels'][ch]['outputDeviceFunctions'][op]['currentValues'][cv]['valueUID'];
+                                                    var pfadneu=pfad+'.'+installArea+' #'+zz+'.'+effectArea+' #'+ch+'.OutputDevice'+op+' #'+cv
+                                                    var value = normierung (valueTypeID,valueo)
+						    adapter.setObjectNotExists(pfadneu, {_id : adapter.namespace + pfadneu, type: "folder", common: {name: "##", type: "mixed", role: "value"},native: {Device_UID: deviceUID, Device_TypeID: deviceTypeID, outputDeviceType_UID:odfUID, Device_Type: odftypeID, Install_Area: installArea, ValueType_ID: valueTypeID,  Input_UID: ''}});
+                       				    //adapter.setObjectNotExists(pfadneu+'.EffectArea', {_id : adapter.namespace + pfadneu+'.EffectArea', type: "state", common: {name: '', type: "string", role: "value", read: true, write: true},native: {}});
+                                                    //adapter.setState(pfadneu+'.EffectArea',effectArea,{unit: ''}); 
+						    adapter.setObjectNotExists(pfadneu+'.value', {_id : adapter.namespace + pfadneu+'.value', type: "state", common: {name: valueTypeID, type: "string", role: "value", read: true, write: true},native: {valueUID: valueUID}});
+                                                    adapter.setState(pfadneu+'.value',  value,true);
+                                                    //////adapter.setState(pfadneu+'.valueTypeID',  valueTypeID, {unit: ''});    
+                                                    eNetServer_getNameAndValueTypeIDsFromDeviceFunctionType(pfadneu,odftypeID) 										
+                         			    // Output valueUID registrieren fuer requests
+                            		                eNetServer_Register_EventValue_Change(valueUID,pfadneu);
+                                                    //InputUID fuer OutputID finden
+                                                    //eNetServer_getInputFTypfromOutputFTyp(pfadneu,InputTyp2InputID,odftypeID)
+						    eNetServer_getifUIDfromofUID(pfadneu,odfUID)
+						    devicePathArray[odfUID]=pfadneu
+                                                } 
+                                            }
+                                        }
+                                    }   
+                                }
+			    }
+			});
+			req.on('error', function(e) 
+			{
+				adapter.log.error('GetDevices: Error with request: ' + e.message);
+			});
+		});
+		req.write(body_in);
+		req.end();
+	     }
+	  });
+	}
+   });
+}
+
+function eNetServer_SetState(uid,typ,wert) 
+{
+	var options = {host: adapter.config.ip, port: Connection_Port, rejectUnauthorized: false, path: '/jsonrpc/visualization', method:'POST', headers: {'Content-Type': 'application/json'}};
+    var body_out=''
+	var tempSessionID =	adapter.getState("info.SessionID", function (err, state) 
+	{
+		if (state)
+		{
+			SessionID = state.val;
+			var tempZaehler = adapter.getState("info.CounterID", function (err, state) 
+			{
+				if (state)
+				{
+					//Zaehler = state.val;
+					options.headers={'Content-Type':'application/json; charset=utf-8','Cookie':'uEhaA=true; pbAudioFalg=ON; VideoFormatAVN=ActiveX; INSTASESSIONID='+SessionID+'; downloadFinished=true; rememberMe=true'};
+					Zaehler++;
+					adapter.setState('info.CounterID', Zaehler.toString(), true);
+					var body_in=set_state.replace('$$id$$',Zaehler.toString());
+					body_in=body_in.replace('$$UID$$',uid);
+					body_in=body_in.replace('$$valueTypeID$$',typ);
+					body_in=body_in.replace('$$Wert$$',wert);
+					var req = HTTPRequest().request(options, function(res) 
+					{
+						res.setEncoding('utf8');
+
+						res.on('data', function (data) 
+						{
+							body_out += data;
+						});
+						res.on('end', function () 
+						{
+							adapter.log.debug('SetState Body Out: ' + body_out);
+							var obj=JSON.parse(body_out)
+        				});
+        
+						req.on('error', function(e) 
+						{
+							adapter.log.error('SetState Problem with request: ' + e.message);
+						});
+					});
+					req.write(body_in);
+					//adapter.log.debug('SetState Body In:'+body_in);
+					req.end();
+				}
+			});
+		}
+	});
+}
+
+function eNetServer_executeAction(uid) 
+{
+	var options = {host: adapter.config.ip, port: Connection_Port, rejectUnauthorized: false, path: '/jsonrpc/visualization', method:'POST', headers: {'Content-Type': 'application/json'}};
+    var reqstring='{"jsonrpc":"2.0", "method": "executeAction","params":{ "actionUID":"$$uid$$"},"id":"$$id$$"}'
+    var body_out=''
+	var tempSessionID =	adapter.getState("info.SessionID", function (err, state) 
+	{
+		if (state)
+		{
+					//Zaehler = state.val;
+					options.headers={'Content-Type':'application/json; charset=utf-8','Cookie':'uEhaA=true; pbAudioFalg=ON; VideoFormatAVN=ActiveX; INSTASESSIONID='+SessionID+'; downloadFinished=true; rememberMe=true'};
+					Zaehler++;
+					adapter.setState('info.CounterID', Zaehler.toString(), true);
+					var body_in=reqstring.replace('$$id$$',Zaehler.toString());
+					body_in=body_in.replace('$$uid$$',uid);
+					var req = HTTPRequest().request(options, function(res) 
+					{
+						res.setEncoding('utf8');
+
+						res.on('data', function (data) 
+						{
+							body_out += data;
+						});
+						res.on('end', function () 
+						{
+							adapter.log.debug('execte Action Body Out: ' + body_out);
+							var obj=JSON.parse(body_out)
+        				});
+        
+						req.on('error', function(e) 
+						{
+							adapter.log.error('execute Action Problem with request: ' + e.message);
+						});
+					});
+					req.write(body_in);
+					//adapter.log.debug('SetState Body In:'+body_in);
+					req.end();
+		}
+	});
+}
+
+
+
+function eNetServer_Logout() 
+{
+	adapter.log.debug("eNet Server Logout Start");
+	
+	var options = {host: adapter.config.ip, port: Connection_Port, rejectUnauthorized: false, path: '/jsonrpc/visualization', method:'POST', headers: {'Content-Type': 'application/json'}};
+	var reqstr=[];
+	//reqstr.push('{"jsonrpc":"2.0", "method":"setClientRole", "params":{"clientRole":"CR_VISU"}, "id":"$$id$$"}')
+	//reqstr.push('{"jsonrpc":"2.0", "method":"registerEventConfigurationParameterChanged", "params":{"configurationUID":"90f37543-7ba6-4eb2-8481-5a58e2f255e4", "parameterID":"P_CFG_PRJ_SAVING"}, "id":"$$id$$"}')
+	//reqstr.push('{"jsonrpc":"2.0", "method":"setValueToConfigurationParameter", "params":{"configurationUID":"90f37543-7ba6-4eb2-8481-5a58e2f255e4", "parameterID":"P_CFG_PRJ_SAVING", "value":true}, "id":"$$id$$"}')
+	reqstr.push('{"jsonrpc":"2.0", "userLogout", "params":null, "id":"$$id$$"}')
+	//reqstr.push('{"jsonrpc":"2.0", "method":"unregisterEventConfigurationParameterChanged", "params":{"configurationUID":"90f37543-7ba6-4eb2-8481-5a58e2f255e4", "parameterID":"P_CFG_PRJ_SAVING"}, "id":"$$id$$"}')
+	var durchlauf = 0;
+	Zaehler = 0;
+    var body_out = ''
+	var tempSessionID = adapter.getState("info.SessionID", function (err, state) 
+	{
+		if (state)
+		{
+			SessionID = state.val;
+			var tempCounterID = adapter.getState("info.CounterID", function (err, state) 
+			{
+				if (state)
+				{
+					CounterID = state.val;
+					options.headers = {'Content-Type':'application/json; charset=utf-8','Cookie':'uEhaA=true; pbAudioFalg=ON; VideoFormatAVN=ActiveX; INSTASESSIONID='+SessionID+'; downloadFinished=true; rememberMe=true'};
+					Zaehler = CounterID
+					Zaehler++;
+					adapter.setState('info.CounterID', Zaehler.toString(), true);
+					var body_in = reqstr[durchlauf].replace('$$id$$',Zaehler.toString());
+					var req = HTTPRequest().request(options, function(res) 
+					{
+						res.setEncoding('utf8');
+						res.on('data', function (data) 
+						{
+							body_out += data;
+							if (typeof(body) !== "undefined")			
+							{
+								traverse(JSON.parse(body));
+							}
+						});
+						res.on('end', function () 
+						{
+							if (typeof(body) !== "undefined")			
+							{
+								durchlauf++;
+								if (durchlauf<reqstr.length)
+								{
+									eNetServer_Logout();
+								}
+							}
+						});
+						req.on('error', function(e) 
+						{
+							adapter.log.error("eNet Server Logout Error: " + e.messsage);
+							adapter.setState("info.connection", false, true);
+						});
+						adapter.setState("info.connection", false, true);
+						adapter.setState('info.SessionID', "", true);
+						adapter.setState('info.CounterID', "0", true);
+						//adapter.setState('info.requestEvents', false, true);
+					});
+					adapter.log.debug("eNet Server Logout Request Body IN: " + body_in);
+					adapter.log.info("eNet Server Logout, Tschuess ....");
+					req.write(body_in);
+					req.end();
+				}
+			});
+		}
+	});
+}
+
+
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+///																																											//
+///          BEGIN ENET GATEWAY ROUTINES 																																	//
+///																																											//
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+function deleteGatewayStates(states, callback) 
+{
+	if (!states || !states.length) 
+	{
+		if (callback) callback();
+		return;
+	}
+	
+	eNetType = adapter.config.devicetype;
+	if (eNetType == "Gateway")
+	{
+		var id = states.pop();
+		adapter.delObject(id, function (err) 
+		{
+			adapter.delState(id, function (err) 
+			{
+			});         
+		});
+	}
+	else if (eNetType == "Server")
+	{
+		adapter.log.debug("DELETE STATES SERVER");
+	}
+};
+
+function getGatewayStates()
+{
+	// Channel subscription -> write state to ioBroker if channel changes
+	adapter.log.debug("getGatewayStates: Starting to retrieve the current states from eNet gateway");
+
+	adapter.getState("eNet.subscribeable_channels", function (err, state) 
+	{
+        if (state)
+		{
+			var eNetChannelList;
+			eNetChannelList = JSON.parse(state.val);
+			adapter.log.debug("getGatewayStates: Array of subscribeable Channels: " + eNetChannelList.toString());
+			
+			var Gateway = eNet.gateway({host: adapter.config.ip});
+			Gateway.connect();
+			Gateway.signIn(eNetChannelList, function(err, res)
+			{
+				if (err) 
+				{
+					adapter.log.error("getGatewayStates: Error on signing in channels for subscription: " + err);
+					adapter.setState("info.connection", false, true)
+				}
+				if (res) 
+				{
+					adapter.log.debug.log("getGatewayStates: Sucess in singing in to channels: " + JSON.stringify(res));
+					adapter.setState("info.connection", true, true);
+				}
+			});
+
+			for(var y = 0; y < eNetChannelList.length; y++) 
+			{
+				Gateway.on(eNetChannelList[parseInt(y)], function(err, msg) 
+				{
+					if (!err && msg) 
+					{	
+						var ResponseString = JSON.stringify(msg)
+						var ParsedJSON = JSON.parse(ResponseString);
+						if (ParsedJSON)
+						{
+							var eNetChannel = ParsedJSON.NUMBER;
+							adapter.getState("channel" + eNetChannel.toString() + ".STATE", function (err, state) 
+							{
+								if (state)
+								{
+									var eNetValue = ParsedJSON.STATE;
+									adapter.log.debug("getGatewayStates: (channel" + eNetChannel.toString() + ".STATE) Channel: " + eNetChannel.toString() + ", Value: " + eNetValue.toString() + ", State: " + ParsedJSON.STATE + ", Setpoint: " + ParsedJSON.SETPOINT + ", Data for channel: " + JSON.stringify(msg));
+									var ActualValue = state.val;
+									if ((eNetValue == "OFF") || (eNetValue == -1))
+										eNetValue = false;
+									else eNetValue = true;
+									if (ActualValue != eNetValue)
+									{
+										adapter.log.debug("getGatewayStates: Setting state for channel: " + eNetChannel.toString() + " to ioBroker objects DB Old Value: " + ActualValue + " new Value: " + eNetValue);
+										adapter.setState("channel" + eNetChannel.toString() + ".STATE", eNetValue, true);
+									}
+								}
+							});						
+							
+							adapter.getState("channel" + eNetChannel.toString() + ".LEVEL", function (err, state) 
+							{
+								if (state)
+								{
+									var eNetValue = ParsedJSON.VALUE;
+									adapter.log.debug("getGatewayStates: (channel" + eNetChannel.toString() + ".LEVEL) Channel: " + eNetChannel.toString() + ", Value: " + eNetValue.toString() + ", State: " + ParsedJSON.STATE + ", Setpoint: " + ParsedJSON.SETPOINT + ", Data for channel: " + JSON.stringify(msg));
+									var ActualValue = state.val;
+									if (eNetValue == -1)
+										eNetValue = 0;
+									if (ActualValue != eNetValue)
+									{
+										adapter.log.debug("getGatewayStates: Setting state for channel: " + eNetChannel.toString() + " to ioBroker objects DB Old Value: " + ActualValue + " new Value: " + eNetValue);
+										adapter.setState("channel" + eNetChannel.toString() + ".LEVEL", eNetValue.toString(), true);
+									}
+								}
+							});								
+						}
+						else adapter.log.error("getGatewayStates: Parse JSON Error: " + err);
+					}
+					else adapter.log.error("getGatewayStates: Gateway.on Error: " + err);
+					Gateway.disconnect();
+				});
+			}
+		}
+	});
+};
+	
+function getGatewayDevices(ip)
+{
+	if (adapter.config.ip)
+	{
+		SyncRoomsAndScenes = adapter.config.sync_roomsandscenes;
+		if (SyncRoomsAndScenes)
+		{
+			adapter.getStates(adapter.namespace + ".rooms.*", function (err, states) 
+			{
+				var toDelete = [];
+				for (var id in states) 
+					toDelete.push(id);
+				deleteGatewayStates(toDelete, function() 
+				{
+				});
+			});
+
+			adapter.getStates(adapter.namespace + ".scenes.*", function (err, states) 
+			{
+				var toDelete = [];
+				for (var id in states) 
+					toDelete.push(id);
+				deleteGatewayStates(toDelete, function() 
+				{
+				});
+			});
+		}
+
+		var gw = eNet.gateway({host: adapter.config.ip});
+		gw.connect();
+		adapter.log.debug("getGatewayDevices: Getting gateway devices...");
+		var DeviceList = {};
+		gw.getProjectList(function(err, res)
+		{
+			if (err) 
+				adapter.log.error("getGatewayDevices: Error getting eNet Gateway devices: " + err);
+			else 
+			{
+				adapter.log.debug("getGatewayDevices: Connected to eNet Gateway for device setup: " + JSON.stringify(res));
+				adapter.setState("info.connection", true, true);
+				setupGatewayDevices(gw, JSON.stringify(res));
+			}
+			gw.disconnect();	})
+	}
+};
+
+function setupGatewayDevices(gw, res)
+{
+	// 0 to 15: Scenes
+	// 16 to 41: Channel/Device 1 to 24
+	// 42 to 43: All on/off and Master Dim
+	var gw = eNet.gateway({host: adapter.config.ip});
+	gw.connect();
+	gw.getVersion(function(err, res) 
+	{
+		if (err) 
+			adapter.log.error("setupGatewayDevices: Error getting eNet Gateway version: " + err);
+		else 
+		{
+			adapter.setState("info.connection", true, true);
+			var ParsedJSON = JSON.parse(JSON.stringify(res));
+			if (ParsedJSON)
+			{
+				adapter.log.info("ioBroker Jung/Gira eNet Adapter Version " + adapter.version + ". Connected to eNet Gateway on " + gw.name + ", Gateway Firmware: " + ParsedJSON.FIRMWARE + ", Gateway Hardware: " + ParsedJSON.HARDWARE + ", Protocol: " + ParsedJSON.PROTOCOL + ", eNet: " + ParsedJSON.ENET);
+			}
+		}
+		gw.disconnect();
+	})	
+	
+	var ParsedJSON = JSON.parse(res);
+	if (ParsedJSON)
+	{
+		adapter.log.debug("setupGatewayDevices: Got JSON device information from eNet gateway. Count of Devices: " + ParsedJSON.ITEMS.length + ", " + "Count of rooms: " + ParsedJSON.LISTS.length);
+		var DevicesCount = ParsedJSON.ITEMS.length;
+		var RoomsCount = ParsedJSON.LISTS.length;
+
+		// Setting up devices/channels
+		adapter.log.debug("setupGatewayDevices: Reading Scenes/Channels/Devices...");
+		var channelArray = [];
+		for (var x = 0; x < DevicesCount; x++) 
+		{
+			var JSONDeviceType = ParsedJSON.ITEMS[x].TYPE;
+			var DeviceType = JSONDeviceType.toUpperCase();
+			switch(DeviceType)
+			{
+				case "SCENE":
+					if (SyncRoomsAndScenes === true)
+					{
+						adapter.setObjectNotExists("scenes.scene" + ParsedJSON.ITEMS[x].NUMBER, {
+						_id : adapter.namespace + "scenes.scene" + ParsedJSON.ITEMS[x].NUMBER,
+						type: "channel",
+						common: {
+							name: ParsedJSON.ITEMS[x].NAME,
+						},
+						native: {}
+						});
+					
+						adapter.setObjectNotExists("scenes.scene" + ParsedJSON.ITEMS[x].NUMBER + ".ID", {
+						_id : adapter.namespace + "scenes.scene" + ParsedJSON.ITEMS[x].NUMBER + ".ID",
+						type: "state",
+							common: {
+							name: ParsedJSON.ITEMS[x].NAME + ":ID",
+							type: "string",
+							role: "id",
+							write: "false",
+							read: "true"
+						},
+						native: {}
+						});	
+			
+						adapter.setObjectNotExists("scenes.scene" + ParsedJSON.ITEMS[x].NUMBER + ".NAME", {					_id : adapter.namespace + "scenes.scene" + ParsedJSON.ITEMS[x].NUMBER + ".NAME",
+						type: "state",
+							common: {
+							name: ParsedJSON.ITEMS[x].NAME + ":NAME",
+							type: "string",
+							role: "value",
+							write: "false",
+							read: "true"
+						},
+						native: {}
+						});								
+			
+						if (ParsedJSON.ITEMS[x].DIMMABLE)
+						{
+							adapter.setObjectNotExists("scenes.scene" + ParsedJSON.ITEMS[x].NUMBER + ".LEVEL", {
+							_id : adapter.namespace + "scenes.scene" + ParsedJSON.ITEMS[x].NUMBER + ".LEVEL",
+							type: "state",
+								common: {
+								name: ParsedJSON.ITEMS[x].NAME + ":LEVEL",
+								type: "number",
+								role: "level.dimmer",
+								min: 0,
+								max: 100
+							},
+							native: {}
+							});							
+						}
+						else
+						{
+							adapter.setObjectNotExists("scenes.scene" + ParsedJSON.ITEMS[x].NUMBER + ".STATE", {
+							_id : adapter.namespace + "scenes.scene" + ParsedJSON.ITEMS[x].NUMBER + ".STATE",
+							type: "state",
+								common: {
+								name: ParsedJSON.ITEMS[x].NAME + ":STATE",
+								type: "boolean",
+								role: "scene.state"						},
+							native: {}
+							});
+						}
+						
+						adapter.setState("scenes.scene" + ParsedJSON.ITEMS[x].NUMBER + ".ID", ParsedJSON.ITEMS[x].NUMBER, true);
+						adapter.setState("scenes.scene" + ParsedJSON.ITEMS[x].NUMBER + ".NAME", ParsedJSON.ITEMS[x].NAME, true);
+						adapter.setState("scenes.scene" + ParsedJSON.ITEMS[x].NUMBER + ".STATE", false, true);
+						adapter.log.debug("setupGatewayDevices: Added Scene ID: " + ParsedJSON.ITEMS[x].NUMBER + ", Name: " + ParsedJSON.ITEMS[x].NAME + ", Type: " + ParsedJSON.ITEMS[x].TYPE);						
+					}
+				break;
+				
+				case "BINAER":
+					adapter.setObjectNotExists("channel" + ParsedJSON.ITEMS[x].NUMBER, {
+					_id : adapter.namespace + "channel" + ParsedJSON.ITEMS[x].NUMBER,
+					type: "channel",
+					common: {
+						name: ParsedJSON.ITEMS[x].NAME,
+					},
+					native: {}
+					});
+					
+					adapter.setObjectNotExists("channel" + ParsedJSON.ITEMS[x].NUMBER + ".ID", {
+					_id : adapter.namespace + "channel" + ParsedJSON.ITEMS[x].NUMBER + ".ID",
+					type: "state",
+						common: {
+						name: ParsedJSON.ITEMS[x].NAME + ":ID",
+						type: "string",
+						role: "id",
+						write: "false",
+						read: "true"
+					},
+					native: {}
+					});	
+			
+					adapter.setObjectNotExists("channel" + ParsedJSON.ITEMS[x].NUMBER + ".NAME", {
+					_id : adapter.namespace + "channel" + ParsedJSON.ITEMS[x].NUMBER + ".NAME",
+					type: "state",
+						common: {
+							name: ParsedJSON.ITEMS[x].NAME + ":NAME",
+							type: "string",
+							role: "value",
+							write: "false",
+							read: "true"
+						},
+					native: {}
+					});								
+							adapter.setObjectNotExists("channel" + ParsedJSON.ITEMS[x].NUMBER + ".STATE", {
+					_id : adapter.namespace + "channel" + ParsedJSON.ITEMS[x].NUMBER + ".STATE",
+					type: "state",
+						common: {
+						name: ParsedJSON.ITEMS[x].NAME + ":STATE",
+						type: "boolean",
+						role: "switch"
+					},
+					native: {}
+					});
+						
+					if (x > 15 && x < 40)		// Do not subscribe scenes, master dim and all on/off!
+						channelArray.push(x);
+					adapter.setState("channel" + ParsedJSON.ITEMS[x].NUMBER + ".ID", ParsedJSON.ITEMS[x].NUMBER, true);
+					adapter.setState("channel" + ParsedJSON.ITEMS[x].NUMBER + ".NAME", ParsedJSON.ITEMS[x].NAME, true);
+					adapter.setState("channel" + ParsedJSON.ITEMS[x].NUMBER + ".STATE", false, true);
+					adapter.log.debug("setupGatewayDevices: Added Device ID: " + ParsedJSON.ITEMS[x].NUMBER + ", Name: " + ParsedJSON.ITEMS[x].NAME + ", Type: " + ParsedJSON.ITEMS[x].TYPE);
+				break;
+
+				case "DIMMER":
+					adapter.setObjectNotExists("channel" + ParsedJSON.ITEMS[x].NUMBER, {
+					_id : adapter.namespace + "channel" + ParsedJSON.ITEMS[x].NUMBER,
+					type: "channel",
+					common: {
+						name: ParsedJSON.ITEMS[x].NAME,
+					},
+					native: {}
+					});
+					
+					adapter.setObjectNotExists("channel" + ParsedJSON.ITEMS[x].NUMBER + ".ID", {
+					_id : adapter.namespace + "channel" + ParsedJSON.ITEMS[x].NUMBER + ".ID",
+				type: "state",
+						common: {
+						name: ParsedJSON.ITEMS[x].NAME + ":ID",
+						type: "string",
+						role: "id",
+						write: "false",
+						read: "true"
+					},
+					native: {}
+					});	
+				
+					adapter.setObjectNotExists("channel" + ParsedJSON.ITEMS[x].NUMBER + ".NAME", {
+					_id : adapter.namespace + "channel" + ParsedJSON.ITEMS[x].NUMBER + ".NAME",
+					type: "state",
+						common: {
+						name: ParsedJSON.ITEMS[x].NAME + ":NAME",
+						type: "string",
+						role: "value",
+						write: "false",
+						read: "true"
+					},
+					native: {}
+					});															
+						
+					adapter.setObjectNotExists("channel" + ParsedJSON.ITEMS[x].NUMBER + ".LEVEL", {
+					_id : adapter.namespace + "channel" + ParsedJSON.ITEMS[x].NUMBER + ".LEVEL",
+					type: "state",
+					common: {
+						name: ParsedJSON.ITEMS[x].NAME + ":LEVEL",
+						type: "number",
+						role: "level.dimmer",
+						min: 0,
+						max: 100
+					},
+					native: {}
+					});	
+
+					if (x > 15 && x < 40)		// Do not subscribe scenes, master dim and all on/off!
+						channelArray.push(x);
+					adapter.setState("channel" + ParsedJSON.ITEMS[x].NUMBER + ".ID", ParsedJSON.ITEMS[x].NUMBER, true);
+					adapter.setState("channel" + ParsedJSON.ITEMS[x].NUMBER + ".NAME", ParsedJSON.ITEMS[x].NAME, true);
+					adapter.setState("channel" + ParsedJSON.ITEMS[x].NUMBER + ".LEVEL", "0", true);
+					adapter.log.debug("setupGatewayDevices: Added Device ID: " + ParsedJSON.ITEMS[x].NUMBER + ", Name: " + ParsedJSON.ITEMS[x].NAME + ", Type: " + ParsedJSON.ITEMS[x].TYPE);
+				break;
+
+				case "JALOUSIE":
+					adapter.setObjectNotExists("channel" + ParsedJSON.ITEMS[x].NUMBER, {
+					_id : adapter.namespace + "channel" + ParsedJSON.ITEMS[x].NUMBER,
+					type: "channel",
+					common: {
+						name: ParsedJSON.ITEMS[x].NAME,
+					},
+					native: {}
+					});
+					
+					adapter.setObjectNotExists("channel" + ParsedJSON.ITEMS[x].NUMBER + ".ID", {
+					_id : adapter.namespace + "channel" + ParsedJSON.ITEMS[x].NUMBER + ".ID",
+					type: "state",
+					common: {
+						name: ParsedJSON.ITEMS[x].NAME + ":ID",
+						type: "string",
+						role: "id",
+						write: "false",
+						read: "true"
+					},
+					native: {}
+					});	
+				
+					adapter.setObjectNotExists("channel" + ParsedJSON.ITEMS[x].NUMBER + ".NAME", {
+					_id : adapter.namespace + "channel" + ParsedJSON.ITEMS[x].NUMBER + ".NAME",
+					type: "state",
+					common: {
+						name: ParsedJSON.ITEMS[x].NAME + ":NAME",
+						type: "string",
+						role: "value",
+						write: "false",
+						read: "true"
+					},
+					native: {}
+					});															
+						
+					adapter.setObjectNotExists("channel" + ParsedJSON.ITEMS[x].NUMBER + ".LEVEL", {
+					_id : adapter.namespace + "channel" + ParsedJSON.ITEMS[x].NUMBER + ".LEVEL",
+					type: "state",
+					common: {
+						name: ParsedJSON.ITEMS[x].NAME + ":LEVEL",
+						type: "number",
+						role: "level.blind",
+						min: 0,
+						max: 100
+					},
+					native: {}
+					});	
+
+					if (x > 15 && x < 40)		// Do not subscribe scenes, master dim and all on/off!
+						channelArray.push(x);
+					adapter.setState("channel" + ParsedJSON.ITEMS[x].NUMBER + ".ID", ParsedJSON.ITEMS[x].NUMBER, true);
+					adapter.setState("channel" + ParsedJSON.ITEMS[x].NUMBER + ".NAME", ParsedJSON.ITEMS[x].NAME, true);
+					adapter.setState("channel" + ParsedJSON.ITEMS[x].NUMBER + ".LEVEL", "0", true);
+					adapter.log.debug("setupGatewayDevices: Added Device ID: " + ParsedJSON.ITEMS[x].NUMBER + ", Name: " + ParsedJSON.ITEMS[x].NAME + ", Type: " + ParsedJSON.ITEMS[x].TYPE);
+				break;
+				
+				case "NONE":
+					// Device is not programmed/learned on eNet Gateway
+				break;
+				
+				default:
+					adapter.log.error("setupGatewayDevices: ERROR! Unknown device type " + ParsedJSON.ITEMS[x].NUMBER + ", Channel: " + ParsedJSON.ITEMS[x].NUMBER + ", Name: " + ParsedJSON.ITEMS[x].NAME);
+			}
+		}
+		
+		if (SyncRoomsAndScenes)
+		{
+			adapter.log.debug("setupGatewayDevices: Reading Rooms...");
+			for (var x = 0; x < RoomsCount; x++) 
+			{
+				adapter.setObjectNotExists("rooms.room" + ParsedJSON.LISTS[x].NUMBER, {
+				_id : adapter.namespace + "rooms.room" + ParsedJSON.ITEMS[x].NUMBER,
+				type: "channel",
+				common: {
+					name: ParsedJSON.LISTS[x].NAME,
+				},
+				native: {}
+				});
+			
+				adapter.setObjectNotExists("rooms.room" + ParsedJSON.LISTS[x].NUMBER + ".ID", {
+					_id : adapter.namespace + "rooms.room" + ParsedJSON.ITEMS[x].NUMBER + ".ID",
+				type: "state",
+					common: {
+					name: ParsedJSON.LISTS[x].NAME + ":ID",
+					type: "string",
+					role: "id",
+					write: "false",
+					read: "true"
+				},
+				native: {}
+				});	
+			
+				adapter.setObjectNotExists("rooms.room" + ParsedJSON.LISTS[x].NUMBER + ".NAME", {
+				_id : adapter.namespace + "rooms.room" + ParsedJSON.ITEMS[x].NUMBER + ".NAME",
+				type: "state",
+				common: {
+					name: ParsedJSON.LISTS[x].NAME + ":NAME",
+					type: "string",
+					role: "value",
+					write: "false",
+					read: "true"
+				},
+				native: {}
+				});								
+			
+				if (ParsedJSON.LISTS[x].ITEMS_ORDER)			// There are devices in this room
+				{
+					var DevicesInRoom = ParsedJSON.LISTS[x].ITEMS_ORDER;
+					adapter.setObjectNotExists("rooms.room" + ParsedJSON.LISTS[x].NUMBER + ".DEVICES", {
+					_id : adapter.namespace + "rooms.room" + ParsedJSON.ITEMS[x].NUMBER + ".DEVICES",
+					type: "state",
+					common: {
+						name: ParsedJSON.LISTS[x].NAME + ":DEVICES",
+						type: "string",
+						role: "value",
+						write: "false",
+						read: "true"
+					},
+					native: {}
+					});		
+					adapter.setState("rooms.room" + ParsedJSON.LISTS[x].NUMBER + ".DEVICES", DevicesInRoom.toString(), true);
+				}
+
+				adapter.setState("rooms.room" + ParsedJSON.LISTS[x].NUMBER + ".ID", ParsedJSON.LISTS[x].NUMBER, true);
+				adapter.setState("rooms.room" + ParsedJSON.LISTS[x].NUMBER + ".NAME", ParsedJSON.LISTS[x].NAME, true);
+				adapter.log.debug("setupGatewayDevices: Added Room ID: " + ParsedJSON.LISTS[x].NUMBER + ", Name: " + ParsedJSON.LISTS[x].NAME);						
+			}
+		}		
+
+		adapter.log.debug("setupGatewayDevices: Channels for subscription: " + channelArray.toString());
+		adapter.setObjectNotExists("eNet.subscribeable_channels", {
+		_id : adapter.namespace + "eNet.subscribeable_channels",
+		type: "state",
+		common: {
+		name: "eNet channels to subscribe for",
+			type: "string",
+			role: "value",
+			read: true,
+			write: false
+		},
+		native: {}
+		});		
+
+		adapter.setState("eNet.subscribeable_channels", JSON.stringify(channelArray), true);
+		
+		main();
+	}
+};
+
+function setGatewayChannel(ip, id, channel, state)
+{
+	var gw = eNet.gateway({host: ip});
+	gw.connect();
+	
+	adapter.getObject(id, function (err, obj) 
+	{
+		if (!err && obj)
+		{
+			switch (obj.common.role)
+			{
+			case "switch":				// Actor/Switch/Light
+					adapter.log.debug("SetGatewayChannel: SWITCH: ID: " + id + ", Object Type: " + obj.common.type + " Object Role: " + obj.common.role);
+					gw.setValue(channel, state, false, function(err, res) 
+					{
+						if (err) 
+							adapter.log.error("SetGatewayChannel: Error in setting SWITCH value: ID: " + id + ", Object Type: " + obj.common.type + " Object Role: " + obj.common.role + ", VALUE: " + state + ", Error: " + JSON.stringify(err));
+						else 
+						adapter.log.debug("setGatewayChannel: Command successfull: \n" + JSON.stringify(res));
+					})
+				break;
+				case "level.dimmer":		// Dimmer
+					adapter.log.debug("SetGatewayChannel: DIMMER: ID: " + id + ", Object Type: " + obj.common.type + " Object Role: " + obj.common.role);
+					gw.setValueDim(channel, state, false, function(err, res) 
+					{
+						if (err) 
+							adapter.log.error("SetGatewayChannel: Error in setting DIMMER value: ID: " + id + ", Object Type: " + obj.common.type + " Object Role: " + obj.common.role + ", VALUE: " + state);
+						else 
+						adapter.log.debug("setGatewayChannel: Command successfull: \n" + JSON.stringify(res));
+					})
+				break;
+				case "level.blind":			// Jalousie
+					adapter.log.debug("SetGatewayChannel: SHUTTER: ID: " + id + ", Object Type: " + obj.common.type + " Object Role: " + obj.common.role);
+					gw.setValueBlind(channel, state, false, function(err, res) 
+					{
+						if (err) 
+							adapter.log.error("SetGatewayChannel: Error in setting SHUTTER value: ID: " + id + ", Object Type: " + obj.common.type + " Object Role: " + obj.common.role + ", VALUE: " + state);
+						else 
+						adapter.log.debug("setGatewayChannel: Command successfull: \n" + JSON.stringify(res));
+					})
+				break;
+			}
+		}
+	}); 	
+};
+
+if (module && module.parent) {
+    module.exports = startAdapter;
+} else {
+    // or start the instance directly
+    startAdapter();
+} 
