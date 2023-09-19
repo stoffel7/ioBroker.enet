@@ -200,7 +200,7 @@ function init_server()
 	{
 		if (!state)
 		{
-			adapter.setObjectNotExists("info.CounterID", {_id : adapter.namespace + "info.CounterID", type: "state", common: {name: "eNet Server Counter ID", type: "string", role: "value", read: true, write: true},native: {}});
+			adapter.setObjectNotExists("info.CounterID", {_id : adapter.namespace + "info.CounterID", type: "state", common: {name: "eNet Server Counter ID", type: "string", role: "value", read: true, write: true}, native: {}});
 			adapter.setState('info.CounterID', "0", true);
 		}
 	});
@@ -415,7 +415,7 @@ function eNetServer_Login()
 					try
 					{
 						SessionID = res.headers['x-clientcredentials-sessionid'].toString();
-						adapter.setState('info.SessionID', SessionID, {unit: ''});
+						adapter.setState('info.SessionID', SessionID, false);
 						res.setEncoding('utf8');
 						res.on('data', function (data) 
 						{
@@ -1241,7 +1241,7 @@ function eNetServer_RegisterDeviceFunction(ff,uid)
 					//Zaehler = state.val;
 					options.headers={'Content-Type':'application/json; charset=utf-8','Cookie':'uEhaA=true; pbAudioFalg=ON; VideoFormatAVN=ActiveX; INSTASESSIONID='+SessionID+'; downloadFinished=true; rememberMe=true'};
 					Zaehler++;
-					adapter.setState('info.CounterID', Zaehler,toString(),true);
+					adapter.setState('info.CounterID', Zaehler.toString(),true);
 					var body_in=reqstring.replace('$$id$$',Zaehler.toString());
    					body_in=body_in.replace('$$func$$',ff);
    					body_in=body_in.replace('$$uid$$',uid);
@@ -1341,7 +1341,7 @@ function eNetServer_GetDevices(pfad,pos,typ,uid)
 				    var InputTyp2InputID={}
                                     if ((obj['result']['devices'][0]['deviceChannelConfigurationGroups'][zz]['deviceChannels'][ch]['channelTypeID'] != 'CT_DISABLED') && (obj['result']['devices'][0]['deviceChannelConfigurationGroups'][zz]['deviceChannels'][ch]['channelTypeID'] != 'CT_DEVICE')) {
                                         if (batteryState !== null) {
-                                        adapter.setObjectNotExists(pfad+'.'+installArea+' #'+zz+'.batteryState', {_id : adapter.namespace + pfad+'.'+installArea+' #'+zz+'.batteryState', type: "state", common: { type: "string" }});
+                                        adapter.setObjectNotExists(pfad+'.'+installArea+' #'+zz+'.batteryState', {_id : adapter.namespace + pfad+'.'+installArea+' #'+zz+'.batteryState', type: "state", common: {name: "BatteryState",type: "string",role: "value",read: true,write: true}});
                                         adapter.setState(pfad+'.'+installArea+' #'+zz+'.batteryState',  batteryState,true);
 					batteryPathArray[deviceUID]=pfad+'.'+installArea+' #'+zz+'.batteryState'
                                         }
@@ -1367,7 +1367,7 @@ function eNetServer_GetDevices(pfad,pos,typ,uid)
                                                 //adapter.log.debug('---->'+htypid+'#'+huid+'#'+pfadneu)
                                                 adapter.setObject(pfadneu, {_id : adapter.namespace + pfadneu, type: "folder", common: {name: pfadneu, type: "mixed", role: "value"},native: {Device_UID: deviceUID,  Device_Type: htypid, Install_Area: installArea, ValueType_ID: 'valueTypeID',  Input_UID: huid}});
                                                 adapter.setObjectNotExists(pfadneu+'.value', {_id : adapter.namespace + pfadneu, type: "state", common: {name: '*', type: "mixed", role: "value"},native: {Device_UID: deviceUID,  Device_Type: htypid, Install_Area: installArea, ValueType_ID: valueTypeID,  Input_UID: huid}});
-                                                adapter.setState(pfadneu+'.value',  value,true); 
+                                                adapter.setState(pfadneu+'.value',  htypid,true); // hier war value
                                                 //adapter.log.debug('HTYPID:'+htypid)
                         			eNetServer_getNameAndValueTypeIDsFromDeviceFunctionType(pfadneu,htypid) 										
                                                 //adapter.log.debug("ITYP2IID:"+htypid+'#'+huid)
@@ -1394,7 +1394,7 @@ function eNetServer_GetDevices(pfad,pos,typ,uid)
                        				    //adapter.setObjectNotExists(pfadneu+'.EffectArea', {_id : adapter.namespace + pfadneu+'.EffectArea', type: "state", common: {name: '', type: "string", role: "value", read: true, write: true},native: {}});
                                                     //adapter.setState(pfadneu+'.EffectArea',effectArea,{unit: ''}); 
 						    adapter.setObjectNotExists(pfadneu+'.value', {_id : adapter.namespace + pfadneu+'.value', type: "state", common: {name: valueTypeID, type: "string", role: "value", read: true, write: true},native: {valueUID: valueUID}});
-                                                    adapter.setState(pfadneu+'.value',  value,true);
+                                                    adapter.setState(pfadneu+'.value',  value,true); 
                                                     //////adapter.setState(pfadneu+'.valueTypeID',  valueTypeID, {unit: ''});    
                                                     eNetServer_getNameAndValueTypeIDsFromDeviceFunctionType(pfadneu,odftypeID) 										
                          			    // Output valueUID registrieren fuer requests
