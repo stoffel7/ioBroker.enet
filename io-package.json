@@ -2,7 +2,7 @@
   "common": {
     "name": "enet",
     "title": "Jung/Gira eNet",
-    "titleLang":"de",
+    "titleLang":{"de"},
     "version": "1.2.0",
     "news": {
       "1.2.0": {
