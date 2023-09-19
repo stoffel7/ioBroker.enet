@@ -15,7 +15,7 @@ Control Jung/Gira eNet smarthome devices using the Jung/Gira eNet Mobile Gate Wi
 
 ## Changelog
 ### 1.2.0 (2023-09-19)
-* (stoffel7) fixed some bugs, check fpr js-contoller 5.0 ( uploaded source)
+* (stoffel7) fixed some bugs, check for js-contoller 5.0 ( uploaded source)
 ### 1.1.0 (2022-11-29)
 * (stoffel7) fixed some minor bugs ( uploaded orignal source)
 ### 1.0.52 (2021-03-23)
