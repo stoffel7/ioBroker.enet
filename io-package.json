@@ -2,11 +2,12 @@
   "common": {
     "name": "enet",
     "title": "Jung/Gira eNet",
-    "version": "1.1.0",
+    "titleLang":"de",
+    "version": "1.2.0",
     "news": {
-      "1.1.0": {
+      "1.2.0": {
         "en": "First release",
-        "de": "Erstes Release",
+        "de": "Zweites Release",
         "ru": "First release",
         "pt": "First release",
         "fr": "First release",
@@ -44,8 +45,7 @@
     "loglevel": "info",
     "type": "iot-systems",
     "license": "MIT",
-    "compact": true,
-    "installedFrom": "sebastianschultz/iobroker.enet#350f38d57a877db0993c82a40d717200745e5908"
+    "compact": true
   },
   "native": {
     "devicetype": "Server",
