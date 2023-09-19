@@ -2,7 +2,7 @@
   "common": {
     "name": "enet",
     "title": "Jung/Gira eNet",
-    "titleLang":{"de"},
+    "titleLang":{"de": "Steuert Jung/Gira eNet Smarthome-Geräte über das eNet Mobile Gate Funk IP Gateway oder dem eNet Smart Home Server"},
     "version": "1.2.0",
     "news": {
       "1.2.0": {
