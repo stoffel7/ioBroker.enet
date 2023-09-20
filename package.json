@@ -14,7 +14,7 @@
         "@iobroker/adapter-core": "^2.6.8"
     },
     "devDependencies": {
-        "@iobroker/testing": "^1.1.10",
+        "@iobroker/testing": "^4.1.0",
         "chai": "^4.1.2",
         "eslint": "^8.39.0",
         "eslint-config-prettier": "^8.8.0",
