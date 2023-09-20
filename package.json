@@ -15,6 +15,9 @@
   "devDependencies": {
     "@iobroker/testing": "^1.1.10",
     "chai": "^4.1.2",
+    "eslint": "^8.39.0",
+    "eslint-config-prettier": "^8.8.0",
+    "eslint-plugin-prettier": "^4.2.1",
     "grunt": "^1.0.1",
     "gulp": "^3.9.1",
     "mocha": "^4.1.0"
@@ -38,7 +41,8 @@
     "test": "npm run test:package && npm run test:unit",
     "test:integration": "mocha test/integration --exit",
     "test:package": "mocha test/package --exit",
-    "test:unit": "mocha test/unit --exit"
+    "test:unit": "mocha test/unit --exit",
+    "lint": "eslint ."
   },
   "version": "1.2.0"
 }
