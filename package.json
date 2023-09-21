@@ -1,44 +1,50 @@
 {
-  "author": {
-    "name": "SebastianSchultz",
-    "email": "mail@sebastian-mundt.com"
-  },
-  "bugs": {
-    "url": "https://github.com/SebastianSchultz/ioBroker.enet/issues"
-  },
-  "bundleDependencies": false,
-  "dependencies": {
-    "@iobroker/adapter-core": "^1.0.3"
-  },
-  "deprecated": false,
-  "description": "ioBroker eNet Adapter",
-  "devDependencies": {
-    "@iobroker/testing": "^1.1.10",
-    "chai": "^4.1.2",
-    "grunt": "^1.0.1",
-    "gulp": "^3.9.1",
-    "mocha": "^4.1.0"
-  },
-  "homepage": "https://github.com/SebastianSchultz/ioBroker.enet",
-  "keywords": [
-    "ioBroker",
-    "eNet",
-    "Smart Home",
-    "home automation"
-  ],
-  "license": "MIT",
-  "main": "main.js",
-  "name": "iobroker.enet",
-  "optionalDependencies": {},
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/SebastianSchultz/ioBroker.enet.git"
-  },
-  "scripts": {
-    "test": "npm run test:package && npm run test:unit",
-    "test:integration": "mocha test/integration --exit",
-    "test:package": "mocha test/package --exit",
-    "test:unit": "mocha test/unit --exit"
-  },
-  "version": "1.2.0"
+    "author": {
+        "name": "SebastianSchultz",
+        "email": "mail@sebastian-mundt.com"
+    },
+    "bugs": {
+        "url": "https://github.com/SebastianSchultz/ioBroker.enet/issues"
+    },
+    "description": "ioBroker eNet Adapter",
+    "engines": {
+        "node": ">= 16"
+    },
+    "dependencies": {
+        "@iobroker/adapter-core": "^2.6.8"
+    },
+    "devDependencies": {
+        "@iobroker/testing": "^4.1.0",
+        "chai": "^4.1.2",
+        "eslint": "^8.39.0",
+        "eslint-config-prettier": "^8.8.0",
+        "eslint-plugin-prettier": "^4.2.1",
+        "grunt": "^1.0.1",
+        "gulp": "^3.9.1",
+        "mocha": "^4.1.0"
+    },
+    "homepage": "https://github.com/SebastianSchultz/ioBroker.enet",
+    "keywords": [
+        "ioBroker",
+        "eNet",
+        "Smart Home",
+        "home automation"
+    ],
+    "license": "MIT",
+    "main": "main.js",
+    "name": "iobroker.enet",
+    "optionalDependencies": {},
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/SebastianSchultz/ioBroker.enet.git"
+    },
+    "scripts": {
+        "test:js": "mocha --config test/mocharc.custom.json \"{!(node_modules|test)/**/*.test.js,*.test.js,test/**/test!(PackageFiles|Startup).js}\"",
+        "test:package": "mocha test/package --exit",
+        "test:integration": "mocha test/integration --exit",
+        "test": "npm run test:js && npm run test:package",
+        "check": "tsc --noEmit -p tsconfig.check.json",
+        "lint": "eslint ."
+    },
+    "version": "1.2.0"
 }
