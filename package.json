@@ -20,7 +20,7 @@
         "eslint-config-prettier": "^8.8.0",
         "eslint-plugin-prettier": "^4.2.1",
         "grunt": "^1.0.1",
-        "gulp": "^3.9.1",
+        "gulp": "^4.0.2",
         "mocha": "^4.1.0"
     },
     "homepage": "https://github.com/SebastianSchultz/ioBroker.enet",
