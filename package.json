@@ -14,13 +14,14 @@
         "@iobroker/adapter-core": "^2.6.8"
     },
     "devDependencies": {
+        "@alcalzone/release-script": "^3.6.0",
         "@iobroker/testing": "^4.1.0",
         "chai": "^4.1.2",
         "eslint": "^8.39.0",
         "eslint-config-prettier": "^8.8.0",
         "eslint-plugin-prettier": "^4.2.1",
         "grunt": "^1.0.1",
-        "gulp": "^4.0.2",
+        "gulp": "^3.9.1",
         "mocha": "^10.2.0"
     },
     "homepage": "https://github.com/SebastianSchultz/ioBroker.enet",
@@ -33,7 +34,6 @@
     "license": "MIT",
     "main": "main.js",
     "name": "iobroker.enet",
-    "optionalDependencies": {},
     "repository": {
         "type": "git",
         "url": "git+https://github.com/SebastianSchultz/ioBroker.enet.git"
