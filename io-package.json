@@ -4,9 +4,22 @@
     "title": "Jung/Gira eNet",
     "titleLang": {
       "de": "Steuert Jung/Gira eNet Smarthome-Geräte über das eNet Mobile Gate Funk IP Gateway oder dem eNet Smart Home Server"
-      },
-    "version": "1.2.1",
+    },
+    "version": "1.2.2",
     "news": {
+      "1.2.2": {
+        "en": "Did some changes",
+        "de": "Einige Änderungen",
+        "ru": "Некоторые изменения",
+        "pt": "Fez algumas mudanças",
+        "nl": "Deed wat veranderingen",
+        "fr": "Quelques changements",
+        "it": "Qualche cambiamento",
+        "es": "¿Algún cambio",
+        "pl": "Zamieniać się",
+        "uk": "Чи були деякі зміни",
+        "zh-cn": "某些变化"
+      },
       "1.2.0": {
         "en": "First release",
         "de": "Zweites Release",
