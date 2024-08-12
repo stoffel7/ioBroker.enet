@@ -1,3 +1,4 @@
+/* 120824
 /* jshint -W097 */
 /* jshint strict:false */
 /* global require */
@@ -895,7 +896,7 @@ function eNetServer_RequestEvents()
 	      							              		var batteryState=obj['result']['events'][y]['eventData']['batteryState']
  							                   		//adapter.log.debug(valueUID+'  '+value) 
  							                   		adapter.log.info('Change:'+batteryPathArray[deviceUID]+' setze auf:'+batteryState);
-  							                  		adapter.setState(batteryPathArray[deviveUID],batteryState,true)//true=ACK
+  							                  		adapter.setState(batteryPathArray[deviceUID],batteryState,true)//true=ACK
 											break;									
 										}
 
