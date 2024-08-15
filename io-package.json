@@ -3,7 +3,8 @@
     "name": "enet",
     "title": "Jung/Gira eNet",
     "titleLang": {
-      "de": "Steuert Jung/Gira eNet Smarthome-Geräte über das eNet Mobile Gate Funk IP Gateway oder dem eNet Smart Home Server"
+      "de": "Steuert Jung/Gira eNet Smarthome-Geräte über das eNet Mobile Gate Funk IP Gateway oder dem eNet Smart Home Server",
+      "en": "Steuert Jung/Gira eNet Smarthome-Geräte über das eNet Mobile Gate Funk IP Gateway oder dem eNet Smart Home Server"
     },
     "version": "1.2.2",
     "news": {
@@ -40,7 +41,7 @@
       "es": "Controls Jung/Gira eNet Smarthome devices through eNet Mobile Gate Wireless IP gateway or the eNet Smart Home Server"
     },
     "authors": [
-      "SebastianSchultz <mail@sebastian-schultz.de>"
+      "SebastianSchultz <mail@sebastian-schultz.de>","Stoffel7 <brudst@yahoo.de>"
     ],
     "main": "main.js",
     "platform": "Javascript/Node.js",
@@ -48,19 +49,19 @@
     "icon": "enet.png",
     "materialize": true,
     "enabled": false,
-    "extIcon": "https://raw.githubusercontent.com/SebastianSchultz/ioBroker.enet/master/admin/enet.png",
+    "extIcon": "https://raw.githubusercontent.com/Stoffel7/ioBroker.enet/master/admin/enet.png",
     "keywords": [
-      "ioBroker",
       "Jung",
       "Gira",
-      "eNet",
-      "smart home"
+      "eNet"
     ],
-    "readme": "https://github.com/SebastianSchultz/ioBroker.enet/blob/master/README.md",
+    "readme": "https://github.com/Stoffel7/ioBroker.enet/blob/master/README.md",
     "loglevel": "info",
     "type": "iot-systems",
     "license": "MIT",
-    "compact": true
+    "compact": true,
+    "connectionType": "cloud",
+    "dataSource": "poll"
   },
   "native": {
     "devicetype": "Server",
