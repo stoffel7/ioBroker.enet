@@ -105,7 +105,7 @@
         "role": "value",
         "read": true,
         "write": true,
-        "def": false
+        "def": "0"
       },
       "native": {}
     },
@@ -118,7 +118,7 @@
         "role": "value",
         "read": true,
         "write": true,
-        "def": false
+        "def": ""
       },
       "native": {}
     },
@@ -131,7 +131,7 @@
         "role": "value",
         "read": true,
         "write": true,
-        "def": false
+        "def": ""
       },
       "native": {}
     },
