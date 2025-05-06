@@ -136,7 +136,7 @@
       "native": {}
     },
     {
-      "_id": "requestEvents",
+      "_id": "info.requestEvents",
       "type": "state",
       "common": {
         "name": "eNet Server request Events",
