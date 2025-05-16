@@ -135,6 +135,17 @@
       },
       "native": {}
     },
+      "dependencies": [
+            {
+                "js-controller": ">=6.0.11"
+            }
+        ],
+     "globalDependencies": [
+            {
+                "admin": "7.0.23"
+            }
+        ]
+    },
     {
       "_id": "info.requestEvents",
       "type": "state",
