@@ -73,17 +73,6 @@
     "connection_port": 80,
     "sync_roomsandscenes": false
   },    
-  "dependencies": [
-            {
-                "js-controller": ">=6.0.11"
-            }
-        ],
-     "globalDependencies": [
-            {
-                "admin": "7.0.23"
-            }
-        ]
-    },
   "objects": [],
   "instanceObjects": [
     {
