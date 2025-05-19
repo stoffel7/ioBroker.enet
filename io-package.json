@@ -1,10 +1,31 @@
 {
   "common": {
+    "tier": 2,
+        "dependencies": [
+      {
+        "js-controller": ">=5.0.19"
+      }
+    ],
+    "globalDependencies": [
+      {
+        "admin": ">=7.4.10"
+      }
+    ],
+    "licenseInformation": {
+      "license": "MIT",
+      "type": "free"
+    },
     "name": "enet",
     "title": "Jung/Gira eNet",
     "titleLang": {
+      "en": "Controls Jung/Gira eNet Smarthome devices through the eNet Mobile Gate Wireless IP gateway or the eNet Smart Home Server",
       "de": "Steuert Jung/Gira eNet Smarthome-Geräte über das eNet Mobile Gate Funk IP Gateway oder dem eNet Smart Home Server",
-      "en": "Steuert Jung/Gira eNet Smarthome-Geräte über das eNet Mobile Gate Funk IP Gateway oder dem eNet Smart Home Server"
+      "ru": "Controls Jung/Gira eNet Smarthome devices through the eNet Mobile Gate Wireless IP gateway or the eNet Smart Home Server",
+      "pt": "Controls Jung/Gira eNet Smarthome devices through the eNet Mobile Gate Wireless IP gateway or the eNet Smart Home Server",
+      "fr": "Controls Jung/Gira eNet Smarthome devices through eNet Mobile Gate Wireless IP gateway or the eNet Smart Home Server",
+      "nl": "Controls Jung/Gira eNet Smarthome devices through eNet Mobile Gate Wireless IP gateway or the eNet Smart Home Server",
+      "it": "Controls Jung/Gira eNet Smarthome devices through eNet Mobile Gate Wireless IP gateway or the eNet Smart Home Server",
+      "es": "Controls Jung/Gira eNet Smarthome devices through eNet Mobile Gate Wireless IP gateway or the eNet Smart Home Server"
     },
     "version": "1.2.2",
     "news": {
@@ -20,14 +41,6 @@
         "pl": "Zamieniać się",
         "uk": "Чи були деякі зміни",
         "zh-cn": "某些变化"
-      },
-      "1.2.0": {
-        "en": "First release",
-        "de": "Zweites Release",
-        "ru": "First release",
-        "pt": "First release",
-        "fr": "First release",
-        "nl": "First release"
       }
     },
     "desc": {
@@ -72,7 +85,7 @@
     "connection_type_ssl": false,
     "connection_port": 80,
     "sync_roomsandscenes": false
-  },    
+  },
   "objects": [],
   "instanceObjects": [
     {
