@@ -11,10 +11,6 @@
         "admin": ">=7.4.10"
       }
     ],
-    "licenseInformation": {
-      "license": "MIT",
-      "type": "free"
-    },
     "name": "enet",
     "title": "Jung/Gira eNet",
     "titleLang": {
