@@ -79,9 +79,9 @@ function readWordJs(src) {
         const resultFunc = new Function(`return ${words};`);
 
         return resultFunc();
-    } catch (e) {
+    }/* catch (e) {
         return null;
-    }
+    }*/
 }
 function padRight(text, totalLength) {
     return text + (text.length < totalLength ? new Array(totalLength - text.length).join(' ') : '');
