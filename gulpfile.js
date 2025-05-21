@@ -1,4 +1,3 @@
-// @ts-nocheck
 /* eslint-disable no-prototype-builtins */
 'use strict';
 
