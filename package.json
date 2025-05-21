@@ -49,5 +49,5 @@
     "lint": "eslint .",
     "release": "release-script"
   },
-  "version": "1.2.2"
+  "version": "1.0.2"
 }
