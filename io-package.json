@@ -85,6 +85,13 @@
     "connection_port": 80,
     "sync_roomsandscenes": false
   },
+  "protectedNative": [
+    "user",
+    "password"
+],
+"encryptedNative": [
+    "password"
+],
   "objects": [],
   "instanceObjects": [
     {
