@@ -23,7 +23,7 @@
     "eslint-config-prettier": "^8.8.0",
     "eslint-plugin-prettier": "^4.2.1",
     "grunt": "^1.0.1",
-    "gulp": "^3.9.1",
+    "gulp": "^5.0.0",
     "mocha": "^10.2.0"
   },
   "homepage": "https://github.com/stoffel7/ioBroker.enet",
@@ -40,7 +40,7 @@
     "type": "git",
     "url": "git@github.com:stoffel7/ioBroker.enet.git"
   },
-    "files": [
+  "files": [
     "admin{,/!(src)/**}/!(tsconfig|tsconfig.*|.eslintrc).{json,json5}",
     "admin{,/!(src)/**}/*.{html,css,png,svg,jpg,js}",
     "lib/",
