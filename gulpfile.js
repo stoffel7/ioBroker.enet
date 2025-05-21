@@ -79,6 +79,7 @@ function readWordJs(src) {
         const resultFunc = new Function(`return ${words};`);
 
         return resultFunc();
+        // eslint-disable-next-line @typescript-eslint/no-unused-vars
     } catch (e) {
         return null;
     }
