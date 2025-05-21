@@ -1,8 +1,4 @@
-<html>
-<!-- This file is deprecated!!!!! Please use index_m.html -->
-<!-- This file is required only for backward compatibility and will be deleted soon -->
-<!-- these 4 files always have to be included -->
-<link rel="stylesheet" type="text/css" href="../../lib/css/themes/jquery-ui/redmond/jquery-ui.min.css"/>
+<html><head><meta charset="utf-8"></head><!-- This file is deprecated!!!!! Please use index_m.html --><!-- This file is required only for backward compatibility and will be deleted soon --><!-- these 4 files always have to be included --><head><link rel="stylesheet" type="text/css" href="../../lib/css/themes/jquery-ui/redmond/jquery-ui.min.css">
 <script type="text/javascript" src="../../lib/js/jquery-1.11.1.min.js"></script>
 <script type="text/javascript" src="../../socket.io/socket.io.js"></script>
 <script type="text/javascript" src="../../lib/js/jquery-ui-1.10.3.full.min.js"></script>
@@ -20,7 +16,7 @@
 -->
 
 <!-- these two file always have to be included -->
-<link rel="stylesheet" type="text/css" href="../../css/adapter.css"/>
+<link rel="stylesheet" type="text/css" href="../../css/adapter.css">
 <script type="text/javascript" src="../../js/translate.js"></script>
 <script type="text/javascript" src="../../js/adapter-settings.js"></script>
 <script type="text/javascript" src="words.js"></script>
@@ -71,16 +67,17 @@
 </script>
 
 <!-- you have to put your config page in a div with id adapter-container -->
-<div id="adapter-container">
+</head><body><div id="adapter-container">
     <table>
-        <td><img src="enet.png" /></td>
+        <tbody><tr><td><img src="enet.png"></td>
         <td style="padding-top: 20px;padding-left: 10px"><h3 class="translate">Jung/Gira eNet Adapter</h3></td>
-    </table>
+    </tr></tbody></table>
 	<table>
-        <tr><td><label class="translate" for="ip">eNet Gateway IP:</label></td><td class="admin-icon"></td><td><input class="value" id="ip"></input></td><td class="admin-tooltip" data-id="ip"></td></tr>
-        <tr><td><label class="translate" for="interval">Poll interval in ms:</label></td><td class="admin-icon"></td><td><input class="value number" id="interval" size="5" maxlength="6" type="number" value="3000"/></td><td class="admin-tooltip"></td></tr>
-        <tr><td><label class="translate" for="sync_roomsandscenes">Synchronize Rooms and Scenes from eNet Gateway:</label></td><td class="admin-icon"></td><td><input class="value" id="sync_roomsandscenes" type="checkbox" value="false"/></td><td class="admin-tooltip"></td></tr>
-	</table>
+        <tbody><tr><td><label class="translate" for="ip">eNet Gateway IP:</label></td><td class="admin-icon"></td><td><input class="value" id="ip"></td><td class="admin-tooltip" data-id="ip"></td></tr>
+        <tr><td><label class="translate" for="interval">Poll interval in ms:</label></td><td class="admin-icon"></td><td><input class="value number" id="interval" size="5" maxlength="6" type="number" value="30000"></td><td class="admin-tooltip"></td></tr>
+        <tr><td><label class="translate" for="sync_roomsandscenes">Synchronize Rooms and Scenes from eNet Gateway:</label></td><td class="admin-icon"></td><td><input class="value" id="sync_roomsandscenes" type="checkbox" value="false"></td><td class="admin-tooltip"></td></tr>
+	</tbody></table>
 </div>
 
-</html>
+
+</body></html>

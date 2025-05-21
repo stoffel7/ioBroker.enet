@@ -2,12 +2,28 @@
     // Use IntelliSense to learn about possible attributes.
     // Hover to view descriptions of existing attributes.
     // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    //"env":{"NODE_PATH":"${workspaceFolder}/.dev_server/default/node_modules"}
     "version": "0.2.0",
     "configurations": [  
         {
+        "type": "node",
+          "request": "launch",
+          "name": "Launch ioBroker Adapter enet",
+          "skipFiles": ["<node_internals>/**"],
+          //"args": ["--debug", "0"],
+          "args": ["--instance", "0", "--force", "--logs", "--debug"],
+          "program": "node_modules/iobroker.enet/main.js",
+          "cwd": "${workspaceFolder}/.dev-server/default",
+          "stopOnEntry": true,
+          "console": "integratedTerminal",
+          "sourceMaps": true,
+          "env":{"NODE_PATH":"${workspaceFolder}"},
+          "resolveSourceMapLocations": ["${workspaceFolder}/", "/node_modules/**"]
+        },
+        {
     
             "name": "Launch normal",
-            "program": "${workspaceFolder}/src/main.ts",
+            "program": "${workspaceFolder}/main.js",
             "args": [
                 "--instance",
                 "0",
@@ -22,6 +38,8 @@
             "skipFiles": [
                 "<node_internals>/**"
             ],
-            "type": "node"
+            "type": "node",
+            "env":{"NODE_PATH":"${workspaceFolder}"}
         },
+    ]
 }

@@ -14,6 +14,11 @@ Jung/Gira eNet Smarthome Adapter for [ioBroker smart home system](https://www.io
 Control Jung/Gira eNet smarthome devices using the Jung/Gira eNet Mobile Gate Wireless IP gateway (https://www.gira.com/en_GB/gebaeudetechnik/systeme/enet/enet-produkte/bediengeraete/enet-mobile-gate.html) or the Jung/Gira eNet Smart Home Server.
 
 ## Changelog
+
+### **WORK IN PROGRSS**
+*
+
+
 ### 1.2.2 (2023-09-28)
 
 -   minor changes/fixes for js-controller 5
