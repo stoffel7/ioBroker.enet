@@ -27,9 +27,9 @@
       "it": "Controls Jung/Gira eNet Smarthome devices through eNet Mobile Gate Wireless IP gateway or the eNet Smart Home Server",
       "es": "Controls Jung/Gira eNet Smarthome devices through eNet Mobile Gate Wireless IP gateway or the eNet Smart Home Server"
     },
-    "version": "1.0.2",
+    "version": "1.0.1",
     "news": {
-      "1.0.2": {
+      "1.0.1": {
         "en": "Did some changes",
         "de": "Einige Änderungen",
         "ru": "Некоторые изменения",
