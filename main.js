@@ -1,4 +1,4 @@
-/* 200525 */
+/* 220525 */
 /* jshint -W097 */
 /* jshint strict:false */
 /* jslint node: true */
@@ -908,7 +908,7 @@ function eNetServer_RequestEvents() {
                                     const i = obj['result']['events'].length;
 
                                     for (let y = 0; y < i; y++) {
-                                        adapter.log.debug(`EVENT: ${obj['result']['events'][y]['event']}`); // valueChanged und deviceFunctionCalled
+                                        //adapter.log.debug(`EVENT: ${obj['result']['events'][y]['event']}`); // valueChanged und deviceFunctionCalled
                                         const event = obj['result']['events'][y]['event'];
                                         switch (event) {
                                             case 'deviceBatteryStateChanged': {
@@ -1079,7 +1079,7 @@ function eNetServer_GetLocations() {
                 const req = HTTPRequest().request(options, function (res) {
                     res.setEncoding('utf8');
                     res.on('data', function (data) {
-                        adapter.log.debug(`DATA::::::${data}`);
+                        //adapter.log.debug(`DATA::::::${data}`);
                         body_out = body_out + data;
                     });
                     res.on('end', function () {
@@ -1120,7 +1120,8 @@ function eNetServer_GetLocations() {
                                                 'deviceUIDs'
                                             ].length;
                                         for (let l = 0; l < d; l++) {
-                                            adapter.log.debug(`Location Object: ${l}`);
+                                            let ll = l + 1;
+                                            adapter.log.debug(`Location Object: ${ll}`);
                                             const devuid =
                                                 obj['result']['locations'][i]['childLocations'][j]['childLocations'][k][
                                                     'deviceUIDs'
@@ -1174,6 +1175,7 @@ function eNetServer_Register_EventValue_Change(uid, pfad) {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
     };
+    // eslint-disable-next-line @typescript-eslint/no-unused-vars
     let body_out = '';
     adapter.getState('info.SessionID', function (_err, state) {
         if (state) {
@@ -1198,7 +1200,7 @@ function eNetServer_Register_EventValue_Change(uid, pfad) {
                             body_out += data;
                         });
                         res.on('end', function () {
-                            adapter.log.debug(`Register_Value_Change Body Out: ${body_out}`);
+                            //adapter.log.debug(`Register_Value_Change Body Out: ${body_out}`);
                             //const obj = JSON.parse(body_out);
                         });
 
