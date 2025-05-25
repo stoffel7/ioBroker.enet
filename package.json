@@ -57,7 +57,7 @@
     "test": "npm run test:js && npm run test:package",
     "check": "tsc --noEmit -p tsconfig.check.json",
     "lint": "eslint -c eslint.config.mjs .",
-    "release": "release-script patch --yes",   
+    "release": "release-script",   
     "release-minor": "release-script minor --yes",
     "release-major": "release-script major --yes"
 
