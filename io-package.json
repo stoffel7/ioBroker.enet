@@ -1,7 +1,7 @@
 {
   "common": {
     "tier": 2,
-        "dependencies": [
+    "dependencies": [
       {
         "js-controller": ">=5.0.19"
       }
@@ -27,8 +27,21 @@
       "it": "Controls Jung/Gira eNet Smarthome devices through eNet Mobile Gate Wireless IP gateway or the eNet Smart Home Server",
       "es": "Controls Jung/Gira eNet Smarthome devices through eNet Mobile Gate Wireless IP gateway or the eNet Smart Home Server"
     },
-    "version": "1.0.1",
+    "version": "1.1.0",
     "news": {
+      "1.1.0": {
+        "en": "adpter takeover and added some changes to requests from adapter creator",
+        "de": "adpter übernahme und fügte einige änderungen an anfragen von adapter-ersteller hinzu",
+        "ru": "адаптер взял верх и добавил некоторые изменения в запросы от создателя адаптера",
+        "pt": "adpter takeover e adicionou algumas alterações aos pedidos do criador do adaptador",
+        "nl": "adpter overname en enkele wijzigingen toegevoegd aan verzoeken van adapter creator",
+        "fr": "adpter prise en charge et ajouté quelques modifications aux demandes de créateur d'adaptateur",
+        "it": "adpter takeover e aggiunto alcune modifiche alle richieste del creatore dell'adattatore",
+        "es": "adpter takeover y agregó algunos cambios a las solicitudes de adaptador creador",
+        "pl": "admirał przejęcia i dodał kilka zmian do żądań od twórcy adaptera",
+        "uk": "додано деякі зміни для запитів від розробника адаптера",
+        "zh-cn": "对适配器创建者的请求添加一些修改"
+      },
       "1.0.1": {
         "en": "Did some changes",
         "de": "Einige Änderungen",
@@ -54,7 +67,8 @@
       "es": "Controls Jung/Gira eNet Smarthome devices through eNet Mobile Gate Wireless IP gateway or the eNet Smart Home Server"
     },
     "authors": [
-      "SebastianSchultz <mail@sebastian-schultz.de>","Stoffel7 <brudst@yahoo.de>"
+      "SebastianSchultz <mail@sebastian-schultz.de>",
+      "Stoffel7 <brudst@yahoo.de>"
     ],
     "main": "main.js",
     "platform": "Javascript/Node.js",
@@ -88,10 +102,10 @@
   "protectedNative": [
     "user",
     "password"
-],
-"encryptedNative": [
+  ],
+  "encryptedNative": [
     "password"
-],
+  ],
   "objects": [],
   "instanceObjects": [
     {
