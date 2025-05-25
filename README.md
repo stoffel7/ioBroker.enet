@@ -48,7 +48,7 @@ Control Jung/Gira eNet smarthome devices using the Jung/Gira eNet Mobile Gate Wi
 
 The MIT License (MIT)
 
-Copyright (c) 2023 stoffel7
+Copyright (c) 2025 stoffel7
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
