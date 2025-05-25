@@ -19,7 +19,7 @@ Control Jung/Gira eNet smarthome devices using the Jung/Gira eNet Mobile Gate Wi
   Placeholder for the next version (at the beginning of the line):
   ### **WORK IN PROGRESS**
 -->
-### 1.1.0 (2025-05-25)
+### **WORK IN PROGRESS**
 * (stoffel7) adpter takeover and added some changes to requests from adapter creator
 
 ### 1.2.2 (2023-09-28)
