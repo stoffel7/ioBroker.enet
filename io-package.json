@@ -27,8 +27,21 @@
       "it": "Controls Jung/Gira eNet Smarthome devices through eNet Mobile Gate Wireless IP gateway or the eNet Smart Home Server",
       "es": "Controls Jung/Gira eNet Smarthome devices through eNet Mobile Gate Wireless IP gateway or the eNet Smart Home Server"
     },
-    "version": "2.0.0",
+    "version": "2.0.1",
     "news": {
+      "2.0.1": {
+        "en": "* adpter takeover and added some changes to requests from adapter creator\n  added PING function, ( config-> interval=0 no PING)",
+        "de": "* adpter übernahme und hinzugefügt einige änderungen an anfragen von adapter-ersteller\nhinzugefügt PING-Funktion, ( config-> Intervall = kein PING)",
+        "ru": "- захват адаптера и добавление некоторых изменений в запросы от создателя адаптера\nдобавлена функция PING (конфигурация -> интервал = 0 без PING)",
+        "pt": "* adpter takeover e adicionou algumas alterações aos pedidos do criador do adaptador\nadicionado função PING, ( config-> intervalo=0 no PING)",
+        "nl": "* adpter overname en toegevoegd enkele wijzigingen aan verzoeken van adapter creator\npING-functie toegevoegd, (configuratie-> interval=0 geen PING)",
+        "fr": "* prise en charge de l'adpteur et ajouté quelques modifications aux demandes du créateur d'adaptateur\nfonction PING ajoutée, (intervalle config->=0 sans PING)",
+        "it": "* adpter takeover e aggiunto alcune modifiche alle richieste dal creatore dell'adattatore\nfunzione PING aggiunta, ( config-> intervallo=0 no PING)",
+        "es": "* adpter takeover y agregó algunos cambios a las solicitudes de adaptador creador\nañadido función PING, (config- ratio=0 no PING)",
+        "pl": "* admirał przejęcia i dodał kilka zmian do żądań od twórcy adaptera\ndodana funkcja PING (config- > interval = 0 no PING)",
+        "uk": "* прийняття реклами та додано деякі зміни до запитів від розробника адаптера\nдодана функція PING, (config-> інтервал=0 немає PING)",
+        "zh-cn": "* 选取并增加了适配器创建者的一些修改请求\n添加 PING 函数, (配置 - > 间隔=0 no PING)"
+      },
       "2.0.0": {
         "en": "adpter takeover and added some changes to requests from adapter creator",
         "de": "adpter übernahme und fügte einige änderungen an anfragen von adapter-ersteller hinzu",

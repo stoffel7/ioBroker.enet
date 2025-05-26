@@ -19,9 +19,9 @@ Control Jung/Gira eNet smarthome devices using the Jung/Gira eNet Mobile Gate Wi
   Placeholder for the next version (at the beginning of the line):
   ### **WORK IN PROGRESS**
 -->
-### **WORK IN PROGRESS**
+### 2.0.1 (2025-05-26)
 * (stoffel7) adpter takeover and added some changes to requests from adapter creator
-  added PING function, ( config-> interval=0 no PING) 
+  added PING function, ( config-> interval=0 no PING)
 
 ### 1.2.2 (2023-09-28)
 
