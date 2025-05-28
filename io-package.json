@@ -93,7 +93,7 @@
     "connectionType": "cloud",
     "dataSource": "poll",
     "adminUI": {
-            "config": "html"
+            "config": "materialize"
         }
   },
   "native": {
