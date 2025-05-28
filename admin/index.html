@@ -1,26 +1,17 @@
-<html><head><meta charset="utf-8"></head><!-- This file is deprecated!!!!! Please use index_m.html --><!-- This file is required only for backward compatibility and will be deleted soon --><!-- these 4 files always have to be included --><head><link rel="stylesheet" type="text/css" href="../../lib/css/themes/jquery-ui/redmond/jquery-ui.min.css">
+<html>
+<head><meta charset="utf-8">
+<!-- these 4 files always have to be included -->
+<link rel="stylesheet" type="text/css" href="../../lib/css/materialize.css">
+<link rel="stylesheet" type="text/css" href="../../css/adapter.css">
+
 <script type="text/javascript" src="../../lib/js/jquery-1.11.1.min.js"></script>
 <script type="text/javascript" src="../../socket.io/socket.io.js"></script>
-<script type="text/javascript" src="../../lib/js/jquery-ui-1.10.3.full.min.js"></script>
 
-
-<!-- optional: use jqGrid
-<link rel="stylesheet" type="text/css" href="../../lib/css/jqGrid/ui.jqgrid-4.5.4.css"/>
-<script type="text/javascript" src="../../lib/js/jqGrid/jquery.jqGrid-4.5.4.min.js"></script>
-<script type="text/javascript" src="../../lib/js/jqGrid/i18n/grid.locale-all.js"></script>
--->
-
-<!-- optional: use multiselect
-<link rel="stylesheet" type="text/css" href="../../lib/css/jquery.multiselect-1.13.css"/>
-<script type="text/javascript" src="../../lib/js/jquery.multiselect-1.13.min.js"></script>
--->
-
-<!-- these two file always have to be included -->
-<link rel="stylesheet" type="text/css" href="../../css/adapter.css">
+<!-- these files always have to be included -->
 <script type="text/javascript" src="../../js/translate.js"></script>
+<script type="text/javascript" src="../../lib/js/materialize.js"></script>
 <script type="text/javascript" src="../../js/adapter-settings.js"></script>
 <script type="text/javascript" src="words.js"></script>
-
 
 <!-- you have to define 2 functions in the global scope: -->
 <script type="text/javascript">
@@ -33,19 +24,88 @@
             var $key = $(this);
             var id = $key.attr('id');
             if ($key.attr('type') === 'checkbox') {
-		// do not call onChange direct, because onChange could expect some arguments
+		        // do not call onChange direct, because onChange could expect some arguments
                 $key.prop('checked', settings[id]).change(function() {
-                    onChange();
+
+					if ($('#sync_roomsandscenes').prop('checked') && $('#devicetype').val() == 'eNet Server')
+					{
+						$('#sync_roomsandscenes').prop('checked', false);
+					}
+					if ($('#connection_type_ssl').prop('checked') && $('#devicetype').val() == 'eNet Gateway')
+					{
+						$('#connection_type_ssl').prop('checked', false);
+					}
+					onChange();
                 });
             } else {
-		// do not call onChange direct, because onChange could expect some arguments
+		        // do not call onChange direct, because onChange could expect some arguments
                 $key.val(settings[id]).change(function() {
-                    onChange();
-                }).keyup(function() {
+				onChange();
+                }).keyup(function() 
+				{
                     onChange();
                 });
             }
         });
+
+		switch($('#devicetype').val())
+		{
+			case 'Server':
+				$('#username').show();
+				$('#usernamelabel').show();
+				$('#password').show();
+				$('#passwordlabel').show();
+				$('#connection_type_ssl').removeClass('disabled');
+				$('#connection_port').removeClass('disabled');
+				$('#sync_roomsandscenes').addClass('disabled');
+				$('#sync_roomsandscenes').prop('checked', false);
+			break;
+			
+			case 'Gateway':
+				$('#username').hide();
+				$('#usernamelabel').hide();
+				$('#password').hide();
+				$('#passwordlabel').hide();
+				$('#connection_type_ssl').addClass('disabled');
+				$('#connection_port').addClass('disabled');
+				$('#connection_type_ssl').prop('checked', false);
+				$('#sync_roomsandscenes').removeClass('disabled');
+			break;
+			
+			default:			
+		}
+		
+	
+        $('#devicetype').change(function () 
+		{
+            switch ($(this).val()) 
+			{
+                case 'Server':
+					$('#username').show();
+					$('#usernamelabel').show();
+					$('#password').show();
+					$('#passwordlabel').show();
+					$('#connection_type_ssl').removeClass('disabled');
+					$('#connection_port').removeClass('disabled');
+					$('#sync_roomsandscenes').addClass('disabled');
+					$('#sync_roomsandscenes').prop('checked', false);
+				break;
+
+                case 'Gateway':
+					$('#username').hide();
+					$('#usernamelabel').hide();
+					$('#password').hide();
+					$('#passwordlabel').hide();
+					$('#connection_type_ssl').addClass('disabled');
+					$('#connection_port').addClass('disabled');
+					$('#connection_type_ssl').prop('checked', false);
+					$('#sync_roomsandscenes').removeClass('disabled');
+				break;
+
+                default:
+            }
+        });
+		
         onChange(false);
     }
 
@@ -65,19 +125,59 @@
         callback(obj);
     }
 </script>
-
+</head>
+<body>
 <!-- you have to put your config page in a div with id adapter-container -->
-</head><body><div id="adapter-container">
-    <table>
-        <tbody><tr><td><img src="enet.png"></td>
-        <td style="padding-top: 20px;padding-left: 10px"><h3 class="translate">Jung/Gira eNet Adapter</h3></td>
-    </tr></tbody></table>
-	<table>
-        <tbody><tr><td><label class="translate" for="ip">eNet Gateway IP:</label></td><td class="admin-icon"></td><td><input class="value" id="ip"></td><td class="admin-tooltip" data-id="ip"></td></tr>
-        <tr><td><label class="translate" for="interval">Poll interval in ms:</label></td><td class="admin-icon"></td><td><input class="value number" id="interval" size="5" maxlength="6" type="number" value="30000"></td><td class="admin-tooltip"></td></tr>
-        <tr><td><label class="translate" for="sync_roomsandscenes">Synchronize Rooms and Scenes from eNet Gateway:</label></td><td class="admin-icon"></td><td><input class="value" id="sync_roomsandscenes" type="checkbox" value="false"></td><td class="admin-tooltip"></td></tr>
-	</tbody></table>
+<div class="m adapter-container">
+    <div class="row">
+
+        <div id="tab-main" class="col s12 page">
+            <div class="row">
+                <div class="col s12 m4 l2">
+                    <img src="enet.png">
+                </div>
+            </div>
+            <div class="row">
+				<div class="input-field col s12 m6 l4">
+                    <select class="value" id="devicetype">
+                        <option value="Server" class="translate">eNet Server</option>
+                        <option value="Gateway" class="translate">eNet Gateway</option>
+                    </select>
+                    <label class="translate" for="devicetype">devicetype</label>
+                </div>
+                <div class="col s12 m8 l5">
+					<input class="value" id="connection_type_ssl" type="checkbox" value="false"/>
+                    <label for="connection_type_ssl" class="translate" for="connection_type_ssl">connection_type_ssl</label>
+				</div>
+                <div class="col s12 m8 l5">
+					<input class="value" id="connection_port" value="80"/>
+                    <label for="connection_port" class="translate" for="connection_port">connection_port</label>
+				</div>
+			</div>
+			
+			<div class="row">			
+                <div class="col s12 m8 l5">
+                    <input class="value" id="ip"></input>
+                    <label for="ip" class="translate" for="ip">ip</label>
+                    <input class="value" id="username"></input>
+                    <label for="usernamelabel" class="translate" for="usernamelabel" id="usernamelabel">usernamelabel</label>
+                    <input class="value" id="password" type="password"></input>
+                    <label for="passwordlabel" class="translate" for="passwordlabel" id="passwordlabel">passwordlabel</label>
+                </div>
+                <div class="col s12 m4 l1">
+                    <input class="value" id="interval" type="number" min="0" value="30000"/>
+                    <label for="interval" class="translate" for="interval">interval</label>
+                </div>
+			</div>
+			<div class="row">
+                <div class="col s12 m8 l5">
+					<input class="value" id="sync_roomsandscenes" type="checkbox" value="false"/>
+                    <label for="sync_roomsandscenes" class="translate" for="sync_roomsandscenes">sync_roomsandscenes</label>
+				</div>
+			</div>
+        </div>
+    </div>
 </div>
 
-
-</body></html>
+</body>
+</html>
