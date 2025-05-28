@@ -78,6 +78,7 @@
     "platform": "Javascript/Node.js",
     "mode": "daemon",
     "icon": "enet.png",
+    "materialize": true,
     "enabled": false,
     "extIcon": "https://raw.githubusercontent.com/Stoffel7/ioBroker.enet/master/admin/enet.png",
     "keywords": [
