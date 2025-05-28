@@ -90,10 +90,7 @@
     "type": "iot-systems",
     "compact": true,
     "connectionType": "cloud",
-    "dataSource": "poll",
-    "adminUI": {
-            "config": "html"
-        }
+    "dataSource": "poll"
   },
   "native": {
     "devicetype": "Server",
