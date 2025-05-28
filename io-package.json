@@ -16,16 +16,18 @@
       "type": "free"
     },
     "name": "enet",
-    "title": "Jung/Gira eNet",
     "titleLang": {
-      "en": "Controls Jung/Gira eNet Smarthome devices through the eNet Mobile Gate Wireless IP gateway or the eNet Smart Home Server",
+      "en": "Steuert Jung/Gira eNet Smarthome-Geräte über das eNet Mobile Gate Funk IP Gateway oder dem eNet Smart Home Server",
       "de": "Steuert Jung/Gira eNet Smarthome-Geräte über das eNet Mobile Gate Funk IP Gateway oder dem eNet Smart Home Server",
-      "ru": "Controls Jung/Gira eNet Smarthome devices through the eNet Mobile Gate Wireless IP gateway or the eNet Smart Home Server",
-      "pt": "Controls Jung/Gira eNet Smarthome devices through the eNet Mobile Gate Wireless IP gateway or the eNet Smart Home Server",
-      "fr": "Controls Jung/Gira eNet Smarthome devices through eNet Mobile Gate Wireless IP gateway or the eNet Smart Home Server",
-      "nl": "Controls Jung/Gira eNet Smarthome devices through eNet Mobile Gate Wireless IP gateway or the eNet Smart Home Server",
-      "it": "Controls Jung/Gira eNet Smarthome devices through eNet Mobile Gate Wireless IP gateway or the eNet Smart Home Server",
-      "es": "Controls Jung/Gira eNet Smarthome devices through eNet Mobile Gate Wireless IP gateway or the eNet Smart Home Server"
+      "ru": "Steuert Jung/Gira eNet Smarthome-Geräte über das eNet Mobile Gate Funk IP Gateway oder dem eNet Smart Home Server",
+      "pt": "Steuert Jung/Gira eNet Smarthome-Geräte über das eNet Mobile Gate Funk IP Gateway oder dem eNet Smart Home Server",
+      "nl": "Steuert Jung/Gira eNet Smarthome-Geräte über das eNet Mobile Gate Funk IP Gateway oder dem eNet Smart Home Server",
+      "fr": "Steuert Jung/Gira eNet Smarthome-Geräte über das eNet Mobile Gate Funk IP Gate oder dem eNet Smart Home Server",
+      "it": "Steuert Jung/Gira eNet Smarthome-Geräte über das eNet Mobile Gate Funk IP Gateway oder dem eNet Smart Home Server",
+      "es": "Steuert Jung/Gira eNet Smarthome-Geräte über das eNet Mobile Gate Funk IP Gateway oder dem eNet Smart Home Server",
+      "pl": "Steuert Jung / Gira eNet Smarthome- Geräte über das eNet Mobile Gate Funk IP Gateway oder dem eNet Smart Home Server",
+      "uk": "Статус на сервери",
+      "zh-cn": "Steuert Jung/Gira eNet Smarthome-Geräte über das eNet 移动门 Funk IP Gateway oder dem eNet 智能主服务器"
     },
     "version": "2.0.1",
     "news": {
@@ -42,32 +44,6 @@
         "uk": "* прийняття реклами та додано деякі зміни до запитів від розробника адаптера\nдодана функція PING, (config-> інтервал=0 немає PING)",
         "zh-cn": "* 选取并增加了适配器创建者的一些修改请求\n添加 PING 函数, (配置 - > 间隔=0 no PING)"
       },
-      "2.0.0": {
-        "en": "adpter takeover and added some changes to requests from adapter creator",
-        "de": "adpter übernahme und fügte einige änderungen an anfragen von adapter-ersteller hinzu",
-        "ru": "адаптер взял верх и добавил некоторые изменения в запросы от создателя адаптера",
-        "pt": "adpter takeover e adicionou algumas alterações aos pedidos do criador do adaptador",
-        "nl": "adpter overname en enkele wijzigingen toegevoegd aan verzoeken van adapter creator",
-        "fr": "adpter prise en charge et ajouté quelques modifications aux demandes de créateur d'adaptateur",
-        "it": "adpter takeover e aggiunto alcune modifiche alle richieste del creatore dell'adattatore",
-        "es": "adpter takeover y agregó algunos cambios a las solicitudes de adaptador creador",
-        "pl": "admirał przejęcia i dodał kilka zmian do żądań od twórcy adaptera",
-        "uk": "додано деякі зміни для запитів від розробника адаптера",
-        "zh-cn": "对适配器创建者的请求添加一些修改"
-      },
-      "1.1.0": {
-        "en": "adpter takeover and added some changes to requests from adapter creator",
-        "de": "adpter übernahme und fügte einige änderungen an anfragen von adapter-ersteller hinzu",
-        "ru": "адаптер взял верх и добавил некоторые изменения в запросы от создателя адаптера",
-        "pt": "adpter takeover e adicionou algumas alterações aos pedidos do criador do adaptador",
-        "nl": "adpter overname en enkele wijzigingen toegevoegd aan verzoeken van adapter creator",
-        "fr": "adpter prise en charge et ajouté quelques modifications aux demandes de créateur d'adaptateur",
-        "it": "adpter takeover e aggiunto alcune modifiche alle richieste del creatore dell'adattatore",
-        "es": "adpter takeover y agregó algunos cambios a las solicitudes de adaptador creador",
-        "pl": "admirał przejęcia i dodał kilka zmian do żądań od twórcy adaptera",
-        "uk": "додано деякі зміни для запитів від розробника адаптера",
-        "zh-cn": "对适配器创建者的请求添加一些修改"
-      },
       "1.0.1": {
         "en": "Did some changes",
         "de": "Einige Änderungen",
@@ -83,24 +59,25 @@
       }
     },
     "desc": {
-      "en": "Controls Jung/Gira eNet Smarthome devices through the eNet Mobile Gate Wireless IP gateway or the eNet Smart Home Server",
+      "en": "Steuert Jung/Gira eNet Smarthome-Geräte über das eNet Mobile Gate Funk IP Gateway oder dem eNet Smart Home Server",
       "de": "Steuert Jung/Gira eNet Smarthome-Geräte über das eNet Mobile Gate Funk IP Gateway oder dem eNet Smart Home Server",
-      "ru": "Controls Jung/Gira eNet Smarthome devices through the eNet Mobile Gate Wireless IP gateway or the eNet Smart Home Server",
-      "pt": "Controls Jung/Gira eNet Smarthome devices through the eNet Mobile Gate Wireless IP gateway or the eNet Smart Home Server",
-      "fr": "Controls Jung/Gira eNet Smarthome devices through eNet Mobile Gate Wireless IP gateway or the eNet Smart Home Server",
-      "nl": "Controls Jung/Gira eNet Smarthome devices through eNet Mobile Gate Wireless IP gateway or the eNet Smart Home Server",
-      "it": "Controls Jung/Gira eNet Smarthome devices through eNet Mobile Gate Wireless IP gateway or the eNet Smart Home Server",
-      "es": "Controls Jung/Gira eNet Smarthome devices through eNet Mobile Gate Wireless IP gateway or the eNet Smart Home Server"
+      "ru": "Steuert Jung/Gira eNet Smarthome-Geräte über das eNet Mobile Gate Funk IP Gateway oder dem eNet Smart Home Server",
+      "pt": "Steuert Jung/Gira eNet Smarthome-Geräte über das eNet Mobile Gate Funk IP Gateway oder dem eNet Smart Home Server",
+      "nl": "Steuert Jung/Gira eNet Smarthome-Geräte über das eNet Mobile Gate Funk IP Gateway oder dem eNet Smart Home Server",
+      "fr": "Steuert Jung/Gira eNet Smarthome-Geräte über das eNet Mobile Gate Funk IP Gate oder dem eNet Smart Home Server",
+      "it": "Steuert Jung/Gira eNet Smarthome-Geräte über das eNet Mobile Gate Funk IP Gateway oder dem eNet Smart Home Server",
+      "es": "Steuert Jung/Gira eNet Smarthome-Geräte über das eNet Mobile Gate Funk IP Gateway oder dem eNet Smart Home Server",
+      "pl": "Steuert Jung / Gira eNet Smarthome- Geräte über das eNet Mobile Gate Funk IP Gateway oder dem eNet Smart Home Server",
+      "uk": "Статус на сервери",
+      "zh-cn": "Steuert Jung/Gira eNet Smarthome-Geräte über das eNet 移动门 Funk IP Gateway oder dem eNet 智能主服务器"
     },
     "authors": [
       "SebastianSchultz <mail@sebastian-schultz.de>",
       "Stoffel7 <brudst@yahoo.de>"
     ],
-    "main": "main.js",
     "platform": "Javascript/Node.js",
     "mode": "daemon",
     "icon": "enet.png",
-    "materialize": true,
     "enabled": false,
     "extIcon": "https://raw.githubusercontent.com/Stoffel7/ioBroker.enet/master/admin/enet.png",
     "keywords": [
@@ -123,12 +100,12 @@
     "interval": 30000,
     "connection_type_ssl": false,
     "connection_port": 80,
-    "sync_roomsandscenes": false
+    "sync_roomsandscenes": false,
+    "protectedNative": [
+      "user",
+      "password"
+    ]
   },
-  "protectedNative": [
-    "user",
-    "password"
-  ],
   "encryptedNative": [
     "password"
   ],

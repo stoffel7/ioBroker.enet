@@ -206,6 +206,8 @@ function main() {
             if (adapter.config.interval > 0) {
                 adapter.log.info(`PING polling time[ms]:${adapter.config.interval}`);
                 pollTimerStates = setInterval(eNetServer_Ping, Number(adapter.config.interval));
+            } else {
+                adapter.log.info(`NO PING :${adapter.config.interval}`);
             }
         }
     }
@@ -763,7 +765,8 @@ function eNetServer_getScenes(projekt, uids) {
                             adapter.setObjectNotExists(pfad, {
                                 _id: adapter.namespace + pfad,
                                 type: 'folder',
-                                common: { name: pfad, read: true, write: true },
+                                common: { name: pfad, type: 'string', read: true, write: true },
+                                //common: { name: pfad,                 read: true, write: true },
                                 native: { sceneActionUID: scUID, sceneActionName: scName },
                             });
                             adapter.setObjectNotExists(`${pfad}.action`, {
