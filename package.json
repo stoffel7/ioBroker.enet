@@ -19,6 +19,7 @@
     "@alcalzone/release-script-plugin-license": "^3.5.9",
     "@iobroker/eslint-config": "^2.0.2",
     "@iobroker/testing": "^5.0.4",
+    "@tsconfig/node20": "^20.1.5",
     "@types/node": "^22.15.21",
     "chai": "^4.1.2",
     "eslint-plugin-react": "^7.37.5",
