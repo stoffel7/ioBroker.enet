@@ -29,8 +29,21 @@
       "uk": "Статус на сервери",
       "zh-cn": "Steuert Jung/Gira eNet Smarthome-Geräte über das eNet 移动门 Funk IP Gateway oder dem eNet 智能主服务器"
     },
-    "version": "2.0.1",
+    "version": "2.0.2",
     "news": {
+      "2.0.2": {
+        "en": "fixed error in io-package.json (materialize)\nindex.html removed\nfixed JSDoc issues",
+        "de": "fester fehler in io-package.json (materialize)\nindex.html entfernt\njSDoc-Ausgaben",
+        "ru": "фиксированная ошибка в io-package.json (материализация)\nindex.html удален\nфиксированные JSDoc",
+        "pt": "corrigido erro em io-package.json (materialize)\nindex.html removido\nproblemas JSDoc corrigidos",
+        "nl": "vaste fout in io-package.json (materialiseren)\nindex.html verwijderd\nvaste JSDoc-problemen",
+        "fr": "erreur fixe dans io-package.json (matérialiser)\nindex.html supprimé\ndes numéros JSDoc fixes",
+        "it": "errore fisso in io-package.json (materializzare)\nindex.html rimosso\nrisolvere problemi JSDoc",
+        "es": "error fijo en io-package.json (materializar)\nindex.html eliminado\ncuestiones fijas de la JSDoc",
+        "pl": "błąd stały w jo- package.json (materialize)\nindex.html usunięty\nstałe problemy z JSDoc",
+        "uk": "виправлена помилка в io-package.json (матеріалізація)\nindex.html видалено\nвиправлені проблеми JSDoc",
+        "zh-cn": "io-package.json(物质化)中的固定错误\n索引.html已删除\n固定联合来文问题"
+      },
       "2.0.1": {
         "en": "* adpter takeover and added some changes to requests from adapter creator\n  added PING function, ( config-> interval=0 no PING)",
         "de": "* adpter übernahme und hinzugefügt einige änderungen an anfragen von adapter-ersteller\nhinzugefügt PING-Funktion, ( config-> Intervall = kein PING)",
@@ -92,8 +105,8 @@
     "connectionType": "cloud",
     "dataSource": "poll",
     "adminUI": {
-            "config": "materialize"
-        }
+      "config": "materialize"
+    }
   },
   "native": {
     "devicetype": "Server",
@@ -106,9 +119,9 @@
     "sync_roomsandscenes": false
   },
   "protectedNative": [
-      "user",
-      "password"
-    ],
+    "user",
+    "password"
+  ],
   "objects": [],
   "instanceObjects": [
     {
