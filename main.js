@@ -7,7 +7,8 @@
 const utils = require('@iobroker/adapter-core');
 let adapter;
 const eNet = require(`${__dirname}/lib/enet`);
-//const Gateway = require(__dirname + '/lib/gateway');
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
+const Gateway = require(`${__dirname}/lib/gateway`);
 let pollTimerStates = null;
 let SyncRoomsAndScenes = false;
 let ConnectionType_SSL = false;
