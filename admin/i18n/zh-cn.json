@@ -1,0 +1,17 @@
+{
+    "Auto": "汽车",
+    "Manual": "手动的",
+    "connection_port": "港口",
+    "connection_type_ssl": "使用HTTPS连接",
+    "devicetype": "ENET设备类型",
+    "eNet Gateway": "ENET网关",
+    "eNet Server": "ENET服务器",
+    "interval": "MS中的轮询间隔/Pinginterval",
+    "ip": "主机名/IP Adress",
+    "on save adapter restarts with new config immediately": "在保存适配器上，请立即使用新的配置重新启动",
+    "passwordlabel": "密码",
+    "sync_roomsandscenes": "从ENET网关同步房间和场景",
+    "usernamelabel": "用户名",
+    "ip_label": "主机名或IP Adress用于连接",
+    "port_label": "连接的端口号"
+}

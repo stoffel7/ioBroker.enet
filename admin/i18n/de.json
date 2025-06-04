@@ -1,0 +1,17 @@
+{
+    "Auto": "Auto",
+    "Manual": "Manual",
+    "connection_port": "Port",
+    "connection_type_ssl": "HTTPS Verbindung verwenden",
+    "devicetype": "eNet Gerätetyp",
+    "eNet Gateway": "eNet Gateway",
+    "eNet Server": "eNet Server",
+    "interval": "Abfrageintervall/PING-Interval in ms",
+    "ip": "Hostname/IP-Adresse",
+    "on save adapter restarts with new config immediately": "Beim Speichern von Einstellungen der Adapter wird sofort neu gestartet.",
+    "passwordlabel": "Passwort",
+    "sync_roomsandscenes": "Räume und Szenen vom eNet Gateway synchronisieren",
+    "usernamelabel": "Benutzername",
+    "ip_label": "Hostname oder IP -Adress für die Verbindung",
+    "port_label": "Portnummer für die Verbindung"
+}

@@ -1,0 +1,79 @@
+{
+  "i18n": true,
+  "type": "panel",
+  "items": {
+        "devicetype": {
+          "newLine": true,
+          "type": "select",
+          "label": "devicetype",
+          "help": "",
+          "xs": 12,
+          "sm": 12,
+          "md": 4,
+          "options": [
+            {"value": "Server", "label": "eNet Server"},
+            {"value": "Gateway", "label": "eNet Gateway"}
+          ]
+        },
+    "connection_type_ssl": {
+      "type": "checkbox",
+      "label": "connection_type_ssl",
+      "help": "",
+      "xs": 12,
+      "sm": 12,
+      "md": 4
+    },
+    "ip": {
+      "newLine": true,
+      "type": "text",
+      "label": "ip",
+      "help": "ip_label",
+      "xs": 12,
+      "sm": 12,
+      "md": 4
+    },
+    "connection_port": {
+      "type": "number",
+      "label": "Port",
+      "help": "port_label",
+      "xs": 12,
+      "sm": 12,
+      "md": 4
+    },
+    "username": {
+      "newLine": true,
+      "type": "text",
+      "label": "usernamelabel",
+      "help": "",
+      "xs": 12,
+      "sm": 12,
+      "md": 4
+    },
+    "password": {
+      "type": "password",
+      "label": "passwordlabel",
+      "help": "",
+      "xs": 12,
+      "sm": 12,
+      "md": 4
+    },
+    "interval": {
+      "newLine": true,
+      "type": "number",
+      "label": "interval",
+      "help": "",
+      "xs": 12,
+      "sm": 12,
+      "md": 4
+    },
+    "sync_roomsandscenes": {
+      "newLine": true,
+      "type": "checkbox",
+      "label": "sync_roomsandscenes",
+      "help": "",
+      "xs": 12,
+      "sm": 12,
+      "md": 4
+    }
+}
+}

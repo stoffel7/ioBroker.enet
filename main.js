@@ -7,7 +7,8 @@
 const utils = require('@iobroker/adapter-core');
 let adapter;
 const eNet = require(`${__dirname}/lib/enet`);
-//const Gateway = require(__dirname + '/lib/gateway');
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
+const Gateway = require(`${__dirname}/lib/gateway`);
 let pollTimerStates = null;
 let SyncRoomsAndScenes = false;
 let ConnectionType_SSL = false;
@@ -772,14 +773,14 @@ function eNetServer_getScenes(projekt, uids) {
                             adapter.setObjectNotExists(`${pfad}.action`, {
                                 _id: `${adapter.namespace + pfad}.action`,
                                 type: 'state',
-                                common: { name: scName, type: 'string', role: 'value', read: true, write: true },
+                                common: { name: scName, type: 'boolean', role: 'value', read: true, write: true },
                                 native: { sceneUID: scUID },
                             });
-                            adapter.setState(`${pfad}.action`, 'false', true);
+                            adapter.setState(`${pfad}.action`, false, true);
                             adapter.setObjectNotExists(`${pfad}.status`, {
                                 _id: `${adapter.namespace + pfad}.status`,
                                 type: 'state',
-                                common: { name: scName, type: 'string', role: 'value', read: true, write: true },
+                                common: { name: scName, type: 'boolean', role: 'value', read: true, write: true },
                                 native: { sceneUID: scUID },
                             });
                             adapter.setState(`${pfad}.status`, scstatus, true);
@@ -938,7 +939,7 @@ function eNetServer_RequestEvents() {
                                                                 adapter.log.debug(
                                                                     `ERROR value Changed: ${
                                                                         valueUID
-                                                                    } ->Object noch nicht vorhanden`,
+                                                                    } ->Object:${valuePathArray[valueUID]}.value  noch nicht vorhanden`,
                                                                 );
                                                             } else {
                                                                 //var obj = adapter.getObject(valuePathArray[valueUID]+'.value')
@@ -1684,7 +1685,7 @@ function eNetServer_executeAction(uid) {
                     body_out += data;
                 });
                 res.on('end', function () {
-                    adapter.log.debug(`execte Action Body Out: ${body_out}`);
+                    adapter.log.debug(`execute Action Body Out: ${body_out}`);
                     //const obj = JSON.parse(body_out);
                 });
 

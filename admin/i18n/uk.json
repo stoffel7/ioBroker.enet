@@ -1,0 +1,17 @@
+{
+    "Auto": "Автоматичний",
+    "Manual": "Посібник",
+    "connection_port": "Порт",
+    "connection_type_ssl": "Використовуйте HTTPS -з'єднання",
+    "devicetype": "Тип пристрою ENET",
+    "eNet Gateway": "шлюз Enet",
+    "eNet Server": "Сервер ENET",
+    "interval": "Інтервал опитування/пінгінтерваль у МС",
+    "ip": "Ім'я хоста/IP Adress",
+    "on save adapter restarts with new config immediately": "Після збереження адаптерів з перезапуском з новою конфігурацією негайно",
+    "passwordlabel": "Пароль",
+    "sync_roomsandscenes": "Синхронізувати кімнати та сцени з шлюзу Enet",
+    "usernamelabel": "Ім'я користувача",
+    "ip_label": "Ім'я хоста або IP -адреса для з'єднання",
+    "port_label": "Номер порту для з'єднання"
+}

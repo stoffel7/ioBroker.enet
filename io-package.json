@@ -102,10 +102,10 @@
     "loglevel": "info",
     "type": "iot-systems",
     "compact": true,
-    "connectionType": "cloud",
+    "connectionType": "local",
     "dataSource": "poll",
     "adminUI": {
-      "config": "materialize"
+      "config": "json"
     }
   },
   "native": {
@@ -119,7 +119,10 @@
     "sync_roomsandscenes": false
   },
   "protectedNative": [
-    "user",
+    "username",
+    "password"
+  ],
+  "encryptedNative":[
     "password"
   ],
   "objects": [],

@@ -1,0 +1,17 @@
+{
+    "Auto": "Automatyczny",
+    "Manual": "Podręcznik",
+    "connection_port": "Port",
+    "connection_type_ssl": "Użyj połączenia HTTPS",
+    "devicetype": "Typ urządzenia ENET",
+    "eNet Gateway": "ENET GATEAY",
+    "eNet Server": "serwer ENET",
+    "interval": "Interwał ankiety/pinginterval w MS",
+    "ip": "HostName/IP Adres",
+    "on save adapter restarts with new config immediately": "Podczas zapisu adaptera ponownie uruchamia się z nową konfiguracją",
+    "passwordlabel": "Hasło",
+    "sync_roomsandscenes": "Synchronizować pokoje i sceny z ENET GATEY",
+    "usernamelabel": "Nazwa użytkownika",
+    "ip_label": "Nazwa hosta lub adres IP do połączenia",
+    "port_label": "Numer portu do połączenia"
+}

@@ -19,10 +19,18 @@ Control Jung/Gira eNet smarthome devices using the Jung/Gira eNet Mobile Gate Wi
   Placeholder for the next version (at the beginning of the line):
   ### **WORK IN PROGRESS**
 -->
+### **WORK IN PROGRESS**
+* Gateway function activated again, eNet Gateway should now be running again (still some outstanding tests)
+* switched configUI to JSON
+* fixed wrong type errors/warnings
+
+
 ### 2.0.2 (2025-05-30)
 * (stoffel7) fixed error in io-package.json (materialize)
 * index.html removed
 * fixed JSDoc issues
+
+* Gateway version actually not supported, please remain on Version 1.0.1
 
 ### 2.0.1 (2025-05-26)
 * (stoffel7) adpter takeover and added some changes to requests from adapter creator
