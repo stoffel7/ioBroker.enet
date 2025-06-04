@@ -29,6 +29,9 @@ Control Jung/Gira eNet smarthome devices using the Jung/Gira eNet Mobile Gate Wi
 * (stoffel7) fixed error in io-package.json (materialize)
 * index.html removed
 * fixed JSDoc issues
+  
+* Gateway version actually not supported, please remain on Version 1.0.1
+
 
 * Gateway version actually not supported, please remain on Version 1.0.1
 
