@@ -22,11 +22,10 @@ Control Jung/Gira eNet smarthome devices using the Jung/Gira eNet Mobile Gate Wi
 ### **WORK IN PROGRESS**
 * Gateway function activated again, eNet Gateway version should now be running again (still some outstanding tests)
 * switched configUI to JSON
-* fixed wrong type errors/warnings
 
 **Breaking Change**
 * username/password are stored encrypted, **you need to input username/password <ins>once</ins> again**
-
+* fixed wrong type-errors/warnings   **you should delete project and scenes folder** will be rebuild during Adapter start
 
 ### 2.0.2 (2025-05-30)
 * (stoffel7) fixed error in io-package.json (materialize)
