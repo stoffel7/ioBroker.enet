@@ -20,9 +20,16 @@ Control Jung/Gira eNet smarthome devices using the Jung/Gira eNet Mobile Gate Wi
   ### **WORK IN PROGRESS**
 -->
 ### **WORK IN PROGRESS**
-* Gateway function activated again,\
-  eNet Gateway version should now be running again (still some outstanding tests)
 * switched configUI to JSON
+
+   #### Gateway version
+* "discover.js" and "gateway.js" replaced by files from Version 1.2.2\
+   and reformatted accroding to requirements from ESLINT\
+   **no logical code changed**\
+   Gateway function activated again,\
+   eNet Gateway version should now be running again (depending on outstanding tests)
+
+  #### Server version
 
   **Breaking Change**
 * username/password are stored encrypted, **you need to input username/password <ins>once</ins> again**
