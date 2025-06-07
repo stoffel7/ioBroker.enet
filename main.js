@@ -1571,7 +1571,7 @@ function eNetServer_GetDevices(pfad, pos, typ, uid) {
                                                         },
                                                         native: { valueUID: valueUID },
                                                     });
-                                                    adapter.setState(`${pfadneu}.value`, value, true);
+                                                    adapter.setState(`${pfadneu}.value`, value.toString(), true);
                                                     //////adapter.setState(pfadneu+'.valueTypeID',  valueTypeID, {unit: ''});
                                                     eNetServer_getNameAndValueTypeIDsFromDeviceFunctionType(
                                                         pfadneu,
