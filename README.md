@@ -19,8 +19,8 @@ Control Jung/Gira eNet smarthome devices using the Jung/Gira eNet Mobile Gate Wi
   Placeholder for the next version (at the beginning of the line):
   ### **WORK IN PROGRESS**
 -->
-### **WORK IN PROGRESS**
-*  fixed error in Gateway "statechange" function 
+### 2.0.4 (2025-06-07)
+*  fixed error in Gateway "statechange" function
 
 ### 2.0.3 (2025-06-05)
 * switched configUI to JSON

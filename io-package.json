@@ -29,8 +29,21 @@
       "uk": "Статус на сервери",
       "zh-cn": "Steuert Jung/Gira eNet Smarthome-Geräte über das eNet 移动门 Funk IP Gateway oder dem eNet 智能主服务器"
     },
-    "version": "2.0.3",
+    "version": "2.0.4",
     "news": {
+      "2.0.4": {
+        "en": "fixed error in Gateway \"statechange\" function",
+        "de": "fester Fehler in Gateway \"statechange\" Funktion",
+        "ru": "фиксированная ошибка в функции «изменения состояния» Gateway",
+        "pt": "erro fixo na função Gateway \"statechange\"",
+        "nl": "vaste fout in Gateway \"statechange\" functie",
+        "fr": "erreur fixe dans la fonction Gateway \"statechange\"",
+        "it": "errore fisso nella funzione Gateway \"statechange\"",
+        "es": "error fijo en función de cambio de estado de Gateway",
+        "pl": "stały błąd w funkcji Gateway \"statechange\"",
+        "uk": "виправлена помилка в функції шлюзу \"держава зміна\"",
+        "zh-cn": "gateway \"statechange\" 函数中的固定错误"
+      },
       "2.0.3": {
         "en": "* switched configUI to JSON\n\n   #### Gateway version\n* \"discover.js\" and \"gateway.js\" replaced by files from Version 1.2.2\\\n   and reformatted accroding to requirements from ESLINT\\\n   **no logical code changed**\\\n   Gateway function activated again,\\\n   eNet Gateway version should now be running again (depending on outstanding tests)\n\n  #### Server version\n\n  **Breaking Change**\n* username/password are stored encrypted, **you need to input username/password <ins>once</ins> again**\n* fixed wrong type-errors/warnings,   **you should delete project and scenes folder**\\\n  (will be rebuild during Adapter start)",
         "de": "* eingeschaltete config UI an JSON\n\nGateway-Version\n* \"discover.js\" und \"gateway.js\" ersetzt durch Dateien von Version 1.2.2\\\nund neu auf die Anforderungen von ESLINT\n**ke logischer code geändert**\nGateway-Funktion wieder aktiviert,\\\neNet Gateway-Version sollte nun wieder ausgeführt werden (abhängig von hervorragenden Tests)\n\nServerversion\n\n**Veränderungen* *\n* benutzername/passwort werden verschlüsselt gespeichert, **sie müssen benutzername/passwort <ins>once</ins> erneut eingeben*\n* fix falsche typ-fehler/warnungen, ** sie sollten projekt- und szenenordner löschen**\\\n(wird beim Adapterstart wieder aufgebaut)",
