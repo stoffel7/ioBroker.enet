@@ -62,7 +62,7 @@ function startAdapter(options) {
             if (eNetType == 'Gateway') {
                 const eNetChannelArray = id.split('.');
                 const eNetChannelTemp = eNetChannelArray[2];
-                if (eNetChannelTemp.search(/channel/g)) {
+                if (eNetChannelTemp.search(/channel/g) > -1) {
                     const eNetChannel = eNetChannelTemp.replace('channel', '');
                     if (state && !state.ack) {
                         setGatewayChannel(adapter.config.ip, id, eNetChannel, state.val);
