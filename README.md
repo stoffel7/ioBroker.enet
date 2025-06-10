@@ -19,6 +19,14 @@ Control Jung/Gira eNet smarthome devices using the Jung/Gira eNet Mobile Gate Wi
   Placeholder for the next version (at the beginning of the line):
   ### **WORK IN PROGRESS**
 -->
+### **WORK IN PROGRESS**
+* fixed wrong "states type" warnings
+* adopted some log output
+
+  **Breaking Change**
+  be aware, if you update direct to new version\
+  username/password are stored encrypted, **you need to input username/password <ins>once</ins> again**
+
 ### 2.0.4 (2025-06-07)
 *  fixed error in Gateway "statechange" function
 

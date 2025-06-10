@@ -1,4 +1,4 @@
-/* 220525 */
+/* 100625 */
 /* jshint -W097 */
 /* jshint strict:false */
 /* jslint node: true */
@@ -203,7 +203,8 @@ function main() {
         eNetType = adapter.config.devicetype;
         if (eNetType == 'Gateway') {
             pollTimerStates = setInterval(getGatewayStates, parseInt(adapter.config.interval, 10));
-        } else if (eNetType == 'Server') {
+        }
+        if (eNetType == 'Server') {
             if (adapter.config.interval > 0) {
                 adapter.log.info(`PING polling time[ms]:${adapter.config.interval}`);
                 pollTimerStates = setInterval(eNetServer_Ping, Number(adapter.config.interval));
@@ -343,7 +344,7 @@ function eNetServer_Ping() {
     const req = HTTPRequest().request(options, function (res) {
         res.setEncoding('utf8');
         res.on('data', function (body) {
-            adapter.log.debug(`PING, Body: ${body}`);
+            adapter.log.info(`PING, Body: ${body}`);
         });
         res.on('end', function () {
             //console.log(`Body: ${body}`);
@@ -955,7 +956,7 @@ function eNetServer_RequestEvents() {
                                                                 );
                                                                 adapter.setState(
                                                                     `${valuePathArray[valueUID]}.value`,
-                                                                    wert.toString(),
+                                                                    wert,
                                                                     true,
                                                                 ); //true=ACK
                                                             }
@@ -1090,6 +1091,7 @@ function eNetServer_GetLocations() {
                         const obj = JSON.parse(body_out);
                         if (Object.prototype.hasOwnProperty.call(obj, 'error')) {
                             adapter.log.error(`GetLocations Error: ${obj.error.message}`);
+                            // hier bei Fehler -> logout...(kommt vom fehlerhaften login...)
                         } else {
                             const p = obj['result']['locations'].length;
                             let e = obj['result']['locations'][0]['childLocations'].length;
@@ -1213,7 +1215,7 @@ function eNetServer_Register_EventValue_Change(uid, pfad) {
                         });
                     });
                     req.write(body_in);
-                    adapter.log.debug(`Register_Value_Change:${body_in}`);
+                    adapter.log.info(`Register_Value_Change:${body_in}`);
                     req.end();
                 }
             });
@@ -1333,9 +1335,9 @@ function eNetServer_writeObjects(deviceUID,pfad,installArea,effectArea,deviceTyp
     adapter.setObjectNotExists(pfad+'.EffectArea', {_id : adapter.namespace + pfad+'.EffectArea', type: "state", common: {name: pfad+'.EffectArea', type: "string", role: "value", read: true, write: true},native: {}});
 	adapter.setState(pfad+'.EffectArea',effectArea,{unit: ''});
 
-	adapter.setObjectNotExists(pfad+'.value', {_id : adapter.namespace + pfad+'.value', type: "state", common: {name: valueTypeID, type: "string", role: "value", read: true, write: true},native: {valueUID: valueUID}});
-	adapter.setState(pfad+'.value',  value, {unit: ''});
-	adapter.setState(pfad+'.valueTypeID',  valueTypeID, {unit: ''});
+	adapter.setObjectNotExists(pfad+'.value', {_id : adapter.namespace + pfad+'.value', type: "state", common: {name: valueTypeID, type: typeof value, role: "value", read: true, write: true},native: {valueUID: valueUID}});
+	adapter.setState(pfad+'.value',  value, true);
+	adapter.setState(pfad+'.valueTypeID',  valueTypeID, true);
 
     adapter.setObject(pfad, {_id : adapter.namespace + pfad, type: "state", common: {name: pfad, type: "mixed", role: "value"},native: {Device_UID: deviceUID, Device_TypeID: deviceTypeID, Device_Type: typeID, Install_Area: installArea, ValueType_ID: valueTypeID,  Input_UID: inputUID}});
 	eNetServer_getNameAndValueTypeIDsFromDeviceFunctionType(pfad,typeID)
@@ -1374,7 +1376,7 @@ function eNetServer_GetDevices(pfad, pos, typ, uid) {
                         res.on('data', function (data) {
                             body_out += data;
                         });
-                        res.on('end', function () {
+                        res.on('end', async function () {
                             //adapter.log.debug("GetDevices Body Out: " + body_out);
                             const obj = JSON.parse(body_out);
                             let installArea = obj['result']['devices'][0]['installationArea'];
@@ -1406,18 +1408,21 @@ function eNetServer_GetDevices(pfad, pos, typ, uid) {
                                         ][ch]['channelTypeID'] != 'CT_DEVICE'
                                     ) {
                                         if (batteryState !== null) {
-                                            adapter.setObjectNotExists(`${pfad}.${installArea} #${zz}.batteryState`, {
-                                                _id: `${adapter.namespace + pfad}.${installArea} #${zz}.batteryState`,
-                                                type: 'state',
-                                                common: {
-                                                    name: 'BatteryState',
-                                                    type: 'string',
-                                                    role: 'value',
-                                                    read: true,
-                                                    write: true,
+                                            await adapter.setObjectNotExistsAsync(
+                                                `${pfad}.${installArea} #${zz}.batteryState`,
+                                                {
+                                                    _id: `${adapter.namespace + pfad}.${installArea} #${zz}.batteryState`,
+                                                    type: 'state',
+                                                    common: {
+                                                        name: 'BatteryState',
+                                                        type: 'string',
+                                                        role: 'value',
+                                                        read: true,
+                                                        write: true,
+                                                    },
                                                 },
-                                            });
-                                            adapter.setState(
+                                            );
+                                            await adapter.setStateAsync(
                                                 `${pfad}.${installArea} #${zz}.batteryState`,
                                                 batteryState,
                                                 true,
@@ -1473,7 +1478,7 @@ function eNetServer_GetDevices(pfad, pos, typ, uid) {
                                                     },
                                                 });
                                                 //adapter.log.debug('::::::::::::::::::::::'+valueTypeID);
-                                                adapter.setObjectNotExists(`${pfadneu}.value`, {
+                                                await adapter.setObjectNotExistsAsync(`${pfadneu}.value`, {
                                                     _id: adapter.namespace + pfadneu,
                                                     type: 'state',
                                                     common: { name: '*', type: 'mixed', role: 'value' },
@@ -1485,7 +1490,7 @@ function eNetServer_GetDevices(pfad, pos, typ, uid) {
                                                         Input_UID: huid,
                                                     },
                                                 });
-                                                adapter.setState(`${pfadneu}.value`, htypid, true); // hier war value
+                                                await adapter.setStateAsync(`${pfadneu}.value`, htypid, true); // hier war value
                                                 //adapter.log.debug('HTYPID:'+htypid)
                                                 eNetServer_getNameAndValueTypeIDsFromDeviceFunctionType(
                                                     pfadneu,
@@ -1559,19 +1564,19 @@ function eNetServer_GetDevices(pfad, pos, typ, uid) {
                                                     });
                                                     //adapter.setObjectNotExists(pfadneu+'.EffectArea', {_id : adapter.namespace + pfadneu+'.EffectArea', type: "state", common: {name: '', type: "string", role: "value", read: true, write: true},native: {}});
                                                     //adapter.setState(pfadneu+'.EffectArea',effectArea,{unit: ''});
-                                                    adapter.setObjectNotExists(`${pfadneu}.value`, {
+                                                    await adapter.setObjectNotExistsAsync(`${pfadneu}.value`, {
                                                         _id: `${adapter.namespace + pfadneu}.value`,
                                                         type: 'state',
                                                         common: {
                                                             name: valueTypeID,
-                                                            type: 'string',
+                                                            type: typeof value, // oder: "typeof value" ,dann aber kein toString() unten
                                                             role: 'value',
                                                             read: true,
                                                             write: true,
                                                         },
                                                         native: { valueUID: valueUID },
                                                     });
-                                                    adapter.setState(`${pfadneu}.value`, value.toString(), true);
+                                                    await adapter.setStateAsync(`${pfadneu}.value`, value, true); // hier unterschiedliche Typen möglich
                                                     //////adapter.setState(pfadneu+'.valueTypeID',  valueTypeID, {unit: ''});
                                                     eNetServer_getNameAndValueTypeIDsFromDeviceFunctionType(
                                                         pfadneu,
@@ -1611,7 +1616,6 @@ function eNetServer_SetState(uid, typ, wert) {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
     };
-    let body_out = '';
     adapter.getState('info.SessionID', function (_err, state) {
         if (state) {
             SessionID = state.val;
@@ -1625,6 +1629,7 @@ function eNetServer_SetState(uid, typ, wert) {
                         }; downloadFinished=true; rememberMe=true`,
                     };
                     Zaehler++;
+                    let body_out = '';
                     adapter.setState('info.CounterID', Zaehler.toString(), true);
                     let body_in = set_state.replace('$$id$$', Zaehler.toString());
                     body_in = body_in.replace('$$UID$$', uid);
@@ -1637,7 +1642,7 @@ function eNetServer_SetState(uid, typ, wert) {
                             body_out += data;
                         });
                         res.on('end', function () {
-                            adapter.log.debug(`SetState Body Out: ${body_out}`);
+                            adapter.log.debug(`SetState Body Out: ${body_out}  ->evtl. hier schon UnOuthorized`);
                             //const obj = JSON.parse(body_out);
                         });
 
