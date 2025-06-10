@@ -1,4 +1,4 @@
-/* 100625 */
+/* 100625.02 */
 /* jshint -W097 */
 /* jshint strict:false */
 /* jslint node: true */
@@ -747,7 +747,7 @@ function eNetServer_getScenes(projekt, uids) {
                 res.on('data', function (data) {
                     body_out += data;
                 });
-                res.on('end', function () {
+                res.on('end', async function () {
                     const sobj = JSON.parse(body_out);
                     //adapter.log.debug("Szene:::::"+body_out)
                     const anzScene = sobj['result']['sceneActions'].length;
@@ -771,20 +771,20 @@ function eNetServer_getScenes(projekt, uids) {
                                 //common: { name: pfad,                 read: true, write: true },
                                 native: { sceneActionUID: scUID, sceneActionName: scName },
                             });
-                            adapter.setObjectNotExists(`${pfad}.action`, {
+                            await adapter.setObjectNotExistsAsync(`${pfad}.action`, {
                                 _id: `${adapter.namespace + pfad}.action`,
                                 type: 'state',
                                 common: { name: scName, type: 'boolean', role: 'value', read: true, write: true },
                                 native: { sceneUID: scUID },
                             });
-                            adapter.setState(`${pfad}.action`, false, true);
-                            adapter.setObjectNotExists(`${pfad}.status`, {
+                            await adapter.setStateAsync(`${pfad}.action`, false, true);
+                            await adapter.setObjectNotExistsAsync(`${pfad}.status`, {
                                 _id: `${adapter.namespace + pfad}.status`,
                                 type: 'state',
                                 common: { name: scName, type: 'boolean', role: 'value', read: true, write: true },
                                 native: { sceneUID: scUID },
                             });
-                            adapter.setState(`${pfad}.status`, scstatus, true);
+                            await adapter.setStateAsync(`${pfad}.status`, scstatus, true);
                             sceneActionPathArray[scUID] = pfad;
                             //eNetServer_RegisterSceneAction('registerEventSceneActionChanged')
                         }
