@@ -1642,7 +1642,7 @@ function eNetServer_SetState(uid, typ, wert) {
                             body_out += data;
                         });
                         res.on('end', function () {
-                            adapter.log.debug(`SetState Body Out: ${body_out}  ->evtl. hier schon UnOuthorized`);
+                            adapter.log.debug(`SetState Body Out: ${body_out}`); // evtl hiwer schon UnOuthorized
                             //const obj = JSON.parse(body_out);
                         });
 
