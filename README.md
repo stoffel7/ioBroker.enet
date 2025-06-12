@@ -19,7 +19,7 @@ Control Jung/Gira eNet smarthome devices using the Jung/Gira eNet Mobile Gate Wi
   Placeholder for the next version (at the beginning of the line):
   ### **WORK IN PROGRESS**
 -->
-### **WORK IN PROGRESS**
+### 2.0.5 (2025-06-12)
 * fixed warning: "Object of state 'enet.....value' is missing the required property "common.type"\
   fixed warning: "State value to set for 'enet....value' has to be type "string" but received type "boolean"\
   **to fix above: delete Project- and Scenes-Object tree**
