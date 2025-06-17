@@ -1,4 +1,4 @@
-/* 100625.02 */
+/* 170625.01 */
 /* jshint -W097 */
 /* jshint strict:false */
 /* jslint node: true */
@@ -237,7 +237,7 @@ function GenerateRandom(len) {
     }
 }
 */
-function eNetServer_CalculateLoginDigest(challengeParams) {
+async function eNetServer_CalculateLoginDigest(challengeParams) {
     const ha1 = crypto
         .createHash('sha1')
         .update(`${adapter.config.username}:Insta-NetBox:${adapter.config.password}`)
@@ -344,7 +344,7 @@ function eNetServer_Ping() {
     const req = HTTPRequest().request(options, function (res) {
         res.setEncoding('utf8');
         res.on('data', function (body) {
-            adapter.log.info(`PING, Body: ${body}`);
+            adapter.log.debug(`PING, Body: ${body}`);
         });
         res.on('end', function () {
             //console.log(`Body: ${body}`);
@@ -361,7 +361,7 @@ function eNetServer_Ping() {
     req.end();
 }
 
-function eNetServer_SendLoginDigest(body) {
+async function eNetServer_SendLoginDigest(body) {
     const options = {
         host: adapter.config.ip,
         port: Connection_Port,
@@ -442,15 +442,16 @@ function eNetServer_Login() {
                         res.on('data', function (data) {
                             body_out += data;
                         });
-                        res.on('end', function () {
+                        res.on('end', async function () {
                             adapter.log.debug(`Login Body: ${body_out}`);
                             const challengeParams = JSON.parse(body_out);
-                            let login_digest = eNetServer_CalculateLoginDigest(challengeParams);
+                            adapter.log.debug('**************** warte auf Login digest**************');
+                            let login_digest = await eNetServer_CalculateLoginDigest(challengeParams);
                             Zaehler++;
                             login_digest = login_digest.replace('$$id$$', Zaehler.toString());
                             adapter.log.debug(`Login Digest Login: ${login_digest}`);
                             adapter.setState('info.CounterID', Zaehler.toString(), true);
-                            eNetServer_SendLoginDigest(login_digest);
+                            await eNetServer_SendLoginDigest(login_digest);
                             adapter.setState('info.connection', true, true);
                             adapter.setState('info.requestEvents', true, true);
 
@@ -1741,7 +1742,7 @@ function eNetServer_Logout() {
                     Zaehler++;
                     adapter.setState('info.CounterID', Zaehler.toString(), true);
                     const body_in = reqstr[durchlauf].replace('$$id$$', Zaehler.toString());
-                    const req = HTTPRequest().request(options, function (res) {
+                    const req = HTTPRequest().request(options, async function (res) {
                         res.setEncoding('utf8');
                         res.on('data', function (data) {
                             body_out += data;
@@ -1761,9 +1762,9 @@ function eNetServer_Logout() {
                             adapter.log.error(`eNet Server Logout Error: ${e.messsage}`);
                             adapter.setState('info.connection', false, true);
                         });
-                        adapter.setState('info.connection', false, true);
-                        adapter.setState('info.SessionID', '', true);
-                        adapter.setState('info.CounterID', '0', true);
+                        await adapter.setStateAsync('info.connection', false, true);
+                        await adapter.setStateAsync('info.SessionID', '', true);
+                        await adapter.setStateAsync('info.CounterID', '0', true);
                         //adapter.setState('info.requestEvents', false, true);
                     });
                     adapter.log.debug(`eNet Server Logout Request Body IN: ${body_in}`);
