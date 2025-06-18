@@ -19,9 +19,8 @@ Control Jung/Gira eNet smarthome devices using the Jung/Gira eNet Mobile Gate Wi
   Placeholder for the next version (at the beginning of the line):
   ### **WORK IN PROGRESS**
 -->
-### **WORK IN PROGRESS**
+### 2.0.6 (2025-06-18)
 * fixed problem causing UnAuthorized LOGIN
-
 
 ### 2.0.5 (2025-06-12)
 * fixed warning: "Object of state 'enet.....value' is missing the required property "common.type"\

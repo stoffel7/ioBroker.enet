@@ -29,8 +29,21 @@
       "uk": "Статус на сервери",
       "zh-cn": "Steuert Jung/Gira eNet Smarthome-Geräte über das eNet 移动门 Funk IP Gateway oder dem eNet 智能主服务器"
     },
-    "version": "2.0.5",
+    "version": "2.0.6",
     "news": {
+      "2.0.6": {
+        "en": "fixed problem causing UnAuthorized LOGIN",
+        "de": "behobenes Problem verursacht UnAuthorized LOGIN",
+        "ru": "проблема, вызывающая неавторизованный LOGIN",
+        "pt": "problema fixo causando LOGIN não autorizado",
+        "nl": "vast probleem veroorzaakt UnAuthorized LOGIN",
+        "fr": "problème corrigé causant une connexion non autorisée",
+        "it": "problema fisso causando LOGIN non autenticato",
+        "es": "problema fijo que causa UnAuthorized L acción",
+        "pl": "naprawiony problem powodujący nieautoryzowany login",
+        "uk": "виправлена проблема, що викликає UnAuthorized LOGIN",
+        "zh-cn": "未授权 LOGIN 的固定问题"
+      },
       "2.0.5": {
         "en": "* fixed warning: \"Object of state 'enet.....value' is missing the required property \"common.type\"\\\n  fixed warning: \"State value to set for 'enet....value' has to be type \"string\" but received type \"boolean\"\\\n  **to fix above: delete Project- and Scenes-Object tree**\n* adopted some log output\n\n  **Breaking Change**\n  be aware, if you update direct to new version\\\n  username/password are stored encrypted, **you need to input username/password <ins>once</ins> again**",
         "de": "* Feste Warnung: \"Objekt des Zustands 'enet....value' fehlt die erforderliche Eigenschaft \"common.type\"\\\nfeste Warnung: \"State Value to set for 'enet....value' muss Typ \"string\" sein, aber empfangener Typ \"boolean\"\\\n**zu beheben oben: Löschen Projekt- und Scenes-Objektbaum* *\n* angenommen einige log ausgabe\n\n**Veränderungen* *\nbewusst sein, wenn sie direkt auf neue version aktualisieren \\\nbenutzername/passwort werden verschlüsselt gespeichert, **sie müssen benutzername/passwort <ins>once</ins> erneut eingeben*",
