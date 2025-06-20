@@ -454,14 +454,18 @@ function eNetServer_Login() {
                             await eNetServer_SendLoginDigest(login_digest);
                             adapter.setState('info.connection', true, true);
                             adapter.setState('info.requestEvents', true, true);
-
-                            //eNetServer_getProject();
-                            //eNetServer_getScenes('','')
-                            eNetServer_GetLocations();
-                            eNetServer_RegisterSceneAction('registerEventSceneActionCreated');
-                            eNetServer_RegisterSceneAction('registerEventSceneActionDeleted');
-                            eNetServer_RegisterSceneAction('registerEventSceneActionChanged');
-                            eNetServer_RegisterDeviceFunction('registerEventDeviceBatteryStateChanged', 'null');
+                            adapter.getState('info.SessionID', function (_err, state) {
+                                if (state.val != '') {
+                                    //eNetServer_getProject();
+                                    //eNetServer_getScenes('','')
+                                    eNetServer_GetLocations();
+                                    eNetServer_RegisterSceneAction('registerEventSceneActionCreated');
+                                    eNetServer_RegisterSceneAction('registerEventSceneActionDeleted');
+                                    eNetServer_RegisterSceneAction('registerEventSceneActionChanged');
+                                    eNetServer_RegisterDeviceFunction('registerEventDeviceBatteryStateChanged', 'null');
+                                } else {
+                                    adapter.log.error('Error Get Login Digest... (not available)')
+                                }
                         });
 
                         req.on('error', function (e) {
