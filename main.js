@@ -1,4 +1,3 @@
-/* 200625.03 */
 /* jshint -W097 */
 /* jshint strict:false */
 /* jslint node: true */
@@ -27,6 +26,7 @@ const valuePathArray = [];
 const devicePathArray = [];
 const sceneActionPathArray = [];
 const batteryPathArray = [];
+const VIntern = '200625.04';
 
 const get_login_digest = '{"jsonrpc":"2.0","method":"getDigestAuthentificationInfos","params":null,"id":"$$id$$"}';
 //const get_configuration='{"jsonrpc":"2.0", "method":"getCurrentConfiguration", "params":null, "id":"$$id$$"}';
@@ -128,7 +128,7 @@ function startAdapter(options) {
             } else if (eNetType == 'Server') {
                 if (ConnectionType_SSL) {
                     adapter.log.info(
-                        `Running eNet Adapter Version ${adapter.version}, Configured eNet Server: ${
+                        `Running eNet Adapter Version ${adapter.version}( $(VIntern)), Configured eNet Server: ${
                             adapter.config.ip
                         } (SSL/HTTPS), Username: ${adapter.config.username} on port ${Connection_Port}`,
                     );
@@ -1034,15 +1034,14 @@ function eNetServer_RequestEvents() {
                                         }
                                     }
                                 }
-                                /* adapter.getState('info.requestEvents', function (_err, state) {
+                                adapter.getState('info.requestEvents', function (_err, state) {
                                     if (state.val) {
-                                        //adapter.log.debug("requestEvents ReStart....")
+                                        adapter.log.debug('requestEvents ReStart....');
                                         eNetServer_RequestEvents();
                                     } else {
                                         adapter.log.debug('requestEvents gestoppt....');
                                     } 
                                 });
-                                */
                             } catch (e) {
                                 adapter.log.error(
                                     `Return from eNet Server: "${
