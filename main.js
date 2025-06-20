@@ -1026,14 +1026,15 @@ function eNetServer_RequestEvents() {
                                         }
                                     }
                                 }
-                                adapter.getState('info.requestEvents', function (_err, state) {
+                                /* adapter.getState('info.requestEvents', function (_err, state) {
                                     if (state.val) {
                                         //adapter.log.debug("requestEvents ReStart....")
                                         eNetServer_RequestEvents();
                                     } else {
                                         adapter.log.debug('requestEvents gestoppt....');
-                                    }
+                                    } 
                                 });
+                                */
                             } catch (e) {
                                 adapter.log.error(
                                     `Return from eNet Server: "${
