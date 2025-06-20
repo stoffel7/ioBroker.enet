@@ -26,7 +26,7 @@ const valuePathArray = [];
 const devicePathArray = [];
 const sceneActionPathArray = [];
 const batteryPathArray = [];
-const VIntern = '200625.04';
+const VIntern = '200625.06';
 
 const get_login_digest = '{"jsonrpc":"2.0","method":"getDigestAuthentificationInfos","params":null,"id":"$$id$$"}';
 //const get_configuration='{"jsonrpc":"2.0", "method":"getCurrentConfiguration", "params":null, "id":"$$id$$"}';
@@ -128,7 +128,7 @@ function startAdapter(options) {
             } else if (eNetType == 'Server') {
                 if (ConnectionType_SSL) {
                     adapter.log.info(
-                        `Running eNet Adapter Version ${adapter.version}( $(VIntern)), Configured eNet Server: ${
+                        `Running eNet Adapter Version ${adapter.version}( ${VIntern}), Configured eNet Server: ${
                             adapter.config.ip
                         } (SSL/HTTPS), Username: ${adapter.config.username} on port ${Connection_Port}`,
                     );
@@ -455,7 +455,7 @@ function eNetServer_Login() {
                             await eNetServer_SendLoginDigest(login_digest);
                             adapter.setState('info.connection', true, true);
                             adapter.setState('info.requestEvents', true, true);
-                            adapter.getState('info.SessionID', function (_err, state) {
+                            await adapter.getStateAsync('info.SessionID', function (_err, state) {
                                 while (state.val != '') {
                                     adapter.log.error('Error Get Login Digest... (not available)');
                                     //adapter.stop;
