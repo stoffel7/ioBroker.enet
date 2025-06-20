@@ -26,7 +26,7 @@ const valuePathArray = [];
 const devicePathArray = [];
 const sceneActionPathArray = [];
 const batteryPathArray = [];
-const VIntern = '200625.06';
+const VIntern = '200625.08';
 
 const get_login_digest = '{"jsonrpc":"2.0","method":"getDigestAuthentificationInfos","params":null,"id":"$$id$$"}';
 //const get_configuration='{"jsonrpc":"2.0", "method":"getCurrentConfiguration", "params":null, "id":"$$id$$"}';
@@ -128,7 +128,7 @@ function startAdapter(options) {
             } else if (eNetType == 'Server') {
                 if (ConnectionType_SSL) {
                     adapter.log.info(
-                        `Running eNet Adapter Version ${adapter.version}( ${VIntern}), Configured eNet Server: ${
+                        `Running eNet Adapter Version ${adapter.version} (${VIntern}), Configured eNet Server: ${
                             adapter.config.ip
                         } (SSL/HTTPS), Username: ${adapter.config.username} on port ${Connection_Port}`,
                     );
@@ -136,7 +136,7 @@ function startAdapter(options) {
                     adapter.log.info(
                         `Running eNet Adapter Version ${
                             adapter.version
-                        }, Configured eNet Server: ${adapter.config.ip}, Username: ${adapter.config.username} on port ${
+                        }, (${VIntern}) Configured eNet Server: ${adapter.config.ip}, Username: ${adapter.config.username} on port ${
                             Connection_Port
                         }`,
                     );
@@ -463,7 +463,7 @@ function eNetServer_Login() {
                                     //                                       adapter.log.info('Login digest not available...');
                                     //                                   }, 500); // Delay in milliseconds (2000ms = 2 seconds)
                                     //                               }
-                                    //                               adapter.log.debug('**************** Login digest ist da, HURRA **************');
+                                    adapter.log.debug('**************** Login digest ist da, HURRA **************');
                                     //eNetServer_getProject();
                                     //eNetServer_getScenes('','')
                                     eNetServer_GetLocations();
