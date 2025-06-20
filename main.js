@@ -340,6 +340,7 @@ function eNetServer_Ping() {
         'Content-Type': 'application/json; charset=utf-8',
         Cookie: `uEhaA=true; pbAudioFalg=ON; VideoFormatAVN=ActiveX; INSTASESSIONID=${SessionID}; downloadFinished=true; rememberMe=true`,
     };
+    Zaehler++;
     const body = server_ping.replace('$$id$$', Zaehler.toString());
     const req = HTTPRequest().request(options, function (res) {
         res.setEncoding('utf8');
@@ -1036,7 +1037,7 @@ function eNetServer_RequestEvents() {
                                 }
                                 adapter.getState('info.requestEvents', function (_err, state) {
                                     if (state.val) {
-                                        adapter.log.debug('requestEvents ReStart....');
+                                        //adapter.log.debug('requestEvents ReStart....');
                                         eNetServer_RequestEvents();
                                     } else {
                                         adapter.log.debug('requestEvents gestoppt....');
