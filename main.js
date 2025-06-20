@@ -456,21 +456,22 @@ function eNetServer_Login() {
                             adapter.setState('info.connection', true, true);
                             adapter.setState('info.requestEvents', true, true);
                             await adapter.getStateAsync('info.SessionID', function (_err, state) {
-                                while (state.val != '') {
-                                    adapter.log.error('Error Get Login Digest... (not available)');
-                                    //adapter.stop;
-                                    setTimeout(() => {
-                                        adapter.log.info('Login digest not available...');
-                                    }, 500); // Delay in milliseconds (2000ms = 2 seconds)
+                                if (state.val != '') {
+                                    //                                   adapter.log.error('Error Get Login Digest... (not available)');
+                                    //                                   //adapter.stop;
+                                    //                                   setTimeout(() => {
+                                    //                                       adapter.log.info('Login digest not available...');
+                                    //                                   }, 500); // Delay in milliseconds (2000ms = 2 seconds)
+                                    //                               }
+                                    //                               adapter.log.debug('**************** Login digest ist da, HURRA **************');
+                                    //eNetServer_getProject();
+                                    //eNetServer_getScenes('','')
+                                    eNetServer_GetLocations();
+                                    eNetServer_RegisterSceneAction('registerEventSceneActionCreated');
+                                    eNetServer_RegisterSceneAction('registerEventSceneActionDeleted');
+                                    eNetServer_RegisterSceneAction('registerEventSceneActionChanged');
+                                    eNetServer_RegisterDeviceFunction('registerEventDeviceBatteryStateChanged', 'null');
                                 }
-                                adapter.log.debug('**************** Login digest ist da, HURRA **************');
-                                //eNetServer_getProject();
-                                //eNetServer_getScenes('','')
-                                eNetServer_GetLocations();
-                                eNetServer_RegisterSceneAction('registerEventSceneActionCreated');
-                                eNetServer_RegisterSceneAction('registerEventSceneActionDeleted');
-                                eNetServer_RegisterSceneAction('registerEventSceneActionChanged');
-                                eNetServer_RegisterDeviceFunction('registerEventDeviceBatteryStateChanged', 'null');
                             });
                         });
                         req.on('error', function (e) {
@@ -1041,7 +1042,7 @@ function eNetServer_RequestEvents() {
                                         eNetServer_RequestEvents();
                                     } else {
                                         adapter.log.debug('requestEvents gestoppt....');
-                                    } 
+                                    }
                                 });
                             } catch (e) {
                                 adapter.log.error(
