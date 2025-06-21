@@ -26,7 +26,7 @@ const valuePathArray = [];
 const devicePathArray = [];
 const sceneActionPathArray = [];
 const batteryPathArray = [];
-const VIntern = '210625.01';
+const VIntern = '210625.02';
 
 const get_login_digest = '{"jsonrpc":"2.0","method":"getDigestAuthentificationInfos","params":null,"id":"$$id$$"}';
 //const get_configuration='{"jsonrpc":"2.0", "method":"getCurrentConfiguration", "params":null, "id":"$$id$$"}';
