@@ -26,7 +26,7 @@ const valuePathArray = [];
 const devicePathArray = [];
 const sceneActionPathArray = [];
 const batteryPathArray = [];
-const VIntern = '200625.08';
+const VIntern = '210625.01';
 
 const get_login_digest = '{"jsonrpc":"2.0","method":"getDigestAuthentificationInfos","params":null,"id":"$$id$$"}';
 //const get_configuration='{"jsonrpc":"2.0", "method":"getCurrentConfiguration", "params":null, "id":"$$id$$"}';
@@ -455,14 +455,11 @@ function eNetServer_Login() {
                             await eNetServer_SendLoginDigest(login_digest);
                             adapter.setState('info.connection', true, true);
                             adapter.setState('info.requestEvents', true, true);
-                            await adapter.getStateAsync('info.SessionID', function (_err, state) {
+                            setTimeout(() => {
+                                //adapter.log.info('Login digest not available...WAIT');
+                            }, 1000); // Delay in milliseconds (2000ms = 2 seconds)
+                            await adapter.getState('info.SessionID', function (_err, state) {
                                 if (state.val != '') {
-                                    //                                   adapter.log.error('Error Get Login Digest... (not available)');
-                                    //                                   //adapter.stop;
-                                    //                                   setTimeout(() => {
-                                    //                                       adapter.log.info('Login digest not available...');
-                                    //                                   }, 500); // Delay in milliseconds (2000ms = 2 seconds)
-                                    //                               }
                                     adapter.log.debug('**************** Login digest ist da, HURRA **************');
                                     //eNetServer_getProject();
                                     //eNetServer_getScenes('','')
@@ -938,7 +935,14 @@ function eNetServer_RequestEvents() {
                                                 adapter.setState(batteryPathArray[deviceUID], batteryState, true); //true=ACK
                                                 break;
                                             }
-
+                                            /*  case 'deviceFunctionCalled': {
+                                                const valueUID = obj['result']['events'][0]['eventData']['valueUID'];
+                                                adapter.log.debug(
+                                                    `deviceFunctionCalled von ${valuePathArray[valueUID]}`,
+                                                );
+                                                break;
+                                            }
+                                            */
                                             case 'valueChanged': {
                                                 const valueUID = obj['result']['events'][y]['eventData']['valueUID'];
                                                 const value = obj['result']['events'][y]['eventData']['value'];
