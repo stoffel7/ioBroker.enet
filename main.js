@@ -26,7 +26,7 @@ const valuePathArray = [];
 const devicePathArray = [];
 const sceneActionPathArray = [];
 const batteryPathArray = [];
-const VIntern = '210625.02';
+const VIntern = '220625.02';
 
 const get_login_digest = '{"jsonrpc":"2.0","method":"getDigestAuthentificationInfos","params":null,"id":"$$id$$"}';
 //const get_configuration='{"jsonrpc":"2.0", "method":"getCurrentConfiguration", "params":null, "id":"$$id$$"}';
@@ -1175,6 +1175,7 @@ function eNetServer_GetLocations() {
                                     }
                                 }
                             }
+                            //adapter.log.debug('************* Adapter ist UP and RUNNING *************');
                         }
                     });
                     req.on('error', function (e) {
@@ -1623,6 +1624,7 @@ function eNetServer_GetDevices(pfad, pos, typ, uid) {
                     req.write(body_in);
                     req.end();
                 }
+                //adapter.log.info('*******Adapter is UP and RUNNING ********');
             });
         }
     });
