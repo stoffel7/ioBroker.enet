@@ -172,9 +172,9 @@ function init_server() {
                 common: { name: 'eNet Server Session ID', type: 'string', role: 'value', read: true, write: true },
                 native: {},
             });
-            adapter.setState('info.SessionID', '', true);
         }
     });
+    adapter.setState('info.SessionID', '', true);
     adapter.getState('info.CounterID', function (_err, state) {
         if (!state) {
             adapter.setObjectNotExists('info.CounterID', {
@@ -458,17 +458,23 @@ function eNetServer_Login() {
                             setTimeout(() => {
                                 //adapter.log.info('Login digest not available...WAIT');
                             }, 1000); // Delay in milliseconds (2000ms = 2 seconds)
-                            const state = await adapter.getStateAsync('info.SessionID'); //, function (_err, state) {
-                            if (state.val != '') {
-                                adapter.log.debug('**************** Login digest ist da, HURRA **************');
-                                //eNetServer_getProject();
-                                //eNetServer_getScenes('','')
-                                eNetServer_GetLocations();
-                                eNetServer_RegisterSceneAction('registerEventSceneActionCreated');
-                                eNetServer_RegisterSceneAction('registerEventSceneActionDeleted');
-                                eNetServer_RegisterSceneAction('registerEventSceneActionChanged');
-                                eNetServer_RegisterDeviceFunction('registerEventDeviceBatteryStateChanged', 'null');
+                            let state = await adapter.getStateAsync('info.SessionID'); //, function (_err, state) {
+                            while (state.val == '') {
+                                adapter.log.info('Login digest not available...WAIT');
+                                setTimeout(() => {
+                                    //adapter.log.info('Login digest not available...WAIT');
+                                }, 1000); // Delay in milliseconds (2000ms = 2 seconds)
+                                state = await adapter.getStateAsync('info.SessionID');
                             }
+                            adapter.log.debug('**************** Login digest ist da, HURRA **************');
+                            //eNetServer_getProject();
+                            //eNetServer_getScenes('','')
+                            eNetServer_GetLocations();
+                            eNetServer_RegisterSceneAction('registerEventSceneActionCreated');
+                            eNetServer_RegisterSceneAction('registerEventSceneActionDeleted');
+                            eNetServer_RegisterSceneAction('registerEventSceneActionChanged');
+                            eNetServer_RegisterDeviceFunction('registerEventDeviceBatteryStateChanged', 'null');
+                            //}
                             //});
                         });
                         req.on('error', function (e) {
