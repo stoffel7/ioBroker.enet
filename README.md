@@ -19,7 +19,7 @@ Control Jung/Gira eNet smarthome devices using the Jung/Gira eNet Mobile Gate Wi
   Placeholder for the next version (at the beginning of the line):
   ### **WORK IN PROGRESS**
 -->
-### **WORK IN PROGRESS**
+### 2.0.7 (2025-06-25)
 * fixed problem causing UnAuthorized LOGIN
 * changed some log output
 

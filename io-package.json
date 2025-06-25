@@ -29,8 +29,21 @@
       "uk": "Статус на сервери",
       "zh-cn": "Steuert Jung/Gira eNet Smarthome-Geräte über das eNet 移动门 Funk IP Gateway oder dem eNet 智能主服务器"
     },
-    "version": "2.0.6",
+    "version": "2.0.7",
     "news": {
+      "2.0.7": {
+        "en": "fixed problem causing UnAuthorized LOGIN\nchanged some log output",
+        "de": "behobenes Problem verursacht UnAuthorized LOGIN\nänderungen der protokollausgabe",
+        "ru": "проблема, вызывающая неавторизованный LOGIN\nизменился некоторый выход",
+        "pt": "problema fixo causando LOGIN não autorizado\nmudou algum resultado do log",
+        "nl": "vast probleem veroorzaakt UnAuthorized LOGIN\nsommige loguitvoer gewijzigd",
+        "fr": "problème corrigé causant une connexion non autorisée\na changé la sortie du journal",
+        "it": "problema fisso causando LOGIN non autenticato\ncambiato qualche uscita di log",
+        "es": "problema fijo que causa UnAuthorized L acción\ncambio de la salida del registro",
+        "pl": "naprawiony problem powodujący nieautoryzowany login\nzmieniono wyjście dziennika",
+        "uk": "виправлена проблема, що викликає UnAuthorized LOGIN\nзмінено деякий вихід журналу",
+        "zh-cn": "未授权 LOGIN 的固定问题\n更改一些日志输出"
+      },
       "2.0.6": {
         "en": "fixed problem causing UnAuthorized LOGIN",
         "de": "behobenes Problem verursacht UnAuthorized LOGIN",
@@ -108,19 +121,6 @@
         "pl": "* admirał przejęcia i dodał kilka zmian do żądań od twórcy adaptera\ndodana funkcja PING (config- > interval = 0 no PING)",
         "uk": "* прийняття реклами та додано деякі зміни до запитів від розробника адаптера\nдодана функція PING, (config-> інтервал=0 немає PING)",
         "zh-cn": "* 选取并增加了适配器创建者的一些修改请求\n添加 PING 函数, (配置 - > 间隔=0 no PING)"
-      },
-      "1.0.1": {
-        "en": "Did some changes",
-        "de": "Einige Änderungen",
-        "ru": "Некоторые изменения",
-        "pt": "Fez algumas mudanças",
-        "nl": "Deed wat veranderingen",
-        "fr": "Quelques changements",
-        "it": "Qualche cambiamento",
-        "es": "¿Algún cambio",
-        "pl": "Zamieniać się",
-        "uk": "Чи були деякі зміни",
-        "zh-cn": "某些变化"
       }
     },
     "desc": {
