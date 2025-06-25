@@ -26,7 +26,7 @@ const valuePathArray = [];
 const devicePathArray = [];
 const sceneActionPathArray = [];
 const batteryPathArray = [];
-const VIntern = '250625.01';
+const VIntern = '250625.02';
 
 const get_login_digest = '{"jsonrpc":"2.0","method":"getDigestAuthentificationInfos","params":null,"id":"$$id$$"}';
 //const get_configuration='{"jsonrpc":"2.0", "method":"getCurrentConfiguration", "params":null, "id":"$$id$$"}';
@@ -362,7 +362,7 @@ function eNetServer_Ping() {
     req.end();
 }
 
-async function eNetServer_SendLoginDigest(body) {
+function eNetServer_SendLoginDigest(body) {
     const options = {
         host: adapter.config.ip,
         port: Connection_Port,
@@ -443,7 +443,7 @@ function eNetServer_Login() {
                         res.on('data', function (data) {
                             body_out += data;
                         });
-                        res.on('end', async function () {
+                        res.on('end', function () {
                             adapter.log.debug(`Login Body: ${body_out}`);
                             const challengeParams = JSON.parse(body_out);
                             adapter.log.debug('**************** wait for Login digest ****************');
@@ -452,13 +452,13 @@ function eNetServer_Login() {
                             login_digest = login_digest.replace('$$id$$', Zaehler.toString());
                             adapter.log.debug(`Login Digest Login: ${login_digest}`);
                             adapter.setState('info.CounterID', Zaehler.toString(), true);
-                            await eNetServer_SendLoginDigest(login_digest);
+                            eNetServer_SendLoginDigest(login_digest);
                             adapter.setState('info.connection', true, true);
                             adapter.setState('info.requestEvents', true, true);
                             setTimeout(() => {
                                 //adapter.log.info('**************** Login digest not available...WAIT ****************');
                             }, 1000); // Delay in milliseconds (2000ms = 2 seconds)
-                            let state = await adapter.getStateAsync('info.SessionID'); //, function (_err, state) {
+                            let state = adapter.getState('info.SessionID'); //, function (_err, state) {
                             while (state.val == '') {
                                 adapter.log.debug(
                                     '**************** Login digest not available...WAIT ****************',
@@ -466,7 +466,7 @@ function eNetServer_Login() {
                                 setTimeout(() => {
                                     //adapter.log.info('Login digest not available...WAIT');
                                 }, 1000); // Delay in milliseconds (2000ms = 2 seconds)
-                                state = await adapter.getStateAsync('info.SessionID');
+                                state = adapter.getState('info.SessionID');
                             }
                             adapter.log.debug('**************** Login digest available, lets go **************');
                             //eNetServer_getProject();
