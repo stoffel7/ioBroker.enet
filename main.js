@@ -26,7 +26,7 @@ const valuePathArray = [];
 const devicePathArray = [];
 const sceneActionPathArray = [];
 const batteryPathArray = [];
-const VIntern = '250625.02';
+const VIntern = '280625.02';
 
 const get_login_digest = '{"jsonrpc":"2.0","method":"getDigestAuthentificationInfos","params":null,"id":"$$id$$"}';
 //const get_configuration='{"jsonrpc":"2.0", "method":"getCurrentConfiguration", "params":null, "id":"$$id$$"}';
@@ -123,7 +123,7 @@ function startAdapter(options) {
             eNetType = adapter.config.devicetype;
             if (eNetType == 'Gateway') {
                 adapter.log.info(
-                    `Running eNet Adapter Version ${adapter.version}, Configured eNet Gateway: ${adapter.config.ip}`,
+                    `Running eNet Adapter Version ${adapter.version} (${VIntern}), Configured eNet Gateway: ${adapter.config.ip}`,
                 );
             } else if (eNetType == 'Server') {
                 if (ConnectionType_SSL) {
@@ -455,18 +455,20 @@ function eNetServer_Login() {
                             eNetServer_SendLoginDigest(login_digest);
                             adapter.setState('info.connection', true, true);
                             adapter.setState('info.requestEvents', true, true);
-                            setTimeout(() => {
+                            let timer = setTimeout(() => {
                                 //adapter.log.info('**************** Login digest not available...WAIT ****************');
                             }, 1000); // Delay in milliseconds (2000ms = 2 seconds)
+                            clearTimeout(timer);
                             let state = adapter.getState('info.SessionID'); //, function (_err, state) {
                             while (state.val == '') {
                                 adapter.log.debug(
                                     '**************** Login digest not available...WAIT ****************',
                                 );
-                                setTimeout(() => {
+                                const timer = setTimeout(() => {
                                     //adapter.log.info('Login digest not available...WAIT');
                                 }, 1000); // Delay in milliseconds (2000ms = 2 seconds)
                                 state = adapter.getState('info.SessionID');
+                                clearTimeout(timer);
                             }
                             adapter.log.debug('**************** Login digest available, lets go **************');
                             //eNetServer_getProject();
@@ -2016,7 +2018,7 @@ function setupGatewayDevices(gw, res) {
                             type: 'state',
                             common: {
                                 name: `${ParsedJSON.ITEMS[x].NAME}:ID`,
-                                type: 'string',
+                                type: 'number', // wg Issue #86
                                 role: 'id',
                                 write: 'false',
                                 read: 'true',
@@ -2097,7 +2099,7 @@ function setupGatewayDevices(gw, res) {
                         type: 'state',
                         common: {
                             name: `${ParsedJSON.ITEMS[x].NAME}:ID`,
-                            type: 'string',
+                            type: 'number', // wg Issue #86
                             role: 'id',
                             write: 'false',
                             read: 'true',
@@ -2157,7 +2159,7 @@ function setupGatewayDevices(gw, res) {
                         type: 'state',
                         common: {
                             name: `${ParsedJSON.ITEMS[x].NAME}:ID`,
-                            type: 'string',
+                            type: 'number', //wg. Issue #86
                             role: 'id',
                             write: 'false',
                             read: 'true',
@@ -2197,7 +2199,7 @@ function setupGatewayDevices(gw, res) {
                     }
                     adapter.setState(`channel${ParsedJSON.ITEMS[x].NUMBER}.ID`, ParsedJSON.ITEMS[x].NUMBER, true);
                     adapter.setState(`channel${ParsedJSON.ITEMS[x].NUMBER}.NAME`, ParsedJSON.ITEMS[x].NAME, true);
-                    adapter.setState(`channel${ParsedJSON.ITEMS[x].NUMBER}.LEVEL`, '0', true);
+                    adapter.setState(`channel${ParsedJSON.ITEMS[x].NUMBER}.LEVEL`, 0, true); //wg Issue #86
                     adapter.log.debug(
                         `setupGatewayDevices: Added Device ID: ${ParsedJSON.ITEMS[x].NUMBER}, Name: ${
                             ParsedJSON.ITEMS[x].NAME
@@ -2220,7 +2222,7 @@ function setupGatewayDevices(gw, res) {
                         type: 'state',
                         common: {
                             name: `${ParsedJSON.ITEMS[x].NAME}:ID`,
-                            type: 'string',
+                            type: 'number',
                             role: 'id',
                             write: 'false',
                             read: 'true',
@@ -2260,7 +2262,7 @@ function setupGatewayDevices(gw, res) {
                     }
                     adapter.setState(`channel${ParsedJSON.ITEMS[x].NUMBER}.ID`, ParsedJSON.ITEMS[x].NUMBER, true);
                     adapter.setState(`channel${ParsedJSON.ITEMS[x].NUMBER}.NAME`, ParsedJSON.ITEMS[x].NAME, true);
-                    adapter.setState(`channel${ParsedJSON.ITEMS[x].NUMBER}.LEVEL`, '0', true);
+                    adapter.setState(`channel${ParsedJSON.ITEMS[x].NUMBER}.LEVEL`, 0, true); //wg Issue #86
                     adapter.log.debug(
                         `setupGatewayDevices: Added Device ID: ${ParsedJSON.ITEMS[x].NUMBER}, Name: ${
                             ParsedJSON.ITEMS[x].NAME
@@ -2298,7 +2300,7 @@ function setupGatewayDevices(gw, res) {
                     type: 'state',
                     common: {
                         name: `${ParsedJSON.LISTS[x].NAME}:ID`,
-                        type: 'string',
+                        type: 'number', // wg Issue #86
                         role: 'id',
                         write: 'false',
                         read: 'true',

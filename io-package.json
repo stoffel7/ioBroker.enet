@@ -175,6 +175,7 @@
     "password"
   ],
   "encryptedNative": [
+    "username",
     "password"
   ],
   "objects": [],

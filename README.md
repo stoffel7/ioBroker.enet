@@ -19,6 +19,17 @@ Control Jung/Gira eNet smarthome devices using the Jung/Gira eNet Mobile Gate Wi
   Placeholder for the next version (at the beginning of the line):
   ### **WORK IN PROGRESS**
 -->
+### **WORK IN PROGRESS**
+
+#### Server version
+* added clearTimeout in main.js
+* added username as encryptedNative,-> please input username once again
+* added script package.json
+
+#### Gateway version
+* fixed warnings from Issue#86, -> please remove object tree before first start 
+
+
 ### 2.0.8 (2025-06-25)
 * fixed problem causing UnAuthorized LOGIN
 * changed some Async functions
