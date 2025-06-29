@@ -14,7 +14,7 @@
     "@iobroker/adapter-core": "^3.2.3"
   },
   "devDependencies": {
-    "@alcalzone/release-script-plugin-manual-review" : "^3.7.0",
+    "@alcalzone/release-script-plugin-manual-review": "^3.7.0",
     "@alcalzone/release-script": "^3.8.0",
     "@alcalzone/release-script-plugin-iobroker": "^3.6.0",
     "@alcalzone/release-script-plugin-license": "^3.5.9",
@@ -64,5 +64,5 @@
     "release-minor": "release-script minor --yes",
     "release-major": "release-script major --yes"
   },
-  "version": "2.0.8"
+  "version": "2.0.9"
 }
