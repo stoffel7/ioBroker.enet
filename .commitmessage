@@ -1,9 +1,0 @@
-chore: release v2.0.9
-
-#### Server version
-* added clearTimeout in main.js
-* added username as encryptedNative,-> please input username once again
-* added script package.json
-
-#### Gateway version
-* fixed warnings from Issue#86, -> please remove object tree before first start

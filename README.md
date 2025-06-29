@@ -20,6 +20,9 @@ Control Jung/Gira eNet smarthome devices using the Jung/Gira eNet Mobile Gate Wi
   ### **WORK IN PROGRESS**
 -->
 ### 2.0.10 (2025-06-29)
+* fixed issue#89
+
+### 2.0.9 (2025-06-29)
 
 #### Server version
 * added clearTimeout in main.js
