@@ -29,8 +29,11 @@
       "uk": "Статус на сервери",
       "zh-cn": "Steuert Jung/Gira eNet Smarthome-Geräte über das eNet 移动门 Funk IP Gateway oder dem eNet 智能主服务器"
     },
-    "version": "2.0.10",
+    "version": "2.0.11",
     "news": {
+      "2.0.11": {
+        "en": "#### Gateway version\n* Added IBN commissioning commands: ibnStart(), ibnEnd(), ibnEditChannel(), ibnEditRoom()\n* Allows renaming channels and rooms on the Mobilegate without the eNet app\n* Verified against Mobilegate firmware 0.91"
+      },
       "2.0.10": {
         "en": "#### Server version\n* added clearTimeout in main.js\n* added username as encryptedNative,-> please input username once again\n* added script package.json\n\n#### Gateway version\n* fixed warnings from Issue#86, -> please remove object tree before first start",
         "de": "oder Serverversion\n* deutlich hinzugefügt Zeit im Haupt. j)\n* Benutzername als verschlüsselt hinzugefügtNative,-> bitte Benutzername erneut eingeben\n* script-paket hinzugefügt. json\n\nGateway-Version\n* Feste Warnungen aus Ausgabe #86, -> bitte entfernen Objektbaum vor dem ersten Start",
