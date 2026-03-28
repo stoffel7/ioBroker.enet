@@ -13,7 +13,7 @@ let SyncRoomsAndScenes = false;
 let ConnectionType_SSL = false;
 let Connection_Port = 80;
 let eNetType = 'Server';
-const crypto = require('crypto');
+const crypto = require('node:crypto');
 let SessionID = '';
 let CounterID = '';
 //var IBN = "";
@@ -44,8 +44,8 @@ const server_ping = '{"jsonrpc":"2.0", "method":"ping", "params":null, "id":"$$i
 
 const HTTPRequest = (function () {
     const adapters = {
-        false: require('http'),
-        true: require('https'),
+        false: require('node:http'),
+        true: require('node:https'),
     };
 
     return function (_connection_type) {
