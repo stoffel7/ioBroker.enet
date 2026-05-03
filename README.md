@@ -106,6 +106,8 @@ Control Jung/Gira eNet smarthome devices using the Jung/Gira eNet Mobile Gate Wi
 ### 1.0.0 (2019-01-21)
 * (SebastianSchultz) first release
 
+[Older changelogs can be found there](CHANGELOG_OLD.md)
+
 ## License
 
 The MIT License (MIT)
